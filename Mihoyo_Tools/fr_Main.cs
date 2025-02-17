@@ -57,14 +57,11 @@ namespace Mihoyo_Tools {
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-
-
             ChineseLunisolarCalendar ChineseCalendar = new ChineseLunisolarCalendar();
             DateTime now = DateTime.Now;
-            // 获取农历日期信息
-            DateTime solar = new DateTime(now.Year, now.Month, now.Day);
             string[] Day = new string[] { "星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六" };
             var week = Day[Convert.ToInt16(DateTime.Now.DayOfWeek)];
+            // 获取农历日期信息
             int leapMonth = ChineseCalendar.GetLeapMonth(now.Year);
             string date = string.Format("农历  {0}{1}（{2}）年  {3}{4}月{5}{6}"
              , "甲乙丙丁戊己庚辛壬癸"[(now.Year - 4) % 10]
@@ -80,6 +77,11 @@ namespace Mihoyo_Tools {
         private void toolStripStatusLabel2_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://space.bilibili.com/3493128132626725");//海棠云螭的B站
+        }
+
+        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/HaitangYunchi/Mihoyo_Tools");
         }
     }
 }
