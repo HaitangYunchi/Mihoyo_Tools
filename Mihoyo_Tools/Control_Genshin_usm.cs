@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Mihoyo_Tools
 {
@@ -17,5 +18,14 @@ namespace Mihoyo_Tools
 		{
             InitializeComponent();
 		}
-	}
+
+        private void Control_Genshin_usm_Load(object sender, EventArgs e)
+        {
+            textEdit1.Text = GlobalVar.StrPath + @"\data\GICutscenes.exe";
+            textEdit2.Text = GlobalVar.StrPath + @"\data\ffmpeg.exe";
+            INIFile.writeString("Config", "Cutscenes", textEdit1.Text, GlobalVar.IniName);
+            INIFile.writeString("Config", "Ffmpegr", textEdit2.Text, GlobalVar.IniName);
+
+        }
+    }
 }

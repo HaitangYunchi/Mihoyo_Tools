@@ -34,6 +34,7 @@
             this.hyperlinkLabelControl1 = new DevExpress.XtraEditors.HyperlinkLabelControl();
             this.hyperlinkLabelControl2 = new DevExpress.XtraEditors.HyperlinkLabelControl();
             this.hyperlinkLabelControl3 = new DevExpress.XtraEditors.HyperlinkLabelControl();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -44,9 +45,9 @@
             this.labelControl1.Appearance.Options.UseForeColor = true;
             this.labelControl1.Location = new System.Drawing.Point(132, 121);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(222, 29);
+            this.labelControl1.Size = new System.Drawing.Size(200, 29);
             this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "关于 Genshinn_Tools";
+            this.labelControl1.Text = "关于 Mihoyo_Tools";
             // 
             // labelControl2
             // 
@@ -105,10 +106,20 @@
             this.hyperlinkLabelControl3.Text = "邮箱";
             this.hyperlinkLabelControl3.Click += new System.EventHandler(this.hyperlinkLabelControl3_Click);
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.progressBar1.Location = new System.Drawing.Point(0, 774);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(1368, 35);
+            this.progressBar1.TabIndex = 3;
+            this.progressBar1.Value = 50;
+            // 
             // Control_About
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.hyperlinkLabelControl3);
             this.Controls.Add(this.hyperlinkLabelControl2);
             this.Controls.Add(this.hyperlinkLabelControl1);
@@ -130,5 +141,6 @@
         private DevExpress.XtraEditors.HyperlinkLabelControl hyperlinkLabelControl1;
         private DevExpress.XtraEditors.HyperlinkLabelControl hyperlinkLabelControl2;
         private DevExpress.XtraEditors.HyperlinkLabelControl hyperlinkLabelControl3;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }

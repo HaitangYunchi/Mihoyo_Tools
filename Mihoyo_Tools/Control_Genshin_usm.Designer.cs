@@ -336,9 +336,9 @@
             // progressBar1
             // 
             this.progressBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.progressBar1.Location = new System.Drawing.Point(0, 685);
+            this.progressBar1.Location = new System.Drawing.Point(0, 730);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(1305, 80);
+            this.progressBar1.Size = new System.Drawing.Size(1305, 35);
             this.progressBar1.TabIndex = 5;
             this.progressBar1.Value = 50;
             // 
@@ -354,6 +354,7 @@
             this.Controls.Add(this.groupBox_system);
             this.Name = "Control_Genshin_usm";
             this.Size = new System.Drawing.Size(1305, 765);
+            this.Load += new System.EventHandler(this.Control_Genshin_usm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
