@@ -24,14 +24,13 @@ namespace Mihoyo_Tools
         public static string VersionNo= Assembly.GetExecutingAssembly().GetName().Version.ToString();
         public static int    Release = 2;//  0  Alpha 内测版      1  bate 公测版      2  Release 正式版
         public static string Update_ver = "";//升级版本号
-        public static float Old_Ver = 1.0f;
-        public static float New_Ver = 3.0f;
+        public static string VerContrast = "B9E08017-5E71-4383-8B2A-D908EF2ED4DB";// 版本唯一码
         public static string New_Info = "";
 
         public static string SoftTitle = "  原神过场动画导出工具 UI";
         public static string USM_dir = "";
         public static string line = "";
-        public static string Outdir = "0";
+        public static string Outdir = "0"; // 0 = 单文件导出  1 = 游戏目录导出  2 = 自定义 usm 目录导出
 
 
         public static string AuthorName = "海棠云螭";

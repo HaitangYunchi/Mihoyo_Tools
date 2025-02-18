@@ -59,7 +59,7 @@
             this.fr_Main_Container.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fr_Main_Container.Location = new System.Drawing.Point(260, 31);
             this.fr_Main_Container.Name = "fr_Main_Container";
-            this.fr_Main_Container.Size = new System.Drawing.Size(1262, 717);
+            this.fr_Main_Container.Size = new System.Drawing.Size(1263, 778);
             this.fr_Main_Container.TabIndex = 0;
             // 
             // accordionControl1
@@ -72,7 +72,7 @@
             this.accordionControl1.Location = new System.Drawing.Point(0, 31);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(260, 717);
+            this.accordionControl1.Size = new System.Drawing.Size(260, 778);
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -135,7 +135,7 @@
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Manager = this.fluentFormDefaultManager1;
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1522, 31);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1523, 31);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             this.fluentDesignFormControl1.TitleItemLinks.Add(this.skinDropDownButtonItem1);
@@ -161,9 +161,9 @@
             this.toolStripStatusLabel3,
             this.toolStripStatusLabel5,
             this.toolStripStatusLabel4});
-            this.statusStrip1.Location = new System.Drawing.Point(260, 726);
+            this.statusStrip1.Location = new System.Drawing.Point(260, 787);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1262, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1263, 22);
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -194,7 +194,7 @@
             // toolStripStatusLabel5
             // 
             this.toolStripStatusLabel5.Name = "toolStripStatusLabel5";
-            this.toolStripStatusLabel5.Size = new System.Drawing.Size(216, 17);
+            this.toolStripStatusLabel5.Size = new System.Drawing.Size(97, 17);
             this.toolStripStatusLabel5.Spring = true;
             // 
             // toolStripStatusLabel4
@@ -214,7 +214,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1522, 748);
+            this.ClientSize = new System.Drawing.Size(1523, 809);
             this.ControlContainer = this.fr_Main_Container;
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.fr_Main_Container);
@@ -222,11 +222,12 @@
             this.Controls.Add(this.fluentDesignFormControl1);
             this.FluentDesignFormControl = this.fluentDesignFormControl1;
             this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("fr_Main.IconOptions.Image")));
-            this.MinimumSize = new System.Drawing.Size(1524, 749);
+            this.MinimumSize = new System.Drawing.Size(1525, 810);
             this.Name = "fr_Main";
             this.NavigationControl = this.accordionControl1;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " 米哈游工具箱";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.fr_Main_FormClosed);
             this.Load += new System.EventHandler(this.fr_Main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();

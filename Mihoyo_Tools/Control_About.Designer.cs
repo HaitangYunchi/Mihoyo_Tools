@@ -35,6 +35,10 @@
             this.hyperlinkLabelControl2 = new DevExpress.XtraEditors.HyperlinkLabelControl();
             this.hyperlinkLabelControl3 = new DevExpress.XtraEditors.HyperlinkLabelControl();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.radioButto_github = new System.Windows.Forms.RadioButton();
+            this.radioButton_gitee = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -111,14 +115,61 @@
             this.progressBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.progressBar1.Location = new System.Drawing.Point(0, 774);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(1368, 35);
+            this.progressBar1.Size = new System.Drawing.Size(1300, 35);
             this.progressBar1.TabIndex = 3;
-            this.progressBar1.Value = 50;
+            this.progressBar1.Value = 100;
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.simpleButton1.Location = new System.Drawing.Point(132, 692);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton1.TabIndex = 4;
+            this.simpleButton1.Text = "更新 key";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.simpleButton2.Location = new System.Drawing.Point(229, 692);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton2.TabIndex = 5;
+            this.simpleButton2.Text = "检查更新";
+            // 
+            // radioButto_github
+            // 
+            this.radioButto_github.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.radioButto_github.AutoSize = true;
+            this.radioButto_github.Location = new System.Drawing.Point(420, 694);
+            this.radioButto_github.Name = "radioButto_github";
+            this.radioButto_github.Size = new System.Drawing.Size(85, 18);
+            this.radioButto_github.TabIndex = 6;
+            this.radioButto_github.Text = "Github仓库";
+            this.radioButto_github.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_gitee
+            // 
+            this.radioButton_gitee.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.radioButton_gitee.AutoSize = true;
+            this.radioButton_gitee.Checked = true;
+            this.radioButton_gitee.Location = new System.Drawing.Point(326, 694);
+            this.radioButton_gitee.Name = "radioButton_gitee";
+            this.radioButton_gitee.Size = new System.Drawing.Size(78, 18);
+            this.radioButton_gitee.TabIndex = 6;
+            this.radioButton_gitee.TabStop = true;
+            this.radioButton_gitee.Text = "Gitee仓库";
+            this.radioButton_gitee.UseVisualStyleBackColor = true;
             // 
             // Control_About
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.radioButton_gitee);
+            this.Controls.Add(this.radioButto_github);
+            this.Controls.Add(this.simpleButton2);
+            this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.hyperlinkLabelControl3);
             this.Controls.Add(this.hyperlinkLabelControl2);
@@ -127,7 +178,7 @@
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.labelControl1);
             this.Name = "Control_About";
-            this.Size = new System.Drawing.Size(1368, 809);
+            this.Size = new System.Drawing.Size(1300, 809);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,5 +193,9 @@
         private DevExpress.XtraEditors.HyperlinkLabelControl hyperlinkLabelControl2;
         private DevExpress.XtraEditors.HyperlinkLabelControl hyperlinkLabelControl3;
         private System.Windows.Forms.ProgressBar progressBar1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private System.Windows.Forms.RadioButton radioButto_github;
+        private System.Windows.Forms.RadioButton radioButton_gitee;
     }
 }

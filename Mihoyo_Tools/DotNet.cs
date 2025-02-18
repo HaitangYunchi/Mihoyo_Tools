@@ -115,8 +115,7 @@ namespace Mihoyo_Tools
             throw new NotImplementedException();
         }
 
-
-    }
+    }  
     public class INIFile
     {
         /// <summary>

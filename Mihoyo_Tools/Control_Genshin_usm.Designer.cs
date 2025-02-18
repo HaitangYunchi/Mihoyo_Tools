@@ -28,319 +28,339 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Control_Genshin_usm));
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.txtInfo = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.label2 = new System.Windows.Forms.Label();
+            this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
+            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.simpleButton_Out = new DevExpress.XtraEditors.SimpleButton();
+            this.buttonEdit_usm_Name = new DevExpress.XtraEditors.ButtonEdit();
+            this.radioButton_usm_path = new System.Windows.Forms.RadioButton();
+            this.radioButton_Game_path = new System.Windows.Forms.RadioButton();
+            this.radioButton_KR = new System.Windows.Forms.RadioButton();
+            this.radioButton_JP = new System.Windows.Forms.RadioButton();
+            this.radioButton_EN = new System.Windows.Forms.RadioButton();
+            this.radioButton_CN = new System.Windows.Forms.RadioButton();
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.button_LoadIni = new DevExpress.XtraEditors.SimpleButton();
+            this.buttonEdit_Out_path = new DevExpress.XtraEditors.ButtonEdit();
+            this.buttonEdit_usm_path = new DevExpress.XtraEditors.ButtonEdit();
+            this.buttonEdit_Game_path = new DevExpress.XtraEditors.ButtonEdit();
             this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
-            this.groupBox_system = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textEdit6 = new DevExpress.XtraEditors.TextEdit();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
-            this.button1 = new System.Windows.Forms.Button();
-            this.groupBox_out = new System.Windows.Forms.GroupBox();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtInfo = new System.Windows.Forms.TextBox();
+            this.backgroundWorker_Game_path = new System.ComponentModel.BackgroundWorker();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel1)).BeginInit();
+            this.splitContainerControl1.Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel2)).BeginInit();
+            this.splitContainerControl1.Panel2.SuspendLayout();
+            this.splitContainerControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
+            this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit_usm_Name.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
+            this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit_Out_path.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit_usm_path.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit_Game_path.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
-            this.groupBox_system.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
-            this.groupBox_out.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // splitContainerControl1
+            // 
+            this.splitContainerControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainerControl1.IsSplitterFixed = true;
+            this.splitContainerControl1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainerControl1.Name = "splitContainerControl1";
+            // 
+            // splitContainerControl1.Panel1
+            // 
+            this.splitContainerControl1.Panel1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Default;
+            this.splitContainerControl1.Panel1.Controls.Add(this.groupControl2);
+            this.splitContainerControl1.Panel1.Controls.Add(this.groupControl1);
+            this.splitContainerControl1.Panel1.Padding = new System.Windows.Forms.Padding(605, 0, 0, 0);
+            this.splitContainerControl1.Panel1.Text = "Panel1";
+            // 
+            // splitContainerControl1.Panel2
+            // 
+            this.splitContainerControl1.Panel2.Controls.Add(this.txtInfo);
+            this.splitContainerControl1.Panel2.Text = "Panel2";
+            this.splitContainerControl1.Size = new System.Drawing.Size(1305, 730);
+            this.splitContainerControl1.SplitterPosition = 604;
+            this.splitContainerControl1.TabIndex = 6;
+            // 
+            // groupControl2
+            // 
+            this.groupControl2.Controls.Add(this.labelControl6);
+            this.groupControl2.Controls.Add(this.simpleButton_Out);
+            this.groupControl2.Controls.Add(this.buttonEdit_usm_Name);
+            this.groupControl2.Controls.Add(this.radioButton_usm_path);
+            this.groupControl2.Controls.Add(this.radioButton_Game_path);
+            this.groupControl2.Controls.Add(this.radioButton_KR);
+            this.groupControl2.Controls.Add(this.radioButton_JP);
+            this.groupControl2.Controls.Add(this.radioButton_EN);
+            this.groupControl2.Controls.Add(this.radioButton_CN);
+            this.groupControl2.Location = new System.Drawing.Point(39, 385);
+            this.groupControl2.Name = "groupControl2";
+            this.groupControl2.Size = new System.Drawing.Size(528, 297);
+            this.groupControl2.TabIndex = 8;
+            this.groupControl2.Text = "导出设置";
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Location = new System.Drawing.Point(41, 53);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(96, 14);
+            this.labelControl6.TabIndex = 17;
+            this.labelControl6.Text = "选择要导出的文件";
+            // 
+            // simpleButton_Out
+            // 
+            this.simpleButton_Out.Appearance.Font = new System.Drawing.Font("楷体", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.simpleButton_Out.Appearance.Options.UseFont = true;
+            this.simpleButton_Out.Location = new System.Drawing.Point(118, 187);
+            this.simpleButton_Out.Name = "simpleButton_Out";
+            this.simpleButton_Out.Size = new System.Drawing.Size(267, 60);
+            this.simpleButton_Out.TabIndex = 16;
+            this.simpleButton_Out.Text = "国语配音";
+            this.simpleButton_Out.Click += new System.EventHandler(this.simpleButton_Out_Click);
+            // 
+            // buttonEdit_usm_Name
+            // 
+            this.buttonEdit_usm_Name.Location = new System.Drawing.Point(143, 50);
+            this.buttonEdit_usm_Name.Name = "buttonEdit_usm_Name";
+            this.buttonEdit_usm_Name.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.buttonEdit_usm_Name.Properties.ReadOnly = true;
+            this.buttonEdit_usm_Name.Size = new System.Drawing.Size(333, 20);
+            this.buttonEdit_usm_Name.TabIndex = 11;
+            this.buttonEdit_usm_Name.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_usm_Name_ButtonClick);
+            // 
+            // radioButton_usm_path
+            // 
+            this.radioButton_usm_path.AutoSize = true;
+            this.radioButton_usm_path.Location = new System.Drawing.Point(405, 134);
+            this.radioButton_usm_path.Name = "radioButton_usm_path";
+            this.radioButton_usm_path.Size = new System.Drawing.Size(85, 18);
+            this.radioButton_usm_path.TabIndex = 12;
+            this.radioButton_usm_path.Text = "自定义目录";
+            this.radioButton_usm_path.UseVisualStyleBackColor = true;
+            this.radioButton_usm_path.CheckedChanged += new System.EventHandler(this.radioButton_usm_path_CheckedChanged);
+            // 
+            // radioButton_Game_path
+            // 
+            this.radioButton_Game_path.AutoSize = true;
+            this.radioButton_Game_path.Location = new System.Drawing.Point(405, 110);
+            this.radioButton_Game_path.Name = "radioButton_Game_path";
+            this.radioButton_Game_path.Size = new System.Drawing.Size(73, 18);
+            this.radioButton_Game_path.TabIndex = 12;
+            this.radioButton_Game_path.Text = "目录导出";
+            this.radioButton_Game_path.UseVisualStyleBackColor = true;
+            this.radioButton_Game_path.CheckedChanged += new System.EventHandler(this.radioButton_Game_path_CheckedChanged);
+            // 
+            // radioButton_KR
+            // 
+            this.radioButton_KR.AutoSize = true;
+            this.radioButton_KR.Location = new System.Drawing.Point(317, 110);
+            this.radioButton_KR.Name = "radioButton_KR";
+            this.radioButton_KR.Size = new System.Drawing.Size(49, 18);
+            this.radioButton_KR.TabIndex = 12;
+            this.radioButton_KR.Text = "韩语";
+            this.radioButton_KR.UseVisualStyleBackColor = true;
+            this.radioButton_KR.CheckedChanged += new System.EventHandler(this.radioButton_KR_CheckedChanged);
+            // 
+            // radioButton_JP
+            // 
+            this.radioButton_JP.AutoSize = true;
+            this.radioButton_JP.Location = new System.Drawing.Point(229, 110);
+            this.radioButton_JP.Name = "radioButton_JP";
+            this.radioButton_JP.Size = new System.Drawing.Size(49, 18);
+            this.radioButton_JP.TabIndex = 13;
+            this.radioButton_JP.Text = "日语";
+            this.radioButton_JP.UseVisualStyleBackColor = true;
+            this.radioButton_JP.CheckedChanged += new System.EventHandler(this.radioButton_JP_CheckedChanged);
+            // 
+            // radioButton_EN
+            // 
+            this.radioButton_EN.AutoSize = true;
+            this.radioButton_EN.Location = new System.Drawing.Point(141, 110);
+            this.radioButton_EN.Name = "radioButton_EN";
+            this.radioButton_EN.Size = new System.Drawing.Size(49, 18);
+            this.radioButton_EN.TabIndex = 14;
+            this.radioButton_EN.Text = "英语";
+            this.radioButton_EN.UseVisualStyleBackColor = true;
+            this.radioButton_EN.CheckedChanged += new System.EventHandler(this.radioButton_EN_CheckedChanged);
+            // 
+            // radioButton_CN
+            // 
+            this.radioButton_CN.AutoSize = true;
+            this.radioButton_CN.Checked = true;
+            this.radioButton_CN.Location = new System.Drawing.Point(41, 110);
+            this.radioButton_CN.Name = "radioButton_CN";
+            this.radioButton_CN.Size = new System.Drawing.Size(61, 18);
+            this.radioButton_CN.TabIndex = 15;
+            this.radioButton_CN.TabStop = true;
+            this.radioButton_CN.Text = "普通话";
+            this.radioButton_CN.UseVisualStyleBackColor = true;
+            this.radioButton_CN.CheckedChanged += new System.EventHandler(this.radioButton_CN_CheckedChanged);
+            // 
+            // groupControl1
+            // 
+            this.groupControl1.Controls.Add(this.labelControl5);
+            this.groupControl1.Controls.Add(this.labelControl4);
+            this.groupControl1.Controls.Add(this.labelControl3);
+            this.groupControl1.Controls.Add(this.labelControl2);
+            this.groupControl1.Controls.Add(this.labelControl1);
+            this.groupControl1.Controls.Add(this.button_LoadIni);
+            this.groupControl1.Controls.Add(this.buttonEdit_Out_path);
+            this.groupControl1.Controls.Add(this.buttonEdit_usm_path);
+            this.groupControl1.Controls.Add(this.buttonEdit_Game_path);
+            this.groupControl1.Controls.Add(this.textEdit2);
+            this.groupControl1.Controls.Add(this.textEdit1);
+            this.groupControl1.Location = new System.Drawing.Point(39, 38);
+            this.groupControl1.Name = "groupControl1";
+            this.groupControl1.Size = new System.Drawing.Size(527, 292);
+            this.groupControl1.TabIndex = 7;
+            this.groupControl1.Text = "系统设置";
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Location = new System.Drawing.Point(91, 197);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(48, 14);
+            this.labelControl5.TabIndex = 15;
+            this.labelControl5.Text = "输出目录";
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Location = new System.Drawing.Point(47, 161);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(92, 14);
+            this.labelControl4.TabIndex = 16;
+            this.labelControl4.Text = "自定义 USM 目录";
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Location = new System.Drawing.Point(67, 125);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(72, 14);
+            this.labelControl3.TabIndex = 17;
+            this.labelControl3.Text = "原神游戏目录";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(100, 89);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(39, 14);
+            this.labelControl2.TabIndex = 18;
+            this.labelControl2.Text = "ffmpeg";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(63, 53);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(76, 14);
+            this.labelControl1.TabIndex = 19;
+            this.labelControl1.Text = "GI_Gutscenes";
+            // 
+            // button_LoadIni
+            // 
+            this.button_LoadIni.Location = new System.Drawing.Point(401, 239);
+            this.button_LoadIni.Name = "button_LoadIni";
+            this.button_LoadIni.Size = new System.Drawing.Size(75, 23);
+            this.button_LoadIni.TabIndex = 14;
+            this.button_LoadIni.Text = "载入配置";
+            this.button_LoadIni.Click += new System.EventHandler(this.button_LoadIni_Click);
+            // 
+            // buttonEdit_Out_path
+            // 
+            this.buttonEdit_Out_path.Location = new System.Drawing.Point(145, 194);
+            this.buttonEdit_Out_path.Name = "buttonEdit_Out_path";
+            this.buttonEdit_Out_path.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.buttonEdit_Out_path.Properties.ReadOnly = true;
+            this.buttonEdit_Out_path.Size = new System.Drawing.Size(333, 20);
+            this.buttonEdit_Out_path.TabIndex = 11;
+            this.buttonEdit_Out_path.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_Out_path_ButtonClick);
+            // 
+            // buttonEdit_usm_path
+            // 
+            this.buttonEdit_usm_path.Location = new System.Drawing.Point(145, 158);
+            this.buttonEdit_usm_path.Name = "buttonEdit_usm_path";
+            this.buttonEdit_usm_path.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.buttonEdit_usm_path.Properties.ReadOnly = true;
+            this.buttonEdit_usm_path.Size = new System.Drawing.Size(333, 20);
+            this.buttonEdit_usm_path.TabIndex = 12;
+            this.buttonEdit_usm_path.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_usm_path_ButtonClick);
+            // 
+            // buttonEdit_Game_path
+            // 
+            this.buttonEdit_Game_path.Location = new System.Drawing.Point(145, 122);
+            this.buttonEdit_Game_path.Name = "buttonEdit_Game_path";
+            this.buttonEdit_Game_path.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.buttonEdit_Game_path.Properties.ReadOnly = true;
+            this.buttonEdit_Game_path.Size = new System.Drawing.Size(333, 20);
+            this.buttonEdit_Game_path.TabIndex = 13;
+            this.buttonEdit_Game_path.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_Game_path_ButtonClick_1);
+            // 
+            // textEdit2
+            // 
+            this.textEdit2.Location = new System.Drawing.Point(145, 86);
+            this.textEdit2.Name = "textEdit2";
+            this.textEdit2.Properties.ReadOnly = true;
+            this.textEdit2.Size = new System.Drawing.Size(334, 20);
+            this.textEdit2.TabIndex = 9;
+            // 
+            // textEdit1
+            // 
+            this.textEdit1.Location = new System.Drawing.Point(145, 50);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Properties.ReadOnly = true;
+            this.textEdit1.Size = new System.Drawing.Size(334, 20);
+            this.textEdit1.TabIndex = 10;
+            // 
             // txtInfo
             // 
             this.txtInfo.BackColor = System.Drawing.SystemColors.WindowText;
             this.txtInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtInfo.ForeColor = System.Drawing.Color.LimeGreen;
-            this.txtInfo.Location = new System.Drawing.Point(576, 56);
+            this.txtInfo.Location = new System.Drawing.Point(0, 0);
             this.txtInfo.Multiline = true;
             this.txtInfo.Name = "txtInfo";
             this.txtInfo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtInfo.Size = new System.Drawing.Size(675, 579);
-            this.txtInfo.TabIndex = 4;
+            this.txtInfo.Size = new System.Drawing.Size(687, 726);
+            this.txtInfo.TabIndex = 8;
             // 
-            // label1
+            // backgroundWorker_Game_path
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(43, 51);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 14);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "GI_Cutscenes ";
+            this.backgroundWorker_Game_path.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker_Game_path_DoWork);
+            this.backgroundWorker_Game_path.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker_Game_path_ProgressChanged);
+            this.backgroundWorker_Game_path.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker_Game_path_RunWorkerCompleted);
             // 
-            // textEdit1
+            // progressBar
             // 
-            this.textEdit1.Location = new System.Drawing.Point(135, 48);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.ReadOnly = true;
-            this.textEdit1.Size = new System.Drawing.Size(334, 20);
-            this.textEdit1.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(93, 87);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(36, 14);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "ffpeg";
-            // 
-            // textEdit2
-            // 
-            this.textEdit2.Location = new System.Drawing.Point(135, 84);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.ReadOnly = true;
-            this.textEdit2.Size = new System.Drawing.Size(334, 20);
-            this.textEdit2.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(50, 123);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 14);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "原神游戏目录";
-            // 
-            // textEdit3
-            // 
-            this.textEdit3.Location = new System.Drawing.Point(135, 120);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Size = new System.Drawing.Size(253, 20);
-            this.textEdit3.TabIndex = 3;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(30, 159);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 14);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "自定义 USM 目录";
-            // 
-            // textEdit4
-            // 
-            this.textEdit4.Location = new System.Drawing.Point(135, 156);
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Size = new System.Drawing.Size(253, 20);
-            this.textEdit4.TabIndex = 3;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(74, 195);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 14);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "输出目录";
-            // 
-            // textEdit5
-            // 
-            this.textEdit5.Location = new System.Drawing.Point(135, 192);
-            this.textEdit5.Name = "textEdit5";
-            this.textEdit5.Size = new System.Drawing.Size(253, 20);
-            this.textEdit5.TabIndex = 3;
-            // 
-            // simpleButton2
-            // 
-            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(394, 119);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton2.TabIndex = 4;
-            this.simpleButton2.Text = "选择";
-            // 
-            // simpleButton3
-            // 
-            this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(394, 155);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton3.TabIndex = 4;
-            this.simpleButton3.Text = "选择";
-            // 
-            // simpleButton4
-            // 
-            this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
-            this.simpleButton4.Location = new System.Drawing.Point(394, 191);
-            this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton4.TabIndex = 4;
-            this.simpleButton4.Text = "选择";
-            // 
-            // groupBox_system
-            // 
-            this.groupBox_system.Controls.Add(this.simpleButton4);
-            this.groupBox_system.Controls.Add(this.simpleButton3);
-            this.groupBox_system.Controls.Add(this.simpleButton2);
-            this.groupBox_system.Controls.Add(this.textEdit5);
-            this.groupBox_system.Controls.Add(this.label5);
-            this.groupBox_system.Controls.Add(this.textEdit4);
-            this.groupBox_system.Controls.Add(this.label4);
-            this.groupBox_system.Controls.Add(this.textEdit3);
-            this.groupBox_system.Controls.Add(this.label3);
-            this.groupBox_system.Controls.Add(this.textEdit2);
-            this.groupBox_system.Controls.Add(this.label2);
-            this.groupBox_system.Controls.Add(this.textEdit1);
-            this.groupBox_system.Controls.Add(this.label1);
-            this.groupBox_system.Location = new System.Drawing.Point(43, 47);
-            this.groupBox_system.Name = "groupBox_system";
-            this.groupBox_system.Size = new System.Drawing.Size(512, 259);
-            this.groupBox_system.TabIndex = 3;
-            this.groupBox_system.TabStop = false;
-            this.groupBox_system.Text = " 系统设置 ";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(394, 101);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(74, 18);
-            this.checkBox1.TabIndex = 1;
-            this.checkBox1.Text = "目录导出";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.checkBox2.ForeColor = System.Drawing.Color.Red;
-            this.checkBox2.Location = new System.Drawing.Point(394, 125);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(86, 18);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "自定义目录";
-            this.checkBox2.UseVisualStyleBackColor = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(26, 44);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(103, 14);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "选择要导出的文件";
-            // 
-            // textEdit6
-            // 
-            this.textEdit6.Location = new System.Drawing.Point(135, 41);
-            this.textEdit6.Name = "textEdit6";
-            this.textEdit6.Size = new System.Drawing.Size(253, 20);
-            this.textEdit6.TabIndex = 3;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(33, 101);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(61, 18);
-            this.radioButton1.TabIndex = 5;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "普通话";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(135, 101);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(49, 18);
-            this.radioButton2.TabIndex = 5;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "英语";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(225, 101);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(49, 18);
-            this.radioButton3.TabIndex = 5;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "日语";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton4
-            // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(315, 101);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(49, 18);
-            this.radioButton4.TabIndex = 5;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "韩语";
-            this.radioButton4.UseVisualStyleBackColor = true;
-            // 
-            // simpleButton5
-            // 
-            this.simpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton5.ImageOptions.Image")));
-            this.simpleButton5.Location = new System.Drawing.Point(394, 40);
-            this.simpleButton5.Name = "simpleButton5";
-            this.simpleButton5.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton5.TabIndex = 4;
-            this.simpleButton5.Text = "选择";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(96, 189);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(292, 60);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "国语配音";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // groupBox_out
-            // 
-            this.groupBox_out.Controls.Add(this.button1);
-            this.groupBox_out.Controls.Add(this.simpleButton5);
-            this.groupBox_out.Controls.Add(this.radioButton4);
-            this.groupBox_out.Controls.Add(this.radioButton3);
-            this.groupBox_out.Controls.Add(this.radioButton2);
-            this.groupBox_out.Controls.Add(this.radioButton1);
-            this.groupBox_out.Controls.Add(this.textEdit6);
-            this.groupBox_out.Controls.Add(this.label6);
-            this.groupBox_out.Controls.Add(this.checkBox2);
-            this.groupBox_out.Controls.Add(this.checkBox1);
-            this.groupBox_out.Location = new System.Drawing.Point(43, 350);
-            this.groupBox_out.Name = "groupBox_out";
-            this.groupBox_out.Size = new System.Drawing.Size(512, 285);
-            this.groupBox_out.TabIndex = 3;
-            this.groupBox_out.TabStop = false;
-            this.groupBox_out.Text = " 文件导出 ";
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.progressBar1.Location = new System.Drawing.Point(0, 730);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(1305, 35);
-            this.progressBar1.TabIndex = 5;
-            this.progressBar1.Value = 50;
+            this.progressBar.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.progressBar.Location = new System.Drawing.Point(0, 730);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(1305, 35);
+            this.progressBar.TabIndex = 5;
+            this.progressBar.Value = 100;
             // 
             // Control_Genshin_usm
             // 
@@ -348,56 +368,62 @@
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.progressBar1);
-            this.Controls.Add(this.txtInfo);
-            this.Controls.Add(this.groupBox_out);
-            this.Controls.Add(this.groupBox_system);
+            this.Controls.Add(this.splitContainerControl1);
+            this.Controls.Add(this.progressBar);
             this.Name = "Control_Genshin_usm";
             this.Size = new System.Drawing.Size(1305, 765);
             this.Load += new System.EventHandler(this.Control_Genshin_usm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel1)).EndInit();
+            this.splitContainerControl1.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel2)).EndInit();
+            this.splitContainerControl1.Panel2.ResumeLayout(false);
+            this.splitContainerControl1.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
+            this.splitContainerControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
+            this.groupControl2.ResumeLayout(false);
+            this.groupControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit_usm_Name.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
+            this.groupControl1.ResumeLayout(false);
+            this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit_Out_path.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit_usm_path.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit_Game_path.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
-            this.groupBox_system.ResumeLayout(false);
-            this.groupBox_system.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
-            this.groupBox_out.ResumeLayout(false);
-            this.groupBox_out.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
         private System.Windows.Forms.TextBox txtInfo;
-        private System.Windows.Forms.Label label1;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
-        private System.Windows.Forms.Label label2;
+        private DevExpress.XtraEditors.GroupControl groupControl1;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.SimpleButton button_LoadIni;
+        private DevExpress.XtraEditors.ButtonEdit buttonEdit_Out_path;
+        private DevExpress.XtraEditors.ButtonEdit buttonEdit_usm_path;
+        private DevExpress.XtraEditors.ButtonEdit buttonEdit_Game_path;
         private DevExpress.XtraEditors.TextEdit textEdit2;
-        private System.Windows.Forms.Label label3;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
-        private System.Windows.Forms.Label label4;
-        private DevExpress.XtraEditors.TextEdit textEdit4;
-        private System.Windows.Forms.Label label5;
-        private DevExpress.XtraEditors.TextEdit textEdit5;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
-        private DevExpress.XtraEditors.SimpleButton simpleButton4;
-        private System.Windows.Forms.GroupBox groupBox_system;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.Label label6;
-        private DevExpress.XtraEditors.TextEdit textEdit6;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private DevExpress.XtraEditors.SimpleButton simpleButton5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.GroupBox groupBox_out;
-        private System.Windows.Forms.ProgressBar progressBar1;
+        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.GroupControl groupControl2;
+        private DevExpress.XtraEditors.LabelControl labelControl6;
+        private DevExpress.XtraEditors.SimpleButton simpleButton_Out;
+        private DevExpress.XtraEditors.ButtonEdit buttonEdit_usm_Name;
+        private System.Windows.Forms.RadioButton radioButton_KR;
+        private System.Windows.Forms.RadioButton radioButton_JP;
+        private System.Windows.Forms.RadioButton radioButton_EN;
+        private System.Windows.Forms.RadioButton radioButton_CN;
+        private System.Windows.Forms.RadioButton radioButton_usm_path;
+        private System.Windows.Forms.RadioButton radioButton_Game_path;
+        private System.ComponentModel.BackgroundWorker backgroundWorker_Game_path;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.ProgressBar progressBar;
     }
 }
