@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using System.Net;
 using static System.Net.WebRequestMethods;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
+using System.Diagnostics;
 
 namespace Mihoyo_Tools
 {
@@ -59,9 +60,9 @@ namespace Mihoyo_Tools
             client = new WebClient();
             client.DownloadProgressChanged += new DownloadProgressChangedEventHandler(Client_DownloadProgressChanged);
             client.DownloadFileCompleted += new AsyncCompletedEventHandler(Client_DownloadFileCompleted);
-
             client.DownloadFileAsync(new Uri(url), savePath);
         }
+
         void Client_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
             int progress = (int)(e.ProgressPercentage);
@@ -77,18 +78,54 @@ namespace Mihoyo_Tools
             {
                 if (e.Error != null)
                 {
-                    MessageBox.Show("错误: " + e.Error.Message);
+                    XtraMessageBox.Show("错误: " + e.Error.Message);
                 }
                 else if (e.Cancelled)
                 {
-                    MessageBox.Show("取消更新.");
+                    XtraMessageBox.Show("更新被取消");
                 }
                 else
                 {
-                    MessageBox.Show("更新完成!");
+                    XtraMessageBox.Show("已更新到最新版");
                 }
                 //progressBar1.Value = 0;
             });
+        }
+
+        private void simpleButton_check_upgrade_Click(object sender, EventArgs e)
+        {
+            string ver_url = "";
+            string update_url = "";
+            progressBar1.Value = 0;
+            if (radioButton_gitee.Checked == true)
+            {
+                ver_url = "https://gitee.com/haitangyunchi/Mihoyo_Tools/raw/master/Mihoyo_Tools/data/versions.json";
+            }
+            else if (radioButto_github.Checked == true)
+            {
+                ver_url = "https://raw.githubusercontent.com/HaitangYunchi/Mihoyo_Tools/master/Mihoyo_Tools/data/versions.json";
+            }
+            else
+            {
+                ver_url = "https://gitee.com/haitangyunchi/Mihoyo_Tools/raw/master/Mihoyo_Tools/data/versions.json";
+            }
+            string savePath = Application.StartupPath + @"\upgrade.7z"; // 替换为实际保存路径
+
+            client = new WebClient();
+            client.DownloadProgressChanged += new DownloadProgressChangedEventHandler(Client_DownloadProgressChanged);
+            client.DownloadFileCompleted += new AsyncCompletedEventHandler(Client_DownloadFileCompleted);
+            client.DownloadFileAsync(new Uri(ver_url), savePath);
+            XtraMessageBox.Show("重启使用最新版", GlobalVar.AuthorName, MessageBoxButtons.OK, MessageBoxIcon.None);
+            string arguments = "";
+
+            ProcessStartInfo startInfo = new ProcessStartInfo
+            {
+                FileName = Application.StartupPath + @"\upgrade.exe",
+                Arguments = arguments,
+                UseShellExecute = true
+            };
+
+            Process.Start(startInfo);
         }
     }
 }

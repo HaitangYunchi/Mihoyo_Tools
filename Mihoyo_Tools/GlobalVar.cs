@@ -22,7 +22,7 @@ namespace Mihoyo_Tools
         public static string tempFolderPath = Path.GetTempPath();
         public static string StrPath = System.Windows.Forms.Application.StartupPath;
         public static string VersionNo= Assembly.GetExecutingAssembly().GetName().Version.ToString();
-        public static int    Release = 2;//  0  Alpha 内测版      1  bate 公测版      2  Release 正式版
+        public static int    Release = 1;//  0  Alpha 内测版      1  bate 公测版      2  Release 正式版
         public static string Update_ver = "";//升级版本号
         public static string VerContrast = "B9E08017-5E71-4383-8B2A-D908EF2ED4DB";// 版本唯一码
         public static string New_Info = "";

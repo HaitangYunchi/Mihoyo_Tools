@@ -36,7 +36,7 @@
             this.hyperlinkLabelControl3 = new DevExpress.XtraEditors.HyperlinkLabelControl();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton_check_upgrade = new DevExpress.XtraEditors.SimpleButton();
             this.radioButto_github = new System.Windows.Forms.RadioButton();
             this.radioButton_gitee = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
@@ -129,14 +129,15 @@
             this.simpleButton1.Text = "更新 key";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
-            // simpleButton2
+            // simpleButton_check_upgrade
             // 
-            this.simpleButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.simpleButton2.Location = new System.Drawing.Point(229, 692);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton2.TabIndex = 5;
-            this.simpleButton2.Text = "检查更新";
+            this.simpleButton_check_upgrade.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.simpleButton_check_upgrade.Location = new System.Drawing.Point(229, 692);
+            this.simpleButton_check_upgrade.Name = "simpleButton_check_upgrade";
+            this.simpleButton_check_upgrade.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton_check_upgrade.TabIndex = 5;
+            this.simpleButton_check_upgrade.Text = "检查更新";
+            this.simpleButton_check_upgrade.Click += new System.EventHandler(this.simpleButton_check_upgrade_Click);
             // 
             // radioButto_github
             // 
@@ -168,7 +169,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.radioButton_gitee);
             this.Controls.Add(this.radioButto_github);
-            this.Controls.Add(this.simpleButton2);
+            this.Controls.Add(this.simpleButton_check_upgrade);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.hyperlinkLabelControl3);
@@ -194,7 +195,7 @@
         private DevExpress.XtraEditors.HyperlinkLabelControl hyperlinkLabelControl3;
         private System.Windows.Forms.ProgressBar progressBar1;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton simpleButton_check_upgrade;
         private System.Windows.Forms.RadioButton radioButto_github;
         private System.Windows.Forms.RadioButton radioButton_gitee;
     }
