@@ -167,8 +167,8 @@ namespace Mihoyo_Tools {
             client.DownloadFileAsync(new Uri(ver_url), save_VerContrast);
             GlobalVar.Upgrade_ver = INIFile.getString("VerContrast", "VerContrast", "B9E08017-5E71-4383-8B2A-D908EF2ED4DB", save_VerContrast);
             GlobalVar.New_Info = INIFile.getString("VerContrast", "Verinfo", "", save_VerContrast);
-            Thread.Sleep(1000);
-            XtraMessageBox.Show(GlobalVar.New_Info);
+            Thread.Sleep(3000);
+            XtraMessageBox.Show(GlobalVar.Upgrade_ver);
             byte[] bytesToDecode = Convert.FromBase64String(GlobalVar.New_Info);
             string UTF8_Code = Encoding.UTF8.GetString(bytesToDecode);
             string base64String = UTF8_Code;
