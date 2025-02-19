@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraBars;
+using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -6,15 +7,20 @@ using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Reflection;
 using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Mihoyo_Tools {
     public partial class fr_Main : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm 
     {
+        private WebClient client;
         private Control_Genshin_usm _Genshin_usm;
         private Control_Mihoyo_resources _Mihoyo;
         private Control_About _About;
@@ -115,6 +121,77 @@ namespace Mihoyo_Tools {
                 process.Kill();
             }
             Process.GetCurrentProcess().Kill();
+        }
+
+        private void fr_Main_Shown(object sender, EventArgs e)
+        {
+            backgroundWorker1.RunWorkerAsync();
+        }
+        void Client_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
+        {
+            int progress = (int)(e.ProgressPercentage);
+            this.Invoke((MethodInvoker)delegate
+            {
+                //progressBar1.Value = progress;
+            });
+        }
+
+        void Client_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
+        {
+            this.Invoke((MethodInvoker)delegate
+            {
+                if (e.Error != null)
+                {
+                    //XtraMessageBox.Show("网络异常 \n" + e.Error.Message);
+                    XtraMessageBox.Show("网络异常： \n\n等网络恢复后，在【关于】页面更新最新 Key");
+                }
+                else if (e.Cancelled)
+                {
+                    //XtraMessageBox.Show("更新被取消");
+                }
+                else
+                {
+                    // XtraMessageBox.Show("已更新到最新版");
+                }
+            });
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            string ver_url = "";
+            ver_url = "https://gitee.com/haitangyunchi/Mihoyo_Tools/raw/master/Mihoyo_Tools/Upgrade/VerContrast.sdb";
+            string save_VerContrast = Path.GetTempPath() + @"\VerContrast.sdb";
+            client = new WebClient();
+            client.DownloadProgressChanged += new DownloadProgressChangedEventHandler(Client_DownloadProgressChanged);
+            client.DownloadFileCompleted += new AsyncCompletedEventHandler(Client_DownloadFileCompleted);
+            client.DownloadFileAsync(new Uri(ver_url), save_VerContrast);
+            GlobalVar.Upgrade_ver = INIFile.getString("VerContrast", "VerContrast", "B9E08017-5E71-4383-8B2A-D908EF2ED4DB", save_VerContrast);
+            GlobalVar.New_Info = INIFile.getString("VerContrast", "Info", "", save_VerContrast);
+            Thread.Sleep(1000);
+            XtraMessageBox.Show(GlobalVar.New_Info);
+            byte[] bytesToDecode = Convert.FromBase64String(GlobalVar.New_Info);
+            string UTF8_Code = Encoding.UTF8.GetString(bytesToDecode);
+            string base64String = UTF8_Code;
+
+            if (GlobalVar.Upgrade_ver == GlobalVar.VerContrast)
+            {
+                return;
+            }
+            else
+            {
+                //DialogResult result = XtraMessageBox.Show(base64String, GlobalVar.AuthorName, MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                DialogResult result = XtraMessageBox.Show(base64String, "发现新版本", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                // 判断用户的点击结果
+                if (result == DialogResult.OK)
+                {
+                    System.Diagnostics.Process.Start("https://www.123912.com/s/b6X3jv-4NtU3");
+                }
+                else if (result == DialogResult.Cancel)
+                {
+                    return;
+                }
+
+            }
         }
     }
 }
