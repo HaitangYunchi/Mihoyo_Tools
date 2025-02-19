@@ -1,5 +1,6 @@
 ﻿using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
+using DevExpress.XtraEditors.Filtering.Templates;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,6 +13,7 @@ using System.Linq;
 using System.Net;
 using System.Reflection;
 using System.Runtime.Remoting.Metadata.W3cXsd2001;
+using System.Security.Policy;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
@@ -52,6 +54,12 @@ namespace Mihoyo_Tools {
         private void fr_Main_Load(object sender, EventArgs e)
         {
             this.toolStripStatusLabel4.Text = GlobalVar.VersionNo;
+            string path = GlobalVar.StrPath + @"\data\versions.json";
+            string SaveFilesName = GlobalVar.StrPath + @"\data\versions.json.back";// 新增备份老 version.json
+            if (System.IO.File.Exists(path))//检查文件是否存在 true = 存在 flase = 不存在
+            {
+                System.IO.File.Copy(path, SaveFilesName, true);// 备份老 version.json
+            }
 
             Assembly assembly = typeof(Program).Assembly;
             AssemblyName name = new AssemblyName(assembly.FullName);
@@ -161,14 +169,14 @@ namespace Mihoyo_Tools {
             string ver_url = "";
             ver_url = "https://gitee.com/haitangyunchi/Mihoyo_Tools/raw/master/Mihoyo_Tools/Upgrade/VerContrast.sdb";
             string save_VerContrast = Path.GetTempPath() + @"\VerContrast.sdb";
-            client = new WebClient();
-            client.DownloadProgressChanged += new DownloadProgressChangedEventHandler(Client_DownloadProgressChanged);
-            client.DownloadFileCompleted += new AsyncCompletedEventHandler(Client_DownloadFileCompleted);
-            client.DownloadFileAsync(new Uri(ver_url), save_VerContrast);
-            GlobalVar.Upgrade_ver = INIFile.getString("VerContrast", "VerContrast", "B9E08017-5E71-4383-8B2A-D908EF2ED4DB", save_VerContrast);
-            GlobalVar.New_Info = INIFile.getString("VerContrast", "Verinfo", "", save_VerContrast);
+            using (WebClient client = new WebClient())
+            {
+                client.DownloadFile(new Uri(ver_url), save_VerContrast);
+                GlobalVar.Upgrade_ver = INIFile.getString("VerContrast", "VerContrast", "B9E08017-5E71-4383-8B2A-D908EF2ED4DB", save_VerContrast);
+                GlobalVar.New_Info = INIFile.getString("VerContrast", "Verinfo", "", save_VerContrast);
+            }
             Thread.Sleep(3000);
-            XtraMessageBox.Show(GlobalVar.Upgrade_ver);
+            //XtraMessageBox.Show(GlobalVar.Upgrade_ver);
             byte[] bytesToDecode = Convert.FromBase64String(GlobalVar.New_Info);
             string UTF8_Code = Encoding.UTF8.GetString(bytesToDecode);
             string base64String = UTF8_Code;
@@ -184,7 +192,8 @@ namespace Mihoyo_Tools {
                 // 判断用户的点击结果
                 if (result == DialogResult.OK)
                 {
-                    System.Diagnostics.Process.Start("https://www.123912.com/s/b6X3jv-4NtU3");
+                    System.Diagnostics.Process.Start("https://www.123912.com/s/b6X3jv-wNtU3");
+                    //System.Diagnostics.Process.Start("https://www.123865.com/s/b6X3jv-wNtU3");
                 }
                 else if (result == DialogResult.Cancel)
                 {

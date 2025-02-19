@@ -81,7 +81,7 @@ namespace Mihoyo_Tools
             {
                 if (e.Error != null)
                 {
-                    XtraMessageBox.Show("错误: " + e.Error.Message);
+                    XtraMessageBox.Show("错误:\n\n" + e.Error.Message);
                 }
                 else if (e.Cancelled)
                 {
