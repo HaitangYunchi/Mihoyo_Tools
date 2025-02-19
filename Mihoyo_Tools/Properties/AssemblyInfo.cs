@@ -4,12 +4,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Mihoyo_Tools")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("米哈游工具箱")]
+[assembly: AssemblyDescription("米哈游工具箱")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("海棠云螭（B站）海棠云螭（抖音）")]
 [assembly: AssemblyProduct("Mihoyo_Tools")]
-[assembly: AssemblyCopyright("Copyright ©  2025")]
+[assembly: AssemblyCopyright("HaitangYunchi Copyright ?  2025")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 // Setting ComVisible to false makes the types in this assembly not visible

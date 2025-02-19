@@ -95,6 +95,19 @@ namespace Mihoyo_Tools
             });
         }
 
-        
+        private void hyperlinkLabelControl_ToaHartor_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/ToaHartor/GI-cutscenes");
+        }
+
+        private void hyperlinkLabelControl_orilights_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/orilights/hoyo-files");
+        }
+
+        private void hyperlinkLabelControl_DevExpress_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.devexpress.com");
+        }
     }
 }

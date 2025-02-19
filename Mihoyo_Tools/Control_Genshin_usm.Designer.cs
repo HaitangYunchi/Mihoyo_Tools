@@ -56,6 +56,7 @@
             this.backgroundWorker_Game_path = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.progressBar = new System.Windows.Forms.ProgressBar();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel1)).BeginInit();
             this.splitContainerControl1.Panel1.SuspendLayout();
@@ -219,6 +220,7 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.labelControl7);
             this.groupControl1.Controls.Add(this.labelControl5);
             this.groupControl1.Controls.Add(this.labelControl4);
             this.groupControl1.Controls.Add(this.labelControl3);
@@ -238,7 +240,7 @@
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(91, 197);
+            this.labelControl5.Location = new System.Drawing.Point(89, 197);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(48, 14);
             this.labelControl5.TabIndex = 15;
@@ -254,15 +256,15 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(67, 125);
+            this.labelControl3.Location = new System.Drawing.Point(54, 125);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(72, 14);
+            this.labelControl3.Size = new System.Drawing.Size(83, 14);
             this.labelControl3.TabIndex = 17;
-            this.labelControl3.Text = "原神游戏目录";
+            this.labelControl3.Text = "原神游戏目录 *";
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(100, 89);
+            this.labelControl2.Location = new System.Drawing.Point(98, 89);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(39, 14);
             this.labelControl2.TabIndex = 18;
@@ -270,7 +272,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(63, 53);
+            this.labelControl1.Location = new System.Drawing.Point(61, 53);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(76, 14);
             this.labelControl1.TabIndex = 19;
@@ -362,6 +364,16 @@
             this.progressBar.TabIndex = 5;
             this.progressBar.Value = 100;
             // 
+            // labelControl7
+            // 
+            this.labelControl7.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.labelControl7.Appearance.Options.UseForeColor = true;
+            this.labelControl7.Location = new System.Drawing.Point(47, 243);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(241, 14);
+            this.labelControl7.TabIndex = 15;
+            this.labelControl7.Text = "* 原神游戏目录直接选择 Yuanshen.exe 即可";
+            // 
             // Control_Genshin_usm
             // 
             this.Appearance.BackColor = System.Drawing.SystemColors.Control;
@@ -425,5 +437,6 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker_Game_path;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.ProgressBar progressBar;
+        private DevExpress.XtraEditors.LabelControl labelControl7;
     }
 }
