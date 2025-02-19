@@ -12,6 +12,8 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.IO;
 using System.Diagnostics;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
+using System.Drawing.Text;
+using System.Threading;
 
 namespace Mihoyo_Tools
 {
@@ -197,6 +199,7 @@ namespace Mihoyo_Tools
             }
             else
             {
+                simpleButton_Stop.Enabled = false;
                 if (textEdit1.Text == "")
                 {
                     XtraMessageBox.Show("GICutscenes 程序不能为空！", GlobalVar.AuthorName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -401,34 +404,72 @@ namespace Mihoyo_Tools
         {
             simpleButton_Out.Text = "国语配音";
             GlobalVar.Out_Language = "0";
+            simpleButton_Stop.Enabled = false;
         }
 
         private void radioButton_EN_CheckedChanged(object sender, EventArgs e)
         {
             simpleButton_Out.Text = "英语配音";
             GlobalVar.Out_Language = "1";
+            simpleButton_Stop.Enabled = false;
         }
 
         private void radioButton_JP_CheckedChanged(object sender, EventArgs e)
         {
             simpleButton_Out.Text = "日语配音";
             GlobalVar.Out_Language = "2";
+            simpleButton_Stop.Enabled = false;
         }
 
         private void radioButton_KR_CheckedChanged(object sender, EventArgs e)
         {
             simpleButton_Out.Text = "韩语配音";
             GlobalVar.Out_Language = "3";
+            simpleButton_Stop.Enabled = false;
         }
 
         private void radioButton_Game_path_CheckedChanged(object sender, EventArgs e)
         {
             GlobalVar.Outdir = "1";
+            simpleButton_Stop.Enabled = true;
         }
 
         private void radioButton_usm_path_CheckedChanged(object sender, EventArgs e)
         {
             GlobalVar.Outdir = "2";
+            simpleButton_Stop.Enabled = true;
         }
+
+        private void simpleButton_Stop_Click(object sender, EventArgs e)
+        {
+            string processName = "GICutscenes"; // 查找的程序进程名称
+            Process[] processes = Process.GetProcessesByName(processName);
+            foreach (Process process in processes)
+            {
+                process.Kill();
+            }
+            Thread.Sleep(1000);
+            try
+            {
+                DirectoryInfo di = new DirectoryInfo(GlobalVar.Output_path);
+                FileInfo[] dii = di.GetFiles();
+                if (dii.Length != 0)
+                {
+                    foreach (FileInfo fi in dii)
+                    {
+                        if (fi.Extension == ".ivf" || fi.Extension == ".hca" || fi.Extension == ".wav")
+                        {
+                            fi.Delete();
+                        }
+                    }
+                }
+
+            }
+            catch
+            {
+                //XtraMessageBox.Show("删除失败", GlobalVar.AuthorName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
     }
 }

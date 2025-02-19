@@ -31,6 +31,7 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.simpleButton_Stop = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.simpleButton_Out = new DevExpress.XtraEditors.SimpleButton();
             this.buttonEdit_usm_Name = new DevExpress.XtraEditors.ButtonEdit();
@@ -41,6 +42,7 @@
             this.radioButton_EN = new System.Windows.Forms.RadioButton();
             this.radioButton_CN = new System.Windows.Forms.RadioButton();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
@@ -56,7 +58,6 @@
             this.backgroundWorker_Game_path = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.progressBar = new System.Windows.Forms.ProgressBar();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel1)).BeginInit();
             this.splitContainerControl1.Panel1.SuspendLayout();
@@ -105,6 +106,7 @@
             // 
             // groupControl2
             // 
+            this.groupControl2.Controls.Add(this.simpleButton_Stop);
             this.groupControl2.Controls.Add(this.labelControl6);
             this.groupControl2.Controls.Add(this.simpleButton_Out);
             this.groupControl2.Controls.Add(this.buttonEdit_usm_Name);
@@ -119,6 +121,16 @@
             this.groupControl2.Size = new System.Drawing.Size(528, 297);
             this.groupControl2.TabIndex = 8;
             this.groupControl2.Text = "导出设置";
+            // 
+            // simpleButton_Stop
+            // 
+            this.simpleButton_Stop.Enabled = false;
+            this.simpleButton_Stop.Location = new System.Drawing.Point(422, 224);
+            this.simpleButton_Stop.Name = "simpleButton_Stop";
+            this.simpleButton_Stop.Size = new System.Drawing.Size(68, 23);
+            this.simpleButton_Stop.TabIndex = 18;
+            this.simpleButton_Stop.Text = "停止导出";
+            this.simpleButton_Stop.Click += new System.EventHandler(this.simpleButton_Stop_Click);
             // 
             // labelControl6
             // 
@@ -237,6 +249,16 @@
             this.groupControl1.Size = new System.Drawing.Size(527, 292);
             this.groupControl1.TabIndex = 7;
             this.groupControl1.Text = "系统设置";
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.labelControl7.Appearance.Options.UseForeColor = true;
+            this.labelControl7.Location = new System.Drawing.Point(47, 243);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(241, 14);
+            this.labelControl7.TabIndex = 15;
+            this.labelControl7.Text = "* 原神游戏目录直接选择 Yuanshen.exe 即可";
             // 
             // labelControl5
             // 
@@ -364,16 +386,6 @@
             this.progressBar.TabIndex = 5;
             this.progressBar.Value = 100;
             // 
-            // labelControl7
-            // 
-            this.labelControl7.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.labelControl7.Appearance.Options.UseForeColor = true;
-            this.labelControl7.Location = new System.Drawing.Point(47, 243);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(241, 14);
-            this.labelControl7.TabIndex = 15;
-            this.labelControl7.Text = "* 原神游戏目录直接选择 Yuanshen.exe 即可";
-            // 
             // Control_Genshin_usm
             // 
             this.Appearance.BackColor = System.Drawing.SystemColors.Control;
@@ -438,5 +450,6 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.ProgressBar progressBar;
         private DevExpress.XtraEditors.LabelControl labelControl7;
+        private DevExpress.XtraEditors.SimpleButton simpleButton_Stop;
     }
 }

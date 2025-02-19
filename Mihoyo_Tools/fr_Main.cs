@@ -60,12 +60,12 @@ namespace Mihoyo_Tools {
             {
                 System.IO.File.Copy(path, SaveFilesName, true);// 备份老 version.json
             }
-
+            
             Assembly assembly = typeof(Program).Assembly;
             AssemblyName name = new AssemblyName(assembly.FullName);
             int majorVersion = (int)name.Version.Major;
             int minorVersion = (int)name.Version.Minor;
-
+            
             //根据GlobalVar对应变量值，修改显示版本信息；如需修改，请打开GlobalVar.cs文件，修改 Release 的值，注意类型是int;//  0  Alpha 内测版      1  bate 公测版      2  Release 正式版
             if (GlobalVar.Release == 0)
             {
@@ -128,6 +128,27 @@ namespace Mihoyo_Tools {
             {
                 process.Kill();
             }
+            Thread.Sleep(1000);
+            try
+            {
+                DirectoryInfo di = new DirectoryInfo(GlobalVar.Output_path);
+                FileInfo[] dii = di.GetFiles();
+                if (dii.Length != 0)
+                {
+                    foreach (FileInfo fi in dii)
+                    {
+                        if (fi.Extension == ".ivf" || fi.Extension == ".hca" || fi.Extension == ".wav")
+                        {
+                            fi.Delete();
+                        }
+                    }
+                }
+
+            }
+            catch
+            {
+                //XtraMessageBox.Show("删除失败", GlobalVar.AuthorName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
             Process.GetCurrentProcess().Kill();
         }
 
@@ -172,7 +193,7 @@ namespace Mihoyo_Tools {
             using (WebClient client = new WebClient())
             {
                 client.DownloadFile(new Uri(ver_url), save_VerContrast);
-                GlobalVar.Upgrade_ver = INIFile.getString("VerContrast", "VerContrast", "B9E08017-5E71-4383-8B2A-D908EF2ED4DB", save_VerContrast);
+                GlobalVar.Upgrade_ver = INIFile.getString("VerContrast", "VerContrast", "B9E08017-5E71-4383-8B2A-D908EF2ED4DY", save_VerContrast);
                 GlobalVar.New_Info = INIFile.getString("VerContrast", "Verinfo", "", save_VerContrast);
             }
             Thread.Sleep(3000);
