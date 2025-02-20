@@ -24,7 +24,7 @@ namespace Mihoyo_Tools
         public static string VersionNo= Assembly.GetExecutingAssembly().GetName().Version.ToString();
         public static int    Release = 1;//  0  Alpha 内测版      1  bate 公测版      2  Release 正式版
         public static string Upgrade_ver = "";//升级版本号
-        public static string VerContrast = "B9E08017-5E71-4383-8B2A-D908EF2ED4DY";// 版本唯一码
+        public static string VerContrast = "B9E08017-5E71-4383-8B2A-D908EF2ED4AA";// 版本唯一码
         public static string New_Info = "";
 
         public static string SoftTitle = "  原神过场动画导出工具 UI";

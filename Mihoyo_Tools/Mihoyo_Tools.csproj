@@ -161,7 +161,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="Upgrade\VerContrast.sdb" />
-    <None Include="VerContrast.sdb" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="data\7z.dll">

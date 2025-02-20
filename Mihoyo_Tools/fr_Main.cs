@@ -193,7 +193,7 @@ namespace Mihoyo_Tools {
             using (WebClient client = new WebClient())
             {
                 client.DownloadFile(new Uri(ver_url), save_VerContrast);
-                GlobalVar.Upgrade_ver = INIFile.getString("VerContrast", "VerContrast", "B9E08017-5E71-4383-8B2A-D908EF2ED4DY", save_VerContrast);
+                GlobalVar.Upgrade_ver = INIFile.getString("VerContrast", "VerContrast", GlobalVar.VerContrast, save_VerContrast);
                 GlobalVar.New_Info = INIFile.getString("VerContrast", "Verinfo", "", save_VerContrast);
             }
             Thread.Sleep(3000);

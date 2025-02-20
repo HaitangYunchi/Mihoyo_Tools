@@ -608,6 +608,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
         "Release"
@@ -615,7 +623,7 @@
         "DisplayName" = "8:Release"
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
-        "OutputFilename" = "8:Release\\Setup.msi"
+        "OutputFilename" = "8:Release\\Mihoyo_tools_bate_Setup.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -632,6 +640,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
     }
@@ -1812,15 +1828,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:米哈游工具箱"
-        "ProductCode" = "8:{53D72646-4193-4383-ABD6-BCB76540422D}"
-        "PackageCode" = "8:{2829BA9B-858E-479A-B7BA-80599DC8A1E5}"
+        "ProductCode" = "8:{1DC570E9-9D29-47B9-9778-E777DA58262F}"
+        "PackageCode" = "8:{48D70B59-BE83-4574-89AA-794BEEA7FD56}"
         "UpgradeCode" = "8:{48FACF11-33D4-483C-8E7E-FE50951E5A8E}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.1"
+        "ProductVersion" = "8:1.0.2"
         "Manufacturer" = "8:海棠云螭"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:https://space.bilibili.com/3493128132626725"
@@ -1964,7 +1980,7 @@
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_EB084A1DBF3C43F7AF70014D4A0F5A4D"
             {
             "Name" = "8:卸载"
-            "Arguments" = "8:/X {C36AAEC7-FB2B-4693-98B7-23A75D187526}"
+            "Arguments" = "8:/X {1DC570E9-9D29-47B9-9778-E777DA58262F}"
             "Description" = "8:"
             "ShowCmd" = "3:1"
             "IconIndex" = "3:1"
@@ -2400,6 +2416,7 @@
             "ShowKeyOutput" = "11:TRUE"
                 "ExcludeFilters"
                 {
+                "ExcludeFilter" = "8:Config.ini"
                 }
             }
         }
