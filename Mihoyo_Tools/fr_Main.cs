@@ -65,7 +65,7 @@ namespace Mihoyo_Tools {
             AssemblyName name = new AssemblyName(assembly.FullName);
             int majorVersion = (int)name.Version.Major;
             int minorVersion = (int)name.Version.Minor;
-            
+
             //根据GlobalVar对应变量值，修改显示版本信息；如需修改，请打开GlobalVar.cs文件，修改 Release 的值，注意类型是int;//  0  Alpha 内测版      1  bate 公测版      2  Release 正式版
             if (GlobalVar.Release == 0)
             {
