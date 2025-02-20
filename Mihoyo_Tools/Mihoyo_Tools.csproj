@@ -91,7 +91,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChineseCalendar.cs" />
+    <Compile Include="ChinaDate.cs" />
     <Compile Include="Control_About.cs">
       <SubType>UserControl</SubType>
     </Compile>
