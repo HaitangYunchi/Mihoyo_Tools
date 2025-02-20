@@ -1,18 +1,18 @@
-<h1 align="center">米哈游工具箱（原神过场动画导出工具）</h1>
+﻿<h1 align="center">米哈游工具箱（原神过场动画导出工具）</h1>
 
 <p align="center">
-    <img src="https://gitee.com/haitangyunchi/genshin_usm/raw/master/images/icon.png" height="360px" align="center">
+    <img src="./Mihoyo_Tools/Readme_images/icon.png" height="360px" align="center">
 </p>
 <p align="center">
     <strong> <a href="https://github.com/ToaHartor/GI-cutscenes">Genshin Cutscenes Demuxer</a> 的用户界面</strong>
 </p>
 <p align="center">
-    <img src="https://shields.io/badge/version-v1.0.0_bate-blue"></br>
+    <img src="https://shields.io/badge/version-v1.1_Release-blue"></br>
 </p>
 
 ## 软件截图(Screenshots):
 <p align="center">
-<img src="https://gitee.com/haitangyunchi/resources/raw/master/about.png" >
+<img src="./Mihoyo_Tools/Readme_images/about.png" >
 </p>
 <BR>
 <BR>
@@ -65,8 +65,8 @@ Add the `ffplay.exe` file next to the exe file you are running.
 替换 `ffplay.exe` 文件到原有目录。
 <BR>
 <BR>
-<img align="center" src="https://gitee.com/haitangyunchi/resources/raw/master/about.png" >
+<img align="center" src="./Mihoyo_Tools/Readme_images/about.png" >
 <BR>
-<img align="center" src="https://gitee.com/haitangyunchi/resources/raw/master/usm.png" >
+<img align="center" src="./Mihoyo_Tools/Readme_images/usm.png" >
 <BR>
-<img align="center" src="https://gitee.com/haitangyunchi/resources/raw/master/web.png" >
+<img align="center" src="./Mihoyo_Tools/Readme_images/web.png" >
