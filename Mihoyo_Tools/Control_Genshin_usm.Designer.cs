@@ -144,9 +144,9 @@
             // 
             this.simpleButton_Out.Appearance.Font = new System.Drawing.Font("楷体", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.simpleButton_Out.Appearance.Options.UseFont = true;
-            this.simpleButton_Out.Location = new System.Drawing.Point(41, 187);
+            this.simpleButton_Out.Location = new System.Drawing.Point(118, 187);
             this.simpleButton_Out.Name = "simpleButton_Out";
-            this.simpleButton_Out.Size = new System.Drawing.Size(344, 60);
+            this.simpleButton_Out.Size = new System.Drawing.Size(267, 60);
             this.simpleButton_Out.TabIndex = 16;
             this.simpleButton_Out.Text = "国语配音";
             this.simpleButton_Out.Click += new System.EventHandler(this.simpleButton_Out_Click);

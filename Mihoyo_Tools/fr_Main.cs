@@ -107,7 +107,7 @@ namespace Mihoyo_Tools {
             DateTime now = DateTime.Now;
             string[] Day = new string[] { "星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六" };
             var week = Day[Convert.ToInt16(DateTime.Now.DayOfWeek)];
-            toolStripStatusLabel3.Text = $" 当前时间：{now:yyyy-MM-dd HH:mm:ss}  {week}   " + ChinaDate.GetChinaDate(DateTime.Now); 
+            toolStripStatusLabel3.Text = $" 当前时间：{now:yyyy-MM-dd HH:mm:ss}  {week} ";
         }
 
         private void toolStripStatusLabel2_Click(object sender, EventArgs e)

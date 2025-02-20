@@ -430,14 +430,12 @@ namespace Mihoyo_Tools
 
         private void radioButton_Game_path_CheckedChanged(object sender, EventArgs e)
         {
-            simpleButton_Out.Text = "游戏目录导出";
             GlobalVar.Outdir = "1";
             simpleButton_Stop.Enabled = true;
         }
 
         private void radioButton_usm_path_CheckedChanged(object sender, EventArgs e)
         {
-            simpleButton_Out.Text = "自定义目录导出";
             GlobalVar.Outdir = "2";
             simpleButton_Stop.Enabled = true;
         }
