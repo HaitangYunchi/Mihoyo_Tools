@@ -22,7 +22,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 namespace Mihoyo_Tools {
     public partial class fr_Main : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm 
     {
-        private WebClient client;
+       // private WebClient client;
         private Control_Genshin_usm _Genshin_usm;
         private Control_Mihoyo_resources _Mihoyo;
         private Control_About _About;
