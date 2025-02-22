@@ -26,17 +26,25 @@ namespace Mihoyo_Tools {
         private Control_Genshin_usm _Genshin_usm;
         private Control_Mihoyo_resources _Mihoyo;
         private Control_About _About;
+        private Control_Account _Account;
+
         public fr_Main() 
         {
             InitializeComponent();
             _Genshin_usm = new Control_Genshin_usm();
             _Genshin_usm.Dock = DockStyle.Fill;
+
             _Mihoyo = new Control_Mihoyo_resources();
             _Mihoyo.Dock = DockStyle.Fill;
+
             _About = new Control_About();
             _About.Dock = DockStyle.Fill;
-        }
 
+            _Account = new Control_Account();
+            _Account.Dock = DockStyle.Fill;
+
+        }
+        
         private void Element_ys_usm_Click(object sender, EventArgs e)
         {
             fr_Main_Container.Controls.Clear();
@@ -49,6 +57,12 @@ namespace Mihoyo_Tools {
             fr_Main_Container.Controls.Clear();
             _Mihoyo.Show();
             fr_Main_Container.Controls.Add(_Mihoyo);
+        }
+        private void Element_Account_Click(object sender, EventArgs e)
+        {
+            fr_Main_Container.Controls.Clear();
+            _Account.Show();
+            fr_Main_Container.Controls.Add(_Account);
         }
 
         private void fr_Main_Load(object sender, EventArgs e)
@@ -223,5 +237,7 @@ namespace Mihoyo_Tools {
 
             }
         }
+
+        
     }
 }

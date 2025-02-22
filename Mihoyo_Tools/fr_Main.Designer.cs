@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fr_Main));
             this.fr_Main_Container = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
-            this.Element_usm = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.Element_Tools = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.Element_ys_usm = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.lElement_Rex = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.Element_mihoyo_rex = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -49,6 +49,7 @@
             this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.Element_Account = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).BeginInit();
@@ -67,7 +68,7 @@
             // 
             this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.Element_usm,
+            this.Element_Tools,
             this.lElement_Rex,
             this.Element_about});
             this.accordionControl1.Location = new System.Drawing.Point(0, 31);
@@ -77,14 +78,15 @@
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
-            // Element_usm
+            // Element_Tools
             // 
-            this.Element_usm.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.Element_ys_usm});
-            this.Element_usm.Expanded = true;
-            this.Element_usm.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Element_usm.ImageOptions.Image")));
-            this.Element_usm.Name = "Element_usm";
-            this.Element_usm.Text = "USM 工具";
+            this.Element_Tools.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.Element_ys_usm,
+            this.Element_Account});
+            this.Element_Tools.Expanded = true;
+            this.Element_Tools.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Element_usm.ImageOptions.Image")));
+            this.Element_Tools.Name = "Element_Tools";
+            this.Element_Tools.Text = "工具";
             // 
             // Element_ys_usm
             // 
@@ -215,6 +217,13 @@
             // 
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             // 
+            // Element_Account
+            // 
+            this.Element_Account.Name = "Element_Account";
+            this.Element_Account.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.Element_Account.Text = "账号切换";
+            this.Element_Account.Click += new System.EventHandler(this.Element_Account_Click);
+            // 
             // fr_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -249,7 +258,7 @@
         private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer fr_Main_Container;
         private DevExpress.XtraBars.Navigation.AccordionControl accordionControl1;
         private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl fluentDesignFormControl1;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement Element_usm;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement Element_Tools;
         private DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager fluentFormDefaultManager1;
         private DevExpress.XtraBars.SkinDropDownButtonItem skinDropDownButtonItem1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement Element_ys_usm;
@@ -265,5 +274,6 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel5;
         private System.Windows.Forms.Timer timer1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement Element_Account;
     }
 }

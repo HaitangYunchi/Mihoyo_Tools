@@ -136,6 +136,12 @@
     <Compile Include="Control_About.Designer.cs">
       <DependentUpon>Control_About.cs</DependentUpon>
     </Compile>
+    <Compile Include="Control_Account.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control_Account.Designer.cs">
+      <DependentUpon>Control_Account.cs</DependentUpon>
+    </Compile>
     <Compile Include="Control_Genshin_usm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -160,6 +166,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Control_About.resx">
       <DependentUpon>Control_About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control_Account.resx">
+      <DependentUpon>Control_Account.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Control_Genshin_usm.resx">
       <DependentUpon>Control_Genshin_usm.cs</DependentUpon>
