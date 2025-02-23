@@ -42,10 +42,10 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtGenshinStartParam = new DevExpress.XtraEditors.TextEdit();
+            this.ToolTipContoller = new DevExpress.Utils.ToolTipController(this.components);
             this.txtGenshinPath = new DevExpress.XtraEditors.TextEdit();
             this.tabPageSatrRail = new DevExpress.XtraTab.XtraTabPage();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.btnStarRailStart = new DevExpress.XtraEditors.SimpleButton();
             this.btnStarRailDelete = new DevExpress.XtraEditors.SimpleButton();
             this.btnStarRailAdd = new DevExpress.XtraEditors.SimpleButton();
             this.chkStarRailAutoStart = new System.Windows.Forms.CheckBox();
@@ -58,11 +58,6 @@
             this.txtStarRailStartParam = new DevExpress.XtraEditors.TextEdit();
             this.txtStarRailPath = new DevExpress.XtraEditors.TextEdit();
             this.tabPageHonkaiImpact3 = new DevExpress.XtraTab.XtraTabPage();
-            this.tabPageGenshinCloud = new DevExpress.XtraTab.XtraTabPage();
-            this.tabPageGenshinOversea = new DevExpress.XtraTab.XtraTabPage();
-            this.tabPageSatrRailOversea = new DevExpress.XtraTab.XtraTabPage();
-            this.tabPageZZZ = new DevExpress.XtraTab.XtraTabPage();
-            this.ToolTipContoller = new DevExpress.Utils.ToolTipController(this.components);
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.btnHonkaiImpact3Delete = new DevExpress.XtraEditors.SimpleButton();
             this.btnHonkaiImpact3Add = new DevExpress.XtraEditors.SimpleButton();
@@ -75,6 +70,7 @@
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.txtHonkaiImpact3StartParam = new DevExpress.XtraEditors.TextEdit();
             this.txtHonkaiImpact3Path = new DevExpress.XtraEditors.TextEdit();
+            this.tabPageGenshinCloud = new DevExpress.XtraTab.XtraTabPage();
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
             this.btnGenshinCloudDelete = new DevExpress.XtraEditors.SimpleButton();
             this.btnGenshinCloudAdd = new DevExpress.XtraEditors.SimpleButton();
@@ -85,6 +81,7 @@
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
             this.txtGenshinCloudPath = new DevExpress.XtraEditors.TextEdit();
+            this.tabPageGenshinOversea = new DevExpress.XtraTab.XtraTabPage();
             this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
             this.btnGenshinOverseaDelete = new DevExpress.XtraEditors.SimpleButton();
             this.btnGenshinOverseaAdd = new DevExpress.XtraEditors.SimpleButton();
@@ -97,6 +94,7 @@
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
             this.txtGenshinOverseaStartParam = new DevExpress.XtraEditors.TextEdit();
             this.txtGenshinOverseaPath = new DevExpress.XtraEditors.TextEdit();
+            this.tabPageSatrRailOversea = new DevExpress.XtraTab.XtraTabPage();
             this.groupControl6 = new DevExpress.XtraEditors.GroupControl();
             this.btnStarRailOverseaDelete = new DevExpress.XtraEditors.SimpleButton();
             this.btnStarRailOverseaAdd = new DevExpress.XtraEditors.SimpleButton();
@@ -109,6 +107,7 @@
             this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
             this.txtStarRailOverseaStartParam = new DevExpress.XtraEditors.TextEdit();
             this.txtStarRailOverseaPath = new DevExpress.XtraEditors.TextEdit();
+            this.tabPageZZZ = new DevExpress.XtraTab.XtraTabPage();
             this.groupControl7 = new DevExpress.XtraEditors.GroupControl();
             this.btnZZZDelete = new DevExpress.XtraEditors.SimpleButton();
             this.btnZZZAdd = new DevExpress.XtraEditors.SimpleButton();
@@ -121,8 +120,6 @@
             this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
             this.txtZZZStartParam = new DevExpress.XtraEditors.TextEdit();
             this.txtZZZPath = new DevExpress.XtraEditors.TextEdit();
-            this.btnStarRailOverseaStart = new DevExpress.XtraEditors.SimpleButton();
-            this.btnZZZStart = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.tabPageGenshin.SuspendLayout();
@@ -138,29 +135,29 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtStarRailStartParam.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStarRailPath.Properties)).BeginInit();
             this.tabPageHonkaiImpact3.SuspendLayout();
-            this.tabPageGenshinCloud.SuspendLayout();
-            this.tabPageGenshinOversea.SuspendLayout();
-            this.tabPageSatrRailOversea.SuspendLayout();
-            this.tabPageZZZ.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lvwHonkaiImpact3Acct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHonkaiImpact3StartParam.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHonkaiImpact3Path.Properties)).BeginInit();
+            this.tabPageGenshinCloud.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
             this.groupControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lvwGenshinCloudAcct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGenshinCloudPath.Properties)).BeginInit();
+            this.tabPageGenshinOversea.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
             this.groupControl5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lvwGenshinOverseaAcct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGenshinOverseaStartParam.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGenshinOverseaPath.Properties)).BeginInit();
+            this.tabPageSatrRailOversea.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl6)).BeginInit();
             this.groupControl6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lvwStarRailOverseaAcct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStarRailOverseaStartParam.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStarRailOverseaPath.Properties)).BeginInit();
+            this.tabPageZZZ.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl7)).BeginInit();
             this.groupControl7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lvwZZZAcct)).BeginInit();
@@ -314,6 +311,11 @@
     "reen-width 1920 -screen-height 1080";
             this.txtGenshinStartParam.ToolTipController = this.ToolTipContoller;
             // 
+            // ToolTipContoller
+            // 
+            this.ToolTipContoller.KeepWhileHovered = true;
+            this.ToolTipContoller.ReshowDelay = 500;
+            // 
             // txtGenshinPath
             // 
             this.txtGenshinPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -336,7 +338,6 @@
             this.groupControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupControl2.Controls.Add(this.btnStarRailStart);
             this.groupControl2.Controls.Add(this.btnStarRailDelete);
             this.groupControl2.Controls.Add(this.btnStarRailAdd);
             this.groupControl2.Controls.Add(this.chkStarRailAutoStart);
@@ -353,14 +354,6 @@
             this.groupControl2.Size = new System.Drawing.Size(1205, 655);
             this.groupControl2.TabIndex = 1;
             this.groupControl2.Text = "帐号切换";
-            // 
-            // btnStarRailStart
-            // 
-            this.btnStarRailStart.Location = new System.Drawing.Point(1079, 255);
-            this.btnStarRailStart.Name = "btnStarRailStart";
-            this.btnStarRailStart.Size = new System.Drawing.Size(97, 23);
-            this.btnStarRailStart.TabIndex = 8;
-            this.btnStarRailStart.Text = "启动游戏";
             // 
             // btnStarRailDelete
             // 
@@ -475,39 +468,6 @@
             this.tabPageHonkaiImpact3.Name = "tabPageHonkaiImpact3";
             this.tabPageHonkaiImpact3.Size = new System.Drawing.Size(1261, 715);
             this.tabPageHonkaiImpact3.Text = " 崩坏3 ";
-            // 
-            // tabPageGenshinCloud
-            // 
-            this.tabPageGenshinCloud.Controls.Add(this.groupControl4);
-            this.tabPageGenshinCloud.Name = "tabPageGenshinCloud";
-            this.tabPageGenshinCloud.Size = new System.Drawing.Size(1261, 715);
-            this.tabPageGenshinCloud.Text = " 云 原神 ";
-            // 
-            // tabPageGenshinOversea
-            // 
-            this.tabPageGenshinOversea.Controls.Add(this.groupControl5);
-            this.tabPageGenshinOversea.Name = "tabPageGenshinOversea";
-            this.tabPageGenshinOversea.Size = new System.Drawing.Size(1261, 715);
-            this.tabPageGenshinOversea.Text = " 原神（国际服） ";
-            // 
-            // tabPageSatrRailOversea
-            // 
-            this.tabPageSatrRailOversea.Controls.Add(this.groupControl6);
-            this.tabPageSatrRailOversea.Name = "tabPageSatrRailOversea";
-            this.tabPageSatrRailOversea.Size = new System.Drawing.Size(1261, 715);
-            this.tabPageSatrRailOversea.Text = " 崩坏:星穹铁道（国际服） ";
-            // 
-            // tabPageZZZ
-            // 
-            this.tabPageZZZ.Controls.Add(this.groupControl7);
-            this.tabPageZZZ.Name = "tabPageZZZ";
-            this.tabPageZZZ.Size = new System.Drawing.Size(1261, 715);
-            this.tabPageZZZ.Text = " 绝区零 ";
-            // 
-            // ToolTipContoller
-            // 
-            this.ToolTipContoller.KeepWhileHovered = true;
-            this.ToolTipContoller.ReshowDelay = 500;
             // 
             // groupControl3
             // 
@@ -639,6 +599,13 @@
             this.txtHonkaiImpact3Path.Size = new System.Drawing.Size(1036, 20);
             this.txtHonkaiImpact3Path.TabIndex = 0;
             // 
+            // tabPageGenshinCloud
+            // 
+            this.tabPageGenshinCloud.Controls.Add(this.groupControl4);
+            this.tabPageGenshinCloud.Name = "tabPageGenshinCloud";
+            this.tabPageGenshinCloud.Size = new System.Drawing.Size(1261, 715);
+            this.tabPageGenshinCloud.Text = " 云 原神 ";
+            // 
             // groupControl4
             // 
             this.groupControl4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -746,6 +713,13 @@
             this.txtGenshinCloudPath.Name = "txtGenshinCloudPath";
             this.txtGenshinCloudPath.Size = new System.Drawing.Size(1036, 20);
             this.txtGenshinCloudPath.TabIndex = 0;
+            // 
+            // tabPageGenshinOversea
+            // 
+            this.tabPageGenshinOversea.Controls.Add(this.groupControl5);
+            this.tabPageGenshinOversea.Name = "tabPageGenshinOversea";
+            this.tabPageGenshinOversea.Size = new System.Drawing.Size(1261, 715);
+            this.tabPageGenshinOversea.Text = " 原神（国际服） ";
             // 
             // groupControl5
             // 
@@ -877,12 +851,18 @@
             this.txtGenshinOverseaPath.Size = new System.Drawing.Size(1036, 20);
             this.txtGenshinOverseaPath.TabIndex = 0;
             // 
+            // tabPageSatrRailOversea
+            // 
+            this.tabPageSatrRailOversea.Controls.Add(this.groupControl6);
+            this.tabPageSatrRailOversea.Name = "tabPageSatrRailOversea";
+            this.tabPageSatrRailOversea.Size = new System.Drawing.Size(1261, 715);
+            this.tabPageSatrRailOversea.Text = " 崩坏:星穹铁道（国际服） ";
+            // 
             // groupControl6
             // 
             this.groupControl6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupControl6.Controls.Add(this.btnStarRailOverseaStart);
             this.groupControl6.Controls.Add(this.btnStarRailOverseaDelete);
             this.groupControl6.Controls.Add(this.btnStarRailOverseaAdd);
             this.groupControl6.Controls.Add(this.chkStarRailOverseaAutoStart);
@@ -1008,12 +988,18 @@
             this.txtStarRailOverseaPath.Size = new System.Drawing.Size(1036, 20);
             this.txtStarRailOverseaPath.TabIndex = 0;
             // 
+            // tabPageZZZ
+            // 
+            this.tabPageZZZ.Controls.Add(this.groupControl7);
+            this.tabPageZZZ.Name = "tabPageZZZ";
+            this.tabPageZZZ.Size = new System.Drawing.Size(1261, 715);
+            this.tabPageZZZ.Text = " 绝区零 ";
+            // 
             // groupControl7
             // 
             this.groupControl7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupControl7.Controls.Add(this.btnZZZStart);
             this.groupControl7.Controls.Add(this.btnZZZDelete);
             this.groupControl7.Controls.Add(this.btnZZZAdd);
             this.groupControl7.Controls.Add(this.chkZZZAutoStart);
@@ -1139,22 +1125,6 @@
             this.txtZZZPath.Size = new System.Drawing.Size(1036, 20);
             this.txtZZZPath.TabIndex = 0;
             // 
-            // btnStarRailOverseaStart
-            // 
-            this.btnStarRailOverseaStart.Location = new System.Drawing.Point(1079, 255);
-            this.btnStarRailOverseaStart.Name = "btnStarRailOverseaStart";
-            this.btnStarRailOverseaStart.Size = new System.Drawing.Size(97, 23);
-            this.btnStarRailOverseaStart.TabIndex = 9;
-            this.btnStarRailOverseaStart.Text = "启动游戏";
-            // 
-            // btnZZZStart
-            // 
-            this.btnZZZStart.Location = new System.Drawing.Point(1079, 255);
-            this.btnZZZStart.Name = "btnZZZStart";
-            this.btnZZZStart.Size = new System.Drawing.Size(97, 23);
-            this.btnZZZStart.TabIndex = 9;
-            this.btnZZZStart.Text = "启动游戏";
-            // 
             // Control_Account
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -1179,33 +1149,33 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtStarRailStartParam.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStarRailPath.Properties)).EndInit();
             this.tabPageHonkaiImpact3.ResumeLayout(false);
-            this.tabPageGenshinCloud.ResumeLayout(false);
-            this.tabPageGenshinOversea.ResumeLayout(false);
-            this.tabPageSatrRailOversea.ResumeLayout(false);
-            this.tabPageZZZ.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
             this.groupControl3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lvwHonkaiImpact3Acct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHonkaiImpact3StartParam.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHonkaiImpact3Path.Properties)).EndInit();
+            this.tabPageGenshinCloud.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
             this.groupControl4.ResumeLayout(false);
             this.groupControl4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lvwGenshinCloudAcct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGenshinCloudPath.Properties)).EndInit();
+            this.tabPageGenshinOversea.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
             this.groupControl5.ResumeLayout(false);
             this.groupControl5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lvwGenshinOverseaAcct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGenshinOverseaStartParam.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGenshinOverseaPath.Properties)).EndInit();
+            this.tabPageSatrRailOversea.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl6)).EndInit();
             this.groupControl6.ResumeLayout(false);
             this.groupControl6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lvwStarRailOverseaAcct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStarRailOverseaStartParam.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStarRailOverseaPath.Properties)).EndInit();
+            this.tabPageZZZ.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl7)).EndInit();
             this.groupControl7.ResumeLayout(false);
             this.groupControl7.PerformLayout();
@@ -1250,7 +1220,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraEditors.TextEdit txtStarRailStartParam;
         private DevExpress.XtraEditors.TextEdit txtStarRailPath;
-        private DevExpress.XtraEditors.SimpleButton btnStarRailStart;
         public DevExpress.Utils.ToolTipController ToolTipContoller;
         private DevExpress.XtraEditors.GroupControl groupControl3;
         private DevExpress.XtraEditors.SimpleButton btnHonkaiImpact3Delete;
@@ -1287,7 +1256,6 @@
         private DevExpress.XtraEditors.TextEdit txtGenshinOverseaStartParam;
         private DevExpress.XtraEditors.TextEdit txtGenshinOverseaPath;
         private DevExpress.XtraEditors.GroupControl groupControl6;
-        private DevExpress.XtraEditors.SimpleButton btnStarRailOverseaStart;
         private DevExpress.XtraEditors.SimpleButton btnStarRailOverseaDelete;
         private DevExpress.XtraEditors.SimpleButton btnStarRailOverseaAdd;
         private System.Windows.Forms.CheckBox chkStarRailOverseaAutoStart;
@@ -1300,7 +1268,6 @@
         private DevExpress.XtraEditors.TextEdit txtStarRailOverseaStartParam;
         private DevExpress.XtraEditors.TextEdit txtStarRailOverseaPath;
         private DevExpress.XtraEditors.GroupControl groupControl7;
-        private DevExpress.XtraEditors.SimpleButton btnZZZStart;
         private DevExpress.XtraEditors.SimpleButton btnZZZDelete;
         private DevExpress.XtraEditors.SimpleButton btnZZZAdd;
         private System.Windows.Forms.CheckBox chkZZZAutoStart;
