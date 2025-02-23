@@ -34,6 +34,7 @@
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.Element_Tools = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.Element_ys_usm = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.Element_Account = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.lElement_Rex = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.Element_mihoyo_rex = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.Element_about = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -49,7 +50,6 @@
             this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.Element_Account = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).BeginInit();
@@ -84,7 +84,7 @@
             this.Element_ys_usm,
             this.Element_Account});
             this.Element_Tools.Expanded = true;
-            this.Element_Tools.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Element_usm.ImageOptions.Image")));
+            this.Element_Tools.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Element_Tools.ImageOptions.Image")));
             this.Element_Tools.Name = "Element_Tools";
             this.Element_Tools.Text = "工具";
             // 
@@ -95,6 +95,13 @@
             this.Element_ys_usm.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.Element_ys_usm.Text = "原神USM导出工具";
             this.Element_ys_usm.Click += new System.EventHandler(this.Element_ys_usm_Click);
+            // 
+            // Element_Account
+            // 
+            this.Element_Account.Name = "Element_Account";
+            this.Element_Account.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.Element_Account.Text = "账号管理";
+            this.Element_Account.Click += new System.EventHandler(this.Element_Account_Click);
             // 
             // lElement_Rex
             // 
@@ -216,13 +223,6 @@
             // backgroundWorker1
             // 
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
-            // 
-            // Element_Account
-            // 
-            this.Element_Account.Name = "Element_Account";
-            this.Element_Account.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.Element_Account.Text = "账号切换";
-            this.Element_Account.Click += new System.EventHandler(this.Element_Account_Click);
             // 
             // fr_Main
             // 

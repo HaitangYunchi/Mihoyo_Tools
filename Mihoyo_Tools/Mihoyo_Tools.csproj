@@ -224,6 +224,8 @@
     <Content Include="Readme_images\usm.png" />
     <Content Include="Readme_images\web.png" />
     <Content Include="Resources\about.png" />
+    <Content Include="Resources\attention.png" />
+    <Content Include="Resources\hutao.ico" />
     <Content Include="Resources\icon.ico" />
     <Content Include="Resources\icon.png" />
     <Content Include="Resources\qq.jpg" />

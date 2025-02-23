@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraBars;
+﻿using DevExpress.LookAndFeel;
+using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Filtering.Templates;
 using System;
@@ -31,6 +32,7 @@ namespace Mihoyo_Tools {
         public fr_Main() 
         {
             InitializeComponent();
+
             _Genshin_usm = new Control_Genshin_usm();
             _Genshin_usm.Dock = DockStyle.Fill;
 
@@ -44,7 +46,7 @@ namespace Mihoyo_Tools {
             _Account.Dock = DockStyle.Fill;
 
         }
-        
+
         private void Element_ys_usm_Click(object sender, EventArgs e)
         {
             fr_Main_Container.Controls.Clear();
