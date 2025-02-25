@@ -37,6 +37,7 @@ namespace Mihoyo_Tools
         }
         private void ConfigureGrid()
         {
+            #region 原神账号列表
             // 列配置
             gridView1.Columns.Clear();
             gridView1.Columns.Add(new DevExpress.XtraGrid.Columns.GridColumn()
@@ -52,6 +53,116 @@ namespace Mihoyo_Tools
             gridView1.OptionsBehavior.Editable = false;
             gridView1.OptionsSelection.MultiSelect = true;
             gridView1.OptionsSelection.MultiSelectMode = GridMultiSelectMode.RowSelect;
+            #endregion
+
+            #region 崩坏：星穹铁道账号列表
+            // 列配置
+            gridView2.Columns.Clear();
+            gridView2.Columns.Add(new DevExpress.XtraGrid.Columns.GridColumn()
+            {
+                FieldName = "AccountName",
+                Caption = "账号名称",
+                VisibleIndex = 0,
+                Width = 200
+            });
+
+            // 网格设置
+            gridView2.OptionsView.ShowGroupPanel = false;
+            gridView2.OptionsBehavior.Editable = false;
+            gridView2.OptionsSelection.MultiSelect = true;
+            gridView2.OptionsSelection.MultiSelectMode = GridMultiSelectMode.RowSelect;
+            #endregion
+
+            #region 崩坏3账号列表
+            // 列配置
+            gridView3.Columns.Clear();
+            gridView3.Columns.Add(new DevExpress.XtraGrid.Columns.GridColumn()
+            {
+                FieldName = "AccountName",
+                Caption = "账号名称",
+                VisibleIndex = 0,
+                Width = 200
+            });
+
+            // 网格设置
+            gridView3.OptionsView.ShowGroupPanel = false;
+            gridView3.OptionsBehavior.Editable = false;
+            gridView3.OptionsSelection.MultiSelect = true;
+            gridView3.OptionsSelection.MultiSelectMode = GridMultiSelectMode.RowSelect;
+            #endregion
+
+            #region 云原神账号列表
+            // 列配置
+            gridView4.Columns.Clear();
+            gridView4.Columns.Add(new DevExpress.XtraGrid.Columns.GridColumn()
+            {
+                FieldName = "AccountName",
+                Caption = "账号名称",
+                VisibleIndex = 0,
+                Width = 200
+            });
+
+            // 网格设置
+            gridView4.OptionsView.ShowGroupPanel = false;
+            gridView4.OptionsBehavior.Editable = false;
+            gridView4.OptionsSelection.MultiSelect = true;
+            gridView4.OptionsSelection.MultiSelectMode = GridMultiSelectMode.RowSelect;
+            #endregion
+
+            #region 原神国际服账号列表
+            // 列配置
+            gridView5.Columns.Clear();
+            gridView5.Columns.Add(new DevExpress.XtraGrid.Columns.GridColumn()
+            {
+                FieldName = "AccountName",
+                Caption = "账号名称",
+                VisibleIndex = 0,
+                Width = 200
+            });
+
+            // 网格设置
+            gridView5.OptionsView.ShowGroupPanel = false;
+            gridView5.OptionsBehavior.Editable = false;
+            gridView5.OptionsSelection.MultiSelect = true;
+            gridView5.OptionsSelection.MultiSelectMode = GridMultiSelectMode.RowSelect;
+            #endregion
+
+            #region 崩坏：星穹铁道国际服账号列表
+            // 列配置
+            gridView6.Columns.Clear();
+            gridView6.Columns.Add(new DevExpress.XtraGrid.Columns.GridColumn()
+            {
+                FieldName = "AccountName",
+                Caption = "账号名称",
+                VisibleIndex = 0,
+                Width = 200
+            });
+
+            // 网格设置
+            gridView6.OptionsView.ShowGroupPanel = false;
+            gridView6.OptionsBehavior.Editable = false;
+            gridView6.OptionsSelection.MultiSelect = true;
+            gridView6.OptionsSelection.MultiSelectMode = GridMultiSelectMode.RowSelect;
+            #endregion
+
+            #region 绝区零账号列表
+            // 列配置
+            gridView7.Columns.Clear();
+            gridView7.Columns.Add(new DevExpress.XtraGrid.Columns.GridColumn()
+            {
+                FieldName = "AccountName",
+                Caption = "账号名称",
+                VisibleIndex = 0,
+                Width = 200
+            });
+
+            // 网格设置
+            gridView7.OptionsView.ShowGroupPanel = false;
+            gridView7.OptionsBehavior.Editable = false;
+            gridView7.OptionsSelection.MultiSelect = true;
+            gridView7.OptionsSelection.MultiSelectMode = GridMultiSelectMode.RowSelect;
+            #endregion
+
         }
         #endregion
         #region 数据操作
@@ -140,7 +251,7 @@ namespace Mihoyo_Tools
             }
             catch
             {
-                XtraMessageBox.Show($"解密失败：密钥可能被篡改或跨用户访问");
+                XtraMessageBox.Show($"【账号管理】加载账号列表失败：秘钥错误或者跨设备、跨用户访问！");
                 return "[]";
             }
         }
@@ -164,19 +275,27 @@ namespace Mihoyo_Tools
 
         private void btnGenshinSwitch_Click(object sender, EventArgs e)
         {
-            if (gridView1.GetFocusedRow() is Account acc)
+            if(txtGenshinPath.Text=="")
             {
-                try
+                XtraMessageBox.Show("原神游戏路径不能为空", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                if (gridView1.GetFocusedRow() is Account acc)
                 {
-                    KillGameProcess();
-                    UpdateRegistry(acc);
-                    XtraMessageBox.Show($"已切换到 [{acc.AccountName}]", "成功",MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Process p = Process.Start(txtGenshinPath.Text+@"\yuanshen.exe");
-                    
-                }
-                catch (Exception ex)
-                {
-                    XtraMessageBox.Show($"切换失败：{ex.Message}", "错误",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    try
+                    {
+                        KillGameProcess();
+                        UpdateRegistry(acc);
+                        XtraMessageBox.Show($"已切换到 [{acc.AccountName}]", "成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Process p = Process.Start(txtGenshinPath.Text + @"\yuanshen.exe");
+
+                    }
+                    catch (Exception ex)
+                    {
+                        XtraMessageBox.Show($"切换失败：{ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }
