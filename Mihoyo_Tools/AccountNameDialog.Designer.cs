@@ -1,6 +1,6 @@
 ﻿namespace Mihoyo_Tools
 {
-    partial class FormInput
+    partial class AccountNameDialog
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AccountNameDialog));
             this.label1 = new System.Windows.Forms.Label();
             this.txtAcctName = new DevExpress.XtraEditors.TextEdit();
-            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
+            this.btnOK = new DevExpress.XtraEditors.SimpleButton();
+            this.btnCance = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.txtAcctName.Properties)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,26 +53,38 @@
             this.txtAcctName.Size = new System.Drawing.Size(230, 20);
             this.txtAcctName.TabIndex = 6;
             // 
-            // btnSave
+            // btnOK
             // 
-            this.btnSave.Location = new System.Drawing.Point(282, 60);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 7;
-            this.btnSave.Text = "保存";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnOK.Location = new System.Drawing.Point(55, 99);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(75, 23);
+            this.btnOK.TabIndex = 7;
+            this.btnOK.Text = "保存";
             // 
-            // FormInput
+            // btnCance
+            // 
+            this.btnCance.Location = new System.Drawing.Point(156, 99);
+            this.btnCance.Name = "btnCance";
+            this.btnCance.Size = new System.Drawing.Size(75, 23);
+            this.btnCance.TabIndex = 7;
+            this.btnCance.Text = "取消";
+            // 
+            // AccountNameDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(395, 111);
-            this.Controls.Add(this.btnSave);
+            this.ClientSize = new System.Drawing.Size(311, 171);
+            this.ControlBox = false;
+            this.Controls.Add(this.btnCance);
+            this.Controls.Add(this.btnOK);
             this.Controls.Add(this.txtAcctName);
             this.Controls.Add(this.label1);
-            this.Name = "FormInput";
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("AccountNameDialog.IconOptions.Image")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "AccountNameDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormInput";
+            this.Text = "保存账号";
             ((System.ComponentModel.ISupportInitialize)(this.txtAcctName.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -80,6 +94,7 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraEditors.TextEdit txtAcctName;
-        private DevExpress.XtraEditors.SimpleButton btnSave;
+        private DevExpress.XtraEditors.SimpleButton btnOK;
+        private DevExpress.XtraEditors.SimpleButton btnCance;
     }
 }

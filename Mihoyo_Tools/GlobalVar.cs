@@ -57,6 +57,7 @@ namespace Mihoyo_Tools
         public static string _tempVideo_Name = "";      // 视频临时名字，可能用不到，先放这里吧，懒得删了
 
         public static bool   isNetworkAvailable;        // 判断网络是否链接 true = 已链接  flase = 未连接
-
+        public const string KeyEncryption_Key = "BLuM44EolK4yh6OozaVUd4BQ26EEC2dlugdikZ0KefXxYYdKvdsMrAmB08Z8ngPLu4MWBFpdnd1n+Out7/RLDsfenvbozXGeDEPrvkbXBJWQrStniSUQln64F1kPgoK3DksQJalZt4n+1IXwSA==";
+        public static string Account_data = StrPath + @"\data\accounts.dat";
     }
 }
