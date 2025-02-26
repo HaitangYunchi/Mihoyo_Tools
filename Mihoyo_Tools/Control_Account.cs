@@ -19,13 +19,26 @@ namespace Mihoyo_Tools
     public partial class Control_Account : DevExpress.XtraEditors.XtraUserControl
     {
         #region 常量
-        private const string REG_PATH = @"Software\miHoYo\原神";
-        private static string SAVE_FILE = GlobalVar.Account_data;
-        private static readonly byte[] Entropy = Encoding.ASCII.GetBytes(GlobalVar.KeyEncryption_Key);
+
+        private static readonly byte[] KeyGenshin = Encoding.ASCII.GetBytes(GlobalVar.KeyGenshin);
+        private static readonly byte[] KeyGenshinCloud = Encoding.ASCII.GetBytes(GlobalVar.KeyGenshinCloud);
+        private static readonly byte[] KeyGenshinOversea = Encoding.ASCII.GetBytes(GlobalVar.KeyGenshinOversea);
+        private static readonly byte[] KeyHonkaiImpact3 = Encoding.ASCII.GetBytes(GlobalVar.KeyHonkaiImpact3);
+        private static readonly byte[] KeyStarRail = Encoding.ASCII.GetBytes(GlobalVar.KeyStarRail);
+        private static readonly byte[] KeyStarRailOversea = Encoding.ASCII.GetBytes(GlobalVar.KeyStarRailOversea);
+        private static readonly byte[] KeyZZZ = Encoding.ASCII.GetBytes(GlobalVar.KeyZZZ);
+        private static readonly byte[] KeyZZZOversea = Encoding.ASCII.GetBytes(GlobalVar.KeyZZZOversea);
         #endregion
 
         #region 字段
-        private List<Account> _accounts = new List<Account>();
+        private List<Account> _accountsGenshin = new List<Account>();
+        private List<Account> _accountsGenshinCloud = new List<Account>();
+        private List<Account> _accountsGenshinOversea = new List<Account>();
+        private List<Account> _accountsHonkaiImpact3 = new List<Account>();
+        private List<Account> _accountsStarRail = new List<Account>();
+        private List<Account> _accountsStarRailOversea = new List<Account>();
+        private List<Account> _accountsZZZ = new List<Account>();
+        private List<Account> _accountsZZZOversea = new List<Account>();
         #endregion
         #region 初始化
         public Control_Account()
@@ -170,12 +183,33 @@ namespace Mihoyo_Tools
         {
             try
             {
-                if (File.Exists(SAVE_FILE))
+                if (File.Exists(GlobalVar.Account))
                 {
-                    var encrypted = File.ReadAllBytes(SAVE_FILE);
-                    var json = Decrypt(encrypted);
-                   _accounts = JsonConvert.DeserializeObject<List<Account>>(json);
-                    gridControl1.DataSource = _accounts; 
+                    var encrypted = File.ReadAllBytes(GlobalVar.Account);
+                    var jsonGenshin = DecryptGenshin(encrypted);
+                    var jsonGenshinCloud = DecryptGenshinCloud(encrypted);
+                    var jsonGenshinOversea = DecryptGenshinOversea(encrypted);
+                    var jsonHonkaiImpact3 = DecryptHonkaiImpact3(encrypted);
+                    var jsonStarRail = DecryptStarRail(encrypted);
+                    var jsonStarRailOversea = DecryptStarRailOversea(encrypted);
+                    var jsonZZZ = DecryptZZZ(encrypted);
+                    var jsonZZZOversea = DecryptZZZOversea(encrypted);
+                    _accountsGenshin = JsonConvert.DeserializeObject<List<Account>>(jsonGenshin);
+                    _accountsGenshinCloud = JsonConvert.DeserializeObject<List<Account>>(jsonGenshinCloud);
+                    _accountsGenshinOversea = JsonConvert.DeserializeObject<List<Account>>(jsonGenshinOversea);
+                    _accountsHonkaiImpact3 = JsonConvert.DeserializeObject<List<Account>>(jsonHonkaiImpact3);
+                    _accountsStarRail = JsonConvert.DeserializeObject<List<Account>>(jsonStarRail);
+                    _accountsStarRailOversea = JsonConvert.DeserializeObject<List<Account>>(jsonStarRailOversea);
+                    _accountsZZZ = JsonConvert.DeserializeObject<List<Account>>(jsonZZZ);
+                    _accountsZZZOversea = JsonConvert.DeserializeObject<List<Account>>(jsonZZZOversea);
+                    gridControl1.DataSource = _accountsGenshin;
+                    gridControl2.DataSource = _accountsStarRail;
+                    gridControl3.DataSource = _accountsHonkaiImpact3;
+                    gridControl4.DataSource = _accountsGenshinCloud;
+                    gridControl5.DataSource = _accountsGenshinOversea;
+                    gridControl6.DataSource = _accountsStarRailOversea;
+                    gridControl7.DataSource = _accountsZZZ;
+                    //gridControl8.DataSource = _accountsZZZOversea;
                 }
             }
             catch (Exception ex)
@@ -184,13 +218,13 @@ namespace Mihoyo_Tools
             }
         }
 
-        private void SaveAccounts()
+        private void SaveAccountsGenshin()
         {
             try
             {
-                var json = JsonConvert.SerializeObject(_accounts);
-                var encrypted = Encrypt(json);
-                File.WriteAllBytes(SAVE_FILE, encrypted);
+                var jsonGenshin = JsonConvert.SerializeObject(_accountsGenshin);
+                var encrypted = EncryptGenshin(jsonGenshin);
+                File.WriteAllBytes(GlobalVar.Account, encrypted);
             }
             catch (Exception ex)
             {
@@ -199,9 +233,9 @@ namespace Mihoyo_Tools
         }
         #endregion
         #region 核心功能
-        private Account BackupCurrentAccount()
+        private Account BackupCurrentAccountGenshin()
         {
-            using (var key = Registry.CurrentUser.OpenSubKey(REG_PATH))
+            using (var key = Registry.CurrentUser.OpenSubKey(GlobalVar.Genshin_REG_PATH))
             {
                 if (key == null)
                 {
@@ -217,9 +251,9 @@ namespace Mihoyo_Tools
             }
         }
 
-        private void UpdateRegistry(Account acc)
+        private void UpdateRegistryGenshin(Account acc)
         {
-            using (var key = Registry.CurrentUser.CreateSubKey(REG_PATH))
+            using (var key = Registry.CurrentUser.CreateSubKey(GlobalVar.Genshin_REG_PATH))
             {
                 key.SetValue("MIHOYOSDK_ADL_PROD_CN_h3123967166", acc.MIHOYOSDK_ADL_PROD_CN_h3123967166, RegistryValueKind.Binary);
                 key.SetValue("GENERAL_DATA_h2389025596", acc.GENERAL_DATA_h2389025596, RegistryValueKind.Binary);
@@ -227,27 +261,23 @@ namespace Mihoyo_Tools
             }
         }
 
-        private void KillGameProcess()
+        private void KillGameProcessGenshin()
         {
                foreach (var proc in Process.GetProcessesByName("YuanShen")) proc.Kill();
         }
         #endregion
 
         #region 加密方法
-        private byte[] Encrypt(string plainText)
+        private byte[] EncryptGenshin(string plainText)
         {
-            return ProtectedData.Protect(
-                Encoding.UTF8.GetBytes(plainText),
-                Entropy,
-                DataProtectionScope.CurrentUser);
+            return ProtectedData.Protect(Encoding.UTF8.GetBytes(plainText), KeyGenshin, DataProtectionScope.CurrentUser);
         }
 
-        private string Decrypt(byte[] cipherText)
+        private string DecryptGenshin(byte[] cipherText)
         {
             try
             {
-                return Encoding.UTF8.GetString(
-                    ProtectedData.Unprotect(cipherText, Entropy, DataProtectionScope.CurrentUser));
+                return Encoding.UTF8.GetString(ProtectedData.Unprotect(cipherText, KeyGenshin, DataProtectionScope.CurrentUser));
             }
             catch
             {
@@ -255,6 +285,133 @@ namespace Mihoyo_Tools
                 return "[]";
             }
         }
+
+        private byte[] EncryptGenshinCloud(string plainText)
+        {
+            return ProtectedData.Protect(Encoding.UTF8.GetBytes(plainText), KeyGenshinCloud, DataProtectionScope.CurrentUser);
+        }
+
+        private string DecryptGenshinCloud(byte[] cipherText)
+        {
+            try
+            {
+                return Encoding.UTF8.GetString(ProtectedData.Unprotect(cipherText, KeyGenshinCloud, DataProtectionScope.CurrentUser));
+            }
+            catch
+            {
+                XtraMessageBox.Show($"【账号管理】加载账号列表失败：秘钥错误或者跨设备、跨用户访问！");
+                return "[]";
+            }
+        }
+
+        private byte[] EncryptGenshinOversea(string plainText)
+        {
+            return ProtectedData.Protect(Encoding.UTF8.GetBytes(plainText), KeyGenshinOversea, DataProtectionScope.CurrentUser);
+        }
+
+        private string DecryptGenshinOversea(byte[] cipherText)
+        {
+            try
+            {
+                return Encoding.UTF8.GetString(ProtectedData.Unprotect(cipherText, KeyGenshinOversea, DataProtectionScope.CurrentUser));
+            }
+            catch
+            {
+                XtraMessageBox.Show($"【账号管理】加载账号列表失败：秘钥错误或者跨设备、跨用户访问！");
+                return "[]";
+            }
+        }
+
+        private byte[] EncryptHonkaiImpact3(string plainText)
+        {
+            return ProtectedData.Protect(Encoding.UTF8.GetBytes(plainText), KeyHonkaiImpact3, DataProtectionScope.CurrentUser);
+        }
+
+        private string DecryptHonkaiImpact3(byte[] cipherText)
+        {
+            try
+            {
+                return Encoding.UTF8.GetString(ProtectedData.Unprotect(cipherText, KeyHonkaiImpact3, DataProtectionScope.CurrentUser));
+            }
+            catch
+            {
+                XtraMessageBox.Show($"【账号管理】加载账号列表失败：秘钥错误或者跨设备、跨用户访问！");
+                return "[]";
+            }
+        }
+
+        private byte[] EncryptStarRaila(string plainText)
+        {
+            return ProtectedData.Protect(Encoding.UTF8.GetBytes(plainText), KeyStarRail, DataProtectionScope.CurrentUser);
+        }
+
+        private string DecryptStarRail(byte[] cipherText)
+        {
+            try
+            {
+                return Encoding.UTF8.GetString(ProtectedData.Unprotect(cipherText, KeyStarRail, DataProtectionScope.CurrentUser));
+            }
+            catch
+            {
+                XtraMessageBox.Show($"【账号管理】加载账号列表失败：秘钥错误或者跨设备、跨用户访问！");
+                return "[]";
+            }
+        }
+
+        private byte[] EncryptStarRailOversea(string plainText)
+        {
+            return ProtectedData.Protect(Encoding.UTF8.GetBytes(plainText), KeyStarRailOversea, DataProtectionScope.CurrentUser);
+        }
+
+        private string DecryptStarRailOversea(byte[] cipherText)
+        {
+            try
+            {
+                return Encoding.UTF8.GetString(ProtectedData.Unprotect(cipherText, KeyStarRailOversea, DataProtectionScope.CurrentUser));
+            }
+            catch
+            {
+                XtraMessageBox.Show($"【账号管理】加载账号列表失败：秘钥错误或者跨设备、跨用户访问！");
+                return "[]";
+            }
+        }
+
+        private byte[] EncryptZZZ(string plainText)
+        {
+            return ProtectedData.Protect(Encoding.UTF8.GetBytes(plainText), KeyZZZ, DataProtectionScope.CurrentUser);
+        }
+
+        private string DecryptZZZ(byte[] cipherText)
+        {
+            try
+            {
+                return Encoding.UTF8.GetString(ProtectedData.Unprotect(cipherText, KeyZZZ, DataProtectionScope.CurrentUser));
+            }
+            catch
+            {
+                XtraMessageBox.Show($"【账号管理】加载账号列表失败：秘钥错误或者跨设备、跨用户访问！");
+                return "[]";
+            }
+        }
+
+        private byte[] EncryptZZZOversea(string plainText)
+        {
+            return ProtectedData.Protect(Encoding.UTF8.GetBytes(plainText), KeyZZZOversea, DataProtectionScope.CurrentUser);
+        }
+
+        private string DecryptZZZOversea(byte[] cipherText)
+        {
+            try
+            {
+                return Encoding.UTF8.GetString(ProtectedData.Unprotect(cipherText, KeyZZZOversea, DataProtectionScope.CurrentUser));
+            }
+            catch
+            {
+                XtraMessageBox.Show($"【账号管理】加载账号列表失败：秘钥错误或者跨设备、跨用户访问！");
+                return "[]";
+            }
+        }
+
         #endregion
 
         private void btnGenshinAdd_Click(object sender, EventArgs e)
@@ -263,11 +420,11 @@ namespace Mihoyo_Tools
             {
                 if (dlg.ShowDialog() == DialogResult.OK)
                 {
-                    var acc = BackupCurrentAccount();
+                    var acc = BackupCurrentAccountGenshin();
                     acc.AccountName = dlg.AccountName;
-                    _accounts.Add(acc);
+                    _accountsGenshin.Add(acc);
                     gridControl1.RefreshDataSource();
-                    SaveAccounts();
+                    SaveAccountsGenshin();
                     LoadAccounts();
                 }
             }
@@ -286,8 +443,8 @@ namespace Mihoyo_Tools
                 {
                     try
                     {
-                        KillGameProcess();
-                        UpdateRegistry(acc);
+                        KillGameProcessGenshin();
+                        UpdateRegistryGenshin(acc);
                         XtraMessageBox.Show($"已切换到 [{acc.AccountName}]", "成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Process p = Process.Start(txtGenshinPath.Text + @"\yuanshen.exe");
 
@@ -310,11 +467,11 @@ namespace Mihoyo_Tools
                     foreach (var handle in selected)
                     {
                         var acc = gridView1.GetRow(handle) as Account;
-                        if (acc != null) _accounts.Remove(acc);
+                        if (acc != null) _accountsGenshin.Remove(acc);
                         //_accounts.RemoveAt(handle);
                     }
                     gridControl1.RefreshDataSource();
-                    SaveAccounts();
+                    SaveAccountsGenshin();
                 }
             }
         }

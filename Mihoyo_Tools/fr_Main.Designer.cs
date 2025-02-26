@@ -204,14 +204,14 @@
             // toolStripStatusLabel5
             // 
             this.toolStripStatusLabel5.Name = "toolStripStatusLabel5";
-            this.toolStripStatusLabel5.Size = new System.Drawing.Size(98, 17);
+            this.toolStripStatusLabel5.Size = new System.Drawing.Size(11, 17);
             this.toolStripStatusLabel5.Spring = true;
             // 
             // toolStripStatusLabel4
             // 
             this.toolStripStatusLabel4.AutoSize = false;
             this.toolStripStatusLabel4.Name = "toolStripStatusLabel4";
-            this.toolStripStatusLabel4.Size = new System.Drawing.Size(200, 17);
+            this.toolStripStatusLabel4.Size = new System.Drawing.Size(256, 17);
             this.toolStripStatusLabel4.Text = "版本：1.0";
             this.toolStripStatusLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
