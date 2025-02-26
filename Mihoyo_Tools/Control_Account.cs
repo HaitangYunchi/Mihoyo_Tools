@@ -31,14 +31,14 @@ namespace Mihoyo_Tools
         #endregion
 
         #region 字段
-        private List<Account> _accountsGenshin = new List<Account>();
-        private List<Account> _accountsGenshinCloud = new List<Account>();
-        private List<Account> _accountsGenshinOversea = new List<Account>();
-        private List<Account> _accountsHonkaiImpact3 = new List<Account>();
-        private List<Account> _accountsStarRail = new List<Account>();
-        private List<Account> _accountsStarRailOversea = new List<Account>();
-        private List<Account> _accountsZZZ = new List<Account>();
-        private List<Account> _accountsZZZOversea = new List<Account>();
+        private List<AccountGenshin> _accountsGenshin = new List<AccountGenshin>();
+        private List<AccountGenshinCloud> _accountsGenshinCloud = new List<AccountGenshinCloud>();
+        private List<AccountGenshinOversea> _accountsGenshinOversea = new List<AccountGenshinOversea>();
+        private List<AccountHonkaiImpact3> _accountsHonkaiImpact3 = new List<AccountHonkaiImpact3>();
+        private List<AccountStarRail> _accountsStarRail = new List<AccountStarRail>();
+        private List<AccountStarRailOversea> _accountsStarRailOversea = new List<AccountStarRailOversea>();
+        private List<AccountZZZ> _accountsZZZ = new List<AccountZZZ>();
+        private List<AccountZZZOversea> _accountsZZZOversea = new List<AccountZZZOversea>();
         #endregion
         #region 初始化
         public Control_Account()
@@ -47,6 +47,11 @@ namespace Mihoyo_Tools
             //InitializeSkin();
             ConfigureGrid();
             LoadAccounts();
+        }
+        private void Control_Account_Load(object sender, EventArgs e)
+        {
+            txtGenshinPath.Text = INIFile.getString("Config", "Genshin_patch", "", GlobalVar.IniName);
+            txtStarRailPath.Text = INIFile.getString("Config", "StarRail_patch", "", GlobalVar.IniName);
         }
         private void ConfigureGrid()
         {
@@ -194,14 +199,14 @@ namespace Mihoyo_Tools
                     var jsonStarRailOversea = DecryptStarRailOversea(encrypted);
                     var jsonZZZ = DecryptZZZ(encrypted);
                     var jsonZZZOversea = DecryptZZZOversea(encrypted);
-                    _accountsGenshin = JsonConvert.DeserializeObject<List<Account>>(jsonGenshin);
-                    _accountsGenshinCloud = JsonConvert.DeserializeObject<List<Account>>(jsonGenshinCloud);
-                    _accountsGenshinOversea = JsonConvert.DeserializeObject<List<Account>>(jsonGenshinOversea);
-                    _accountsHonkaiImpact3 = JsonConvert.DeserializeObject<List<Account>>(jsonHonkaiImpact3);
-                    _accountsStarRail = JsonConvert.DeserializeObject<List<Account>>(jsonStarRail);
-                    _accountsStarRailOversea = JsonConvert.DeserializeObject<List<Account>>(jsonStarRailOversea);
-                    _accountsZZZ = JsonConvert.DeserializeObject<List<Account>>(jsonZZZ);
-                    _accountsZZZOversea = JsonConvert.DeserializeObject<List<Account>>(jsonZZZOversea);
+                    _accountsGenshin = JsonConvert.DeserializeObject<List<AccountGenshin>>(jsonGenshin);
+                    _accountsGenshinCloud = JsonConvert.DeserializeObject<List<AccountGenshinCloud>>(jsonGenshinCloud);
+                    _accountsGenshinOversea = JsonConvert.DeserializeObject<List<AccountGenshinOversea>>(jsonGenshinOversea);
+                    _accountsHonkaiImpact3 = JsonConvert.DeserializeObject<List<AccountHonkaiImpact3>>(jsonHonkaiImpact3);
+                    _accountsStarRail = JsonConvert.DeserializeObject<List<AccountStarRail>>(jsonStarRail);
+                    _accountsStarRailOversea = JsonConvert.DeserializeObject<List<AccountStarRailOversea>>(jsonStarRailOversea);
+                    _accountsZZZ = JsonConvert.DeserializeObject<List<AccountZZZ>>(jsonZZZ);
+                    _accountsZZZOversea = JsonConvert.DeserializeObject<List<AccountZZZOversea>>(jsonZZZOversea);
                     gridControl1.DataSource = _accountsGenshin;
                     gridControl2.DataSource = _accountsStarRail;
                     gridControl3.DataSource = _accountsHonkaiImpact3;
@@ -217,7 +222,8 @@ namespace Mihoyo_Tools
                 XtraMessageBox.Show($"数据加载失败：{ex.Message}", "错误",MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        #endregion
+        #region 核心功能
         private void SaveAccountsGenshin()
         {
             try
@@ -231,9 +237,101 @@ namespace Mihoyo_Tools
                 XtraMessageBox.Show($"数据保存失败：{ex.Message}", "错误",MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        #endregion
-        #region 核心功能
-        private Account BackupCurrentAccountGenshin()
+        private void SaveAccountsGenshinCloud()
+        {
+            try
+            {
+                var jsonGenshinCloud = JsonConvert.SerializeObject(_accountsGenshinCloud);
+                var encrypted = EncryptGenshin(jsonGenshinCloud);
+                File.WriteAllBytes(GlobalVar.Account, encrypted);
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show($"数据保存失败：{ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void SaveAccountsGenshinOversea()
+        {
+            try
+            {
+                var jsonGenshinOversea = JsonConvert.SerializeObject(_accountsGenshinOversea);
+                var encrypted = EncryptGenshin(jsonGenshinOversea);
+                File.WriteAllBytes(GlobalVar.Account, encrypted);
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show($"数据保存失败：{ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void SaveAccountsHonkaiImpact3()
+        {
+            try
+            {
+                var jsonHonkaiImpact3 = JsonConvert.SerializeObject(_accountsHonkaiImpact3);
+                var encrypted = EncryptGenshin(jsonHonkaiImpact3);
+                File.WriteAllBytes(GlobalVar.Account, encrypted);
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show($"数据保存失败：{ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void SaveAccountsStarRail()
+        {
+            try
+            {
+                var jsonStarRail = JsonConvert.SerializeObject(_accountsStarRail);
+                var encrypted = EncryptGenshin(jsonStarRail);
+                File.WriteAllBytes(GlobalVar.Account, encrypted);
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show($"数据保存失败：{ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void SaveAccountsStarRailOversea()
+        {
+            try
+            {
+                var jsonStarRailOversea = JsonConvert.SerializeObject(_accountsStarRailOversea);
+                var encrypted = EncryptGenshin(jsonStarRailOversea);
+                File.WriteAllBytes(GlobalVar.Account, encrypted);
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show($"数据保存失败：{ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void SaveAccountsZZZ()
+        {
+            try
+            {
+                var jsonZZZ = JsonConvert.SerializeObject(_accountsZZZ);
+                var encrypted = EncryptGenshin(jsonZZZ);
+                File.WriteAllBytes(GlobalVar.Account, encrypted);
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show($"数据保存失败：{ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        /**
+        private void SaveAccountsZZZOversea()
+        {
+            try
+            {
+                var jsonZZZOversea = JsonConvert.SerializeObject(_accountsZZZOversea);
+                var encrypted = EncryptGenshin(jsonZZZOversea);
+                File.WriteAllBytes(GlobalVar.Account, encrypted);
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show($"数据保存失败：{ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        **/
+        private AccountGenshin BackupCurrentAccountGenshin()
         {
             using (var key = Registry.CurrentUser.OpenSubKey(GlobalVar.Genshin_REG_PATH))
             {
@@ -243,15 +341,135 @@ namespace Mihoyo_Tools
                     return null;
                 }
                 // 显式类型转换确保二进制数据
-                return new Account
+                return new AccountGenshin
                 {
                     MIHOYOSDK_ADL_PROD_CN_h3123967166 = (byte[])key.GetValue("MIHOYOSDK_ADL_PROD_CN_h3123967166"),
                     GENERAL_DATA_h2389025596 = (byte[])key.GetValue("GENERAL_DATA_h2389025596")
                 };
             }
         }
-
-        private void UpdateRegistryGenshin(Account acc)
+        private AccountGenshinCloud BackupCurrentAccountGenshinCloud()
+        {
+            using (var key = Registry.CurrentUser.OpenSubKey(GlobalVar.GenshinCloud_REG_PATH))
+            {
+                if (key == null)
+                {
+                    XtraMessageBox.Show("未找到原神用户存储信息！");
+                    return null;
+                }
+                // 显式类型转换确保二进制数据
+                return new AccountGenshinCloud
+                {
+                    MIHOYOSDK_ADL_0 = (byte[])key.GetValue("MIHOYOSDK_ADL_0"),
+                    //GENERAL_DATA_h2389025596 = (byte[])key.GetValue("GENERAL_DATA_h2389025596")
+                };
+            }
+        }
+        private AccountGenshinOversea BackupCurrentAccountGenshinOversea()
+        {
+            using (var key = Registry.CurrentUser.OpenSubKey(GlobalVar.GenshinOversea_REG_PATH))
+            {
+                if (key == null)
+                {
+                    XtraMessageBox.Show("未找到原神用户存储信息！");
+                    return null;
+                }
+                // 显式类型转换确保二进制数据
+                return new AccountGenshinOversea
+                {
+                    MIHOYOSDK_ADL_PROD_OVERSEA_h1158948810 = (byte[])key.GetValue("MIHOYOSDK_ADL_PROD_OVERSEA_h1158948810"),
+                    GENERAL_DATA_h2389025596 = (byte[])key.GetValue("GENERAL_DATA_h2389025596")
+                };
+            }
+        }
+        private AccountHonkaiImpact3 BackupCurrentAccountHonkaiImpact3()
+        {
+            using (var key = Registry.CurrentUser.OpenSubKey(GlobalVar.HonkaiImpact3_REG_PATH))
+            {
+                if (key == null)
+                {
+                    XtraMessageBox.Show("未找到原神用户存储信息！");
+                    return null;
+                }
+                // 显式类型转换确保二进制数据
+                return new AccountHonkaiImpact3
+                {
+                    MIHOYOSDK_ADL_PROD_CN_h3123967166 = (byte[])key.GetValue("MIHOYOSDK_ADL_PROD_CN_h3123967166"),
+                    //GENERAL_DATA_h2389025596 = (byte[])key.GetValue("GENERAL_DATA_h2389025596")
+                };
+            }
+        }
+        private AccountStarRail BackupCurrentAccountStarRail()
+        {
+            using (var key = Registry.CurrentUser.OpenSubKey(GlobalVar.StarRail_REG_PATH))
+            {
+                if (key == null)
+                {
+                    XtraMessageBox.Show("未找到原神用户存储信息！");
+                    return null;
+                }
+                // 显式类型转换确保二进制数据
+                return new AccountStarRail
+                {
+                    MIHOYOSDK_ADL_PROD_CN_h3123967166 = (byte[])key.GetValue("MIHOYOSDK_ADL_PROD_CN_h3123967166"),
+                    //GENERAL_DATA_h2389025596 = (byte[])key.GetValue("GENERAL_DATA_h2389025596")
+                };
+            }
+        }
+        private AccountStarRailOversea BackupCurrentAccountStarRailOversea()
+        {
+            using (var key = Registry.CurrentUser.OpenSubKey(GlobalVar.StarRailOversea_REG_PATH))
+            {
+                if (key == null)
+                {
+                    XtraMessageBox.Show("未找到原神用户存储信息！");
+                    return null;
+                }
+                // 显式类型转换确保二进制数据
+                return new AccountStarRailOversea
+                {
+                    MIHOYOSDK_ADL_PROD_OVERSEA_h1158948810 = (byte[])key.GetValue("MIHOYOSDK_ADL_PROD_OVERSEA_h1158948810"),
+                    //GENERAL_DATA_h2389025596 = (byte[])key.GetValue("GENERAL_DATA_h2389025596")
+                };
+            }
+        }
+        private AccountZZZ BackupCurrentAccountZZZ()
+        {
+            using (var key = Registry.CurrentUser.OpenSubKey(GlobalVar.ZZZ_REG_PATH))
+            {
+                if (key == null)
+                {
+                    XtraMessageBox.Show("未找到原神用户存储信息！");
+                    return null;
+                }
+                // 显式类型转换确保二进制数据
+                return new AccountZZZ
+                {
+                    MIHOYOSDK_ADL_PROD_CN_h3123967166 = (byte[])key.GetValue("MIHOYOSDK_ADL_PROD_CN_h3123967166"),
+                   // GENERAL_DATA_h2389025596 = (byte[])key.GetValue("GENERAL_DATA_h2389025596")
+                };
+            }
+        }
+        /**
+        private AccountZZZOversea BackupCurrentAccountZZZOversea()
+        {
+            using (var key = Registry.CurrentUser.OpenSubKey(GlobalVar.ZZZOversea_REG_PATH))
+            {
+                if (key == null)
+                {
+                    XtraMessageBox.Show("未找到原神用户存储信息！");
+                    return null;
+                }
+                // 显式类型转换确保二进制数据
+                return new AccountZZZOversea
+                {
+                    MIHOYOSDK_ADL_PROD_OVERSEA_h1158948810 = (byte[])key.GetValue("MIHOYOSDK_ADL_PROD_OVERSEA_h1158948810"),
+                    //GENERAL_DATA_h2389025596 = (byte[])key.GetValue("GENERAL_DATA_h2389025596")
+                };
+            }
+        }
+        **/
+        private void UpdateRegistryGenshin(AccountGenshin acc)
         {
             using (var key = Registry.CurrentUser.CreateSubKey(GlobalVar.Genshin_REG_PATH))
             {
@@ -261,10 +479,109 @@ namespace Mihoyo_Tools
             }
         }
 
+        private void UpdateRegistryGenshinCloud(AccountGenshinCloud acc)
+        {
+            using (var key = Registry.CurrentUser.CreateSubKey(GlobalVar.GenshinCloud_REG_PATH))
+            {
+                key.SetValue("MIHOYOSDK_ADL_0", acc.MIHOYOSDK_ADL_0, RegistryValueKind.Binary);
+                //key.SetValue("GENERAL_DATA_h2389025596", acc.GENERAL_DATA_h2389025596, RegistryValueKind.Binary);
+
+            }
+        }
+        private void UpdateRegistryGenshinOversea(AccountGenshinOversea acc)
+        {
+            using (var key = Registry.CurrentUser.CreateSubKey(GlobalVar.GenshinOversea_REG_PATH))
+            {
+                key.SetValue("MIHOYOSDK_ADL_PROD_OVERSEA_h1158948810", acc.MIHOYOSDK_ADL_PROD_OVERSEA_h1158948810, RegistryValueKind.Binary);
+                key.SetValue("GENERAL_DATA_h2389025596", acc.GENERAL_DATA_h2389025596, RegistryValueKind.Binary);
+
+            }
+        }
+
+        private void UpdateRegistryHonkaiImpact3(AccountHonkaiImpact3 acc)
+        {
+            using (var key = Registry.CurrentUser.CreateSubKey(GlobalVar.HonkaiImpact3_REG_PATH))
+            {
+                key.SetValue("MIHOYOSDK_ADL_PROD_CN_h3123967166", acc.MIHOYOSDK_ADL_PROD_CN_h3123967166, RegistryValueKind.Binary);
+                //key.SetValue("GENERAL_DATA_h2389025596", acc.GENERAL_DATA_h2389025596, RegistryValueKind.Binary);
+
+            }
+        }
+
+        private void UpdateRegistryStarRail(AccountStarRail acc)
+        {
+            using (var key = Registry.CurrentUser.CreateSubKey(GlobalVar.StarRail_REG_PATH))
+            {
+                key.SetValue("MIHOYOSDK_ADL_PROD_CN_h3123967166", acc.MIHOYOSDK_ADL_PROD_CN_h3123967166, RegistryValueKind.Binary);
+                //key.SetValue("GENERAL_DATA_h2389025596", acc.GENERAL_DATA_h2389025596, RegistryValueKind.Binary);
+
+            }
+        }
+
+        private void UpdateRegistryStarRailOversea(AccountStarRailOversea acc)
+        {
+            using (var key = Registry.CurrentUser.CreateSubKey(GlobalVar.StarRailOversea_REG_PATH))
+            {
+                key.SetValue("MIHOYOSDK_ADL_PROD_OVERSEA_h1158948810", acc.MIHOYOSDK_ADL_PROD_OVERSEA_h1158948810, RegistryValueKind.Binary);
+                //key.SetValue("GENERAL_DATA_h2389025596", acc.GENERAL_DATA_h2389025596, RegistryValueKind.Binary);
+
+            }
+        }
+
+        private void UpdateRegistryZZZ(AccountZZZ acc)
+        {
+            using (var key = Registry.CurrentUser.CreateSubKey(GlobalVar.ZZZ_REG_PATH))
+            {
+                key.SetValue("MIHOYOSDK_ADL_PROD_CN_h3123967166", acc.MIHOYOSDK_ADL_PROD_CN_h3123967166, RegistryValueKind.Binary);
+                //key.SetValue("GENERAL_DATA_h2389025596", acc.GENERAL_DATA_h2389025596, RegistryValueKind.Binary);
+
+            }
+        }
+        /**
+        private void UpdateRegistryZZZOversea(AccountZZZOversea acc)
+        {
+            using (var key = Registry.CurrentUser.CreateSubKey(GlobalVar.ZZZOversea_REG_PATH))
+            {
+                key.SetValue("MIHOYOSDK_ADL_PROD_OVERSEA_h1158948810", acc.MIHOYOSDK_ADL_PROD_OVERSEA_h1158948810, RegistryValueKind.Binary);
+                //key.SetValue("GENERAL_DATA_h2389025596", acc.GENERAL_DATA_h2389025596, RegistryValueKind.Binary);
+
+            }
+        }
+        **/
         private void KillGameProcessGenshin()
         {
                foreach (var proc in Process.GetProcessesByName("YuanShen")) proc.Kill();
         }
+        private void KillGameProcessGenshinCloud()
+        {
+            foreach (var proc in Process.GetProcessesByName("Genshin Impact Cloud Game")) proc.Kill();
+        }
+        private void KillGameProcessGenshinOversea()
+        {
+            foreach (var proc in Process.GetProcessesByName("GenshinImpact")) proc.Kill();
+        }
+        private void KillGameProcessHonkaiImpact3()
+        {
+            foreach (var proc in Process.GetProcessesByName("BH3")) proc.Kill();
+        }
+        private void KillGameProcessStarRail()
+        {
+            foreach (var proc in Process.GetProcessesByName("StarRail")) proc.Kill();
+        }
+        private void KillGameProcessStarRailOversea()
+        {
+            foreach (var proc in Process.GetProcessesByName("StarRailOversea")) proc.Kill();
+        }
+        private void KillGameProcessZZZ()
+        {
+            foreach (var proc in Process.GetProcessesByName("ZenlessZoneZero")) proc.Kill();
+        }
+        /**
+        private void KillGameProcessZZZOversea()
+        {
+            foreach (var proc in Process.GetProcessesByName("ZenlessZoneZero")) proc.Kill();
+        }
+        **/
         #endregion
 
         #region 加密方法
@@ -413,7 +730,7 @@ namespace Mihoyo_Tools
         }
 
         #endregion
-
+        #region 原神面板代码
         private void btnGenshinAdd_Click(object sender, EventArgs e)
         {
             using (var dlg = new AccountNameDialog())
@@ -439,7 +756,7 @@ namespace Mihoyo_Tools
             }
             else
             {
-                if (gridView1.GetFocusedRow() is Account acc)
+                if (gridView1.GetFocusedRow() is AccountGenshin acc)
                 {
                     try
                     {
@@ -466,7 +783,7 @@ namespace Mihoyo_Tools
                 {
                     foreach (var handle in selected)
                     {
-                        var acc = gridView1.GetRow(handle) as Account;
+                        var acc = gridView1.GetRow(handle) as AccountGenshin;
                         if (acc != null) _accountsGenshin.Remove(acc);
                         //_accounts.RemoveAt(handle);
                     }
@@ -490,22 +807,16 @@ namespace Mihoyo_Tools
                 string selectedFile = openFileDialog.FileName;
                 folder = System.IO.Path.GetDirectoryName(selectedFile);
                 txtGenshinPath.Text = folder;
-                INIFile.writeString("Config", "YS_patch", folder, GlobalVar.IniName);
+                INIFile.writeString("Config", "Genshin_patch", folder, GlobalVar.IniName);
                 // XtraMessageBox.Show("选择的文件夹为：" +  GlobalVar.SelectedFolder);
             }
             else
             {
                 txtGenshinPath.Text = "";
+                INIFile.writeString("Config", "Genshin_patch", txtGenshinPath.Text, GlobalVar.IniName);
             }
-            txtGenshinPath.Text = INIFile.getString("Config", "YS_patch", "", GlobalVar.IniName);
-            INIFile.writeString("Config", "YS_patch", txtGenshinPath.Text, GlobalVar.IniName);
+            
         }
-
-        private void Control_Account_Load(object sender, EventArgs e)
-        {
-            txtGenshinPath.Text = INIFile.getString("Config", "YS_patch", "", GlobalVar.IniName);
-        }
-
         private void gridView1_DoubleClick(object sender, EventArgs e)
         {
             // 获取双击的行句柄
@@ -513,13 +824,55 @@ namespace Mihoyo_Tools
             if (hitInfo.RowHandle < 0) return; // 非数据行点击时忽略
 
             // 获取绑定的 Account 对象
-            var selectedAccount = gridView1.GetRow(hitInfo.RowHandle) as Account;
+            var selectedAccount = gridView1.GetRow(hitInfo.RowHandle) as AccountGenshin;
             if (selectedAccount == null) return;
 
             // 直接复用「切换账号」按钮的逻辑
-            btnGenshinSwitch_Click(selectedAccount,e);
+            btnGenshinSwitch_Click(selectedAccount, e);
         }
-        
+
+
+        #endregion
+
+        private void btnChooseStraRailPath_Click(object sender, EventArgs e)
+        {
+            // 游戏目录
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Title = "选择 StarRail.exe";
+            openFileDialog.Filter = "程序文件|StarRail.exe";
+            openFileDialog.InitialDirectory = @"D:\";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string folder;
+                string selectedFile = openFileDialog.FileName;
+                folder = System.IO.Path.GetDirectoryName(selectedFile);
+                txtStarRailPath.Text = folder;
+                INIFile.writeString("Config", "StarRail_patch", folder, GlobalVar.IniName);
+                // XtraMessageBox.Show("选择的文件夹为：" +  GlobalVar.SelectedFolder);
+            }
+            else
+            {
+                txtGenshinPath.Text = "";
+                INIFile.writeString("Config", "StarRail_patch", txtStarRailPath.Text, GlobalVar.IniName);
+            }
+            
+        }
+        private void btnStarRailAdd_Click(object sender, EventArgs e)
+        {
+            using (var dlg = new AccountNameDialog())
+            {
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    var acc = BackupCurrentAccountStarRail();
+                    acc.AccountName = dlg.AccountName;
+                    _accountsStarRail.Add(acc);
+                    gridControl2.RefreshDataSource();
+                    SaveAccountsStarRail();
+                    LoadAccounts();
+                }
+            }
+        }
     }
  
         

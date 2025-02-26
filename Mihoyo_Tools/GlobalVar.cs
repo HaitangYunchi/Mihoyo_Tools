@@ -55,7 +55,7 @@ namespace Mihoyo_Tools
         public static string strOutput = "";
         public static string _tempVideo_Name = "";      // 视频临时名字，可能用不到，先放这里吧，懒得删了
         public static bool   isNetworkAvailable;        // 判断网络是否链接 true = 已链接  flase = 未连接
-        public static string Account = StrPath + @"\data\Genshin.dat";
+        public static string Account = StrPath + @"\data\accounts.dat";
 
         #region 常量
         public const  string KeyGenshin = "KeyHaiTangYunchiPK9SAUq0txQh1NV4WyJVZjz0g3YnHSPibmYWQqJn3i4kxtlZWYHCAowRwOobBLTPAnWTV99NJHE6AuZoyZ8ziefsblLbqEbSsmm0RRyuPdMhNdZQQ0qfQynP3aj9rpZD9fMToHyfytY16NtCIj5ykkgGSCHcPf6qcH9ho6TZKcV0ALsLNNhn3qaN0ujYD1iseo1TaeM0IsYs1b8elK4g6iEWyGwKsijqSyRZsmNrCx4VriLZ";
@@ -77,5 +77,5 @@ namespace Mihoyo_Tools
         public const  string ZZZOversea_REG_PATH = @"Software\Cognosphere\ZZZ";
         #endregion
 
-   }
+    }
 }

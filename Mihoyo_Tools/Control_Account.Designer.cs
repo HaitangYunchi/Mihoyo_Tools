@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode8 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode3 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode4 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode5 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode6 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode7 = new DevExpress.XtraGrid.GridLevelNode();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.tabPageGenshin = new DevExpress.XtraTab.XtraTabPage();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
@@ -52,13 +52,13 @@
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnStraRailDelete1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnStarRailAdd = new DevExpress.XtraEditors.SimpleButton();
+            this.btnStraRailSwitch = new DevExpress.XtraEditors.SimpleButton();
+            this.btnChooseStraRailPath = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtStarRailPath = new DevExpress.XtraEditors.TextEdit();
             this.tabPageHonkaiImpact3 = new DevExpress.XtraTab.XtraTabPage();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.gridControl3 = new DevExpress.XtraGrid.GridControl();
@@ -132,7 +132,7 @@
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStarRailPath.Properties)).BeginInit();
             this.tabPageHonkaiImpact3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
@@ -216,9 +216,9 @@
             this.gridControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            gridLevelNode1.RelationName = "Level1";
+            gridLevelNode2.RelationName = "Level1";
             this.gridControl1.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
+            gridLevelNode2});
             this.gridControl1.Location = new System.Drawing.Point(30, 129);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
@@ -312,13 +312,13 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl2.Controls.Add(this.gridControl2);
-            this.groupControl2.Controls.Add(this.simpleButton1);
-            this.groupControl2.Controls.Add(this.simpleButton2);
-            this.groupControl2.Controls.Add(this.simpleButton3);
-            this.groupControl2.Controls.Add(this.simpleButton4);
+            this.groupControl2.Controls.Add(this.btnStraRailDelete1);
+            this.groupControl2.Controls.Add(this.btnStarRailAdd);
+            this.groupControl2.Controls.Add(this.btnStraRailSwitch);
+            this.groupControl2.Controls.Add(this.btnChooseStraRailPath);
             this.groupControl2.Controls.Add(this.labelControl2);
             this.groupControl2.Controls.Add(this.labelControl5);
-            this.groupControl2.Controls.Add(this.textEdit1);
+            this.groupControl2.Controls.Add(this.txtStarRailPath);
             this.groupControl2.Location = new System.Drawing.Point(28, 28);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(1205, 655);
@@ -330,9 +330,9 @@
             this.gridControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            gridLevelNode2.RelationName = "Level1";
+            gridLevelNode8.RelationName = "Level1";
             this.gridControl2.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
+            gridLevelNode8});
             this.gridControl2.Location = new System.Drawing.Point(30, 129);
             this.gridControl2.MainView = this.gridView2;
             this.gridControl2.Name = "gridControl2";
@@ -346,41 +346,43 @@
             this.gridView2.GridControl = this.gridControl2;
             this.gridView2.Name = "gridView2";
             // 
-            // simpleButton1
+            // btnStraRailDelete1
             // 
-            this.simpleButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton1.Location = new System.Drawing.Point(1081, 205);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(96, 23);
-            this.simpleButton1.TabIndex = 28;
-            this.simpleButton1.Text = "删除当前账号";
+            this.btnStraRailDelete1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnStraRailDelete1.Location = new System.Drawing.Point(1081, 205);
+            this.btnStraRailDelete1.Name = "btnStraRailDelete1";
+            this.btnStraRailDelete1.Size = new System.Drawing.Size(96, 23);
+            this.btnStraRailDelete1.TabIndex = 28;
+            this.btnStraRailDelete1.Text = "删除当前账号";
             // 
-            // simpleButton2
+            // btnStarRailAdd
             // 
-            this.simpleButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton2.Location = new System.Drawing.Point(1080, 129);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(97, 23);
-            this.simpleButton2.TabIndex = 29;
-            this.simpleButton2.Text = "保存当前账号";
+            this.btnStarRailAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnStarRailAdd.Location = new System.Drawing.Point(1080, 129);
+            this.btnStarRailAdd.Name = "btnStarRailAdd";
+            this.btnStarRailAdd.Size = new System.Drawing.Size(97, 23);
+            this.btnStarRailAdd.TabIndex = 29;
+            this.btnStarRailAdd.Text = "保存当前账号";
+            this.btnStarRailAdd.Click += new System.EventHandler(this.btnStarRailAdd_Click);
             // 
-            // simpleButton3
+            // btnStraRailSwitch
             // 
-            this.simpleButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton3.Location = new System.Drawing.Point(1080, 167);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(97, 23);
-            this.simpleButton3.TabIndex = 27;
-            this.simpleButton3.Text = "切换账号";
+            this.btnStraRailSwitch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnStraRailSwitch.Location = new System.Drawing.Point(1080, 167);
+            this.btnStraRailSwitch.Name = "btnStraRailSwitch";
+            this.btnStraRailSwitch.Size = new System.Drawing.Size(97, 23);
+            this.btnStraRailSwitch.TabIndex = 27;
+            this.btnStraRailSwitch.Text = "切换账号";
             // 
-            // simpleButton4
+            // btnChooseStraRailPath
             // 
-            this.simpleButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton4.Location = new System.Drawing.Point(1080, 64);
-            this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(97, 28);
-            this.simpleButton4.TabIndex = 26;
-            this.simpleButton4.Text = "选择...";
+            this.btnChooseStraRailPath.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnChooseStraRailPath.Location = new System.Drawing.Point(1080, 64);
+            this.btnChooseStraRailPath.Name = "btnChooseStraRailPath";
+            this.btnChooseStraRailPath.Size = new System.Drawing.Size(97, 28);
+            this.btnChooseStraRailPath.TabIndex = 26;
+            this.btnChooseStraRailPath.Text = "选择...";
+            this.btnChooseStraRailPath.Click += new System.EventHandler(this.btnChooseStraRailPath_Click);
             // 
             // labelControl2
             // 
@@ -394,19 +396,19 @@
             // 
             this.labelControl5.Location = new System.Drawing.Point(28, 46);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(108, 14);
+            this.labelControl5.Size = new System.Drawing.Size(168, 14);
             this.labelControl5.TabIndex = 25;
-            this.labelControl5.Text = "【原神】游戏路径：";
+            this.labelControl5.Text = "【崩坏：星穹铁道】游戏路径：";
             // 
-            // textEdit1
+            // txtStarRailPath
             // 
-            this.textEdit1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtStarRailPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textEdit1.Enabled = false;
-            this.textEdit1.Location = new System.Drawing.Point(28, 66);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(1036, 20);
-            this.textEdit1.TabIndex = 23;
+            this.txtStarRailPath.Enabled = false;
+            this.txtStarRailPath.Location = new System.Drawing.Point(28, 66);
+            this.txtStarRailPath.Name = "txtStarRailPath";
+            this.txtStarRailPath.Size = new System.Drawing.Size(1036, 20);
+            this.txtStarRailPath.TabIndex = 23;
             // 
             // tabPageHonkaiImpact3
             // 
@@ -439,9 +441,9 @@
             this.gridControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            gridLevelNode3.RelationName = "Level1";
+            gridLevelNode1.RelationName = "Level1";
             this.gridControl3.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode3});
+            gridLevelNode1});
             this.gridControl3.Location = new System.Drawing.Point(30, 129);
             this.gridControl3.MainView = this.gridView3;
             this.gridControl3.Name = "gridControl3";
@@ -548,9 +550,9 @@
             this.gridControl4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            gridLevelNode4.RelationName = "Level1";
+            gridLevelNode3.RelationName = "Level1";
             this.gridControl4.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode4});
+            gridLevelNode3});
             this.gridControl4.Location = new System.Drawing.Point(30, 129);
             this.gridControl4.MainView = this.gridView4;
             this.gridControl4.Name = "gridControl4";
@@ -657,9 +659,9 @@
             this.gridControl5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            gridLevelNode5.RelationName = "Level1";
+            gridLevelNode4.RelationName = "Level1";
             this.gridControl5.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode5});
+            gridLevelNode4});
             this.gridControl5.Location = new System.Drawing.Point(30, 129);
             this.gridControl5.MainView = this.gridView5;
             this.gridControl5.Name = "gridControl5";
@@ -766,9 +768,9 @@
             this.gridControl6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            gridLevelNode6.RelationName = "Level1";
+            gridLevelNode5.RelationName = "Level1";
             this.gridControl6.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode6});
+            gridLevelNode5});
             this.gridControl6.Location = new System.Drawing.Point(30, 129);
             this.gridControl6.MainView = this.gridView6;
             this.gridControl6.Name = "gridControl6";
@@ -875,9 +877,9 @@
             this.gridControl7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            gridLevelNode7.RelationName = "Level1";
+            gridLevelNode6.RelationName = "Level1";
             this.gridControl7.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode7});
+            gridLevelNode6});
             this.gridControl7.Location = new System.Drawing.Point(30, 129);
             this.gridControl7.MainView = this.gridView7;
             this.gridControl7.Name = "gridControl7";
@@ -1001,7 +1003,7 @@
             this.groupControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStarRailPath.Properties)).EndInit();
             this.tabPageHonkaiImpact3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
@@ -1076,13 +1078,13 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.GridControl gridControl2;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
-        private DevExpress.XtraEditors.SimpleButton simpleButton4;
+        private DevExpress.XtraEditors.SimpleButton btnStraRailDelete1;
+        private DevExpress.XtraEditors.SimpleButton btnStarRailAdd;
+        private DevExpress.XtraEditors.SimpleButton btnStraRailSwitch;
+        private DevExpress.XtraEditors.SimpleButton btnChooseStraRailPath;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txtStarRailPath;
         private DevExpress.XtraGrid.GridControl gridControl3;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
         private DevExpress.XtraEditors.SimpleButton simpleButton5;
