@@ -172,6 +172,7 @@
     <Compile Include="Control_Mihoyo_resources.Designer.cs">
       <DependentUpon>Control_Mihoyo_resources.cs</DependentUpon>
     </Compile>
+    <Compile Include="CoreData.cs" />
     <Compile Include="DotNet.cs" />
     <Compile Include="AccountNameDialog.cs">
       <SubType>Form</SubType>

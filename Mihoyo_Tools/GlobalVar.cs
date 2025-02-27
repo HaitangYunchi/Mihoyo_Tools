@@ -55,7 +55,14 @@ namespace Mihoyo_Tools
         public static string strOutput = "";
         public static string _tempVideo_Name = "";      // 视频临时名字，可能用不到，先放这里吧，懒得删了
         public static bool   isNetworkAvailable;        // 判断网络是否链接 true = 已链接  flase = 未连接
-        public static string Account = StrPath + @"\data\accounts.dat";
+        public static string genshin = StrPath + @"\Mihoyo\Genshin.dat";
+        public static string genshinCloud = StrPath + @"\Mihoyo\GenshinCloud.dat";
+        public static string genshinOversea = StrPath + @"\Mihoyo\GenshinOversea .dat";
+        public static string HonkaiImpact3 = StrPath + @"\Mihoyo\HK3.dat";
+        public static string StarRail = StrPath + @"\Mihoyo\StarRail.dat";
+        public static string StarRailOversea = StrPath + @"\Mihoyo\StarRailOversea.dat";
+        public static string ZZZ = StrPath + @"\Mihoyo\ZZZ.dat";
+        public static string ZZZOversea = StrPath + @"\Mihoyo\ZZZOversea.dat";
 
         #region 常量
         public const  string KeyGenshin = "KeyHaiTangYunchiPK9SAUq0txQh1NV4WyJVZjz0g3YnHSPibmYWQqJn3i4kxtlZWYHCAowRwOobBLTPAnWTV99NJHE6AuZoyZ8ziefsblLbqEbSsmm0RRyuPdMhNdZQQ0qfQynP3aj9rpZD9fMToHyfytY16NtCIj5ykkgGSCHcPf6qcH9ho6TZKcV0ALsLNNhn3qaN0ujYD1iseo1TaeM0IsYs1b8elK4g6iEWyGwKsijqSyRZsmNrCx4VriLZ";

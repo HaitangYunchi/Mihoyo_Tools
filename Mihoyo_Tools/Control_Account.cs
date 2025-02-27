@@ -18,6 +18,7 @@ namespace Mihoyo_Tools
 {
     public partial class Control_Account : DevExpress.XtraEditors.XtraUserControl
     {
+
         #region 常量
 
         private static readonly byte[] KeyGenshin = Encoding.ASCII.GetBytes(GlobalVar.KeyGenshin);
@@ -46,7 +47,14 @@ namespace Mihoyo_Tools
             InitializeComponent();
             //InitializeSkin();
             ConfigureGrid();
-            LoadAccounts();
+            LoadAccountsGenshin();
+            LoadAccountsGenshinCloud();
+            LoadAccountsGenshinOversea();
+            LoadAccountsHonkaiImpact3();
+            LoadAccountsStarRail();
+            LoadAccountsStarRailOversea();
+            LoadAccountsZZZ();
+            LoadAccountsZZZOversean();
         }
         private void Control_Account_Load(object sender, EventArgs e)
         {
@@ -184,42 +192,140 @@ namespace Mihoyo_Tools
         }
         #endregion
         #region 数据操作
-        private void LoadAccounts()
+        private void LoadAccountsGenshin()
         {
             try
             {
-                if (File.Exists(GlobalVar.Account))
+                if (File.Exists(GlobalVar.genshin))
                 {
-                    var encrypted = File.ReadAllBytes(GlobalVar.Account);
-                    var jsonGenshin = DecryptGenshin(encrypted);
-                    var jsonGenshinCloud = DecryptGenshinCloud(encrypted);
-                    var jsonGenshinOversea = DecryptGenshinOversea(encrypted);
-                    var jsonHonkaiImpact3 = DecryptHonkaiImpact3(encrypted);
-                    var jsonStarRail = DecryptStarRail(encrypted);
-                    var jsonStarRailOversea = DecryptStarRailOversea(encrypted);
-                    var jsonZZZ = DecryptZZZ(encrypted);
-                    var jsonZZZOversea = DecryptZZZOversea(encrypted);
+                    var genshin = File.ReadAllBytes(GlobalVar.genshin);
+                    var jsonGenshin = DecryptGenshin(genshin);
                     _accountsGenshin = JsonConvert.DeserializeObject<List<AccountGenshin>>(jsonGenshin);
-                    _accountsGenshinCloud = JsonConvert.DeserializeObject<List<AccountGenshinCloud>>(jsonGenshinCloud);
-                    _accountsGenshinOversea = JsonConvert.DeserializeObject<List<AccountGenshinOversea>>(jsonGenshinOversea);
-                    _accountsHonkaiImpact3 = JsonConvert.DeserializeObject<List<AccountHonkaiImpact3>>(jsonHonkaiImpact3);
-                    _accountsStarRail = JsonConvert.DeserializeObject<List<AccountStarRail>>(jsonStarRail);
-                    _accountsStarRailOversea = JsonConvert.DeserializeObject<List<AccountStarRailOversea>>(jsonStarRailOversea);
-                    _accountsZZZ = JsonConvert.DeserializeObject<List<AccountZZZ>>(jsonZZZ);
-                    _accountsZZZOversea = JsonConvert.DeserializeObject<List<AccountZZZOversea>>(jsonZZZOversea);
                     gridControl1.DataSource = _accountsGenshin;
-                    gridControl2.DataSource = _accountsStarRail;
-                    gridControl3.DataSource = _accountsHonkaiImpact3;
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show($"数据加载失败：{ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void LoadAccountsGenshinCloud()
+        {
+            try
+            {
+                if (File.Exists(GlobalVar.genshinCloud))
+                {
+                    var genshinCloud = File.ReadAllBytes(GlobalVar.genshinCloud);
+                    var jsonGenshinCloud = DecryptGenshinCloud(genshinCloud);
+                    _accountsGenshinCloud = JsonConvert.DeserializeObject<List<AccountGenshinCloud>>(jsonGenshinCloud);
                     gridControl4.DataSource = _accountsGenshinCloud;
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show($"数据加载失败：{ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void LoadAccountsGenshinOversea()
+        {
+            try
+            {
+                if (File.Exists(GlobalVar.genshinOversea))
+                {
+                    var genshinOversea = File.ReadAllBytes(GlobalVar.genshinOversea);
+                    var jsonGenshinOversea = DecryptGenshinOversea(genshinOversea);
+                    _accountsGenshinOversea = JsonConvert.DeserializeObject<List<AccountGenshinOversea>>(jsonGenshinOversea);
                     gridControl5.DataSource = _accountsGenshinOversea;
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show($"数据加载失败：{ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void LoadAccountsHonkaiImpact3()
+        {
+            try
+            {
+                if (File.Exists(GlobalVar.HonkaiImpact3))
+                {
+                    var HonkaiImpact3 = File.ReadAllBytes(GlobalVar.HonkaiImpact3);
+                    var jsonHonkaiImpact3 = DecryptHonkaiImpact3(HonkaiImpact3);
+                    _accountsHonkaiImpact3 = JsonConvert.DeserializeObject<List<AccountHonkaiImpact3>>(jsonHonkaiImpact3);
+                    gridControl3.DataSource = _accountsHonkaiImpact3;
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show($"数据加载失败：{ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void LoadAccountsStarRail()
+        {
+            try
+            {
+                if (File.Exists(GlobalVar.StarRail))
+                {
+                    var StarRail = File.ReadAllBytes(GlobalVar.StarRail);
+                    var jsonStarRail = DecryptStarRail(StarRail);
+                    _accountsStarRail = JsonConvert.DeserializeObject<List<AccountStarRail>>(jsonStarRail);
+                    gridControl2.DataSource = _accountsStarRail;
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show($"数据加载失败：{ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void LoadAccountsStarRailOversea()
+        {
+            try
+            {
+                if (File.Exists(GlobalVar.StarRailOversea))
+                {
+                    var StarRailOversea = File.ReadAllBytes(GlobalVar.StarRailOversea);
+                    var jsonStarRailOversea = DecryptStarRailOversea(StarRailOversea);
+                    _accountsStarRailOversea = JsonConvert.DeserializeObject<List<AccountStarRailOversea>>(jsonStarRailOversea);
                     gridControl6.DataSource = _accountsStarRailOversea;
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show($"数据加载失败：{ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void LoadAccountsZZZ()
+        {
+            try
+            {
+                if (File.Exists(GlobalVar.ZZZ))
+                {
+                    var ZZZ = File.ReadAllBytes(GlobalVar.ZZZ);
+                    var jsonZZZ = DecryptZZZ(ZZZ);
+                    _accountsZZZ = JsonConvert.DeserializeObject<List<AccountZZZ>>(jsonZZZ);
                     gridControl7.DataSource = _accountsZZZ;
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show($"数据加载失败：{ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void LoadAccountsZZZOversean()
+        {
+            try
+            {
+                if (File.Exists(GlobalVar.ZZZOversea))
+                {
+                    var ZZZOversea = File.ReadAllBytes(GlobalVar.ZZZOversea);
+                    var jsonZZZOversea = DecryptZZZOversea(ZZZOversea);
+                    _accountsZZZOversea = JsonConvert.DeserializeObject<List<AccountZZZOversea>>(jsonZZZOversea);
                     //gridControl8.DataSource = _accountsZZZOversea;
                 }
             }
             catch (Exception ex)
             {
-                XtraMessageBox.Show($"数据加载失败：{ex.Message}", "错误",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show($"数据加载失败：{ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         #endregion
@@ -230,7 +336,7 @@ namespace Mihoyo_Tools
             {
                 var jsonGenshin = JsonConvert.SerializeObject(_accountsGenshin);
                 var encrypted = EncryptGenshin(jsonGenshin);
-                File.WriteAllBytes(GlobalVar.Account, encrypted);
+                File.WriteAllBytes(GlobalVar.genshin, encrypted);
             }
             catch (Exception ex)
             {
@@ -242,8 +348,8 @@ namespace Mihoyo_Tools
             try
             {
                 var jsonGenshinCloud = JsonConvert.SerializeObject(_accountsGenshinCloud);
-                var encrypted = EncryptGenshin(jsonGenshinCloud);
-                File.WriteAllBytes(GlobalVar.Account, encrypted);
+                var encrypted = EncryptGenshinCloud(jsonGenshinCloud);
+                File.WriteAllBytes(GlobalVar.genshinCloud, encrypted);
             }
             catch (Exception ex)
             {
@@ -255,8 +361,8 @@ namespace Mihoyo_Tools
             try
             {
                 var jsonGenshinOversea = JsonConvert.SerializeObject(_accountsGenshinOversea);
-                var encrypted = EncryptGenshin(jsonGenshinOversea);
-                File.WriteAllBytes(GlobalVar.Account, encrypted);
+                var encrypted = EncryptGenshinOversea(jsonGenshinOversea);
+                File.WriteAllBytes(GlobalVar.genshinOversea, encrypted);
             }
             catch (Exception ex)
             {
@@ -268,8 +374,8 @@ namespace Mihoyo_Tools
             try
             {
                 var jsonHonkaiImpact3 = JsonConvert.SerializeObject(_accountsHonkaiImpact3);
-                var encrypted = EncryptGenshin(jsonHonkaiImpact3);
-                File.WriteAllBytes(GlobalVar.Account, encrypted);
+                var encrypted = EncryptHonkaiImpact3(jsonHonkaiImpact3);
+                File.WriteAllBytes(GlobalVar.HonkaiImpact3, encrypted);
             }
             catch (Exception ex)
             {
@@ -281,8 +387,8 @@ namespace Mihoyo_Tools
             try
             {
                 var jsonStarRail = JsonConvert.SerializeObject(_accountsStarRail);
-                var encrypted = EncryptGenshin(jsonStarRail);
-                File.WriteAllBytes(GlobalVar.Account, encrypted);
+                var encrypted = EncryptStarRail(jsonStarRail);
+                File.WriteAllBytes(GlobalVar.StarRail, encrypted);
             }
             catch (Exception ex)
             {
@@ -294,8 +400,8 @@ namespace Mihoyo_Tools
             try
             {
                 var jsonStarRailOversea = JsonConvert.SerializeObject(_accountsStarRailOversea);
-                var encrypted = EncryptGenshin(jsonStarRailOversea);
-                File.WriteAllBytes(GlobalVar.Account, encrypted);
+                var encrypted = EncryptStarRailOversea(jsonStarRailOversea);
+                File.WriteAllBytes(GlobalVar.StarRailOversea, encrypted);
             }
             catch (Exception ex)
             {
@@ -307,8 +413,8 @@ namespace Mihoyo_Tools
             try
             {
                 var jsonZZZ = JsonConvert.SerializeObject(_accountsZZZ);
-                var encrypted = EncryptGenshin(jsonZZZ);
-                File.WriteAllBytes(GlobalVar.Account, encrypted);
+                var encrypted = EncryptZZZ(jsonZZZ);
+                File.WriteAllBytes(GlobalVar.ZZZ, encrypted);
             }
             catch (Exception ex)
             {
@@ -322,8 +428,8 @@ namespace Mihoyo_Tools
             try
             {
                 var jsonZZZOversea = JsonConvert.SerializeObject(_accountsZZZOversea);
-                var encrypted = EncryptGenshin(jsonZZZOversea);
-                File.WriteAllBytes(GlobalVar.Account, encrypted);
+                var encrypted = EncryptZZZOversea(jsonZZZOversea);
+                File.WriteAllBytes(GlobalVar.ZZZOversea, encrypted);
             }
             catch (Exception ex)
             {
@@ -405,7 +511,7 @@ namespace Mihoyo_Tools
             {
                 if (key == null)
                 {
-                    XtraMessageBox.Show("未找到原神用户存储信息！");
+                    XtraMessageBox.Show("未找到星铁用户存储信息！");
                     return null;
                 }
                 // 显式类型转换确保二进制数据
@@ -657,7 +763,7 @@ namespace Mihoyo_Tools
             }
         }
 
-        private byte[] EncryptStarRaila(string plainText)
+        private byte[] EncryptStarRail(string plainText)
         {
             return ProtectedData.Protect(Encoding.UTF8.GetBytes(plainText), KeyStarRail, DataProtectionScope.CurrentUser);
         }
@@ -742,7 +848,7 @@ namespace Mihoyo_Tools
                     _accountsGenshin.Add(acc);
                     gridControl1.RefreshDataSource();
                     SaveAccountsGenshin();
-                    LoadAccounts();
+                    LoadAccountsGenshin();
                 }
             }
         }
@@ -869,7 +975,7 @@ namespace Mihoyo_Tools
                     _accountsStarRail.Add(acc);
                     gridControl2.RefreshDataSource();
                     SaveAccountsStarRail();
-                    LoadAccounts();
+                    LoadAccountsStarRail();
                 }
             }
         }
