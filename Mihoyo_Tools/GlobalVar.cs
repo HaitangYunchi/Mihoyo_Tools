@@ -25,7 +25,6 @@ namespace Mihoyo_Tools
         public static string Upgrade_ver = "";//升级版本号
         public static string VerContrast = Assembly.GetExecutingAssembly().GetName().Version.ToString();// 版本唯一码
         public static string New_Info = "";
-
         public static string SoftTitle = "  米哈游工具箱";
         public static string USM_dir = "";
         public static string line = "";

@@ -29,16 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode6 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode7 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode8 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode3 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode4 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode5 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode6 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode7 = new DevExpress.XtraGrid.GridLevelNode();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.tabPageGenshin = new DevExpress.XtraTab.XtraTabPage();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.btnGenshinDelete = new DevExpress.XtraEditors.SimpleButton();
@@ -50,6 +51,7 @@
             this.txtGenshinPath = new DevExpress.XtraEditors.TextEdit();
             this.tabPageSatrRail = new DevExpress.XtraTab.XtraTabPage();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.btnStarRailDelete = new DevExpress.XtraEditors.SimpleButton();
@@ -61,6 +63,7 @@
             this.txtStarRailPath = new DevExpress.XtraEditors.TextEdit();
             this.tabPageHonkaiImpact3 = new DevExpress.XtraTab.XtraTabPage();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
             this.gridControl3 = new DevExpress.XtraGrid.GridControl();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.btnHonkaiImpact3Delete = new DevExpress.XtraEditors.SimpleButton();
@@ -72,6 +75,7 @@
             this.textHonkaiImpact3patch = new DevExpress.XtraEditors.TextEdit();
             this.tabPageGenshinCloud = new DevExpress.XtraTab.XtraTabPage();
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
             this.gridControl4 = new DevExpress.XtraGrid.GridControl();
             this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.btnGenshinCloudDelete = new DevExpress.XtraEditors.SimpleButton();
@@ -83,6 +87,7 @@
             this.txtGenshinCloudPath = new DevExpress.XtraEditors.TextEdit();
             this.tabPageGenshinOversea = new DevExpress.XtraTab.XtraTabPage();
             this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
             this.gridControl5 = new DevExpress.XtraGrid.GridControl();
             this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.btnGenshinOverseaDelete = new DevExpress.XtraEditors.SimpleButton();
@@ -94,6 +99,7 @@
             this.txtGenshinOverseaPath = new DevExpress.XtraEditors.TextEdit();
             this.tabPageSatrRailOversea = new DevExpress.XtraTab.XtraTabPage();
             this.groupControl6 = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
             this.gridControl6 = new DevExpress.XtraGrid.GridControl();
             this.gridView6 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.btnStarRailOverseaDelete = new DevExpress.XtraEditors.SimpleButton();
@@ -105,6 +111,7 @@
             this.txtStarRailOverseaPath = new DevExpress.XtraEditors.TextEdit();
             this.tabPageZZZ = new DevExpress.XtraTab.XtraTabPage();
             this.groupControl7 = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
             this.gridControl7 = new DevExpress.XtraGrid.GridControl();
             this.gridView7 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.btnZZZDelete = new DevExpress.XtraEditors.SimpleButton();
@@ -115,17 +122,6 @@
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
             this.txtZZZPath = new DevExpress.XtraEditors.TextEdit();
             this.ToolTipContoller = new DevExpress.Utils.ToolTipController(this.components);
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.显示主界面ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lvwGenshinAcct = new DevExpress.Utils.Html.HtmlTemplateCollection();
-            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.tabPageGenshin.SuspendLayout();
@@ -170,7 +166,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtZZZPath.Properties)).BeginInit();
-            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // xtraTabControl1
@@ -219,14 +214,23 @@
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "帐号切换";
             // 
+            // labelControl15
+            // 
+            this.labelControl15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl15.Location = new System.Drawing.Point(1082, 250);
+            this.labelControl15.Name = "labelControl15";
+            this.labelControl15.Size = new System.Drawing.Size(72, 84);
+            this.labelControl15.TabIndex = 23;
+            this.labelControl15.Text = "使用技巧：\r\n\r\n在游戏中登录\r\n账号后，然后\r\n在本软件即可\r\n添加当前账号";
+            // 
             // gridControl1
             // 
             this.gridControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            gridLevelNode6.RelationName = "Level1";
+            gridLevelNode1.RelationName = "Level1";
             this.gridControl1.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode6});
+            gridLevelNode1});
             this.gridControl1.Location = new System.Drawing.Point(30, 129);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
@@ -334,14 +338,23 @@
             this.groupControl2.TabIndex = 1;
             this.groupControl2.Text = "帐号切换";
             // 
+            // labelControl16
+            // 
+            this.labelControl16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl16.Location = new System.Drawing.Point(1082, 250);
+            this.labelControl16.Name = "labelControl16";
+            this.labelControl16.Size = new System.Drawing.Size(72, 84);
+            this.labelControl16.TabIndex = 31;
+            this.labelControl16.Text = "使用技巧：\r\n\r\n在游戏中登录\r\n账号后，然后\r\n在本软件即可\r\n添加当前账号";
+            // 
             // gridControl2
             // 
             this.gridControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            gridLevelNode7.RelationName = "Level1";
+            gridLevelNode2.RelationName = "Level1";
             this.gridControl2.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode7});
+            gridLevelNode2});
             this.gridControl2.Location = new System.Drawing.Point(30, 129);
             this.gridControl2.MainView = this.gridView2;
             this.gridControl2.Name = "gridControl2";
@@ -449,14 +462,23 @@
             this.groupControl3.TabIndex = 1;
             this.groupControl3.Text = "帐号切换";
             // 
+            // labelControl17
+            // 
+            this.labelControl17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl17.Location = new System.Drawing.Point(1082, 250);
+            this.labelControl17.Name = "labelControl17";
+            this.labelControl17.Size = new System.Drawing.Size(72, 84);
+            this.labelControl17.TabIndex = 31;
+            this.labelControl17.Text = "使用技巧：\r\n\r\n在游戏中登录\r\n账号后，然后\r\n在本软件即可\r\n添加当前账号";
+            // 
             // gridControl3
             // 
             this.gridControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            gridLevelNode8.RelationName = "Level1";
+            gridLevelNode3.RelationName = "Level1";
             this.gridControl3.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode8});
+            gridLevelNode3});
             this.gridControl3.Location = new System.Drawing.Point(30, 129);
             this.gridControl3.MainView = this.gridView3;
             this.gridControl3.Name = "gridControl3";
@@ -564,14 +586,23 @@
             this.groupControl4.TabIndex = 2;
             this.groupControl4.Text = "帐号切换";
             // 
+            // labelControl18
+            // 
+            this.labelControl18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl18.Location = new System.Drawing.Point(1082, 250);
+            this.labelControl18.Name = "labelControl18";
+            this.labelControl18.Size = new System.Drawing.Size(72, 84);
+            this.labelControl18.TabIndex = 31;
+            this.labelControl18.Text = "使用技巧：\r\n\r\n在游戏中登录\r\n账号后，然后\r\n在本软件即可\r\n添加当前账号";
+            // 
             // gridControl4
             // 
             this.gridControl4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            gridLevelNode1.RelationName = "Level1";
+            gridLevelNode4.RelationName = "Level1";
             this.gridControl4.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
+            gridLevelNode4});
             this.gridControl4.Location = new System.Drawing.Point(30, 129);
             this.gridControl4.MainView = this.gridView4;
             this.gridControl4.Name = "gridControl4";
@@ -679,14 +710,23 @@
             this.groupControl5.TabIndex = 2;
             this.groupControl5.Text = "帐号切换";
             // 
+            // labelControl19
+            // 
+            this.labelControl19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl19.Location = new System.Drawing.Point(1082, 250);
+            this.labelControl19.Name = "labelControl19";
+            this.labelControl19.Size = new System.Drawing.Size(72, 84);
+            this.labelControl19.TabIndex = 31;
+            this.labelControl19.Text = "使用技巧：\r\n\r\n在游戏中登录\r\n账号后，然后\r\n在本软件即可\r\n添加当前账号";
+            // 
             // gridControl5
             // 
             this.gridControl5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            gridLevelNode2.RelationName = "Level1";
+            gridLevelNode5.RelationName = "Level1";
             this.gridControl5.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
+            gridLevelNode5});
             this.gridControl5.Location = new System.Drawing.Point(30, 129);
             this.gridControl5.MainView = this.gridView5;
             this.gridControl5.Name = "gridControl5";
@@ -794,14 +834,23 @@
             this.groupControl6.TabIndex = 2;
             this.groupControl6.Text = "帐号切换";
             // 
+            // labelControl20
+            // 
+            this.labelControl20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl20.Location = new System.Drawing.Point(1082, 250);
+            this.labelControl20.Name = "labelControl20";
+            this.labelControl20.Size = new System.Drawing.Size(72, 84);
+            this.labelControl20.TabIndex = 31;
+            this.labelControl20.Text = "使用技巧：\r\n\r\n在游戏中登录\r\n账号后，然后\r\n在本软件即可\r\n添加当前账号";
+            // 
             // gridControl6
             // 
             this.gridControl6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            gridLevelNode3.RelationName = "Level1";
+            gridLevelNode6.RelationName = "Level1";
             this.gridControl6.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode3});
+            gridLevelNode6});
             this.gridControl6.Location = new System.Drawing.Point(30, 129);
             this.gridControl6.MainView = this.gridView6;
             this.gridControl6.Name = "gridControl6";
@@ -908,14 +957,23 @@
             this.groupControl7.TabIndex = 2;
             this.groupControl7.Text = "帐号切换";
             // 
+            // labelControl21
+            // 
+            this.labelControl21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl21.Location = new System.Drawing.Point(1082, 250);
+            this.labelControl21.Name = "labelControl21";
+            this.labelControl21.Size = new System.Drawing.Size(72, 84);
+            this.labelControl21.TabIndex = 31;
+            this.labelControl21.Text = "使用技巧：\r\n\r\n在游戏中登录\r\n账号后，然后\r\n在本软件即可\r\n添加当前账号";
+            // 
             // gridControl7
             // 
             this.gridControl7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            gridLevelNode4.RelationName = "Level1";
+            gridLevelNode7.RelationName = "Level1";
             this.gridControl7.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode4});
+            gridLevelNode7});
             this.gridControl7.Location = new System.Drawing.Point(30, 129);
             this.gridControl7.MainView = this.gridView7;
             this.gridControl7.Name = "gridControl7";
@@ -1001,89 +1059,6 @@
             this.ToolTipContoller.KeepWhileHovered = true;
             this.ToolTipContoller.ReshowDelay = 500;
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.显示主界面ToolStripMenuItem,
-            this.退出ToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(137, 48);
-            // 
-            // 显示主界面ToolStripMenuItem
-            // 
-            this.显示主界面ToolStripMenuItem.Name = "显示主界面ToolStripMenuItem";
-            this.显示主界面ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
-            this.显示主界面ToolStripMenuItem.Text = "显示主界面";
-            // 
-            // 退出ToolStripMenuItem
-            // 
-            this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
-            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
-            this.退出ToolStripMenuItem.Text = "退出";
-            // 
-            // labelControl15
-            // 
-            this.labelControl15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl15.Location = new System.Drawing.Point(1082, 250);
-            this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(72, 84);
-            this.labelControl15.TabIndex = 23;
-            this.labelControl15.Text = "使用技巧：\r\n\r\n在游戏中登录\r\n账号后，然后\r\n在本软件即可\r\n添加当前账号";
-            // 
-            // labelControl16
-            // 
-            this.labelControl16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl16.Location = new System.Drawing.Point(1082, 250);
-            this.labelControl16.Name = "labelControl16";
-            this.labelControl16.Size = new System.Drawing.Size(72, 84);
-            this.labelControl16.TabIndex = 31;
-            this.labelControl16.Text = "使用技巧：\r\n\r\n在游戏中登录\r\n账号后，然后\r\n在本软件即可\r\n添加当前账号";
-            // 
-            // labelControl17
-            // 
-            this.labelControl17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl17.Location = new System.Drawing.Point(1082, 250);
-            this.labelControl17.Name = "labelControl17";
-            this.labelControl17.Size = new System.Drawing.Size(72, 84);
-            this.labelControl17.TabIndex = 31;
-            this.labelControl17.Text = "使用技巧：\r\n\r\n在游戏中登录\r\n账号后，然后\r\n在本软件即可\r\n添加当前账号";
-            // 
-            // labelControl18
-            // 
-            this.labelControl18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl18.Location = new System.Drawing.Point(1082, 250);
-            this.labelControl18.Name = "labelControl18";
-            this.labelControl18.Size = new System.Drawing.Size(72, 84);
-            this.labelControl18.TabIndex = 31;
-            this.labelControl18.Text = "使用技巧：\r\n\r\n在游戏中登录\r\n账号后，然后\r\n在本软件即可\r\n添加当前账号";
-            // 
-            // labelControl19
-            // 
-            this.labelControl19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl19.Location = new System.Drawing.Point(1082, 250);
-            this.labelControl19.Name = "labelControl19";
-            this.labelControl19.Size = new System.Drawing.Size(72, 84);
-            this.labelControl19.TabIndex = 31;
-            this.labelControl19.Text = "使用技巧：\r\n\r\n在游戏中登录\r\n账号后，然后\r\n在本软件即可\r\n添加当前账号";
-            // 
-            // labelControl20
-            // 
-            this.labelControl20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl20.Location = new System.Drawing.Point(1082, 250);
-            this.labelControl20.Name = "labelControl20";
-            this.labelControl20.Size = new System.Drawing.Size(72, 84);
-            this.labelControl20.TabIndex = 31;
-            this.labelControl20.Text = "使用技巧：\r\n\r\n在游戏中登录\r\n账号后，然后\r\n在本软件即可\r\n添加当前账号";
-            // 
-            // labelControl21
-            // 
-            this.labelControl21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl21.Location = new System.Drawing.Point(1082, 250);
-            this.labelControl21.Name = "labelControl21";
-            this.labelControl21.Size = new System.Drawing.Size(72, 84);
-            this.labelControl21.TabIndex = 31;
-            this.labelControl21.Text = "使用技巧：\r\n\r\n在游戏中登录\r\n账号后，然后\r\n在本软件即可\r\n添加当前账号";
-            // 
             // Control_Account
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -1143,7 +1118,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtZZZPath.Properties)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1173,11 +1147,6 @@
         private DevExpress.XtraEditors.GroupControl groupControl5;
         private DevExpress.XtraEditors.GroupControl groupControl6;
         private DevExpress.XtraEditors.GroupControl groupControl7;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem 显示主界面ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 退出ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private DevExpress.Utils.Html.HtmlTemplateCollection lvwGenshinAcct;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.GridControl gridControl2;
