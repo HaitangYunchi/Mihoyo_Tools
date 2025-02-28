@@ -26,7 +26,7 @@ namespace Mihoyo_Tools
         public static string VerContrast = Assembly.GetExecutingAssembly().GetName().Version.ToString();// 版本唯一码
         public static string New_Info = "";
 
-        public static string SoftTitle = "  原神过场动画导出工具 UI";
+        public static string SoftTitle = "  米哈游工具箱";
         public static string USM_dir = "";
         public static string line = "";
         public static string Outdir = "0"; // 0 = 单文件导出  1 = 游戏目录导出  2 = 自定义 usm 目录导出
@@ -58,7 +58,7 @@ namespace Mihoyo_Tools
         public static string genshin = StrPath + @"\Mihoyo\Genshin.dat";
         public static string genshinCloud = StrPath + @"\Mihoyo\GenshinCloud.dat";
         public static string genshinOversea = StrPath + @"\Mihoyo\GenshinOversea .dat";
-        public static string HonkaiImpact3 = StrPath + @"\Mihoyo\HK3.dat";
+        public static string HonkaiImpact3 = StrPath + @"\Mihoyo\BH3.dat";
         public static string StarRail = StrPath + @"\Mihoyo\StarRail.dat";
         public static string StarRailOversea = StrPath + @"\Mihoyo\StarRailOversea.dat";
         public static string ZZZ = StrPath + @"\Mihoyo\ZZZ.dat";

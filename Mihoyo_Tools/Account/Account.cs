@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace Mihoyo_Tools
 {
-    #region 实体类
     public class AccountGenshin
     {
         public string AccountName { get; set; }
@@ -67,5 +66,5 @@ namespace Mihoyo_Tools
         public byte[] MIHOYOSDK_ADL_PROD_OVERSEA_h1158948810 { get; set; } //国服账号
 
     }
-    #endregion
+
 }

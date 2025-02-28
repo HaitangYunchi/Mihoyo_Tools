@@ -51,7 +51,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>icon.ico</ApplicationIcon>
+    <ApplicationIcon>hutao.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>Mihoyo_Tools.Program</StartupObject>
@@ -96,6 +96,8 @@
   <PropertyGroup>
     <SignManifests>true</SignManifests>
   </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
   <PropertyGroup>
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
@@ -246,14 +248,16 @@
     <Content Include="data\7z.exe">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="hutao.ico" />
     <Content Include="net.ico" />
     <Content Include="Readme_images\about.png" />
     <Content Include="Readme_images\icon.png" />
     <Content Include="Readme_images\usm.png" />
     <Content Include="Readme_images\web.png" />
     <Content Include="Resources\about.png" />
+    <None Include="Resources\hutao.png" />
     <Content Include="Resources\icon.ico" />
-    <Content Include="Resources\icon.png" />
+    <None Include="Resources\icon.png" />
     <Content Include="Resources\qq.jpg" />
     <Content Include="Resources\winxin.jpg" />
     <None Include="data\ffmpeg.exe">

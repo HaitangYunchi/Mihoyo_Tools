@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode6 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode7 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode8 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode3 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode4 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode5 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode6 = new DevExpress.XtraGrid.GridLevelNode();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.tabPageGenshin = new DevExpress.XtraTab.XtraTabPage();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
@@ -52,7 +52,7 @@
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.btnStraRailDelete1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnStarRailDelete = new DevExpress.XtraEditors.SimpleButton();
             this.btnStarRailAdd = new DevExpress.XtraEditors.SimpleButton();
             this.btnStraRailSwitch = new DevExpress.XtraEditors.SimpleButton();
             this.btnChooseStraRailPath = new DevExpress.XtraEditors.SimpleButton();
@@ -63,62 +63,69 @@
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.gridControl3 = new DevExpress.XtraGrid.GridControl();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton7 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton8 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnHonkaiImpact3Delete = new DevExpress.XtraEditors.SimpleButton();
+            this.AddHonkaiImpact3 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnHonkaiImpact3Switch = new DevExpress.XtraEditors.SimpleButton();
+            this.btnHonkaiImpact3 = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.textHonkaiImpact3patch = new DevExpress.XtraEditors.TextEdit();
             this.tabPageGenshinCloud = new DevExpress.XtraTab.XtraTabPage();
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
             this.gridControl4 = new DevExpress.XtraGrid.GridControl();
             this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.simpleButton9 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton10 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton11 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton12 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnGenshinCloudDelete = new DevExpress.XtraEditors.SimpleButton();
+            this.btnGenshinCloudAdd = new DevExpress.XtraEditors.SimpleButton();
+            this.btnGenshinCloudSwitch = new DevExpress.XtraEditors.SimpleButton();
+            this.Btn_GenshinCloud = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
+            this.txtGenshinCloudPath = new DevExpress.XtraEditors.TextEdit();
             this.tabPageGenshinOversea = new DevExpress.XtraTab.XtraTabPage();
             this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
             this.gridControl5 = new DevExpress.XtraGrid.GridControl();
             this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.simpleButton13 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton14 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton15 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton16 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnGenshinOverseaDelete = new DevExpress.XtraEditors.SimpleButton();
+            this.btnGenshinOverseaAdd = new DevExpress.XtraEditors.SimpleButton();
+            this.btnGenshinOverseaSwitch = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_GenshinOverseaPath = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
+            this.txtGenshinOverseaPath = new DevExpress.XtraEditors.TextEdit();
             this.tabPageSatrRailOversea = new DevExpress.XtraTab.XtraTabPage();
             this.groupControl6 = new DevExpress.XtraEditors.GroupControl();
             this.gridControl6 = new DevExpress.XtraGrid.GridControl();
             this.gridView6 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.simpleButton17 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton18 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton19 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton20 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnStarRailOverseaDelete = new DevExpress.XtraEditors.SimpleButton();
+            this.btnStarRailOverseaAdd = new DevExpress.XtraEditors.SimpleButton();
+            this.btnStarRailOverseaSwitch = new DevExpress.XtraEditors.SimpleButton();
+            this.btnStarRailOverseaPath = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
+            this.txtStarRailOverseaPath = new DevExpress.XtraEditors.TextEdit();
             this.tabPageZZZ = new DevExpress.XtraTab.XtraTabPage();
             this.groupControl7 = new DevExpress.XtraEditors.GroupControl();
             this.gridControl7 = new DevExpress.XtraGrid.GridControl();
             this.gridView7 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.simpleButton21 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton22 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton23 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton24 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnZZZDelete = new DevExpress.XtraEditors.SimpleButton();
+            this.btnZZZAdd = new DevExpress.XtraEditors.SimpleButton();
+            this.btnZZZSwitch = new DevExpress.XtraEditors.SimpleButton();
+            this.btnZZZPath = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit6 = new DevExpress.XtraEditors.TextEdit();
+            this.txtZZZPath = new DevExpress.XtraEditors.TextEdit();
             this.ToolTipContoller = new DevExpress.Utils.ToolTipController(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.显示主界面ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lvwGenshinAcct = new DevExpress.Utils.Html.HtmlTemplateCollection();
+            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.tabPageGenshin.SuspendLayout();
@@ -138,31 +145,31 @@
             this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textHonkaiImpact3patch.Properties)).BeginInit();
             this.tabPageGenshinCloud.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
             this.groupControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGenshinCloudPath.Properties)).BeginInit();
             this.tabPageGenshinOversea.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
             this.groupControl5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGenshinOverseaPath.Properties)).BeginInit();
             this.tabPageSatrRailOversea.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl6)).BeginInit();
             this.groupControl6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStarRailOverseaPath.Properties)).BeginInit();
             this.tabPageZZZ.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl7)).BeginInit();
             this.groupControl7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtZZZPath.Properties)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -197,6 +204,7 @@
             this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl1.Controls.Add(this.labelControl15);
             this.groupControl1.Controls.Add(this.gridControl1);
             this.groupControl1.Controls.Add(this.btnGenshinDelete);
             this.groupControl1.Controls.Add(this.btnGenshinAdd);
@@ -216,9 +224,9 @@
             this.gridControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            gridLevelNode2.RelationName = "Level1";
+            gridLevelNode6.RelationName = "Level1";
             this.gridControl1.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
+            gridLevelNode6});
             this.gridControl1.Location = new System.Drawing.Point(30, 129);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
@@ -311,8 +319,9 @@
             this.groupControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl2.Controls.Add(this.labelControl16);
             this.groupControl2.Controls.Add(this.gridControl2);
-            this.groupControl2.Controls.Add(this.btnStraRailDelete1);
+            this.groupControl2.Controls.Add(this.btnStarRailDelete);
             this.groupControl2.Controls.Add(this.btnStarRailAdd);
             this.groupControl2.Controls.Add(this.btnStraRailSwitch);
             this.groupControl2.Controls.Add(this.btnChooseStraRailPath);
@@ -330,9 +339,9 @@
             this.gridControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            gridLevelNode8.RelationName = "Level1";
+            gridLevelNode7.RelationName = "Level1";
             this.gridControl2.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode8});
+            gridLevelNode7});
             this.gridControl2.Location = new System.Drawing.Point(30, 129);
             this.gridControl2.MainView = this.gridView2;
             this.gridControl2.Name = "gridControl2";
@@ -345,15 +354,17 @@
             // 
             this.gridView2.GridControl = this.gridControl2;
             this.gridView2.Name = "gridView2";
+            this.gridView2.DoubleClick += new System.EventHandler(this.gridView2_DoubleClick);
             // 
-            // btnStraRailDelete1
+            // btnStarRailDelete
             // 
-            this.btnStraRailDelete1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnStraRailDelete1.Location = new System.Drawing.Point(1081, 205);
-            this.btnStraRailDelete1.Name = "btnStraRailDelete1";
-            this.btnStraRailDelete1.Size = new System.Drawing.Size(96, 23);
-            this.btnStraRailDelete1.TabIndex = 28;
-            this.btnStraRailDelete1.Text = "删除当前账号";
+            this.btnStarRailDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnStarRailDelete.Location = new System.Drawing.Point(1081, 205);
+            this.btnStarRailDelete.Name = "btnStarRailDelete";
+            this.btnStarRailDelete.Size = new System.Drawing.Size(96, 23);
+            this.btnStarRailDelete.TabIndex = 28;
+            this.btnStarRailDelete.Text = "删除当前账号";
+            this.btnStarRailDelete.Click += new System.EventHandler(this.btnStraRailDelete_Click);
             // 
             // btnStarRailAdd
             // 
@@ -373,6 +384,7 @@
             this.btnStraRailSwitch.Size = new System.Drawing.Size(97, 23);
             this.btnStraRailSwitch.TabIndex = 27;
             this.btnStraRailSwitch.Text = "切换账号";
+            this.btnStraRailSwitch.Click += new System.EventHandler(this.btnStraRailSwitch_Click);
             // 
             // btnChooseStraRailPath
             // 
@@ -422,14 +434,15 @@
             this.groupControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl3.Controls.Add(this.labelControl17);
             this.groupControl3.Controls.Add(this.gridControl3);
-            this.groupControl3.Controls.Add(this.simpleButton5);
-            this.groupControl3.Controls.Add(this.simpleButton6);
-            this.groupControl3.Controls.Add(this.simpleButton7);
-            this.groupControl3.Controls.Add(this.simpleButton8);
+            this.groupControl3.Controls.Add(this.btnHonkaiImpact3Delete);
+            this.groupControl3.Controls.Add(this.AddHonkaiImpact3);
+            this.groupControl3.Controls.Add(this.btnHonkaiImpact3Switch);
+            this.groupControl3.Controls.Add(this.btnHonkaiImpact3);
             this.groupControl3.Controls.Add(this.labelControl4);
             this.groupControl3.Controls.Add(this.labelControl6);
-            this.groupControl3.Controls.Add(this.textEdit2);
+            this.groupControl3.Controls.Add(this.textHonkaiImpact3patch);
             this.groupControl3.Location = new System.Drawing.Point(28, 28);
             this.groupControl3.Name = "groupControl3";
             this.groupControl3.Size = new System.Drawing.Size(1205, 655);
@@ -441,9 +454,9 @@
             this.gridControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            gridLevelNode1.RelationName = "Level1";
+            gridLevelNode8.RelationName = "Level1";
             this.gridControl3.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
+            gridLevelNode8});
             this.gridControl3.Location = new System.Drawing.Point(30, 129);
             this.gridControl3.MainView = this.gridView3;
             this.gridControl3.Name = "gridControl3";
@@ -456,42 +469,47 @@
             // 
             this.gridView3.GridControl = this.gridControl3;
             this.gridView3.Name = "gridView3";
+            this.gridView3.DoubleClick += new System.EventHandler(this.gridView3_DoubleClick);
             // 
-            // simpleButton5
+            // btnHonkaiImpact3Delete
             // 
-            this.simpleButton5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton5.Location = new System.Drawing.Point(1081, 205);
-            this.simpleButton5.Name = "simpleButton5";
-            this.simpleButton5.Size = new System.Drawing.Size(97, 23);
-            this.simpleButton5.TabIndex = 28;
-            this.simpleButton5.Text = "删除当前账号";
+            this.btnHonkaiImpact3Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHonkaiImpact3Delete.Location = new System.Drawing.Point(1081, 205);
+            this.btnHonkaiImpact3Delete.Name = "btnHonkaiImpact3Delete";
+            this.btnHonkaiImpact3Delete.Size = new System.Drawing.Size(97, 23);
+            this.btnHonkaiImpact3Delete.TabIndex = 28;
+            this.btnHonkaiImpact3Delete.Text = "删除当前账号";
+            this.btnHonkaiImpact3Delete.Click += new System.EventHandler(this.btnHonkaiImpact3Delete_Click);
             // 
-            // simpleButton6
+            // AddHonkaiImpact3
             // 
-            this.simpleButton6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton6.Location = new System.Drawing.Point(1080, 129);
-            this.simpleButton6.Name = "simpleButton6";
-            this.simpleButton6.Size = new System.Drawing.Size(97, 23);
-            this.simpleButton6.TabIndex = 29;
-            this.simpleButton6.Text = "保存当前账号";
+            this.AddHonkaiImpact3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.AddHonkaiImpact3.Location = new System.Drawing.Point(1080, 129);
+            this.AddHonkaiImpact3.Name = "AddHonkaiImpact3";
+            this.AddHonkaiImpact3.Size = new System.Drawing.Size(97, 23);
+            this.AddHonkaiImpact3.TabIndex = 29;
+            this.AddHonkaiImpact3.Text = "保存当前账号";
+            this.AddHonkaiImpact3.Click += new System.EventHandler(this.AddHonkaiImpact3_Click);
             // 
-            // simpleButton7
+            // btnHonkaiImpact3Switch
             // 
-            this.simpleButton7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton7.Location = new System.Drawing.Point(1080, 167);
-            this.simpleButton7.Name = "simpleButton7";
-            this.simpleButton7.Size = new System.Drawing.Size(98, 23);
-            this.simpleButton7.TabIndex = 27;
-            this.simpleButton7.Text = "切换账号";
+            this.btnHonkaiImpact3Switch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHonkaiImpact3Switch.Location = new System.Drawing.Point(1080, 167);
+            this.btnHonkaiImpact3Switch.Name = "btnHonkaiImpact3Switch";
+            this.btnHonkaiImpact3Switch.Size = new System.Drawing.Size(98, 23);
+            this.btnHonkaiImpact3Switch.TabIndex = 27;
+            this.btnHonkaiImpact3Switch.Text = "切换账号";
+            this.btnHonkaiImpact3Switch.Click += new System.EventHandler(this.btnHonkaiImpact3Switch_Click);
             // 
-            // simpleButton8
+            // btnHonkaiImpact3
             // 
-            this.simpleButton8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton8.Location = new System.Drawing.Point(1080, 64);
-            this.simpleButton8.Name = "simpleButton8";
-            this.simpleButton8.Size = new System.Drawing.Size(97, 28);
-            this.simpleButton8.TabIndex = 26;
-            this.simpleButton8.Text = "选择...";
+            this.btnHonkaiImpact3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHonkaiImpact3.Location = new System.Drawing.Point(1080, 64);
+            this.btnHonkaiImpact3.Name = "btnHonkaiImpact3";
+            this.btnHonkaiImpact3.Size = new System.Drawing.Size(97, 28);
+            this.btnHonkaiImpact3.TabIndex = 26;
+            this.btnHonkaiImpact3.Text = "选择...";
+            this.btnHonkaiImpact3.Click += new System.EventHandler(this.btnHonkaiImpact3_Click);
             // 
             // labelControl4
             // 
@@ -505,19 +523,19 @@
             // 
             this.labelControl6.Location = new System.Drawing.Point(28, 46);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(108, 14);
+            this.labelControl6.Size = new System.Drawing.Size(115, 14);
             this.labelControl6.TabIndex = 25;
-            this.labelControl6.Text = "【原神】游戏路径：";
+            this.labelControl6.Text = "【崩坏3】游戏路径：";
             // 
-            // textEdit2
+            // textHonkaiImpact3patch
             // 
-            this.textEdit2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.textHonkaiImpact3patch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textEdit2.Enabled = false;
-            this.textEdit2.Location = new System.Drawing.Point(28, 66);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(1036, 20);
-            this.textEdit2.TabIndex = 23;
+            this.textHonkaiImpact3patch.Enabled = false;
+            this.textHonkaiImpact3patch.Location = new System.Drawing.Point(28, 66);
+            this.textHonkaiImpact3patch.Name = "textHonkaiImpact3patch";
+            this.textHonkaiImpact3patch.Size = new System.Drawing.Size(1036, 20);
+            this.textHonkaiImpact3patch.TabIndex = 23;
             // 
             // tabPageGenshinCloud
             // 
@@ -531,14 +549,15 @@
             this.groupControl4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl4.Controls.Add(this.labelControl18);
             this.groupControl4.Controls.Add(this.gridControl4);
-            this.groupControl4.Controls.Add(this.simpleButton9);
-            this.groupControl4.Controls.Add(this.simpleButton10);
-            this.groupControl4.Controls.Add(this.simpleButton11);
-            this.groupControl4.Controls.Add(this.simpleButton12);
+            this.groupControl4.Controls.Add(this.btnGenshinCloudDelete);
+            this.groupControl4.Controls.Add(this.btnGenshinCloudAdd);
+            this.groupControl4.Controls.Add(this.btnGenshinCloudSwitch);
+            this.groupControl4.Controls.Add(this.Btn_GenshinCloud);
             this.groupControl4.Controls.Add(this.labelControl7);
             this.groupControl4.Controls.Add(this.labelControl8);
-            this.groupControl4.Controls.Add(this.textEdit3);
+            this.groupControl4.Controls.Add(this.txtGenshinCloudPath);
             this.groupControl4.Location = new System.Drawing.Point(28, 28);
             this.groupControl4.Name = "groupControl4";
             this.groupControl4.Size = new System.Drawing.Size(1205, 655);
@@ -550,9 +569,9 @@
             this.gridControl4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            gridLevelNode3.RelationName = "Level1";
+            gridLevelNode1.RelationName = "Level1";
             this.gridControl4.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode3});
+            gridLevelNode1});
             this.gridControl4.Location = new System.Drawing.Point(30, 129);
             this.gridControl4.MainView = this.gridView4;
             this.gridControl4.Name = "gridControl4";
@@ -565,42 +584,47 @@
             // 
             this.gridView4.GridControl = this.gridControl4;
             this.gridView4.Name = "gridView4";
+            this.gridView4.DoubleClick += new System.EventHandler(this.gridView4_DoubleClick);
             // 
-            // simpleButton9
+            // btnGenshinCloudDelete
             // 
-            this.simpleButton9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton9.Location = new System.Drawing.Point(1081, 205);
-            this.simpleButton9.Name = "simpleButton9";
-            this.simpleButton9.Size = new System.Drawing.Size(96, 23);
-            this.simpleButton9.TabIndex = 28;
-            this.simpleButton9.Text = "删除当前账号";
+            this.btnGenshinCloudDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGenshinCloudDelete.Location = new System.Drawing.Point(1081, 205);
+            this.btnGenshinCloudDelete.Name = "btnGenshinCloudDelete";
+            this.btnGenshinCloudDelete.Size = new System.Drawing.Size(96, 23);
+            this.btnGenshinCloudDelete.TabIndex = 28;
+            this.btnGenshinCloudDelete.Text = "删除当前账号";
+            this.btnGenshinCloudDelete.Click += new System.EventHandler(this.btnGenshinCloudDelete_Click);
             // 
-            // simpleButton10
+            // btnGenshinCloudAdd
             // 
-            this.simpleButton10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton10.Location = new System.Drawing.Point(1080, 129);
-            this.simpleButton10.Name = "simpleButton10";
-            this.simpleButton10.Size = new System.Drawing.Size(96, 23);
-            this.simpleButton10.TabIndex = 29;
-            this.simpleButton10.Text = "保存当前账号";
+            this.btnGenshinCloudAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGenshinCloudAdd.Location = new System.Drawing.Point(1080, 129);
+            this.btnGenshinCloudAdd.Name = "btnGenshinCloudAdd";
+            this.btnGenshinCloudAdd.Size = new System.Drawing.Size(96, 23);
+            this.btnGenshinCloudAdd.TabIndex = 29;
+            this.btnGenshinCloudAdd.Text = "保存当前账号";
+            this.btnGenshinCloudAdd.Click += new System.EventHandler(this.btnGenshinCloudAdd_Click);
             // 
-            // simpleButton11
+            // btnGenshinCloudSwitch
             // 
-            this.simpleButton11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton11.Location = new System.Drawing.Point(1080, 167);
-            this.simpleButton11.Name = "simpleButton11";
-            this.simpleButton11.Size = new System.Drawing.Size(97, 23);
-            this.simpleButton11.TabIndex = 27;
-            this.simpleButton11.Text = "切换账号";
+            this.btnGenshinCloudSwitch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGenshinCloudSwitch.Location = new System.Drawing.Point(1080, 167);
+            this.btnGenshinCloudSwitch.Name = "btnGenshinCloudSwitch";
+            this.btnGenshinCloudSwitch.Size = new System.Drawing.Size(97, 23);
+            this.btnGenshinCloudSwitch.TabIndex = 27;
+            this.btnGenshinCloudSwitch.Text = "切换账号";
+            this.btnGenshinCloudSwitch.Click += new System.EventHandler(this.btnGenshinCloudSwitch_Click);
             // 
-            // simpleButton12
+            // Btn_GenshinCloud
             // 
-            this.simpleButton12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton12.Location = new System.Drawing.Point(1080, 64);
-            this.simpleButton12.Name = "simpleButton12";
-            this.simpleButton12.Size = new System.Drawing.Size(97, 28);
-            this.simpleButton12.TabIndex = 26;
-            this.simpleButton12.Text = "选择...";
+            this.Btn_GenshinCloud.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_GenshinCloud.Location = new System.Drawing.Point(1080, 64);
+            this.Btn_GenshinCloud.Name = "Btn_GenshinCloud";
+            this.Btn_GenshinCloud.Size = new System.Drawing.Size(97, 28);
+            this.Btn_GenshinCloud.TabIndex = 26;
+            this.Btn_GenshinCloud.Text = "选择...";
+            this.Btn_GenshinCloud.Click += new System.EventHandler(this.Btn_GenshinCloud_Click);
             // 
             // labelControl7
             // 
@@ -614,19 +638,19 @@
             // 
             this.labelControl8.Location = new System.Drawing.Point(28, 46);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(108, 14);
+            this.labelControl8.Size = new System.Drawing.Size(135, 14);
             this.labelControl8.TabIndex = 25;
-            this.labelControl8.Text = "【原神】游戏路径：";
+            this.labelControl8.Text = "【 云●原神 】游戏路径：";
             // 
-            // textEdit3
+            // txtGenshinCloudPath
             // 
-            this.textEdit3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtGenshinCloudPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textEdit3.Enabled = false;
-            this.textEdit3.Location = new System.Drawing.Point(28, 66);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Size = new System.Drawing.Size(1036, 20);
-            this.textEdit3.TabIndex = 23;
+            this.txtGenshinCloudPath.Enabled = false;
+            this.txtGenshinCloudPath.Location = new System.Drawing.Point(28, 66);
+            this.txtGenshinCloudPath.Name = "txtGenshinCloudPath";
+            this.txtGenshinCloudPath.Size = new System.Drawing.Size(1036, 20);
+            this.txtGenshinCloudPath.TabIndex = 23;
             // 
             // tabPageGenshinOversea
             // 
@@ -640,14 +664,15 @@
             this.groupControl5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl5.Controls.Add(this.labelControl19);
             this.groupControl5.Controls.Add(this.gridControl5);
-            this.groupControl5.Controls.Add(this.simpleButton13);
-            this.groupControl5.Controls.Add(this.simpleButton14);
-            this.groupControl5.Controls.Add(this.simpleButton15);
-            this.groupControl5.Controls.Add(this.simpleButton16);
+            this.groupControl5.Controls.Add(this.btnGenshinOverseaDelete);
+            this.groupControl5.Controls.Add(this.btnGenshinOverseaAdd);
+            this.groupControl5.Controls.Add(this.btnGenshinOverseaSwitch);
+            this.groupControl5.Controls.Add(this.btn_GenshinOverseaPath);
             this.groupControl5.Controls.Add(this.labelControl9);
             this.groupControl5.Controls.Add(this.labelControl10);
-            this.groupControl5.Controls.Add(this.textEdit4);
+            this.groupControl5.Controls.Add(this.txtGenshinOverseaPath);
             this.groupControl5.Location = new System.Drawing.Point(28, 28);
             this.groupControl5.Name = "groupControl5";
             this.groupControl5.Size = new System.Drawing.Size(1205, 655);
@@ -659,9 +684,9 @@
             this.gridControl5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            gridLevelNode4.RelationName = "Level1";
+            gridLevelNode2.RelationName = "Level1";
             this.gridControl5.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode4});
+            gridLevelNode2});
             this.gridControl5.Location = new System.Drawing.Point(30, 129);
             this.gridControl5.MainView = this.gridView5;
             this.gridControl5.Name = "gridControl5";
@@ -674,42 +699,47 @@
             // 
             this.gridView5.GridControl = this.gridControl5;
             this.gridView5.Name = "gridView5";
+            this.gridView5.DoubleClick += new System.EventHandler(this.gridView5_DoubleClick);
             // 
-            // simpleButton13
+            // btnGenshinOverseaDelete
             // 
-            this.simpleButton13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton13.Location = new System.Drawing.Point(1081, 205);
-            this.simpleButton13.Name = "simpleButton13";
-            this.simpleButton13.Size = new System.Drawing.Size(96, 23);
-            this.simpleButton13.TabIndex = 28;
-            this.simpleButton13.Text = "删除当前账号";
+            this.btnGenshinOverseaDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGenshinOverseaDelete.Location = new System.Drawing.Point(1081, 205);
+            this.btnGenshinOverseaDelete.Name = "btnGenshinOverseaDelete";
+            this.btnGenshinOverseaDelete.Size = new System.Drawing.Size(96, 23);
+            this.btnGenshinOverseaDelete.TabIndex = 28;
+            this.btnGenshinOverseaDelete.Text = "删除当前账号";
+            this.btnGenshinOverseaDelete.Click += new System.EventHandler(this.btnGenshinOverseaDelete_Click);
             // 
-            // simpleButton14
+            // btnGenshinOverseaAdd
             // 
-            this.simpleButton14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton14.Location = new System.Drawing.Point(1080, 129);
-            this.simpleButton14.Name = "simpleButton14";
-            this.simpleButton14.Size = new System.Drawing.Size(96, 23);
-            this.simpleButton14.TabIndex = 29;
-            this.simpleButton14.Text = "保存当前账号";
+            this.btnGenshinOverseaAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGenshinOverseaAdd.Location = new System.Drawing.Point(1080, 129);
+            this.btnGenshinOverseaAdd.Name = "btnGenshinOverseaAdd";
+            this.btnGenshinOverseaAdd.Size = new System.Drawing.Size(96, 23);
+            this.btnGenshinOverseaAdd.TabIndex = 29;
+            this.btnGenshinOverseaAdd.Text = "保存当前账号";
+            this.btnGenshinOverseaAdd.Click += new System.EventHandler(this.btnGenshinOverseaAdd_Click);
             // 
-            // simpleButton15
+            // btnGenshinOverseaSwitch
             // 
-            this.simpleButton15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton15.Location = new System.Drawing.Point(1080, 167);
-            this.simpleButton15.Name = "simpleButton15";
-            this.simpleButton15.Size = new System.Drawing.Size(97, 23);
-            this.simpleButton15.TabIndex = 27;
-            this.simpleButton15.Text = "切换账号";
+            this.btnGenshinOverseaSwitch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGenshinOverseaSwitch.Location = new System.Drawing.Point(1080, 167);
+            this.btnGenshinOverseaSwitch.Name = "btnGenshinOverseaSwitch";
+            this.btnGenshinOverseaSwitch.Size = new System.Drawing.Size(97, 23);
+            this.btnGenshinOverseaSwitch.TabIndex = 27;
+            this.btnGenshinOverseaSwitch.Text = "切换账号";
+            this.btnGenshinOverseaSwitch.Click += new System.EventHandler(this.btnGenshinOverseaSwitch_Click);
             // 
-            // simpleButton16
+            // btn_GenshinOverseaPath
             // 
-            this.simpleButton16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton16.Location = new System.Drawing.Point(1080, 64);
-            this.simpleButton16.Name = "simpleButton16";
-            this.simpleButton16.Size = new System.Drawing.Size(97, 28);
-            this.simpleButton16.TabIndex = 26;
-            this.simpleButton16.Text = "选择...";
+            this.btn_GenshinOverseaPath.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_GenshinOverseaPath.Location = new System.Drawing.Point(1080, 64);
+            this.btn_GenshinOverseaPath.Name = "btn_GenshinOverseaPath";
+            this.btn_GenshinOverseaPath.Size = new System.Drawing.Size(97, 28);
+            this.btn_GenshinOverseaPath.TabIndex = 26;
+            this.btn_GenshinOverseaPath.Text = "选择...";
+            this.btn_GenshinOverseaPath.Click += new System.EventHandler(this.btn_GenshinOverseaPath_Click);
             // 
             // labelControl9
             // 
@@ -723,19 +753,19 @@
             // 
             this.labelControl10.Location = new System.Drawing.Point(28, 46);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(108, 14);
+            this.labelControl10.Size = new System.Drawing.Size(148, 14);
             this.labelControl10.TabIndex = 25;
-            this.labelControl10.Text = "【原神】游戏路径：";
+            this.labelControl10.Text = "【原神 国际服】游戏路径：";
             // 
-            // textEdit4
+            // txtGenshinOverseaPath
             // 
-            this.textEdit4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtGenshinOverseaPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textEdit4.Enabled = false;
-            this.textEdit4.Location = new System.Drawing.Point(28, 66);
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Size = new System.Drawing.Size(1036, 20);
-            this.textEdit4.TabIndex = 23;
+            this.txtGenshinOverseaPath.Enabled = false;
+            this.txtGenshinOverseaPath.Location = new System.Drawing.Point(28, 66);
+            this.txtGenshinOverseaPath.Name = "txtGenshinOverseaPath";
+            this.txtGenshinOverseaPath.Size = new System.Drawing.Size(1036, 20);
+            this.txtGenshinOverseaPath.TabIndex = 23;
             // 
             // tabPageSatrRailOversea
             // 
@@ -749,14 +779,15 @@
             this.groupControl6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl6.Controls.Add(this.labelControl20);
             this.groupControl6.Controls.Add(this.gridControl6);
-            this.groupControl6.Controls.Add(this.simpleButton17);
-            this.groupControl6.Controls.Add(this.simpleButton18);
-            this.groupControl6.Controls.Add(this.simpleButton19);
-            this.groupControl6.Controls.Add(this.simpleButton20);
+            this.groupControl6.Controls.Add(this.btnStarRailOverseaDelete);
+            this.groupControl6.Controls.Add(this.btnStarRailOverseaAdd);
+            this.groupControl6.Controls.Add(this.btnStarRailOverseaSwitch);
+            this.groupControl6.Controls.Add(this.btnStarRailOverseaPath);
             this.groupControl6.Controls.Add(this.labelControl11);
             this.groupControl6.Controls.Add(this.labelControl12);
-            this.groupControl6.Controls.Add(this.textEdit5);
+            this.groupControl6.Controls.Add(this.txtStarRailOverseaPath);
             this.groupControl6.Location = new System.Drawing.Point(28, 28);
             this.groupControl6.Name = "groupControl6";
             this.groupControl6.Size = new System.Drawing.Size(1205, 655);
@@ -768,9 +799,9 @@
             this.gridControl6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            gridLevelNode5.RelationName = "Level1";
+            gridLevelNode3.RelationName = "Level1";
             this.gridControl6.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode5});
+            gridLevelNode3});
             this.gridControl6.Location = new System.Drawing.Point(30, 129);
             this.gridControl6.MainView = this.gridView6;
             this.gridControl6.Name = "gridControl6";
@@ -784,41 +815,45 @@
             this.gridView6.GridControl = this.gridControl6;
             this.gridView6.Name = "gridView6";
             // 
-            // simpleButton17
+            // btnStarRailOverseaDelete
             // 
-            this.simpleButton17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton17.Location = new System.Drawing.Point(1081, 205);
-            this.simpleButton17.Name = "simpleButton17";
-            this.simpleButton17.Size = new System.Drawing.Size(96, 23);
-            this.simpleButton17.TabIndex = 28;
-            this.simpleButton17.Text = "删除当前账号";
+            this.btnStarRailOverseaDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnStarRailOverseaDelete.Location = new System.Drawing.Point(1081, 205);
+            this.btnStarRailOverseaDelete.Name = "btnStarRailOverseaDelete";
+            this.btnStarRailOverseaDelete.Size = new System.Drawing.Size(96, 23);
+            this.btnStarRailOverseaDelete.TabIndex = 28;
+            this.btnStarRailOverseaDelete.Text = "删除当前账号";
+            this.btnStarRailOverseaDelete.Click += new System.EventHandler(this.btnStarRailOverseaDelete_Click);
             // 
-            // simpleButton18
+            // btnStarRailOverseaAdd
             // 
-            this.simpleButton18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton18.Location = new System.Drawing.Point(1080, 129);
-            this.simpleButton18.Name = "simpleButton18";
-            this.simpleButton18.Size = new System.Drawing.Size(96, 23);
-            this.simpleButton18.TabIndex = 29;
-            this.simpleButton18.Text = "保存当前账号";
+            this.btnStarRailOverseaAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnStarRailOverseaAdd.Location = new System.Drawing.Point(1080, 129);
+            this.btnStarRailOverseaAdd.Name = "btnStarRailOverseaAdd";
+            this.btnStarRailOverseaAdd.Size = new System.Drawing.Size(96, 23);
+            this.btnStarRailOverseaAdd.TabIndex = 29;
+            this.btnStarRailOverseaAdd.Text = "保存当前账号";
+            this.btnStarRailOverseaAdd.Click += new System.EventHandler(this.btnStarRailOverseaAdd_Click);
             // 
-            // simpleButton19
+            // btnStarRailOverseaSwitch
             // 
-            this.simpleButton19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton19.Location = new System.Drawing.Point(1080, 167);
-            this.simpleButton19.Name = "simpleButton19";
-            this.simpleButton19.Size = new System.Drawing.Size(97, 23);
-            this.simpleButton19.TabIndex = 27;
-            this.simpleButton19.Text = "切换账号";
+            this.btnStarRailOverseaSwitch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnStarRailOverseaSwitch.Location = new System.Drawing.Point(1080, 167);
+            this.btnStarRailOverseaSwitch.Name = "btnStarRailOverseaSwitch";
+            this.btnStarRailOverseaSwitch.Size = new System.Drawing.Size(97, 23);
+            this.btnStarRailOverseaSwitch.TabIndex = 27;
+            this.btnStarRailOverseaSwitch.Text = "切换账号";
+            this.btnStarRailOverseaSwitch.Click += new System.EventHandler(this.btnStarRailOverseaSwitch_Click);
             // 
-            // simpleButton20
+            // btnStarRailOverseaPath
             // 
-            this.simpleButton20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton20.Location = new System.Drawing.Point(1080, 64);
-            this.simpleButton20.Name = "simpleButton20";
-            this.simpleButton20.Size = new System.Drawing.Size(97, 28);
-            this.simpleButton20.TabIndex = 26;
-            this.simpleButton20.Text = "选择...";
+            this.btnStarRailOverseaPath.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnStarRailOverseaPath.Location = new System.Drawing.Point(1080, 64);
+            this.btnStarRailOverseaPath.Name = "btnStarRailOverseaPath";
+            this.btnStarRailOverseaPath.Size = new System.Drawing.Size(97, 28);
+            this.btnStarRailOverseaPath.TabIndex = 26;
+            this.btnStarRailOverseaPath.Text = "选择...";
+            this.btnStarRailOverseaPath.Click += new System.EventHandler(this.btnStarRailOverseaPath_Click);
             // 
             // labelControl11
             // 
@@ -832,19 +867,19 @@
             // 
             this.labelControl12.Location = new System.Drawing.Point(28, 46);
             this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(108, 14);
+            this.labelControl12.Size = new System.Drawing.Size(208, 14);
             this.labelControl12.TabIndex = 25;
-            this.labelControl12.Text = "【原神】游戏路径：";
+            this.labelControl12.Text = "【崩坏：星穹铁道 国际服】游戏路径：";
             // 
-            // textEdit5
+            // txtStarRailOverseaPath
             // 
-            this.textEdit5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtStarRailOverseaPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textEdit5.Enabled = false;
-            this.textEdit5.Location = new System.Drawing.Point(28, 66);
-            this.textEdit5.Name = "textEdit5";
-            this.textEdit5.Size = new System.Drawing.Size(1036, 20);
-            this.textEdit5.TabIndex = 23;
+            this.txtStarRailOverseaPath.Enabled = false;
+            this.txtStarRailOverseaPath.Location = new System.Drawing.Point(28, 66);
+            this.txtStarRailOverseaPath.Name = "txtStarRailOverseaPath";
+            this.txtStarRailOverseaPath.Size = new System.Drawing.Size(1036, 20);
+            this.txtStarRailOverseaPath.TabIndex = 23;
             // 
             // tabPageZZZ
             // 
@@ -858,14 +893,15 @@
             this.groupControl7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl7.Controls.Add(this.labelControl21);
             this.groupControl7.Controls.Add(this.gridControl7);
-            this.groupControl7.Controls.Add(this.simpleButton21);
-            this.groupControl7.Controls.Add(this.simpleButton22);
-            this.groupControl7.Controls.Add(this.simpleButton23);
-            this.groupControl7.Controls.Add(this.simpleButton24);
+            this.groupControl7.Controls.Add(this.btnZZZDelete);
+            this.groupControl7.Controls.Add(this.btnZZZAdd);
+            this.groupControl7.Controls.Add(this.btnZZZSwitch);
+            this.groupControl7.Controls.Add(this.btnZZZPath);
             this.groupControl7.Controls.Add(this.labelControl13);
             this.groupControl7.Controls.Add(this.labelControl14);
-            this.groupControl7.Controls.Add(this.textEdit6);
+            this.groupControl7.Controls.Add(this.txtZZZPath);
             this.groupControl7.Location = new System.Drawing.Point(28, 28);
             this.groupControl7.Name = "groupControl7";
             this.groupControl7.Size = new System.Drawing.Size(1205, 655);
@@ -877,9 +913,9 @@
             this.gridControl7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            gridLevelNode6.RelationName = "Level1";
+            gridLevelNode4.RelationName = "Level1";
             this.gridControl7.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode6});
+            gridLevelNode4});
             this.gridControl7.Location = new System.Drawing.Point(30, 129);
             this.gridControl7.MainView = this.gridView7;
             this.gridControl7.Name = "gridControl7";
@@ -892,42 +928,47 @@
             // 
             this.gridView7.GridControl = this.gridControl7;
             this.gridView7.Name = "gridView7";
+            this.gridView7.DoubleClick += new System.EventHandler(this.gridView7_DoubleClick);
             // 
-            // simpleButton21
+            // btnZZZDelete
             // 
-            this.simpleButton21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton21.Location = new System.Drawing.Point(1081, 205);
-            this.simpleButton21.Name = "simpleButton21";
-            this.simpleButton21.Size = new System.Drawing.Size(96, 23);
-            this.simpleButton21.TabIndex = 28;
-            this.simpleButton21.Text = "删除当前账号";
+            this.btnZZZDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnZZZDelete.Location = new System.Drawing.Point(1081, 205);
+            this.btnZZZDelete.Name = "btnZZZDelete";
+            this.btnZZZDelete.Size = new System.Drawing.Size(96, 23);
+            this.btnZZZDelete.TabIndex = 28;
+            this.btnZZZDelete.Text = "删除当前账号";
+            this.btnZZZDelete.Click += new System.EventHandler(this.btnZZZDelete_Click);
             // 
-            // simpleButton22
+            // btnZZZAdd
             // 
-            this.simpleButton22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton22.Location = new System.Drawing.Point(1080, 129);
-            this.simpleButton22.Name = "simpleButton22";
-            this.simpleButton22.Size = new System.Drawing.Size(96, 23);
-            this.simpleButton22.TabIndex = 29;
-            this.simpleButton22.Text = "保存当前账号";
+            this.btnZZZAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnZZZAdd.Location = new System.Drawing.Point(1080, 129);
+            this.btnZZZAdd.Name = "btnZZZAdd";
+            this.btnZZZAdd.Size = new System.Drawing.Size(96, 23);
+            this.btnZZZAdd.TabIndex = 29;
+            this.btnZZZAdd.Text = "保存当前账号";
+            this.btnZZZAdd.Click += new System.EventHandler(this.btnZZZAdd_Click);
             // 
-            // simpleButton23
+            // btnZZZSwitch
             // 
-            this.simpleButton23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton23.Location = new System.Drawing.Point(1080, 167);
-            this.simpleButton23.Name = "simpleButton23";
-            this.simpleButton23.Size = new System.Drawing.Size(97, 23);
-            this.simpleButton23.TabIndex = 27;
-            this.simpleButton23.Text = "切换账号";
+            this.btnZZZSwitch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnZZZSwitch.Location = new System.Drawing.Point(1080, 167);
+            this.btnZZZSwitch.Name = "btnZZZSwitch";
+            this.btnZZZSwitch.Size = new System.Drawing.Size(97, 23);
+            this.btnZZZSwitch.TabIndex = 27;
+            this.btnZZZSwitch.Text = "切换账号";
+            this.btnZZZSwitch.Click += new System.EventHandler(this.btnZZZSwitch_Click);
             // 
-            // simpleButton24
+            // btnZZZPath
             // 
-            this.simpleButton24.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton24.Location = new System.Drawing.Point(1080, 64);
-            this.simpleButton24.Name = "simpleButton24";
-            this.simpleButton24.Size = new System.Drawing.Size(97, 28);
-            this.simpleButton24.TabIndex = 26;
-            this.simpleButton24.Text = "选择...";
+            this.btnZZZPath.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnZZZPath.Location = new System.Drawing.Point(1080, 64);
+            this.btnZZZPath.Name = "btnZZZPath";
+            this.btnZZZPath.Size = new System.Drawing.Size(97, 28);
+            this.btnZZZPath.TabIndex = 26;
+            this.btnZZZPath.Text = "选择...";
+            this.btnZZZPath.Click += new System.EventHandler(this.btnZZZPath_Click);
             // 
             // labelControl13
             // 
@@ -941,19 +982,19 @@
             // 
             this.labelControl14.Location = new System.Drawing.Point(28, 46);
             this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(108, 14);
+            this.labelControl14.Size = new System.Drawing.Size(120, 14);
             this.labelControl14.TabIndex = 25;
-            this.labelControl14.Text = "【原神】游戏路径：";
+            this.labelControl14.Text = "【绝区零】游戏路径：";
             // 
-            // textEdit6
+            // txtZZZPath
             // 
-            this.textEdit6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtZZZPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textEdit6.Enabled = false;
-            this.textEdit6.Location = new System.Drawing.Point(28, 66);
-            this.textEdit6.Name = "textEdit6";
-            this.textEdit6.Size = new System.Drawing.Size(1036, 20);
-            this.textEdit6.TabIndex = 23;
+            this.txtZZZPath.Enabled = false;
+            this.txtZZZPath.Location = new System.Drawing.Point(28, 66);
+            this.txtZZZPath.Name = "txtZZZPath";
+            this.txtZZZPath.Size = new System.Drawing.Size(1036, 20);
+            this.txtZZZPath.TabIndex = 23;
             // 
             // ToolTipContoller
             // 
@@ -979,6 +1020,69 @@
             this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
             this.退出ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.退出ToolStripMenuItem.Text = "退出";
+            // 
+            // labelControl15
+            // 
+            this.labelControl15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl15.Location = new System.Drawing.Point(1082, 250);
+            this.labelControl15.Name = "labelControl15";
+            this.labelControl15.Size = new System.Drawing.Size(72, 84);
+            this.labelControl15.TabIndex = 23;
+            this.labelControl15.Text = "使用技巧：\r\n\r\n在游戏中登录\r\n账号后，然后\r\n在本软件即可\r\n添加当前账号";
+            // 
+            // labelControl16
+            // 
+            this.labelControl16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl16.Location = new System.Drawing.Point(1082, 250);
+            this.labelControl16.Name = "labelControl16";
+            this.labelControl16.Size = new System.Drawing.Size(72, 84);
+            this.labelControl16.TabIndex = 31;
+            this.labelControl16.Text = "使用技巧：\r\n\r\n在游戏中登录\r\n账号后，然后\r\n在本软件即可\r\n添加当前账号";
+            // 
+            // labelControl17
+            // 
+            this.labelControl17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl17.Location = new System.Drawing.Point(1082, 250);
+            this.labelControl17.Name = "labelControl17";
+            this.labelControl17.Size = new System.Drawing.Size(72, 84);
+            this.labelControl17.TabIndex = 31;
+            this.labelControl17.Text = "使用技巧：\r\n\r\n在游戏中登录\r\n账号后，然后\r\n在本软件即可\r\n添加当前账号";
+            // 
+            // labelControl18
+            // 
+            this.labelControl18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl18.Location = new System.Drawing.Point(1082, 250);
+            this.labelControl18.Name = "labelControl18";
+            this.labelControl18.Size = new System.Drawing.Size(72, 84);
+            this.labelControl18.TabIndex = 31;
+            this.labelControl18.Text = "使用技巧：\r\n\r\n在游戏中登录\r\n账号后，然后\r\n在本软件即可\r\n添加当前账号";
+            // 
+            // labelControl19
+            // 
+            this.labelControl19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl19.Location = new System.Drawing.Point(1082, 250);
+            this.labelControl19.Name = "labelControl19";
+            this.labelControl19.Size = new System.Drawing.Size(72, 84);
+            this.labelControl19.TabIndex = 31;
+            this.labelControl19.Text = "使用技巧：\r\n\r\n在游戏中登录\r\n账号后，然后\r\n在本软件即可\r\n添加当前账号";
+            // 
+            // labelControl20
+            // 
+            this.labelControl20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl20.Location = new System.Drawing.Point(1082, 250);
+            this.labelControl20.Name = "labelControl20";
+            this.labelControl20.Size = new System.Drawing.Size(72, 84);
+            this.labelControl20.TabIndex = 31;
+            this.labelControl20.Text = "使用技巧：\r\n\r\n在游戏中登录\r\n账号后，然后\r\n在本软件即可\r\n添加当前账号";
+            // 
+            // labelControl21
+            // 
+            this.labelControl21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl21.Location = new System.Drawing.Point(1082, 250);
+            this.labelControl21.Name = "labelControl21";
+            this.labelControl21.Size = new System.Drawing.Size(72, 84);
+            this.labelControl21.TabIndex = 31;
+            this.labelControl21.Text = "使用技巧：\r\n\r\n在游戏中登录\r\n账号后，然后\r\n在本软件即可\r\n添加当前账号";
             // 
             // Control_Account
             // 
@@ -1010,35 +1114,35 @@
             this.groupControl3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textHonkaiImpact3patch.Properties)).EndInit();
             this.tabPageGenshinCloud.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
             this.groupControl4.ResumeLayout(false);
             this.groupControl4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGenshinCloudPath.Properties)).EndInit();
             this.tabPageGenshinOversea.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
             this.groupControl5.ResumeLayout(false);
             this.groupControl5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGenshinOverseaPath.Properties)).EndInit();
             this.tabPageSatrRailOversea.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl6)).EndInit();
             this.groupControl6.ResumeLayout(false);
             this.groupControl6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStarRailOverseaPath.Properties)).EndInit();
             this.tabPageZZZ.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl7)).EndInit();
             this.groupControl7.ResumeLayout(false);
             this.groupControl7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtZZZPath.Properties)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -1078,7 +1182,7 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.GridControl gridControl2;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
-        private DevExpress.XtraEditors.SimpleButton btnStraRailDelete1;
+        private DevExpress.XtraEditors.SimpleButton btnStarRailDelete;
         private DevExpress.XtraEditors.SimpleButton btnStarRailAdd;
         private DevExpress.XtraEditors.SimpleButton btnStraRailSwitch;
         private DevExpress.XtraEditors.SimpleButton btnChooseStraRailPath;
@@ -1087,48 +1191,55 @@
         private DevExpress.XtraEditors.TextEdit txtStarRailPath;
         private DevExpress.XtraGrid.GridControl gridControl3;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
-        private DevExpress.XtraEditors.SimpleButton simpleButton5;
-        private DevExpress.XtraEditors.SimpleButton simpleButton6;
-        private DevExpress.XtraEditors.SimpleButton simpleButton7;
-        private DevExpress.XtraEditors.SimpleButton simpleButton8;
+        private DevExpress.XtraEditors.SimpleButton btnHonkaiImpact3Delete;
+        private DevExpress.XtraEditors.SimpleButton AddHonkaiImpact3;
+        private DevExpress.XtraEditors.SimpleButton btnHonkaiImpact3Switch;
+        private DevExpress.XtraEditors.SimpleButton btnHonkaiImpact3;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl6;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.TextEdit textHonkaiImpact3patch;
         private DevExpress.XtraGrid.GridControl gridControl4;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
-        private DevExpress.XtraEditors.SimpleButton simpleButton9;
-        private DevExpress.XtraEditors.SimpleButton simpleButton10;
-        private DevExpress.XtraEditors.SimpleButton simpleButton11;
-        private DevExpress.XtraEditors.SimpleButton simpleButton12;
+        private DevExpress.XtraEditors.SimpleButton btnGenshinCloudDelete;
+        private DevExpress.XtraEditors.SimpleButton btnGenshinCloudAdd;
+        private DevExpress.XtraEditors.SimpleButton btnGenshinCloudSwitch;
+        private DevExpress.XtraEditors.SimpleButton Btn_GenshinCloud;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.LabelControl labelControl8;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
+        private DevExpress.XtraEditors.TextEdit txtGenshinCloudPath;
         private DevExpress.XtraGrid.GridControl gridControl5;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView5;
-        private DevExpress.XtraEditors.SimpleButton simpleButton13;
-        private DevExpress.XtraEditors.SimpleButton simpleButton14;
-        private DevExpress.XtraEditors.SimpleButton simpleButton15;
-        private DevExpress.XtraEditors.SimpleButton simpleButton16;
+        private DevExpress.XtraEditors.SimpleButton btnGenshinOverseaDelete;
+        private DevExpress.XtraEditors.SimpleButton btnGenshinOverseaAdd;
+        private DevExpress.XtraEditors.SimpleButton btnGenshinOverseaSwitch;
+        private DevExpress.XtraEditors.SimpleButton btn_GenshinOverseaPath;
         private DevExpress.XtraEditors.LabelControl labelControl9;
         private DevExpress.XtraEditors.LabelControl labelControl10;
-        private DevExpress.XtraEditors.TextEdit textEdit4;
+        private DevExpress.XtraEditors.TextEdit txtGenshinOverseaPath;
         private DevExpress.XtraGrid.GridControl gridControl6;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView6;
-        private DevExpress.XtraEditors.SimpleButton simpleButton17;
-        private DevExpress.XtraEditors.SimpleButton simpleButton18;
-        private DevExpress.XtraEditors.SimpleButton simpleButton19;
-        private DevExpress.XtraEditors.SimpleButton simpleButton20;
+        private DevExpress.XtraEditors.SimpleButton btnStarRailOverseaDelete;
+        private DevExpress.XtraEditors.SimpleButton btnStarRailOverseaAdd;
+        private DevExpress.XtraEditors.SimpleButton btnStarRailOverseaSwitch;
+        private DevExpress.XtraEditors.SimpleButton btnStarRailOverseaPath;
         private DevExpress.XtraEditors.LabelControl labelControl11;
         private DevExpress.XtraEditors.LabelControl labelControl12;
-        private DevExpress.XtraEditors.TextEdit textEdit5;
+        private DevExpress.XtraEditors.TextEdit txtStarRailOverseaPath;
         private DevExpress.XtraGrid.GridControl gridControl7;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView7;
-        private DevExpress.XtraEditors.SimpleButton simpleButton21;
-        private DevExpress.XtraEditors.SimpleButton simpleButton22;
-        private DevExpress.XtraEditors.SimpleButton simpleButton23;
-        private DevExpress.XtraEditors.SimpleButton simpleButton24;
+        private DevExpress.XtraEditors.SimpleButton btnZZZDelete;
+        private DevExpress.XtraEditors.SimpleButton btnZZZAdd;
+        private DevExpress.XtraEditors.SimpleButton btnZZZSwitch;
+        private DevExpress.XtraEditors.SimpleButton btnZZZPath;
         private DevExpress.XtraEditors.LabelControl labelControl13;
         private DevExpress.XtraEditors.LabelControl labelControl14;
-        private DevExpress.XtraEditors.TextEdit textEdit6;
+        private DevExpress.XtraEditors.TextEdit txtZZZPath;
+        private DevExpress.XtraEditors.LabelControl labelControl15;
+        private DevExpress.XtraEditors.LabelControl labelControl16;
+        private DevExpress.XtraEditors.LabelControl labelControl17;
+        private DevExpress.XtraEditors.LabelControl labelControl18;
+        private DevExpress.XtraEditors.LabelControl labelControl19;
+        private DevExpress.XtraEditors.LabelControl labelControl20;
+        private DevExpress.XtraEditors.LabelControl labelControl21;
     }
 }

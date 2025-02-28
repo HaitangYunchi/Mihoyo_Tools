@@ -58,8 +58,13 @@ namespace Mihoyo_Tools
         }
         private void Control_Account_Load(object sender, EventArgs e)
         {
-            txtGenshinPath.Text = INIFile.getString("Config", "Genshin_patch", "", GlobalVar.IniName);
-            txtStarRailPath.Text = INIFile.getString("Config", "StarRail_patch", "", GlobalVar.IniName);
+            txtGenshinPath.Text = INIFile.getString("Account", "Genshin_patch", "", GlobalVar.IniName);
+            txtStarRailPath.Text = INIFile.getString("Account", "StarRail_patch", "", GlobalVar.IniName);
+            textHonkaiImpact3patch.Text = INIFile.getString("Account", "BH3_patch", "", GlobalVar.IniName);
+            txtGenshinCloudPath.Text= INIFile.getString("Account", "GenshinCloud_patch", "", GlobalVar.IniName);
+            txtGenshinOverseaPath.Text = INIFile.getString("Account", "GenshinOversea_patch", "", GlobalVar.IniName);
+            txtStarRailOverseaPath.Text = INIFile.getString("Account", "StarRailOversea_patch", "", GlobalVar.IniName);
+            txtZZZPath.Text = INIFile.getString("Account", "ZZZ_patch", "", GlobalVar.IniName);
         }
         private void ConfigureGrid()
         {
@@ -443,15 +448,18 @@ namespace Mihoyo_Tools
             {
                 if (key == null)
                 {
-                    XtraMessageBox.Show("未找到原神用户存储信息！");
+                    XtraMessageBox.Show("未找到【原神】用户存储信息！");
                     return null;
                 }
-                // 显式类型转换确保二进制数据
-                return new AccountGenshin
+                else 
                 {
-                    MIHOYOSDK_ADL_PROD_CN_h3123967166 = (byte[])key.GetValue("MIHOYOSDK_ADL_PROD_CN_h3123967166"),
-                    GENERAL_DATA_h2389025596 = (byte[])key.GetValue("GENERAL_DATA_h2389025596")
-                };
+                    // 显式类型转换确保二进制数据
+                    return new AccountGenshin
+                    {
+                        MIHOYOSDK_ADL_PROD_CN_h3123967166 = (byte[])key.GetValue("MIHOYOSDK_ADL_PROD_CN_h3123967166"),
+                        GENERAL_DATA_h2389025596 = (byte[])key.GetValue("GENERAL_DATA_h2389025596")
+                    };
+                }
             }
         }
         private AccountGenshinCloud BackupCurrentAccountGenshinCloud()
@@ -460,15 +468,18 @@ namespace Mihoyo_Tools
             {
                 if (key == null)
                 {
-                    XtraMessageBox.Show("未找到原神用户存储信息！");
+                    XtraMessageBox.Show("未找到【云●原神】用户存储信息！");
                     return null;
                 }
-                // 显式类型转换确保二进制数据
-                return new AccountGenshinCloud
+                else
                 {
-                    MIHOYOSDK_ADL_0 = (byte[])key.GetValue("MIHOYOSDK_ADL_0"),
-                    //GENERAL_DATA_h2389025596 = (byte[])key.GetValue("GENERAL_DATA_h2389025596")
-                };
+                    // 显式类型转换确保二进制数据
+                    return new AccountGenshinCloud
+                    {
+                        MIHOYOSDK_ADL_0 = (byte[])key.GetValue("MIHOYOSDK_ADL_0"),
+                        //GENERAL_DATA_h2389025596 = (byte[])key.GetValue("GENERAL_DATA_h2389025596")
+                    };
+                }
             }
         }
         private AccountGenshinOversea BackupCurrentAccountGenshinOversea()
@@ -477,15 +488,18 @@ namespace Mihoyo_Tools
             {
                 if (key == null)
                 {
-                    XtraMessageBox.Show("未找到原神用户存储信息！");
+                    XtraMessageBox.Show("未找到【原神 国际服】用户存储信息！");
                     return null;
                 }
-                // 显式类型转换确保二进制数据
-                return new AccountGenshinOversea
+                else
                 {
-                    MIHOYOSDK_ADL_PROD_OVERSEA_h1158948810 = (byte[])key.GetValue("MIHOYOSDK_ADL_PROD_OVERSEA_h1158948810"),
-                    GENERAL_DATA_h2389025596 = (byte[])key.GetValue("GENERAL_DATA_h2389025596")
-                };
+                    // 显式类型转换确保二进制数据
+                    return new AccountGenshinOversea
+                    {
+                        MIHOYOSDK_ADL_PROD_OVERSEA_h1158948810 = (byte[])key.GetValue("MIHOYOSDK_ADL_PROD_OVERSEA_h1158948810"),
+                        GENERAL_DATA_h2389025596 = (byte[])key.GetValue("GENERAL_DATA_h2389025596")
+                    };
+                }
             }
         }
         private AccountHonkaiImpact3 BackupCurrentAccountHonkaiImpact3()
@@ -494,15 +508,19 @@ namespace Mihoyo_Tools
             {
                 if (key == null)
                 {
-                    XtraMessageBox.Show("未找到原神用户存储信息！");
+                    XtraMessageBox.Show("未找到【崩坏3】用户存储信息！");
                     return null;
                 }
-                // 显式类型转换确保二进制数据
-                return new AccountHonkaiImpact3
+                else
                 {
-                    MIHOYOSDK_ADL_PROD_CN_h3123967166 = (byte[])key.GetValue("MIHOYOSDK_ADL_PROD_CN_h3123967166"),
-                    //GENERAL_DATA_h2389025596 = (byte[])key.GetValue("GENERAL_DATA_h2389025596")
-                };
+
+                    // 显式类型转换确保二进制数据
+                    return new AccountHonkaiImpact3
+                    {
+                        MIHOYOSDK_ADL_PROD_CN_h3123967166 = (byte[])key.GetValue("MIHOYOSDK_ADL_PROD_CN_h3123967166"),
+                        //GENERAL_DATA_h2389025596 = (byte[])key.GetValue("GENERAL_DATA_h2389025596")
+                    };
+                }
             }
         }
         private AccountStarRail BackupCurrentAccountStarRail()
@@ -511,15 +529,18 @@ namespace Mihoyo_Tools
             {
                 if (key == null)
                 {
-                    XtraMessageBox.Show("未找到星铁用户存储信息！");
+                    XtraMessageBox.Show("未找到【崩坏：星穹铁道】用户存储信息！");
                     return null;
                 }
-                // 显式类型转换确保二进制数据
-                return new AccountStarRail
+                else
                 {
-                    MIHOYOSDK_ADL_PROD_CN_h3123967166 = (byte[])key.GetValue("MIHOYOSDK_ADL_PROD_CN_h3123967166"),
-                    //GENERAL_DATA_h2389025596 = (byte[])key.GetValue("GENERAL_DATA_h2389025596")
-                };
+                    // 显式类型转换确保二进制数据
+                    return new AccountStarRail
+                    {
+                        MIHOYOSDK_ADL_PROD_CN_h3123967166 = (byte[])key.GetValue("MIHOYOSDK_ADL_PROD_CN_h3123967166"),
+                        //GENERAL_DATA_h2389025596 = (byte[])key.GetValue("GENERAL_DATA_h2389025596")
+                    };
+                }
             }
         }
         private AccountStarRailOversea BackupCurrentAccountStarRailOversea()
@@ -528,15 +549,19 @@ namespace Mihoyo_Tools
             {
                 if (key == null)
                 {
-                    XtraMessageBox.Show("未找到原神用户存储信息！");
+                    XtraMessageBox.Show("未找到【崩坏：星穹铁道 国际服】用户存储信息！");
                     return null;
                 }
-                // 显式类型转换确保二进制数据
-                return new AccountStarRailOversea
+                else
                 {
-                    MIHOYOSDK_ADL_PROD_OVERSEA_h1158948810 = (byte[])key.GetValue("MIHOYOSDK_ADL_PROD_OVERSEA_h1158948810"),
-                    //GENERAL_DATA_h2389025596 = (byte[])key.GetValue("GENERAL_DATA_h2389025596")
-                };
+                    // 显式类型转换确保二进制数据
+                    return new AccountStarRailOversea
+                    {
+                        MIHOYOSDK_ADL_PROD_OVERSEA_h1158948810 = (byte[])key.GetValue("MIHOYOSDK_ADL_PROD_OVERSEA_h1158948810"),
+                        //GENERAL_DATA_h2389025596 = (byte[])key.GetValue("GENERAL_DATA_h2389025596")
+                    };
+
+                }
             }
         }
         private AccountZZZ BackupCurrentAccountZZZ()
@@ -545,15 +570,18 @@ namespace Mihoyo_Tools
             {
                 if (key == null)
                 {
-                    XtraMessageBox.Show("未找到原神用户存储信息！");
+                    XtraMessageBox.Show("未找到【绝区零】用户存储信息！");
                     return null;
                 }
-                // 显式类型转换确保二进制数据
-                return new AccountZZZ
+                else
                 {
-                    MIHOYOSDK_ADL_PROD_CN_h3123967166 = (byte[])key.GetValue("MIHOYOSDK_ADL_PROD_CN_h3123967166"),
-                   // GENERAL_DATA_h2389025596 = (byte[])key.GetValue("GENERAL_DATA_h2389025596")
-                };
+                    // 显式类型转换确保二进制数据
+                    return new AccountZZZ
+                    {
+                        MIHOYOSDK_ADL_PROD_CN_h3123967166 = (byte[])key.GetValue("MIHOYOSDK_ADL_PROD_CN_h3123967166"),
+                        // GENERAL_DATA_h2389025596 = (byte[])key.GetValue("GENERAL_DATA_h2389025596")
+                    };
+                }
             }
         }
         /**
@@ -563,18 +591,22 @@ namespace Mihoyo_Tools
             {
                 if (key == null)
                 {
-                    XtraMessageBox.Show("未找到原神用户存储信息！");
+                    XtraMessageBox.Show("未找到【绝区零 国际服】用户存储信息！");
                     return null;
                 }
-                // 显式类型转换确保二进制数据
-                return new AccountZZZOversea
+                else
                 {
-                    MIHOYOSDK_ADL_PROD_OVERSEA_h1158948810 = (byte[])key.GetValue("MIHOYOSDK_ADL_PROD_OVERSEA_h1158948810"),
-                    //GENERAL_DATA_h2389025596 = (byte[])key.GetValue("GENERAL_DATA_h2389025596")
-                };
+                    // 显式类型转换确保二进制数据
+                    return new AccountZZZOversea
+                    {
+                        MIHOYOSDK_ADL_PROD_OVERSEA_h1158948810 = (byte[])key.GetValue("MIHOYOSDK_ADL_PROD_OVERSEA_h1158948810"),
+                        //GENERAL_DATA_h2389025596 = (byte[])key.GetValue("GENERAL_DATA_h2389025596")
+                    };
+                }
             }
         }
         **/
+ 
         private void UpdateRegistryGenshin(AccountGenshin acc)
         {
             using (var key = Registry.CurrentUser.CreateSubKey(GlobalVar.Genshin_REG_PATH))
@@ -693,150 +725,150 @@ namespace Mihoyo_Tools
         #region 加密方法
         private byte[] EncryptGenshin(string plainText)
         {
-            return ProtectedData.Protect(Encoding.UTF8.GetBytes(plainText), KeyGenshin, DataProtectionScope.CurrentUser);
+            return ProtectedData.Protect(Encoding.UTF8.GetBytes(plainText), KeyGenshin, DataProtectionScope.LocalMachine);
         }
 
         private string DecryptGenshin(byte[] cipherText)
         {
             try
             {
-                return Encoding.UTF8.GetString(ProtectedData.Unprotect(cipherText, KeyGenshin, DataProtectionScope.CurrentUser));
+                return Encoding.UTF8.GetString(ProtectedData.Unprotect(cipherText, KeyGenshin, DataProtectionScope.LocalMachine));
             }
             catch
             {
-                //XtraMessageBox.Show($"【账号管理】加载账号列表失败：秘钥错误或者跨设备、跨用户访问！");
+                //XtraMessageBox.Show($"【账号管理】加载账号列表失败：不允许跨设备访问！");
                 return "[]";
             }
         }
 
         private byte[] EncryptGenshinCloud(string plainText)
         {
-            return ProtectedData.Protect(Encoding.UTF8.GetBytes(plainText), KeyGenshinCloud, DataProtectionScope.CurrentUser);
+            return ProtectedData.Protect(Encoding.UTF8.GetBytes(plainText), KeyGenshinCloud, DataProtectionScope.LocalMachine);
         }
 
         private string DecryptGenshinCloud(byte[] cipherText)
         {
             try
             {
-                return Encoding.UTF8.GetString(ProtectedData.Unprotect(cipherText, KeyGenshinCloud, DataProtectionScope.CurrentUser));
+                return Encoding.UTF8.GetString(ProtectedData.Unprotect(cipherText, KeyGenshinCloud, DataProtectionScope.LocalMachine));
             }
             catch
             {
-                //XtraMessageBox.Show($"【账号管理】加载账号列表失败：秘钥错误或者跨设备、跨用户访问！");
+                //XtraMessageBox.Show($"【账号管理】加载账号列表失败：不允许跨设备访问！");
                 return "[]";
             }
         }
 
         private byte[] EncryptGenshinOversea(string plainText)
         {
-            return ProtectedData.Protect(Encoding.UTF8.GetBytes(plainText), KeyGenshinOversea, DataProtectionScope.CurrentUser);
+            return ProtectedData.Protect(Encoding.UTF8.GetBytes(plainText), KeyGenshinOversea, DataProtectionScope.LocalMachine);
         }
 
         private string DecryptGenshinOversea(byte[] cipherText)
         {
             try
             {
-                return Encoding.UTF8.GetString(ProtectedData.Unprotect(cipherText, KeyGenshinOversea, DataProtectionScope.CurrentUser));
+                return Encoding.UTF8.GetString(ProtectedData.Unprotect(cipherText, KeyGenshinOversea, DataProtectionScope.LocalMachine));
             }
             catch
             {
-                //XtraMessageBox.Show($"【账号管理】加载账号列表失败：秘钥错误或者跨设备、跨用户访问！");
+                //XtraMessageBox.Show($"【账号管理】加载账号列表失败：不允许跨设备访问！");
                 return "[]";
             }
         }
 
         private byte[] EncryptHonkaiImpact3(string plainText)
         {
-            return ProtectedData.Protect(Encoding.UTF8.GetBytes(plainText), KeyHonkaiImpact3, DataProtectionScope.CurrentUser);
+            return ProtectedData.Protect(Encoding.UTF8.GetBytes(plainText), KeyHonkaiImpact3, DataProtectionScope.LocalMachine);
         }
 
         private string DecryptHonkaiImpact3(byte[] cipherText)
         {
             try
             {
-                return Encoding.UTF8.GetString(ProtectedData.Unprotect(cipherText, KeyHonkaiImpact3, DataProtectionScope.CurrentUser));
+                return Encoding.UTF8.GetString(ProtectedData.Unprotect(cipherText, KeyHonkaiImpact3, DataProtectionScope.LocalMachine));
             }
             catch
             {
-                //XtraMessageBox.Show($"【账号管理】加载账号列表失败：秘钥错误或者跨设备、跨用户访问！");
+                //XtraMessageBox.Show($"【账号管理】加载账号列表失败：不允许跨设备访问！");
                 return "[]";
             }
         }
 
         private byte[] EncryptStarRail(string plainText)
         {
-            return ProtectedData.Protect(Encoding.UTF8.GetBytes(plainText), KeyStarRail, DataProtectionScope.CurrentUser);
+            return ProtectedData.Protect(Encoding.UTF8.GetBytes(plainText), KeyStarRail, DataProtectionScope.LocalMachine);
         }
 
         private string DecryptStarRail(byte[] cipherText)
         {
             try
             {
-                return Encoding.UTF8.GetString(ProtectedData.Unprotect(cipherText, KeyStarRail, DataProtectionScope.CurrentUser));
+                return Encoding.UTF8.GetString(ProtectedData.Unprotect(cipherText, KeyStarRail, DataProtectionScope.LocalMachine));
             }
             catch
             {
-                //XtraMessageBox.Show($"【账号管理】加载账号列表失败：秘钥错误或者跨设备、跨用户访问！");
+                //XtraMessageBox.Show($"【账号管理】加载账号列表失败：不允许跨设备访问！");
                 return "[]";
             }
         }
 
         private byte[] EncryptStarRailOversea(string plainText)
         {
-            return ProtectedData.Protect(Encoding.UTF8.GetBytes(plainText), KeyStarRailOversea, DataProtectionScope.CurrentUser);
+            return ProtectedData.Protect(Encoding.UTF8.GetBytes(plainText), KeyStarRailOversea, DataProtectionScope.LocalMachine);
         }
 
         private string DecryptStarRailOversea(byte[] cipherText)
         {
             try
             {
-                return Encoding.UTF8.GetString(ProtectedData.Unprotect(cipherText, KeyStarRailOversea, DataProtectionScope.CurrentUser));
+                return Encoding.UTF8.GetString(ProtectedData.Unprotect(cipherText, KeyStarRailOversea, DataProtectionScope.LocalMachine));
             }
             catch
             {
-                //XtraMessageBox.Show($"【账号管理】加载账号列表失败：秘钥错误或者跨设备、跨用户访问！");
+                //XtraMessageBox.Show($"【账号管理】加载账号列表失败：不允许跨设备访问！");
                 return "[]";
             }
         }
 
         private byte[] EncryptZZZ(string plainText)
         {
-            return ProtectedData.Protect(Encoding.UTF8.GetBytes(plainText), KeyZZZ, DataProtectionScope.CurrentUser);
+            return ProtectedData.Protect(Encoding.UTF8.GetBytes(plainText), KeyZZZ, DataProtectionScope.LocalMachine);
         }
 
         private string DecryptZZZ(byte[] cipherText)
         {
             try
             {
-                return Encoding.UTF8.GetString(ProtectedData.Unprotect(cipherText, KeyZZZ, DataProtectionScope.CurrentUser));
+                return Encoding.UTF8.GetString(ProtectedData.Unprotect(cipherText, KeyZZZ, DataProtectionScope.LocalMachine));
             }
             catch
             {
-                //XtraMessageBox.Show($"【账号管理】加载账号列表失败：秘钥错误或者跨设备、跨用户访问！");
+                //XtraMessageBox.Show($"【账号管理】加载账号列表失败：不允许跨设备访问！");
                 return "[]";
             }
         }
 
         private byte[] EncryptZZZOversea(string plainText)
         {
-            return ProtectedData.Protect(Encoding.UTF8.GetBytes(plainText), KeyZZZOversea, DataProtectionScope.CurrentUser);
+            return ProtectedData.Protect(Encoding.UTF8.GetBytes(plainText), KeyZZZOversea, DataProtectionScope.LocalMachine);
         }
 
         private string DecryptZZZOversea(byte[] cipherText)
         {
             try
             {
-                return Encoding.UTF8.GetString(ProtectedData.Unprotect(cipherText, KeyZZZOversea, DataProtectionScope.CurrentUser));
+                return Encoding.UTF8.GetString(ProtectedData.Unprotect(cipherText, KeyZZZOversea, DataProtectionScope.LocalMachine));
             }
             catch
             {
-                //XtraMessageBox.Show($"【账号管理】加载账号列表失败：秘钥错误或者跨设备、跨用户访问！");
+                //XtraMessageBox.Show($"【账号管理】加载账号列表失败：不允许跨设备访问！");
                 return "[]";
             }
         }
 
         #endregion
-        #region 原神面板代码
+        #region 原神 面板代码
         private void btnGenshinAdd_Click(object sender, EventArgs e)
         {
             using (var dlg = new AccountNameDialog())
@@ -844,11 +876,18 @@ namespace Mihoyo_Tools
                 if (dlg.ShowDialog() == DialogResult.OK)
                 {
                     var acc = BackupCurrentAccountGenshin();
-                    acc.AccountName = dlg.AccountName;
-                    _accountsGenshin.Add(acc);
-                    gridControl1.RefreshDataSource();
-                    SaveAccountsGenshin();
-                    LoadAccountsGenshin();
+                    if (acc == null)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        acc.AccountName = dlg.AccountName;
+                        _accountsGenshin.Add(acc);
+                        gridControl1.RefreshDataSource();
+                        SaveAccountsGenshin();
+                        LoadAccountsGenshin();
+                    }
                 }
             }
         }
@@ -857,7 +896,7 @@ namespace Mihoyo_Tools
         {
             if(txtGenshinPath.Text=="")
             {
-                XtraMessageBox.Show("原神游戏路径不能为空", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show("【原神】游戏路径不能为空", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             else
@@ -869,7 +908,7 @@ namespace Mihoyo_Tools
                         KillGameProcessGenshin();
                         UpdateRegistryGenshin(acc);
                         XtraMessageBox.Show($"已切换到 [{acc.AccountName}]", "成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Process p = Process.Start(txtGenshinPath.Text + @"\yuanshen.exe");
+                        Process.Start(txtGenshinPath.Text);
 
                     }
                     catch (Exception ex)
@@ -895,6 +934,7 @@ namespace Mihoyo_Tools
                     }
                     gridControl1.RefreshDataSource();
                     SaveAccountsGenshin();
+                    LoadAccountsGenshin();
                 }
             }
         }
@@ -909,17 +949,15 @@ namespace Mihoyo_Tools
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                string folder;
                 string selectedFile = openFileDialog.FileName;
-                folder = System.IO.Path.GetDirectoryName(selectedFile);
-                txtGenshinPath.Text = folder;
-                INIFile.writeString("Config", "Genshin_patch", folder, GlobalVar.IniName);
+                txtGenshinPath.Text = selectedFile;
+                INIFile.writeString("Account", "Genshin_patch", selectedFile, GlobalVar.IniName);
                 // XtraMessageBox.Show("选择的文件夹为：" +  GlobalVar.SelectedFolder);
             }
             else
             {
                 txtGenshinPath.Text = "";
-                INIFile.writeString("Config", "Genshin_patch", txtGenshinPath.Text, GlobalVar.IniName);
+                INIFile.writeString("Account", "Genshin_patch", txtGenshinPath.Text, GlobalVar.IniName);
             }
             
         }
@@ -939,7 +977,7 @@ namespace Mihoyo_Tools
 
 
         #endregion
-
+        #region 崩坏：星穹铁道 面板代码
         private void btnChooseStraRailPath_Click(object sender, EventArgs e)
         {
             // 游戏目录
@@ -950,17 +988,15 @@ namespace Mihoyo_Tools
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                string folder;
                 string selectedFile = openFileDialog.FileName;
-                folder = System.IO.Path.GetDirectoryName(selectedFile);
-                txtStarRailPath.Text = folder;
-                INIFile.writeString("Config", "StarRail_patch", folder, GlobalVar.IniName);
+                txtStarRailPath.Text = selectedFile;
+                INIFile.writeString("Account", "StarRail_patch", selectedFile, GlobalVar.IniName);
                 // XtraMessageBox.Show("选择的文件夹为：" +  GlobalVar.SelectedFolder);
             }
             else
             {
-                txtGenshinPath.Text = "";
-                INIFile.writeString("Config", "StarRail_patch", txtStarRailPath.Text, GlobalVar.IniName);
+                txtStarRailPath.Text = "";
+                INIFile.writeString("Account", "StarRail_patch", txtStarRailPath.Text, GlobalVar.IniName);
             }
             
         }
@@ -971,15 +1007,609 @@ namespace Mihoyo_Tools
                 if (dlg.ShowDialog() == DialogResult.OK)
                 {
                     var acc = BackupCurrentAccountStarRail();
-                    acc.AccountName = dlg.AccountName;
-                    _accountsStarRail.Add(acc);
+                    if (acc == null)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        acc.AccountName = dlg.AccountName;
+                        _accountsStarRail.Add(acc);
+                        gridControl2.RefreshDataSource();
+                        SaveAccountsStarRail();
+                        LoadAccountsStarRail();
+                    }
+                }
+            }
+        }
+
+        private void btnStraRailSwitch_Click(object sender, EventArgs e)
+        {
+            if (txtStarRailPath.Text == "")
+            {
+                XtraMessageBox.Show("【崩坏：星穹铁道】游戏路径不能为空", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                if (gridView2.GetFocusedRow() is AccountStarRail acc)
+                {
+                    try
+                    {
+                        KillGameProcessStarRail();
+                        UpdateRegistryStarRail(acc);
+                        XtraMessageBox.Show($"已切换到 [{acc.AccountName}]", "成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Process.Start(txtStarRailPath.Text);
+
+                    }
+                    catch (Exception ex)
+                    {
+                        XtraMessageBox.Show($"切换失败：{ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+        private void btnStraRailDelete_Click(object sender, EventArgs e)
+        {
+            var selected = gridView2.GetSelectedRows();
+            if (selected.Length > 0)
+            {
+                if (XtraMessageBox.Show($"确认删除选中的 {selected.Length} 个账号？", "警告", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    foreach (var handle in selected)
+                    {
+                        var acc = gridView2.GetRow(handle) as AccountStarRail;
+                        if (acc != null) _accountsStarRail.Remove(acc);
+                        //_accounts.RemoveAt(handle);
+                    }
                     gridControl2.RefreshDataSource();
                     SaveAccountsStarRail();
                     LoadAccountsStarRail();
                 }
             }
         }
+
+        private void gridView2_DoubleClick(object sender, EventArgs e)
+        {
+            // 获取双击的行句柄
+            var hitInfo = gridView2.CalcHitInfo(gridControl2.PointToClient(MousePosition));
+            if (hitInfo.RowHandle < 0) return; // 非数据行点击时忽略
+
+            // 获取绑定的 Account 对象
+            var selectedAccount = gridView2.GetRow(hitInfo.RowHandle) as AccountStarRail;
+            if (selectedAccount == null) return;
+
+            // 直接复用「切换账号」按钮的逻辑
+            btnStraRailSwitch_Click(selectedAccount, e);
+        }
+        #endregion
+        #region 崩坏3 面板代码
+        private void btnHonkaiImpact3_Click(object sender, EventArgs e)
+        {
+            // 游戏目录
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Title = "选择 BH3.exe";
+            openFileDialog.Filter = "程序文件|BH3.exe";
+            openFileDialog.InitialDirectory = @"D:\";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string selectedFile = openFileDialog.FileName;
+                textHonkaiImpact3patch.Text = selectedFile;
+                INIFile.writeString("Config", "BH3_patch", selectedFile, GlobalVar.IniName);
+                // XtraMessageBox.Show("选择的文件夹为：" +  GlobalVar.SelectedFolder);
+            }
+            else
+            {
+                textHonkaiImpact3patch.Text = "";
+                INIFile.writeString("Config", "BH3_patch", txtStarRailPath.Text, GlobalVar.IniName);
+            }
+        }
+
+        private void AddHonkaiImpact3_Click(object sender, EventArgs e)
+        {
+            using (var dlg = new AccountNameDialog())
+            {
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    var acc = BackupCurrentAccountHonkaiImpact3();
+                    if (acc == null)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        acc.AccountName = dlg.AccountName;
+                        _accountsHonkaiImpact3.Add(acc);
+                        gridControl3.RefreshDataSource();
+                        SaveAccountsHonkaiImpact3();
+                        LoadAccountsHonkaiImpact3();
+                    }
+                }
+            }
+        }
+
+        private void btnHonkaiImpact3Switch_Click(object sender, EventArgs e)
+        {
+            if (textHonkaiImpact3patch.Text == "")
+            {
+                XtraMessageBox.Show("【崩坏3】游戏路径不能为空", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                if (gridView3.GetFocusedRow() is AccountHonkaiImpact3 acc)
+                {
+                    try
+                    {
+                        KillGameProcessHonkaiImpact3();
+                        UpdateRegistryHonkaiImpact3(acc);
+                        XtraMessageBox.Show($"已切换到 [{acc.AccountName}]", "成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Process.Start(textHonkaiImpact3patch.Text);
+
+                    }
+                    catch (Exception ex)
+                    {
+                        XtraMessageBox.Show($"切换失败：{ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+        private void btnHonkaiImpact3Delete_Click(object sender, EventArgs e)
+        {
+            var selected = gridView3.GetSelectedRows();
+            if (selected.Length > 0)
+            {
+                if (XtraMessageBox.Show($"确认删除选中的 {selected.Length} 个账号？", "警告", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    foreach (var handle in selected)
+                    {
+                        var acc = gridView3.GetRow(handle) as AccountHonkaiImpact3;
+                        if (acc != null) _accountsHonkaiImpact3.Remove(acc);
+                        //_accounts.RemoveAt(handle);
+                    }
+                    gridControl3.RefreshDataSource();
+                    SaveAccountsHonkaiImpact3();
+                    LoadAccountsHonkaiImpact3();
+                }
+            }
+        }
+
+        private void gridView3_DoubleClick(object sender, EventArgs e)
+        {
+            // 获取双击的行句柄
+            var hitInfo = gridView3.CalcHitInfo(gridControl3.PointToClient(MousePosition));
+            if (hitInfo.RowHandle < 0) return; // 非数据行点击时忽略
+
+            // 获取绑定的 Account 对象
+            var selectedAccount = gridView3.GetRow(hitInfo.RowHandle) as AccountHonkaiImpact3;
+            if (selectedAccount == null) return;
+
+            // 直接复用「切换账号」按钮的逻辑
+            btnHonkaiImpact3Switch_Click(selectedAccount, e);
+        }
+        #endregion
+        #region 云●原神 面板代码
+        private void Btn_GenshinCloud_Click(object sender, EventArgs e)
+        {
+            // 游戏目录
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Title = "选择 Genshin Impact Cloud Game.exe";
+            openFileDialog.Filter = "程序文件|Genshin Impact Cloud Game.exe";
+            openFileDialog.InitialDirectory = @"D:\";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string selectedFile = openFileDialog.FileName;
+                txtGenshinCloudPath.Text = selectedFile;
+                INIFile.writeString("Account", "GenshinCloud_patch", selectedFile, GlobalVar.IniName);
+                // XtraMessageBox.Show("选择的文件夹为：" +  GlobalVar.SelectedFolder);
+            }
+            else
+            {
+                txtGenshinCloudPath.Text = "";
+                INIFile.writeString("Account", "GenshinCloud_patch", txtGenshinCloudPath.Text, GlobalVar.IniName);
+            }
+        }
+
+        private void btnGenshinCloudAdd_Click(object sender, EventArgs e)
+        {
+            using (var dlg = new AccountNameDialog())
+            {
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    var acc = BackupCurrentAccountGenshinCloud();
+                    if (acc == null)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        acc.AccountName = dlg.AccountName;
+                        _accountsGenshinCloud.Add(acc);
+                        gridControl4.RefreshDataSource();
+                        SaveAccountsGenshinCloud();
+                        LoadAccountsGenshinCloud();
+                    }
+                }
+            }
+        }
+
+        private void btnGenshinCloudSwitch_Click(object sender, EventArgs e)
+        {
+            if (txtGenshinCloudPath.Text == "")
+            {
+                XtraMessageBox.Show("【云●原神】游戏路径不能为空", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                if (gridView4.GetFocusedRow() is AccountGenshinCloud acc)
+                {
+                    try
+                    {
+                        KillGameProcessGenshinCloud();
+                        UpdateRegistryGenshinCloud(acc);
+                        XtraMessageBox.Show($"已切换到 [{acc.AccountName}]", "成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Process.Start(txtGenshinCloudPath.Text);
+
+                    }
+                    catch (Exception ex)
+                    {
+                        XtraMessageBox.Show($"切换失败：{ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+        private void btnGenshinCloudDelete_Click(object sender, EventArgs e)
+        {
+            var selected = gridView4.GetSelectedRows();
+            if (selected.Length > 0)
+            {
+                if (XtraMessageBox.Show($"确认删除选中的 {selected.Length} 个账号？", "警告", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    foreach (var handle in selected)
+                    {
+                        var acc = gridView4.GetRow(handle) as AccountGenshinCloud;
+                        if (acc != null) _accountsGenshinCloud.Remove(acc);
+                        //_accounts.RemoveAt(handle);
+                    }
+                    gridControl4.RefreshDataSource();
+                    SaveAccountsGenshinCloud();
+                    LoadAccountsGenshinCloud();
+                }
+            }
+        }
+
+        private void gridView4_DoubleClick(object sender, EventArgs e)
+        {
+            // 获取双击的行句柄
+            var hitInfo = gridView4.CalcHitInfo(gridControl4.PointToClient(MousePosition));
+            if (hitInfo.RowHandle < 0) return; // 非数据行点击时忽略
+
+            // 获取绑定的 Account 对象
+            var selectedAccount = gridView4.GetRow(hitInfo.RowHandle) as AccountGenshinCloud;
+            if (selectedAccount == null) return;
+
+            // 直接复用「切换账号」按钮的逻辑
+            btnGenshinCloudSwitch_Click(selectedAccount, e);
+        }
+        #endregion
+        #region 原神国际服 面板代码
+        private void btn_GenshinOverseaPath_Click(object sender, EventArgs e)
+        {
+            // 游戏目录
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Title = "选择 GenshinImpact.exe";
+            openFileDialog.Filter = "程序文件|GenshinImpact.exe";
+            openFileDialog.InitialDirectory = @"D:\";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string selectedFile = openFileDialog.FileName;
+                txtGenshinOverseaPath.Text = selectedFile;
+                INIFile.writeString("Account", "GenshinOversea_patch", selectedFile, GlobalVar.IniName);
+                // XtraMessageBox.Show("选择的文件夹为：" +  GlobalVar.SelectedFolder);
+            }
+            else
+            {
+                txtGenshinOverseaPath.Text = "";
+                INIFile.writeString("Account", "GenshinOversea_patch", txtGenshinOverseaPath.Text, GlobalVar.IniName);
+            }
+        }
+
+        private void btnGenshinOverseaAdd_Click(object sender, EventArgs e)
+        {
+            using (var dlg = new AccountNameDialog())
+            {
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    var acc = BackupCurrentAccountGenshinOversea();
+                    if (acc == null)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        acc.AccountName = dlg.AccountName;
+                        _accountsGenshinOversea.Add(acc);
+                        gridControl5.RefreshDataSource();
+                        SaveAccountsGenshinOversea();
+                        LoadAccountsGenshinOversea();
+                    }
+                }
+            }
+        }
+
+        private void btnGenshinOverseaSwitch_Click(object sender, EventArgs e)
+        {
+            if (txtGenshinOverseaPath.Text == "")
+            {
+                XtraMessageBox.Show("【原神 国际服】游戏路径不能为空", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                if (gridView5.GetFocusedRow() is AccountGenshinOversea acc)
+                {
+                    try
+                    {
+                        KillGameProcessGenshinOversea();
+                        UpdateRegistryGenshinOversea(acc);
+                        XtraMessageBox.Show($"已切换到 [{acc.AccountName}]", "成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Process.Start(txtGenshinOverseaPath.Text);
+
+                    }
+                    catch (Exception ex)
+                    {
+                        XtraMessageBox.Show($"切换失败：{ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+        private void btnGenshinOverseaDelete_Click(object sender, EventArgs e)
+        {
+            var selected = gridView5.GetSelectedRows();
+            if (selected.Length > 0)
+            {
+                if (XtraMessageBox.Show($"确认删除选中的 {selected.Length} 个账号？", "警告", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    foreach (var handle in selected)
+                    {
+                        var acc = gridView5.GetRow(handle) as AccountGenshinOversea;
+                        if (acc != null) _accountsGenshinOversea.Remove(acc);
+                        //_accounts.RemoveAt(handle);
+                    }
+                    gridControl5.RefreshDataSource();
+                    SaveAccountsGenshinOversea();
+                    LoadAccountsGenshinOversea();
+                }
+            }
+        }
+
+        private void gridView5_DoubleClick(object sender, EventArgs e)
+        {
+            // 获取双击的行句柄
+            var hitInfo = gridView5.CalcHitInfo(gridControl4.PointToClient(MousePosition));
+            if (hitInfo.RowHandle < 0) return; // 非数据行点击时忽略
+
+            // 获取绑定的 Account 对象
+            var selectedAccount = gridView5.GetRow(hitInfo.RowHandle) as AccountGenshinOversea;
+            if (selectedAccount == null) return;
+
+            // 直接复用「切换账号」按钮的逻辑
+            btnGenshinOverseaSwitch_Click(selectedAccount, e);
+        }
+        #endregion
+        #region 崩坏：星穹铁道国际服 面板代码
+        private void btnStarRailOverseaPath_Click(object sender, EventArgs e)
+        {
+            // 游戏目录
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Title = "选择 StarRail.exe";
+            openFileDialog.Filter = "程序文件|StarRail.exe";
+            openFileDialog.InitialDirectory = @"D:\";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string selectedFile = openFileDialog.FileName;
+                txtStarRailOverseaPath.Text = selectedFile;
+                INIFile.writeString("Account", "StarRailOversea_patch", selectedFile, GlobalVar.IniName);
+                // XtraMessageBox.Show("选择的文件夹为：" +  GlobalVar.SelectedFolder);
+            }
+            else
+            {
+                txtStarRailOverseaPath.Text = "";
+                INIFile.writeString("Account", "StarRailOversea_patch", txtGenshinOverseaPath.Text, GlobalVar.IniName);
+            }
+        }
+
+        private void btnStarRailOverseaAdd_Click(object sender, EventArgs e)
+        {
+            using (var dlg = new AccountNameDialog())
+            {
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    var acc = BackupCurrentAccountStarRailOversea();
+                    if (acc == null)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        acc.AccountName = dlg.AccountName;
+                        _accountsStarRailOversea.Add(acc);
+                        gridControl6.RefreshDataSource();
+                        SaveAccountsStarRailOversea();
+                        LoadAccountsStarRailOversea();
+                    }
+                }
+            }
+        }
+
+        private void btnStarRailOverseaSwitch_Click(object sender, EventArgs e)
+        {
+            if (txtStarRailOverseaPath.Text == "")
+            {
+                XtraMessageBox.Show("【原神 国际服】游戏路径不能为空", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                if (gridView6.GetFocusedRow() is AccountStarRailOversea acc)
+                {
+                    try
+                    {
+                        KillGameProcessStarRailOversea();
+                        UpdateRegistryStarRailOversea(acc);
+                        XtraMessageBox.Show($"已切换到 [{acc.AccountName}]", "成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Process.Start(txtStarRailOverseaPath.Text);
+
+                    }
+                    catch (Exception ex)
+                    {
+                        XtraMessageBox.Show($"切换失败：{ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+        private void btnStarRailOverseaDelete_Click(object sender, EventArgs e)
+        {
+            var selected = gridView6.GetSelectedRows();
+            if (selected.Length > 0)
+            {
+                if (XtraMessageBox.Show($"确认删除选中的 {selected.Length} 个账号？", "警告", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    foreach (var handle in selected)
+                    {
+                        var acc = gridView6.GetRow(handle) as AccountStarRailOversea;
+                        if (acc != null) _accountsStarRailOversea.Remove(acc);
+                        //_accounts.RemoveAt(handle);
+                    }
+                    gridControl6.RefreshDataSource();
+                    SaveAccountsStarRailOversea();
+                    LoadAccountsStarRailOversea();
+                }
+            }
+        }
+        #endregion
+        #region 绝区零 面板代码
+        private void btnZZZPath_Click(object sender, EventArgs e)
+        {
+            // 游戏目录
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Title = "选择 ZenlessZoneZero.exe";
+            openFileDialog.Filter = "程序文件|ZenlessZoneZero.exe";
+            openFileDialog.InitialDirectory = @"D:\";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string selectedFile = openFileDialog.FileName;
+                txtZZZPath.Text = selectedFile;
+                INIFile.writeString("Account", "ZZZ_patch", selectedFile, GlobalVar.IniName);
+                // XtraMessageBox.Show("选择的文件夹为：" +  GlobalVar.SelectedFolder);
+            }
+            else
+            {
+                txtZZZPath.Text = "";
+                INIFile.writeString("Account", "ZZZ_patch", txtZZZPath.Text, GlobalVar.IniName);
+            }
+        }
+
+        private void btnZZZAdd_Click(object sender, EventArgs e)
+        {
+            using (var dlg = new AccountNameDialog())
+            {
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    var acc = BackupCurrentAccountZZZ();
+                    if (acc == null)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        acc.AccountName = dlg.AccountName;
+                        _accountsZZZ.Add(acc);
+                        gridControl7.RefreshDataSource();
+                        SaveAccountsZZZ();
+                        LoadAccountsZZZ();
+                    }
+                }
+            }
+        }
+
+        private void btnZZZSwitch_Click(object sender, EventArgs e)
+        {
+            if (txtZZZPath.Text == "")
+            {
+                XtraMessageBox.Show("【原神 国际服】游戏路径不能为空", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                if (gridView6.GetFocusedRow() is AccountZZZ acc)
+                {
+                    try
+                    {
+                        KillGameProcessZZZ();
+                        UpdateRegistryZZZ(acc);
+                        XtraMessageBox.Show($"已切换到 [{acc.AccountName}]", "成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Process.Start(txtZZZPath.Text);
+
+                    }
+                    catch (Exception ex)
+                    {
+                        XtraMessageBox.Show($"切换失败：{ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+        private void btnZZZDelete_Click(object sender, EventArgs e)
+        {
+            var selected = gridView7.GetSelectedRows();
+            if (selected.Length > 0)
+            {
+                if (XtraMessageBox.Show($"确认删除选中的 {selected.Length} 个账号？", "警告", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    foreach (var handle in selected)
+                    {
+                        var acc = gridView7.GetRow(handle) as AccountZZZ;
+                        if (acc != null) _accountsZZZ.Remove(acc);
+                        //_accounts.RemoveAt(handle);
+                    }
+                    gridControl7.RefreshDataSource();
+                    SaveAccountsZZZ();
+                    LoadAccountsZZZ();
+                }
+            }
+        }
+
+        private void gridView7_DoubleClick(object sender, EventArgs e)
+        {
+            var selected = gridView7.GetSelectedRows();
+            if (selected.Length > 0)
+            {
+                if (XtraMessageBox.Show($"确认删除选中的 {selected.Length} 个账号？", "警告", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    foreach (var handle in selected)
+                    {
+                        var acc = gridView7.GetRow(handle) as AccountZZZ;
+                        if (acc != null) _accountsZZZ.Remove(acc);
+                        //_accounts.RemoveAt(handle);
+                    }
+                    gridControl7.RefreshDataSource();
+                    SaveAccountsZZZ();
+                    LoadAccountsZZZ();
+                }
+            }
+        }
+        #endregion
     }
- 
-        
 }
