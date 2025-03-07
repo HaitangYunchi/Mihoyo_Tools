@@ -1097,13 +1097,13 @@ namespace Mihoyo_Tools
             {
                 string selectedFile = openFileDialog.FileName;
                 textHonkaiImpact3patch.Text = selectedFile;
-                INIFile.writeString("Config", "BH3_patch", selectedFile, GlobalVar.IniName);
+                INIFile.writeString("Account", "BH3_patch", selectedFile, GlobalVar.IniName);
                 // XtraMessageBox.Show("选择的文件夹为：" +  GlobalVar.SelectedFolder);
             }
             else
             {
                 textHonkaiImpact3patch.Text = "";
-                INIFile.writeString("Config", "BH3_patch", txtStarRailPath.Text, GlobalVar.IniName);
+                INIFile.writeString("Account", "BH3_patch", txtStarRailPath.Text, GlobalVar.IniName);
             }
         }
 
@@ -1404,6 +1404,7 @@ namespace Mihoyo_Tools
             // 直接复用「切换账号」按钮的逻辑
             btnGenshinOverseaSwitch_Click(selectedAccount, e);
         }
+
         #endregion
         #region 崩坏：星穹铁道国际服 面板代码
         private void btnStarRailOverseaPath_Click(object sender, EventArgs e)
@@ -1455,7 +1456,7 @@ namespace Mihoyo_Tools
         {
             if (txtStarRailOverseaPath.Text == "")
             {
-                XtraMessageBox.Show("【原神 国际服】游戏路径不能为空", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show("【崩坏：星穹铁道 国际服】游戏路径不能为空", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             else
@@ -1496,6 +1497,19 @@ namespace Mihoyo_Tools
                     LoadAccountsStarRailOversea();
                 }
             }
+        }
+        private void gridView6_DoubleClick(object sender, EventArgs e)
+        {
+            // 获取双击的行句柄
+            var hitInfo = gridView6.CalcHitInfo(gridControl6.PointToClient(MousePosition));
+            if (hitInfo.RowHandle < 0) return; // 非数据行点击时忽略
+
+            // 获取绑定的 Account 对象
+            var selectedAccount = gridView6.GetRow(hitInfo.RowHandle) as AccountStarRailOversea;
+            if (selectedAccount == null) return;
+
+            // 直接复用「切换账号」按钮的逻辑
+            btnStarRailOverseaSwitch_Click(selectedAccount, e);
         }
         #endregion
         #region 绝区零 面板代码
@@ -1548,12 +1562,12 @@ namespace Mihoyo_Tools
         {
             if (txtZZZPath.Text == "")
             {
-                XtraMessageBox.Show("【原神 国际服】游戏路径不能为空", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show("【绝区零】游戏路径不能为空", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             else
             {
-                if (gridView6.GetFocusedRow() is AccountZZZ acc)
+                if (gridView7.GetFocusedRow() is AccountZZZ acc)
                 {
                     try
                     {
@@ -1593,23 +1607,19 @@ namespace Mihoyo_Tools
 
         private void gridView7_DoubleClick(object sender, EventArgs e)
         {
-            var selected = gridView7.GetSelectedRows();
-            if (selected.Length > 0)
-            {
-                if (XtraMessageBox.Show($"确认删除选中的 {selected.Length} 个账号？", "警告", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                {
-                    foreach (var handle in selected)
-                    {
-                        var acc = gridView7.GetRow(handle) as AccountZZZ;
-                        if (acc != null) _accountsZZZ.Remove(acc);
-                        //_accounts.RemoveAt(handle);
-                    }
-                    gridControl7.RefreshDataSource();
-                    SaveAccountsZZZ();
-                    LoadAccountsZZZ();
-                }
-            }
+            // 获取双击的行句柄
+            var hitInfo = gridView7.CalcHitInfo(gridControl7.PointToClient(MousePosition));
+            if (hitInfo.RowHandle < 0) return; // 非数据行点击时忽略
+
+            // 获取绑定的 Account 对象
+            var selectedAccount = gridView7.GetRow(hitInfo.RowHandle) as AccountZZZ;
+            if (selectedAccount == null) return;
+
+            // 直接复用「切换账号」按钮的逻辑
+            btnZZZSwitch_Click(selectedAccount, e);
         }
         #endregion
+
+        
     }
 }

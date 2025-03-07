@@ -70,13 +70,7 @@ namespace Mihoyo_Tools {
         private void fr_Main_Load(object sender, EventArgs e)
         {
             this.toolStripStatusLabel4.Text = GlobalVar.VersionNo;
-            string path = GlobalVar.StrPath + @"\data\versions.json";
-            string SaveFilesName = GlobalVar.StrPath + @"\data\versions.json.back";// 新增备份老 version.json
-            if (System.IO.File.Exists(path))//检查文件是否存在 true = 存在 flase = 不存在
-            {
-                System.IO.File.Copy(path, SaveFilesName, true);// 备份老 version.json
-            }
-            
+                        
             Assembly assembly = typeof(Program).Assembly;
             AssemblyName name = new AssemblyName(assembly.FullName);
             int majorVersion = (int)name.Version.Major;
@@ -86,27 +80,40 @@ namespace Mihoyo_Tools {
             if (GlobalVar.Release == 0)
             {
                 toolStripStatusLabel4.Text = "    版本：" + GlobalVar.VersionNo + "_Alpha（内测版）";
-                this.Text = GlobalVar.SoftTitle + "    版本：" + GlobalVar.VersionNo + "_Alpha（内测版）";
+                this.Text = GlobalVar.SoftTitle + "    版本：" + GlobalVar.VersionNo;
             }
             else if (GlobalVar.Release == 1)
             {
                 toolStripStatusLabel4.Text = "    版本：" + GlobalVar.VersionNo + "_bate（公测版）";
-                this.Text = GlobalVar.SoftTitle + "    版本：" + GlobalVar.VersionNo + "_bate（公测版）";
+                this.Text = GlobalVar.SoftTitle + "    版本：" + GlobalVar.VersionNo ;
             }
             else if (GlobalVar.Release == 2)
             {
                 toolStripStatusLabel4.Text = "    版本：" + $"{majorVersion}." + $"{minorVersion}" + "_Release（正式版）";
-                this.Text = GlobalVar.SoftTitle + "    版本：" + $"{majorVersion}." + $"{minorVersion}" + "_Release（正式版）";
+                this.Text = GlobalVar.SoftTitle + "    版本：" + GlobalVar.VersionNo;
             }
             else
             {
                 toolStripStatusLabel4.Text = "    版本：" + GlobalVar.VersionNo + "_Alpha（内测版）";
                 this.Text = GlobalVar.SoftTitle + "    版本：" + GlobalVar.VersionNo + "_Alpha（内测版）";
             }
-
             fr_Main_Container.Controls.Clear();
             _About.Show();
             fr_Main_Container.Controls.Add(_About);
+            string path = GlobalVar.StrPath + @"\data\versions.json";
+            string SaveFilesName = GlobalVar.StrPath + @"\data\versions.json.back";// 新增备份老 version.json
+            if (System.IO.File.Exists(path))//检查文件是否存在 true = 存在 flase = 不存在
+            {
+                if (System.IO.File.Exists(SaveFilesName))
+                {
+                    return;
+                }
+                else
+                {
+                    System.IO.File.Copy(path, SaveFilesName, true);// 备份老 version.json
+                }
+
+            }
         }
 
         private void Element_guanyu_Click(object sender, EventArgs e)

@@ -53,7 +53,7 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(132, 121);
+            this.labelControl1.Location = new System.Drawing.Point(131, 67);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(223, 29);
             this.labelControl1.TabIndex = 0;
@@ -64,18 +64,18 @@
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelControl2.Location = new System.Drawing.Point(132, 167);
+            this.labelControl2.Location = new System.Drawing.Point(131, 113);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(731, 38);
+            this.labelControl2.Size = new System.Drawing.Size(483, 57);
             this.labelControl2.TabIndex = 1;
-            this.labelControl2.Text = "      一款专为 Mihoyo 玩家设计的工具，旨在提供便捷的过场动画导出功能和历代版本资源的访问途径。\r\n通过该软件，玩家可以轻松导出游戏中的usm格式过场" +
-    "动画，并欣赏到高清流畅的CG游戏画面。";
+            this.labelControl2.Text = "       一款专为 Mihoyo 玩家设计的工具，旨在提供便捷的过场动画\r\n导出功能和历代版本资源的访问途径。通过该软件，玩家可以轻松\r\n导出游戏中的usm格" +
+    "式过场动画，并欣赏到高清流畅的CG游戏画面。";
             // 
             // labelControl3
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(132, 235);
+            this.labelControl3.Location = new System.Drawing.Point(131, 209);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(100, 29);
             this.labelControl3.TabIndex = 0;
@@ -85,7 +85,7 @@
             // 
             this.hyperlinkLabelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hyperlinkLabelControl1.Appearance.Options.UseFont = true;
-            this.hyperlinkLabelControl1.Location = new System.Drawing.Point(132, 284);
+            this.hyperlinkLabelControl1.Location = new System.Drawing.Point(131, 258);
             this.hyperlinkLabelControl1.Name = "hyperlinkLabelControl1";
             this.hyperlinkLabelControl1.Size = new System.Drawing.Size(56, 17);
             this.hyperlinkLabelControl1.TabIndex = 2;
@@ -96,7 +96,7 @@
             // 
             this.hyperlinkLabelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hyperlinkLabelControl2.Appearance.Options.UseFont = true;
-            this.hyperlinkLabelControl2.Location = new System.Drawing.Point(253, 284);
+            this.hyperlinkLabelControl2.Location = new System.Drawing.Point(252, 258);
             this.hyperlinkLabelControl2.Name = "hyperlinkLabelControl2";
             this.hyperlinkLabelControl2.Size = new System.Drawing.Size(34, 17);
             this.hyperlinkLabelControl2.TabIndex = 2;
@@ -107,7 +107,7 @@
             // 
             this.hyperlinkLabelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hyperlinkLabelControl3.Appearance.Options.UseFont = true;
-            this.hyperlinkLabelControl3.Location = new System.Drawing.Point(344, 284);
+            this.hyperlinkLabelControl3.Location = new System.Drawing.Point(343, 258);
             this.hyperlinkLabelControl3.Name = "hyperlinkLabelControl3";
             this.hyperlinkLabelControl3.Size = new System.Drawing.Size(28, 17);
             this.hyperlinkLabelControl3.TabIndex = 2;
@@ -126,7 +126,7 @@
             // simpleButton1
             // 
             this.simpleButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.simpleButton1.Location = new System.Drawing.Point(132, 711);
+            this.simpleButton1.Location = new System.Drawing.Point(131, 711);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(75, 23);
             this.simpleButton1.TabIndex = 4;
@@ -137,7 +137,7 @@
             // 
             this.radioButto_github.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.radioButto_github.AutoSize = true;
-            this.radioButto_github.Location = new System.Drawing.Point(347, 713);
+            this.radioButto_github.Location = new System.Drawing.Point(346, 713);
             this.radioButto_github.Name = "radioButto_github";
             this.radioButto_github.Size = new System.Drawing.Size(85, 18);
             this.radioButto_github.TabIndex = 6;
@@ -149,7 +149,7 @@
             this.radioButton_gitee.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.radioButton_gitee.AutoSize = true;
             this.radioButton_gitee.Checked = true;
-            this.radioButton_gitee.Location = new System.Drawing.Point(253, 713);
+            this.radioButton_gitee.Location = new System.Drawing.Point(252, 713);
             this.radioButton_gitee.Name = "radioButton_gitee";
             this.radioButton_gitee.Size = new System.Drawing.Size(78, 18);
             this.radioButton_gitee.TabIndex = 6;
@@ -161,7 +161,7 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(132, 343);
+            this.labelControl4.Location = new System.Drawing.Point(131, 317);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(50, 29);
             this.labelControl4.TabIndex = 0;
@@ -171,7 +171,7 @@
             // 
             this.hyperlinkLabelControl_ToaHartor.Appearance.Font = new System.Drawing.Font("Tahoma", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hyperlinkLabelControl_ToaHartor.Appearance.Options.UseFont = true;
-            this.hyperlinkLabelControl_ToaHartor.Location = new System.Drawing.Point(132, 392);
+            this.hyperlinkLabelControl_ToaHartor.Location = new System.Drawing.Point(131, 366);
             this.hyperlinkLabelControl_ToaHartor.Name = "hyperlinkLabelControl_ToaHartor";
             this.hyperlinkLabelControl_ToaHartor.Size = new System.Drawing.Size(62, 17);
             this.hyperlinkLabelControl_ToaHartor.TabIndex = 2;
@@ -182,7 +182,7 @@
             // 
             this.hyperlinkLabelControl_orilights.Appearance.Font = new System.Drawing.Font("Tahoma", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hyperlinkLabelControl_orilights.Appearance.Options.UseFont = true;
-            this.hyperlinkLabelControl_orilights.Location = new System.Drawing.Point(253, 392);
+            this.hyperlinkLabelControl_orilights.Location = new System.Drawing.Point(252, 366);
             this.hyperlinkLabelControl_orilights.Name = "hyperlinkLabelControl_orilights";
             this.hyperlinkLabelControl_orilights.Size = new System.Drawing.Size(46, 17);
             this.hyperlinkLabelControl_orilights.TabIndex = 2;
@@ -193,7 +193,7 @@
             // 
             this.hyperlinkLabelControl_DevExpress.Appearance.Font = new System.Drawing.Font("Tahoma", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hyperlinkLabelControl_DevExpress.Appearance.Options.UseFont = true;
-            this.hyperlinkLabelControl_DevExpress.Location = new System.Drawing.Point(344, 392);
+            this.hyperlinkLabelControl_DevExpress.Location = new System.Drawing.Point(343, 366);
             this.hyperlinkLabelControl_DevExpress.Name = "hyperlinkLabelControl_DevExpress";
             this.hyperlinkLabelControl_DevExpress.Size = new System.Drawing.Size(56, 17);
             this.hyperlinkLabelControl_DevExpress.TabIndex = 2;
@@ -204,7 +204,7 @@
             // 
             this.pictureBox_WinXin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox_WinXin.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_WinXin.Image")));
-            this.pictureBox_WinXin.Location = new System.Drawing.Point(132, 505);
+            this.pictureBox_WinXin.Location = new System.Drawing.Point(131, 505);
             this.pictureBox_WinXin.Name = "pictureBox_WinXin";
             this.pictureBox_WinXin.Size = new System.Drawing.Size(150, 150);
             this.pictureBox_WinXin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -215,7 +215,7 @@
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(311, 505);
+            this.pictureBox2.Location = new System.Drawing.Point(310, 505);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(150, 150);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

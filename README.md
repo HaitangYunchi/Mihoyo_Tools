@@ -1,13 +1,13 @@
 ﻿<h1 align="center">米哈游工具箱（原神过场动画导出工具）</h1>
 
 <p align="center">
-    <img src="./Mihoyo_Tools/Readme_images/icon.png" height="360px" align="center">
+    <img src="./Mihoyo_Tools/Readme_images/hutao.png" height="360px" align="center">
 </p>
 <p align="center">
     <strong> <a href="https://github.com/ToaHartor/GI-cutscenes">Genshin Cutscenes Demuxer</a> 的用户界面</strong>
 </p>
 <p align="center">
-    <img src="https://shields.io/badge/version-v1.1_Release-blue"></br>
+    <img src="https://shields.io/badge/version-v1.2_Release-blue"></br>
 </p>
 
 ## 软件截图(Screenshots):
@@ -28,8 +28,8 @@
 `[Game directory]\Genshin Impact game\GenshinImpact_Data\StreamingAssets\VideoAssets\StandaloneWindows64`
 
 ### I have an error when demuxing files
-Try to update your [GI-cutscenes script](https://github.com/ToaHartor/GI-cutscenes/releases) to the latest version.<br>
-Specify the path to the `GI-cutscenes.exe` in the settings.
+Try to update your [GIcutscenes script](https://github.com/ToaHartor/GI-cutscenes/releases) to the latest version.<br>
+Specify the path to the `GIcutscenes.exe` in the settings.
 
 
 ### I have an error in merging video
@@ -53,8 +53,8 @@ Add the `ffplay.exe` file next to the exe file you are running.
 `[游戏安装目录]\Genshin Impact game\GenshinImpact_Data\StreamingAssets\VideoAssets\StandaloneWindows64`
 
 ### 解密文件出错怎么办？
-尝试更新 [GI-cutscenes](https://github.com/ToaHartor/GI-cutscenes/releases)到最新版本，<br>
-替换 `GI-cutscenes.exe` 文件及可。
+尝试更新 [GIcutscenes](https://github.com/ToaHartor/GI-cutscenes/releases)到最新版本，<br>
+替换 `GIcutscenes.exe` 文件及可。
 
 ### 合并视频出错
 尝试更新 [ffmpeg](https://github.com/BtbN/FFmpeg-Builds/releases) 到最新版本<br>

@@ -863,6 +863,7 @@
             // 
             this.gridView6.GridControl = this.gridControl6;
             this.gridView6.Name = "gridView6";
+            this.gridView6.DoubleClick += new System.EventHandler(this.gridView6_DoubleClick);
             // 
             // btnStarRailOverseaDelete
             // 

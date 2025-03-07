@@ -81,15 +81,37 @@ namespace Mihoyo_Tools
             {
                 if (e.Error != null)
                 {
-                    XtraMessageBox.Show("错误:\n\n" + e.Error.Message);
+                    string path = GlobalVar.StrPath + @"\data\versions.json";
+                    string SaveFilesName = GlobalVar.StrPath + @"\data\versions.json.back";
+                    if (System.IO.File.Exists(SaveFilesName))
+                    {
+                        System.IO.File.Copy(SaveFilesName, path, true);
+                        progressBar1.Value = 100;
+                        XtraMessageBox.Show("错误:\n\n无法访问更新服务器！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    
                 }
                 else if (e.Cancelled)
                 {
-                    XtraMessageBox.Show("更新被取消");
+                    string path = GlobalVar.StrPath + @"\data\versions.json";
+                    string SaveFilesName = GlobalVar.StrPath + @"\data\versions.json.back";
+                    if (System.IO.File.Exists(SaveFilesName))
+                    {
+                        System.IO.File.Copy(SaveFilesName, path, true);
+                        progressBar1.Value = 100;
+                        XtraMessageBox.Show("更新被取消", "取消", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    
                 }
                 else
                 {
-                    XtraMessageBox.Show("已更新 Key 到最新版");
+                    string path = GlobalVar.StrPath + @"\data\versions.json";
+                    string SaveFilesName = GlobalVar.StrPath + @"\data\versions.json.back";
+                    if (System.IO.File.Exists(path))
+                    {
+                        System.IO.File.Copy(path, SaveFilesName, true);
+                        XtraMessageBox.Show("已更新 Key 到最新版","成功", MessageBoxButtons.OK, MessageBoxIcon.None);
+                    }
                 }
                 //progressBar1.Value = 0;
             });

@@ -19,7 +19,7 @@ namespace Mihoyo_Tools {
             System.Diagnostics.Process[] myProcesses = System.Diagnostics.Process.GetProcessesByName("Mihoyo_Tools");
             if (myProcesses.Length > 1) //如果可以获取到知道的进程名大于一个，则说明在此之前已经启动过
             {
-                XtraMessageBox.Show("程序已经运行！");
+                XtraMessageBox.Show("程序已经运行！", "警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Process.GetCurrentProcess().Kill();             //关闭
             }
             else
