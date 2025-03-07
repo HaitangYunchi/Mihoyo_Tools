@@ -98,6 +98,7 @@
             // 
             // Element_Account
             // 
+            this.Element_Account.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Element_Account.ImageOptions.Image")));
             this.Element_Account.Name = "Element_Account";
             this.Element_Account.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.Element_Account.Text = "账号管理";
