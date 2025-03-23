@@ -1,4 +1,5 @@
 ﻿using DevExpress.LookAndFeel;
+using DevExpress.Skins;
 using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Filtering.Templates;
@@ -28,10 +29,14 @@ namespace Mihoyo_Tools {
         private Control_Mihoyo_resources _Mihoyo;
         private Control_About _About;
         private Control_Account _Account;
+        private UserLookAndFeel userLookAndFeel;
 
         public fr_Main() 
         {
             InitializeComponent();
+            HideSkins(_skinsToHide);
+            // 创建 UserLookAndFeel 实例
+            userLookAndFeel = new UserLookAndFeel(this);
 
             _Genshin_usm = new Control_Genshin_usm();
             _Genshin_usm.Dock = DockStyle.Fill;
@@ -46,6 +51,7 @@ namespace Mihoyo_Tools {
             _Account.Dock = DockStyle.Fill;
 
         }
+        
 
         private void Element_ys_usm_Click(object sender, EventArgs e)
         {
@@ -69,8 +75,15 @@ namespace Mihoyo_Tools {
 
         private void fr_Main_Load(object sender, EventArgs e)
         {
+
+            
             this.toolStripStatusLabel4.Text = GlobalVar.VersionNo;
-                        
+            string savedSkinName = Properties.Settings.Default.SkinName;
+
+            if (!string.IsNullOrEmpty(savedSkinName))
+            {
+                UserLookAndFeel.Default.SetSkinStyle(savedSkinName);
+            }
             Assembly assembly = typeof(Program).Assembly;
             AssemblyName name = new AssemblyName(assembly.FullName);
             int majorVersion = (int)name.Version.Major;
@@ -211,8 +224,8 @@ namespace Mihoyo_Tools {
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
             string ver_url = "";
-            //ver_url = "https://gitee.com/haitangyunchi/Mihoyo_Tools/raw/master/Mihoyo_Tools/Upgrade/VerContrast.sdb";
-            ver_url = "https://gitee.com/haitangyunchi/Mihoyo_Tools/raw/Test/Mihoyo_Tools/Upgrade/VerContrast.sdb";
+            //ver_url = "https://gitee.com/haitangyunchi/Mihoyo_Tools/raw/master/Mihoyo_Tools/Upgrade/VerContrast.sdb"; // 发布使用这个地址
+            ver_url = "https://gitee.com/haitangyunchi/Mihoyo_Tools/raw/Test/Mihoyo_Tools/Upgrade/VerContrast.sdb"; //自己测试使用这个地址
             string save_VerContrast = Path.GetTempPath() + @"\VerContrast.sdb";
             using (WebClient client = new WebClient())
             {
@@ -248,6 +261,54 @@ namespace Mihoyo_Tools {
             }
         }
 
-        
+        private void barButtonItem_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            string skinName = userLookAndFeel.ActiveSkinName;
+            Properties.Settings.Default.SkinName = skinName;
+            Properties.Settings.Default.Save();
+            XtraMessageBox.Show($"当前皮肤：{userLookAndFeel.ActiveSkinName}","成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        string[] _skinsToHide = { "DevExpress Style", "DevExpress Dark Style" };
+        private void HideSkins(string[] skinsToHide)
+        {
+  
+            for (var i = 0; i < skinBarSubItem.ItemLinks.Count; i++)
+            {
+                //Check regular button items
+                if (skinBarSubItem.ItemLinks[i] is BarButtonItemLink)
+                {
+                    var item = skinBarSubItem.ItemLinks[i];
+                    foreach (var skin in skinsToHide)
+                    {
+                        if (item.Caption.Contains(skin))
+                        {
+                            item.Visible = false;
+                        }
+                    }
+                }
+                //Check buttons nested in the "Bonus Skins" sub-menu
+                if (skinBarSubItem.ItemLinks[i] is BarSubItemLink && skinBarSubItem.ItemLinks[i].Caption == "Bonus Skins")
+                {
+                    BarSubItemLink group = (BarSubItemLink)skinBarSubItem.ItemLinks[i];
+                    for (var j = 0; j < group.Item.ItemLinks.Count; j++)
+                    {
+                        var item = group.Item.ItemLinks[j];
+                        foreach (var skin in skinsToHide)
+                        {
+                            if (item.Caption.Contains(skin))
+                            {
+                                item.Visible = false;
+                            }
+                        }
+                    }
+                }
+                //Hide theme skins
+                if (skinBarSubItem.ItemLinks[i] is BarSubItemLink && skinBarSubItem.ItemLinks[i].Caption == "Theme Skins")
+                {
+                    skinBarSubItem.ItemLinks[i].Visible = false;
+                }
+            }
+        }
+
     }
 }

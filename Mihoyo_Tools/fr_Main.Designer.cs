@@ -41,6 +41,8 @@
             this.Element_guanyu = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.skinDropDownButtonItem1 = new DevExpress.XtraBars.SkinDropDownButtonItem();
+            this.barButtonItem = new DevExpress.XtraBars.BarButtonItem();
+            this.skinBarSubItem = new DevExpress.XtraBars.SkinBarSubItem();
             this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -59,9 +61,9 @@
             // fr_Main_Container
             // 
             this.fr_Main_Container.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fr_Main_Container.Location = new System.Drawing.Point(260, 31);
+            this.fr_Main_Container.Location = new System.Drawing.Point(260, 33);
             this.fr_Main_Container.Name = "fr_Main_Container";
-            this.fr_Main_Container.Size = new System.Drawing.Size(1263, 778);
+            this.fr_Main_Container.Size = new System.Drawing.Size(1263, 776);
             this.fr_Main_Container.TabIndex = 0;
             // 
             // accordionControl1
@@ -71,10 +73,10 @@
             this.Element_Tools,
             this.lElement_Rex,
             this.Element_about});
-            this.accordionControl1.Location = new System.Drawing.Point(0, 31);
+            this.accordionControl1.Location = new System.Drawing.Point(0, 33);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(260, 778);
+            this.accordionControl1.Size = new System.Drawing.Size(260, 776);
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -142,27 +144,50 @@
             // 
             this.fluentDesignFormControl1.FluentDesignForm = this;
             this.fluentDesignFormControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.skinDropDownButtonItem1});
+            this.skinDropDownButtonItem1,
+            this.barButtonItem,
+            this.skinBarSubItem});
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Manager = this.fluentFormDefaultManager1;
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1523, 31);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1523, 33);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
-            this.fluentDesignFormControl1.TitleItemLinks.Add(this.skinDropDownButtonItem1);
+            this.fluentDesignFormControl1.TitleItemLinks.Add(this.barButtonItem);
+            this.fluentDesignFormControl1.TitleItemLinks.Add(this.skinBarSubItem);
             // 
             // skinDropDownButtonItem1
             // 
             this.skinDropDownButtonItem1.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
-            this.skinDropDownButtonItem1.Id = 0;
+            this.skinDropDownButtonItem1.Id = 16;
             this.skinDropDownButtonItem1.Name = "skinDropDownButtonItem1";
+            this.skinDropDownButtonItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            // 
+            // barButtonItem
+            // 
+            this.barButtonItem.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.barButtonItem.Caption = "保存皮肤设置";
+            this.barButtonItem.Id = 17;
+            this.barButtonItem.Name = "barButtonItem";
+            this.barButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem_ItemClick);
+            // 
+            // skinBarSubItem
+            // 
+            this.skinBarSubItem.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.skinBarSubItem.Caption = "Skin";
+            this.skinBarSubItem.Id = 18;
+            this.skinBarSubItem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("skinBarSubItem.ImageOptions.Image")));
+            this.skinBarSubItem.Name = "skinBarSubItem";
+            this.skinBarSubItem.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
             // fluentFormDefaultManager1
             // 
             this.fluentFormDefaultManager1.Form = this;
             this.fluentFormDefaultManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.skinDropDownButtonItem1});
-            this.fluentFormDefaultManager1.MaxItemId = 1;
+            this.skinDropDownButtonItem1,
+            this.barButtonItem,
+            this.skinBarSubItem});
+            this.fluentFormDefaultManager1.MaxItemId = 19;
             // 
             // statusStrip1
             // 
@@ -261,7 +286,6 @@
         private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl fluentDesignFormControl1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement Element_Tools;
         private DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager fluentFormDefaultManager1;
-        private DevExpress.XtraBars.SkinDropDownButtonItem skinDropDownButtonItem1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement Element_ys_usm;
         private DevExpress.XtraBars.Navigation.AccordionControlElement lElement_Rex;
         private DevExpress.XtraBars.Navigation.AccordionControlElement Element_mihoyo_rex;
@@ -276,5 +300,8 @@
         private System.Windows.Forms.Timer timer1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement Element_Account;
+        private DevExpress.XtraBars.SkinDropDownButtonItem skinDropDownButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem;
+        private DevExpress.XtraBars.SkinBarSubItem skinBarSubItem;
     }
 }

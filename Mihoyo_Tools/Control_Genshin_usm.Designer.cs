@@ -158,7 +158,7 @@
             this.buttonEdit_usm_Name.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.buttonEdit_usm_Name.Properties.ReadOnly = true;
-            this.buttonEdit_usm_Name.Size = new System.Drawing.Size(333, 20);
+            this.buttonEdit_usm_Name.Size = new System.Drawing.Size(333, 28);
             this.buttonEdit_usm_Name.TabIndex = 11;
             this.buttonEdit_usm_Name.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_usm_Name_ButtonClick);
             // 
@@ -314,7 +314,7 @@
             this.buttonEdit_Out_path.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.buttonEdit_Out_path.Properties.ReadOnly = true;
-            this.buttonEdit_Out_path.Size = new System.Drawing.Size(333, 20);
+            this.buttonEdit_Out_path.Size = new System.Drawing.Size(333, 28);
             this.buttonEdit_Out_path.TabIndex = 11;
             this.buttonEdit_Out_path.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_Out_path_ButtonClick);
             // 
@@ -325,7 +325,7 @@
             this.buttonEdit_usm_path.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.buttonEdit_usm_path.Properties.ReadOnly = true;
-            this.buttonEdit_usm_path.Size = new System.Drawing.Size(333, 20);
+            this.buttonEdit_usm_path.Size = new System.Drawing.Size(333, 28);
             this.buttonEdit_usm_path.TabIndex = 12;
             this.buttonEdit_usm_path.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_usm_path_ButtonClick);
             // 
@@ -336,7 +336,7 @@
             this.buttonEdit_Game_path.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.buttonEdit_Game_path.Properties.ReadOnly = true;
-            this.buttonEdit_Game_path.Size = new System.Drawing.Size(333, 20);
+            this.buttonEdit_Game_path.Size = new System.Drawing.Size(333, 28);
             this.buttonEdit_Game_path.TabIndex = 13;
             this.buttonEdit_Game_path.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.buttonEdit_Game_path_ButtonClick_1);
             // 
@@ -345,7 +345,7 @@
             this.textEdit2.Location = new System.Drawing.Point(145, 86);
             this.textEdit2.Name = "textEdit2";
             this.textEdit2.Properties.ReadOnly = true;
-            this.textEdit2.Size = new System.Drawing.Size(334, 20);
+            this.textEdit2.Size = new System.Drawing.Size(334, 28);
             this.textEdit2.TabIndex = 9;
             // 
             // textEdit1
@@ -353,7 +353,7 @@
             this.textEdit1.Location = new System.Drawing.Point(145, 50);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Properties.ReadOnly = true;
-            this.textEdit1.Size = new System.Drawing.Size(334, 20);
+            this.textEdit1.Size = new System.Drawing.Size(334, 28);
             this.textEdit1.TabIndex = 10;
             // 
             // txtInfo
@@ -366,7 +366,7 @@
             this.txtInfo.Multiline = true;
             this.txtInfo.Name = "txtInfo";
             this.txtInfo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtInfo.Size = new System.Drawing.Size(687, 726);
+            this.txtInfo.Size = new System.Drawing.Size(681, 726);
             this.txtInfo.TabIndex = 8;
             // 
             // backgroundWorker_Game_path
