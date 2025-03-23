@@ -77,12 +77,13 @@ namespace Mihoyo_Tools
 
         void Client_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
         {
+            string path = GlobalVar.StrPath + @"\data\versions.json";
+            string SaveFilesName = GlobalVar.StrPath + @"\data\versions.json.back";
             this.Invoke((MethodInvoker)delegate
             {
                 if (e.Error != null)
                 {
-                    string path = GlobalVar.StrPath + @"\data\versions.json";
-                    string SaveFilesName = GlobalVar.StrPath + @"\data\versions.json.back";
+                    
                     if (System.IO.File.Exists(SaveFilesName))
                     {
                         System.IO.File.Copy(SaveFilesName, path, true);
@@ -93,24 +94,20 @@ namespace Mihoyo_Tools
                 }
                 else if (e.Cancelled)
                 {
-                    string path = GlobalVar.StrPath + @"\data\versions.json";
-                    string SaveFilesName = GlobalVar.StrPath + @"\data\versions.json.back";
                     if (System.IO.File.Exists(SaveFilesName))
                     {
                         System.IO.File.Copy(SaveFilesName, path, true);
                         progressBar1.Value = 100;
-                        XtraMessageBox.Show("更新被取消", "取消", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        XtraMessageBox.Show("更新被取消", "取消", MessageBoxButtons.OK, MessageBoxIcon.None);
                     }
                     
                 }
                 else
                 {
-                    string path = GlobalVar.StrPath + @"\data\versions.json";
-                    string SaveFilesName = GlobalVar.StrPath + @"\data\versions.json.back";
                     if (System.IO.File.Exists(path))
                     {
                         System.IO.File.Copy(path, SaveFilesName, true);
-                        XtraMessageBox.Show("已更新 Key 到最新版","成功", MessageBoxButtons.OK, MessageBoxIcon.None);
+                        XtraMessageBox.Show("已更新 Key 到最新版","成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
                 //progressBar1.Value = 0;

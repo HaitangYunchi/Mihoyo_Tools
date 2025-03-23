@@ -224,8 +224,8 @@ namespace Mihoyo_Tools {
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
             string ver_url = "";
-            //ver_url = "https://gitee.com/haitangyunchi/Mihoyo_Tools/raw/master/Mihoyo_Tools/Upgrade/VerContrast.sdb"; // 发布使用这个地址
-            ver_url = "https://gitee.com/haitangyunchi/Mihoyo_Tools/raw/Test/Mihoyo_Tools/Upgrade/VerContrast.sdb"; //自己测试使用这个地址
+            ver_url = "https://gitee.com/haitangyunchi/Mihoyo_Tools/raw/master/Mihoyo_Tools/Upgrade/VerContrast.sdb"; // 发布使用这个地址
+            //ver_url = "https://gitee.com/haitangyunchi/Mihoyo_Tools/raw/Test/Mihoyo_Tools/Upgrade/VerContrast.sdb"; //自己测试使用这个地址
             string save_VerContrast = Path.GetTempPath() + @"\VerContrast.sdb";
             using (WebClient client = new WebClient())
             {
