@@ -52,6 +52,7 @@
             this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.Element_LrcToSrt = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).BeginInit();
@@ -84,8 +85,14 @@
             // 
             this.Element_Tools.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.Element_ys_usm,
-            this.Element_Account});
+            this.Element_Account,
+            this.Element_LrcToSrt});
             this.Element_Tools.Expanded = true;
+            this.Element_Tools.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
+            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons)});
             this.Element_Tools.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Element_Tools.ImageOptions.Image")));
             this.Element_Tools.Name = "Element_Tools";
             this.Element_Tools.Text = "工具";
@@ -250,6 +257,14 @@
             // 
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             // 
+            // Element_LrcToSrt
+            // 
+            this.Element_LrcToSrt.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Element_LrcToSrt.ImageOptions.Image")));
+            this.Element_LrcToSrt.Name = "Element_LrcToSrt";
+            this.Element_LrcToSrt.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.Element_LrcToSrt.Text = "LRC 转 SRT";
+            this.Element_LrcToSrt.Click += new System.EventHandler(this.Element_LrcToSrt_Click);
+            // 
             // fr_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -303,5 +318,6 @@
         private DevExpress.XtraBars.SkinDropDownButtonItem skinDropDownButtonItem1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem;
         private DevExpress.XtraBars.SkinBarSubItem skinBarSubItem;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement Element_LrcToSrt;
     }
 }

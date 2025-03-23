@@ -30,6 +30,7 @@ namespace Mihoyo_Tools {
         private Control_About _About;
         private Control_Account _Account;
         private UserLookAndFeel userLookAndFeel;
+        private Control_LrcToSrt _LrcToSrt;
 
         public fr_Main() 
         {
@@ -49,6 +50,9 @@ namespace Mihoyo_Tools {
 
             _Account = new Control_Account();
             _Account.Dock = DockStyle.Fill;
+
+            _LrcToSrt = new Control_LrcToSrt();
+            _LrcToSrt.Dock= DockStyle.Fill;
 
         }
         
@@ -72,7 +76,12 @@ namespace Mihoyo_Tools {
             _Account.Show();
             fr_Main_Container.Controls.Add(_Account);
         }
-
+        private void Element_LrcToSrt_Click(object sender, EventArgs e)
+        {
+            fr_Main_Container.Controls.Clear();
+            _LrcToSrt.Show();
+            fr_Main_Container.Controls.Add(_LrcToSrt);
+        }
         private void fr_Main_Load(object sender, EventArgs e)
         {
 
@@ -310,5 +319,6 @@ namespace Mihoyo_Tools {
             }
         }
 
+        
     }
 }

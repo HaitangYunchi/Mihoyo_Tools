@@ -1105,11 +1105,6 @@
             "AssemblyAsmDisplayName" = "8:DevExpress.RichEdit.v24.2.Core.resources, Version=24.2.0.0, Culture=zh-CN, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_05FB96A2293B48B3900096E4FB5A651E"
-                    {
-                    "Name" = "8:DevExpress.RichEdit.v24.2.Core.resources.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\Release\\zh-CN\\DevExpress.RichEdit.v24.2.Core.resources.dll"
             "TargetName" = "8:"
@@ -1156,11 +1151,6 @@
             "AssemblyAsmDisplayName" = "8:DevExpress.XtraLayout.v24.2.resources, Version=24.2.0.0, Culture=zh-CN, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_07F1514C42244D93BDFB6FFFEDBD3DAC"
-                    {
-                    "Name" = "8:DevExpress.XtraLayout.v24.2.resources.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\Release\\zh-CN\\DevExpress.XtraLayout.v24.2.resources.dll"
             "TargetName" = "8:"
@@ -1218,11 +1208,6 @@
             "AssemblyAsmDisplayName" = "8:DevExpress.Pdf.v24.2.Core.resources, Version=24.2.0.0, Culture=zh-CN, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_1E0AE869C0964D6DB35C04247C974267"
-                    {
-                    "Name" = "8:DevExpress.Pdf.v24.2.Core.resources.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\Release\\zh-CN\\DevExpress.Pdf.v24.2.Core.resources.dll"
             "TargetName" = "8:"
@@ -1311,11 +1296,6 @@
             "AssemblyAsmDisplayName" = "8:DevExpress.Sparkline.v24.2.Core.resources, Version=24.2.0.0, Culture=zh-CN, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_247CD7986D8E410A81835779426013E7"
-                    {
-                    "Name" = "8:DevExpress.Sparkline.v24.2.Core.resources.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\Release\\zh-CN\\DevExpress.Sparkline.v24.2.Core.resources.dll"
             "TargetName" = "8:"
@@ -1373,11 +1353,6 @@
             "AssemblyAsmDisplayName" = "8:DevExpress.Data.v24.2.resources, Version=24.2.0.0, Culture=zh-CN, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_264D483E1031438E95B2AFE92444120C"
-                    {
-                    "Name" = "8:DevExpress.Data.v24.2.resources.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\Release\\zh-CN\\DevExpress.Data.v24.2.resources.dll"
             "TargetName" = "8:"
@@ -1466,11 +1441,6 @@
             "AssemblyAsmDisplayName" = "8:DevExpress.Printing.v24.2.Core.resources, Version=24.2.0.0, Culture=zh-CN, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_30E28C599BC44BAC90C8B90915488507"
-                    {
-                    "Name" = "8:DevExpress.Printing.v24.2.Core.resources.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\Release\\zh-CN\\DevExpress.Printing.v24.2.Core.resources.dll"
             "TargetName" = "8:"
@@ -1630,11 +1600,6 @@
             "AssemblyAsmDisplayName" = "8:DevExpress.Office.v24.2.Core.resources, Version=24.2.0.0, Culture=zh-CN, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_4795737955AB40859208FF2FBA3D364F"
-                    {
-                    "Name" = "8:DevExpress.Office.v24.2.Core.resources.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\Release\\zh-CN\\DevExpress.Office.v24.2.Core.resources.dll"
             "TargetName" = "8:"
@@ -1661,11 +1626,6 @@
             "AssemblyAsmDisplayName" = "8:DevExpress.XtraEditors.v24.2.resources, Version=24.2.0.0, Culture=zh-CN, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_5771A7C48ABF4B51B08D86DDCA068928"
-                    {
-                    "Name" = "8:DevExpress.XtraEditors.v24.2.resources.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\Release\\zh-CN\\DevExpress.XtraEditors.v24.2.resources.dll"
             "TargetName" = "8:"
@@ -1845,11 +1805,6 @@
             "AssemblyAsmDisplayName" = "8:DevExpress.Drawing.v24.2.resources, Version=24.2.0.0, Culture=zh-CN, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_73B677468CDB40699CAE3AA43130A32A"
-                    {
-                    "Name" = "8:DevExpress.Drawing.v24.2.resources.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\Release\\zh-CN\\DevExpress.Drawing.v24.2.resources.dll"
             "TargetName" = "8:"
@@ -1938,11 +1893,6 @@
             "AssemblyAsmDisplayName" = "8:DevExpress.XtraGrid.v24.2.resources, Version=24.2.0.0, Culture=zh-CN, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_91C8C6DE2A1747838EA91F30DA0CDEFA"
-                    {
-                    "Name" = "8:DevExpress.XtraGrid.v24.2.resources.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\Release\\zh-CN\\DevExpress.XtraGrid.v24.2.resources.dll"
             "TargetName" = "8:"
@@ -2060,11 +2010,6 @@
             "AssemblyAsmDisplayName" = "8:DevExpress.Utils.v24.2.resources, Version=24.2.0.0, Culture=zh-CN, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_B97CF9B53BF847899A267DBA10335CCC"
-                    {
-                    "Name" = "8:DevExpress.Utils.v24.2.resources.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\Release\\zh-CN\\DevExpress.Utils.v24.2.resources.dll"
             "TargetName" = "8:"
@@ -2297,11 +2242,6 @@
             "AssemblyAsmDisplayName" = "8:DevExpress.XtraTreeList.v24.2.resources, Version=24.2.0.0, Culture=zh-CN, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_D52C134A2D654F32845A09ED75E1432D"
-                    {
-                    "Name" = "8:DevExpress.XtraTreeList.v24.2.resources.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\Release\\zh-CN\\DevExpress.XtraTreeList.v24.2.resources.dll"
             "TargetName" = "8:"
@@ -2441,11 +2381,6 @@
             "AssemblyAsmDisplayName" = "8:DevExpress.XtraBars.v24.2.resources, Version=24.2.0.0, Culture=zh-CN, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_E21EC5378FF6415486A94B095805418D"
-                    {
-                    "Name" = "8:DevExpress.XtraBars.v24.2.resources.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\Release\\zh-CN\\DevExpress.XtraBars.v24.2.resources.dll"
             "TargetName" = "8:"
@@ -2492,11 +2427,6 @@
             "AssemblyAsmDisplayName" = "8:DevExpress.XtraPrinting.v24.2.resources, Version=24.2.0.0, Culture=zh-CN, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_F11B6417DD7A43C5BE182982B33C7D03"
-                    {
-                    "Name" = "8:DevExpress.XtraPrinting.v24.2.resources.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\Release\\zh-CN\\DevExpress.XtraPrinting.v24.2.resources.dll"
             "TargetName" = "8:"
@@ -2713,15 +2643,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:米哈游工具箱"
-        "ProductCode" = "8:{5E24AD9A-212E-4E19-884E-4F606CBE45E9}"
-        "PackageCode" = "8:{1E0616F3-D019-4E65-97B0-7E35955D9E44}"
+        "ProductCode" = "8:{508A7F40-EE76-4FD2-9672-F31EC4C4565D}"
+        "PackageCode" = "8:{B881D9E3-0FE8-4AF5-A59D-CEC5B941C92A}"
         "UpgradeCode" = "8:{48FACF11-33D4-483C-8E7E-FE50951E5A8E}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.1.7"
+        "ProductVersion" = "8:1.1.8"
         "Manufacturer" = "8:海棠云螭"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:https://space.bilibili.com/3493128132626725"
@@ -2865,7 +2795,7 @@
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_EB084A1DBF3C43F7AF70014D4A0F5A4D"
             {
             "Name" = "8:卸载"
-            "Arguments" = "8:/X {5E24AD9A-212E-4E19-884E-4F606CBE45E9}"
+            "Arguments" = "8:/X {508A7F40-EE76-4FD2-9672-F31EC4C4565D}"
             "Description" = "8:"
             "ShowCmd" = "3:1"
             "IconIndex" = "3:1"
