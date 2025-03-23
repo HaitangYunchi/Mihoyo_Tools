@@ -40,7 +40,7 @@ namespace Mihoyo_Tools
         {
             if (string.IsNullOrEmpty(txtLRCFilePath.Text) || !File.Exists(txtLRCFilePath.Text))
             {
-                MessageBox.Show("请选择一个有效的LRC文件。");
+                XtraMessageBox.Show("请选择一个有效的LRC文件。", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -55,7 +55,7 @@ namespace Mihoyo_Tools
             {
                 // 以UTF-8编码保存SRT文件
                 File.WriteAllText(saveFileDialog.FileName, srtContent, Encoding.UTF8);
-                MessageBox.Show("转换完成并保存成功！");
+                XtraMessageBox.Show("转换完成并保存成功！", "成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         private string ConvertLRCtoSRT(string lrcFilePath)
@@ -115,7 +115,8 @@ namespace Mihoyo_Tools
             string[] parts = timeTag.Split(':', '.');
             int minutes = int.Parse(parts[0]);
             int seconds = int.Parse(parts[1]);
-            int milliseconds = int.Parse(parts[2]); // LRC的ff是百分之一秒，SRT需要毫秒
+            //int milliseconds = int.Parse(parts[2]*10); 
+            int milliseconds = int.Parse(parts[2]); // 修复后的时间
 
             return new TimeSpan(0, 0, minutes, seconds, milliseconds);
         }
