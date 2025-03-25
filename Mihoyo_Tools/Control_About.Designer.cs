@@ -61,6 +61,7 @@
             this.lblSystemModel = new DevExpress.XtraEditors.LabelControl();
             this.lblOSVersion = new DevExpress.XtraEditors.LabelControl();
             this.lblOSName = new DevExpress.XtraEditors.LabelControl();
+            this.ChecUpde = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_WinXin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -398,6 +399,16 @@
             this.lblOSName.TabIndex = 24;
             this.lblOSName.Text = "lblOSName";
             // 
+            // ChecUpde
+            // 
+            this.ChecUpde.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.ChecUpde.Location = new System.Drawing.Point(687, 708);
+            this.ChecUpde.Name = "ChecUpde";
+            this.ChecUpde.Size = new System.Drawing.Size(111, 23);
+            this.ChecUpde.TabIndex = 4;
+            this.ChecUpde.Text = "检查软件更新";
+            this.ChecUpde.Click += new System.EventHandler(this.ChecUpde_Click);
+            // 
             // Control_About
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -422,6 +433,7 @@
             this.Controls.Add(this.pictureBox_WinXin);
             this.Controls.Add(this.radioButton_gitee);
             this.Controls.Add(this.radioButto_github);
+            this.Controls.Add(this.ChecUpde);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.hyperlinkLabelControl_DevExpress);
@@ -477,5 +489,6 @@
         private DevExpress.XtraEditors.LabelControl lblSystemModel;
         private DevExpress.XtraEditors.LabelControl lblOSVersion;
         private DevExpress.XtraEditors.LabelControl lblOSName;
+        private DevExpress.XtraEditors.SimpleButton ChecUpde;
     }
 }

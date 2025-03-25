@@ -19,12 +19,14 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
+using UpdateHaiTang;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Mihoyo_Tools {
     public partial class fr_Main : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm 
     {
-       // private WebClient client;
+        UpdateHaiTang.Update up = new UpdateHaiTang.Update();
+        // private WebClient client;
         private Control_Genshin_usm _Genshin_usm;
         private Control_Mihoyo_resources _Mihoyo;
         private Control_About _About;
@@ -32,8 +34,10 @@ namespace Mihoyo_Tools {
         private UserLookAndFeel userLookAndFeel;
         private Control_LrcToSrt _LrcToSrt;
 
+        
         public fr_Main() 
         {
+
             InitializeComponent();
             HideSkins(_skinsToHide);
             // 创建 UserLookAndFeel 实例
@@ -195,34 +199,7 @@ namespace Mihoyo_Tools {
         {
             backgroundWorker1.RunWorkerAsync();
         }
-        void Client_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
-        {
-            int progress = (int)(e.ProgressPercentage);
-            this.Invoke((MethodInvoker)delegate
-            {
-                //progressBar1.Value = progress;
-            });
-        }
-
-        void Client_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
-        {
-            this.Invoke((MethodInvoker)delegate
-            {
-                if (e.Error != null)
-                {
-                    //XtraMessageBox.Show("网络异常 \n" + e.Error.Message);
-                    XtraMessageBox.Show("网络异常： \n\n等网络恢复后，在【关于】页面更新最新 Key");
-                }
-                else if (e.Cancelled)
-                {
-                    //XtraMessageBox.Show("更新被取消");
-                }
-                else
-                {
-                    // XtraMessageBox.Show("已更新到最新版");
-                }
-            });
-        }
+        
 
         private void barButtonItem_ItemClick(object sender, ItemClickEventArgs e)
         {
@@ -285,7 +262,8 @@ namespace Mihoyo_Tools {
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
-            string ver_url = "";
+            /**
+             string ver_url = "";
             //ver_url = "https://gitee.com/haitangyunchi/Mihoyo_Tools/raw/master/Mihoyo_Tools/Upgrade/VerContrast.sdb"; // 发布使用这个地址
             ver_url = "https://gitee.com/haitangyunchi/Mihoyo_Tools/raw/Test/Mihoyo_Tools/Upgrade/VerContrast.sdb"; //自己测试使用这个地址
             string save_VerContrast = Path.GetTempPath() + @"\VerContrast.sdb";
@@ -321,6 +299,30 @@ namespace Mihoyo_Tools {
                 }
 
             }
+             * **/
+            //AE72DEEE2BDF489DACC17D39D8D2C65E
+            //XtraMessageBox.Show(up.GetUpdateVer("AE72DEEE2BDF489DACC17D39D8D2C65E"));
+            string ver = up.GetUpdateVer("AE72DEEE2BDF489DACC17D39D8D2C65E");
+            if (ver == GlobalVar.VerContrast)
+            {
+                return;
+            }
+            else
+            {
+                DialogResult result = XtraMessageBox.Show(up.GetUpdateInformation("AE72DEEE2BDF489DACC17D39D8D2C65E"), "发现新版本", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                // 判断用户的点击结果
+                if (result == DialogResult.OK)
+                {
+                    System.Diagnostics.Process.Start("https://www.123912.com/s/b6X3jv-wNtU3");
+                    //System.Diagnostics.Process.Start("https://www.123865.com/s/b6X3jv-wNtU3");
+                }
+                else if (result == DialogResult.Cancel)
+                {
+                    return;
+                }
+            }
+            
         }
     }
+
 }

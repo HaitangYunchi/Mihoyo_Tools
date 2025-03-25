@@ -19,11 +19,13 @@ using System.Management;
 using Timer = System.Windows.Forms.Timer;
 using SharpDX.DXGI;
 using Microsoft.Win32;
+using UpdateHaiTang;
 
 namespace Mihoyo_Tools
 {
     public partial class Control_About : DevExpress.XtraEditors.XtraUserControl
     {
+        UpdateHaiTang.Update up = new UpdateHaiTang.Update();
         private readonly PerformanceCounter cpuCounter = new PerformanceCounter("Processor", "% Processor Time", "_Total");
         private readonly Timer updateTimer = new Timer();
         private WebClient client;
@@ -350,6 +352,30 @@ namespace Mihoyo_Tools
                 {
                     lblBIOSVersion.Text = $"BIOS版本: {obj["SMBIOSBIOSVersion"]}";
                     lblBIOSDate.Text = $"发布日期: {obj["ReleaseDate"]?.ToString().Substring(0, 8)}";
+                }
+            }
+        }
+
+        private void ChecUpde_Click(object sender, EventArgs e)
+        {
+            string ver = up.GetUpdateVer("AE72DEEE2BDF489DACC17D39D8D2C65E");
+            if (ver == GlobalVar.VerContrast)
+            {
+                XtraMessageBox.Show("当前版本已是最新版，无需更新", "无需更新", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            else
+            {
+                DialogResult result = XtraMessageBox.Show(up.GetUpdateInformation("AE72DEEE2BDF489DACC17D39D8D2C65E"), "发现新版本", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                // 判断用户的点击结果
+                if (result == DialogResult.OK)
+                {
+                    System.Diagnostics.Process.Start("https://www.123912.com/s/b6X3jv-wNtU3");
+                    //System.Diagnostics.Process.Start("https://www.123865.com/s/b6X3jv-wNtU3");
+                }
+                else if (result == DialogResult.Cancel)
+                {
+                    return;
                 }
             }
         }
