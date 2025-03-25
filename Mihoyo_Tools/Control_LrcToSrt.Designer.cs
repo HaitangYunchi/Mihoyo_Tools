@@ -43,7 +43,7 @@
             // 
             this.txtLRCFilePath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtLRCFilePath.Location = new System.Drawing.Point(112, 112);
+            this.txtLRCFilePath.Location = new System.Drawing.Point(112, 87);
             this.txtLRCFilePath.Name = "txtLRCFilePath";
             this.txtLRCFilePath.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
@@ -58,16 +58,17 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.rtbSRTContent.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rtbSRTContent.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtbSRTContent.Location = new System.Drawing.Point(642, 165);
+            this.rtbSRTContent.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.rtbSRTContent.Location = new System.Drawing.Point(642, 146);
             this.rtbSRTContent.Name = "rtbSRTContent";
             this.rtbSRTContent.ReadOnly = true;
-            this.rtbSRTContent.Size = new System.Drawing.Size(602, 459);
+            this.rtbSRTContent.Size = new System.Drawing.Size(602, 503);
             this.rtbSRTContent.TabIndex = 1;
             this.rtbSRTContent.Text = "";
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(112, 83);
+            this.labelControl1.Location = new System.Drawing.Point(112, 58);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(76, 14);
             this.labelControl1.TabIndex = 2;
@@ -76,7 +77,7 @@
             // simpleButton1
             // 
             this.simpleButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton1.Location = new System.Drawing.Point(1136, 112);
+            this.simpleButton1.Location = new System.Drawing.Point(1136, 87);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(108, 28);
             this.simpleButton1.TabIndex = 3;
@@ -88,10 +89,10 @@
             this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Location = new System.Drawing.Point(114, 165);
+            this.richTextBox1.Location = new System.Drawing.Point(114, 146);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(522, 459);
+            this.richTextBox1.Size = new System.Drawing.Size(522, 503);
             this.richTextBox1.TabIndex = 4;
             this.richTextBox1.Text = "";
             // 

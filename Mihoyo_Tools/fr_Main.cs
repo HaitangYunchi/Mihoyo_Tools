@@ -84,9 +84,7 @@ namespace Mihoyo_Tools {
         }
         private void fr_Main_Load(object sender, EventArgs e)
         {
-
-            
-            this.toolStripStatusLabel4.Text = GlobalVar.VersionNo;
+           
             string savedSkinName = Properties.Settings.Default.SkinName;
 
             if (!string.IsNullOrEmpty(savedSkinName))
@@ -101,22 +99,26 @@ namespace Mihoyo_Tools {
             //根据GlobalVar对应变量值，修改显示版本信息；如需修改，请打开GlobalVar.cs文件，修改 Release 的值，注意类型是int;//  0  Alpha 内测版      1  bate 公测版      2  Release 正式版
             if (GlobalVar.Release == 0)
             {
-                toolStripStatusLabel4.Text = "    版本：" + GlobalVar.VersionNo + "_Alpha（内测版）";
+                //toolStripStatusLabel4.Text = "    版本：" + GlobalVar.VersionNo + "_Alpha（内测版）";
+                barStaticItem_Ver.Caption = "    版本：" + GlobalVar.VersionNo + "_Alpha（内测版）";
                 this.Text = GlobalVar.SoftTitle + "    版本：" + GlobalVar.VersionNo;
             }
             else if (GlobalVar.Release == 1)
             {
-                toolStripStatusLabel4.Text = "    版本：" + GlobalVar.VersionNo + "_bate（公测版）";
+                //toolStripStatusLabel4.Text = "    版本：" + GlobalVar.VersionNo + "_bate（公测版）";
+                barStaticItem_Ver.Caption = "    版本：" + GlobalVar.VersionNo + "_bate（公测版）";
                 this.Text = GlobalVar.SoftTitle + "    版本：" + GlobalVar.VersionNo ;
             }
             else if (GlobalVar.Release == 2)
             {
-                toolStripStatusLabel4.Text = "    版本：" + $"{majorVersion}." + $"{minorVersion}" + "_Release（正式版）";
+                //toolStripStatusLabel4.Text = "    版本：" + $"{majorVersion}." + $"{minorVersion}" + "_Release（正式版）";
+                barStaticItem_Ver.Caption = "    版本：" + $"{majorVersion}." + $"{minorVersion}" + "_Release（正式版）";
                 this.Text = GlobalVar.SoftTitle + "    版本：" + GlobalVar.VersionNo;
             }
             else
             {
-                toolStripStatusLabel4.Text = "    版本：" + GlobalVar.VersionNo + "_Alpha（内测版）";
+                //toolStripStatusLabel4.Text = "    版本：" + GlobalVar.VersionNo + "_Alpha（内测版）";
+                barStaticItem_Ver.Caption = "    版本：" + GlobalVar.VersionNo + "_Alpha（内测版）";
                 this.Text = GlobalVar.SoftTitle + "    版本：" + GlobalVar.VersionNo + "_Alpha（内测版）";
             }
             fr_Main_Container.Controls.Clear();
@@ -152,18 +154,10 @@ namespace Mihoyo_Tools {
             DateTime now = DateTime.Now;
             string[] Day = new string[] { "星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六" };
             var week = Day[Convert.ToInt16(DateTime.Now.DayOfWeek)];
-            toolStripStatusLabel3.Text = $" 当前时间：{now:yyyy-MM-dd HH:mm:ss}  {week}   " + ChinaDate.GetChinaDate(DateTime.Now); 
+            //toolStripStatusLabel3.Text = $" 当前时间：{now:yyyy-MM-dd HH:mm:ss}  {week}   " + ChinaDate.GetChinaDate(DateTime.Now); 
+            barStaticItem_Time.Caption = $" 当前时间：{now:yyyy-MM-dd HH:mm:ss}  {week}   " + ChinaDate.GetChinaDate(DateTime.Now)+"      ";
         }
-
-        private void toolStripStatusLabel2_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://space.bilibili.com/3493128132626725");//海棠云螭的B站
-        }
-
-        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://github.com/HaitangYunchi/Mihoyo_Tools");
-        }
+      
 
         private void fr_Main_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -230,46 +224,6 @@ namespace Mihoyo_Tools {
             });
         }
 
-        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
-        {
-            string ver_url = "";
-            ver_url = "https://gitee.com/haitangyunchi/Mihoyo_Tools/raw/master/Mihoyo_Tools/Upgrade/VerContrast.sdb"; // 发布使用这个地址
-            //ver_url = "https://gitee.com/haitangyunchi/Mihoyo_Tools/raw/Test/Mihoyo_Tools/Upgrade/VerContrast.sdb"; //自己测试使用这个地址
-            string save_VerContrast = Path.GetTempPath() + @"\VerContrast.sdb";
-            using (WebClient client = new WebClient())
-            {
-                client.DownloadFile(new Uri(ver_url), save_VerContrast);
-                GlobalVar.Upgrade_ver = INIFile.getString("VerContrast", "VerContrast", GlobalVar.VerContrast, save_VerContrast);
-                GlobalVar.New_Info = INIFile.getString("VerContrast", "Verinfo", "", save_VerContrast);
-            }
-            Thread.Sleep(3000);
-            //XtraMessageBox.Show(GlobalVar.Upgrade_ver);
-            byte[] bytesToDecode = Convert.FromBase64String(GlobalVar.New_Info);
-            string UTF8_Code = Encoding.UTF8.GetString(bytesToDecode);
-            string base64String = UTF8_Code;
-
-            if (GlobalVar.Upgrade_ver == GlobalVar.VerContrast)
-            {
-                return;
-            }
-            else
-            {
-                //DialogResult result = XtraMessageBox.Show(base64String, GlobalVar.AuthorName, MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                DialogResult result = XtraMessageBox.Show(base64String, "发现新版本", MessageBoxButtons.OKCancel, MessageBoxIcon.None);
-                // 判断用户的点击结果
-                if (result == DialogResult.OK)
-                {
-                    System.Diagnostics.Process.Start("https://www.123912.com/s/b6X3jv-wNtU3");
-                    //System.Diagnostics.Process.Start("https://www.123865.com/s/b6X3jv-wNtU3");
-                }
-                else if (result == DialogResult.Cancel)
-                {
-                    return;
-                }
-
-            }
-        }
-
         private void barButtonItem_ItemClick(object sender, ItemClickEventArgs e)
         {
             string skinName = userLookAndFeel.ActiveSkinName;
@@ -319,6 +273,54 @@ namespace Mihoyo_Tools {
             }
         }
 
-        
+        private void barStaticItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/HaitangYunchi/Mihoyo_Tools");
+        }
+
+        private void barStaticItem2_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://space.bilibili.com/3493128132626725");//海棠云螭的B站
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            string ver_url = "";
+            //ver_url = "https://gitee.com/haitangyunchi/Mihoyo_Tools/raw/master/Mihoyo_Tools/Upgrade/VerContrast.sdb"; // 发布使用这个地址
+            ver_url = "https://gitee.com/haitangyunchi/Mihoyo_Tools/raw/Test/Mihoyo_Tools/Upgrade/VerContrast.sdb"; //自己测试使用这个地址
+            string save_VerContrast = Path.GetTempPath() + @"\VerContrast.sdb";
+            using (WebClient client = new WebClient())
+            {
+                client.DownloadFile(new Uri(ver_url), save_VerContrast);
+                GlobalVar.Upgrade_ver = INIFile.getString("VerContrast", "VerContrast", GlobalVar.VerContrast, save_VerContrast);
+                GlobalVar.New_Info = INIFile.getString("VerContrast", "Verinfo", "", save_VerContrast);
+            }
+            Thread.Sleep(3000);
+            //XtraMessageBox.Show(GlobalVar.Upgrade_ver);
+            byte[] bytesToDecode = Convert.FromBase64String(GlobalVar.New_Info);
+            string UTF8_Code = Encoding.UTF8.GetString(bytesToDecode);
+            string base64String = UTF8_Code;
+
+            if (GlobalVar.Upgrade_ver == GlobalVar.VerContrast)
+            {
+                return;
+            }
+            else
+            {
+                //DialogResult result = XtraMessageBox.Show(base64String, GlobalVar.AuthorName, MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                DialogResult result = XtraMessageBox.Show(base64String, "发现新版本", MessageBoxButtons.OKCancel, MessageBoxIcon.None);
+                // 判断用户的点击结果
+                if (result == DialogResult.OK)
+                {
+                    System.Diagnostics.Process.Start("https://www.123912.com/s/b6X3jv-wNtU3");
+                    //System.Diagnostics.Process.Start("https://www.123865.com/s/b6X3jv-wNtU3");
+                }
+                else if (result == DialogResult.Cancel)
+                {
+                    return;
+                }
+
+            }
+        }
     }
 }

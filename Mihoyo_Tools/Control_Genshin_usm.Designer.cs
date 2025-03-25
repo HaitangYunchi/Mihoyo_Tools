@@ -100,7 +100,7 @@
             // 
             this.splitContainerControl1.Panel2.Controls.Add(this.txtInfo);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1305, 730);
+            this.splitContainerControl1.Size = new System.Drawing.Size(1305, 747);
             this.splitContainerControl1.SplitterPosition = 604;
             this.splitContainerControl1.TabIndex = 6;
             // 
@@ -366,7 +366,7 @@
             this.txtInfo.Multiline = true;
             this.txtInfo.Name = "txtInfo";
             this.txtInfo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtInfo.Size = new System.Drawing.Size(681, 726);
+            this.txtInfo.Size = new System.Drawing.Size(681, 743);
             this.txtInfo.TabIndex = 8;
             // 
             // backgroundWorker_Game_path
@@ -378,9 +378,9 @@
             // progressBar
             // 
             this.progressBar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.progressBar.Location = new System.Drawing.Point(0, 730);
+            this.progressBar.Location = new System.Drawing.Point(0, 747);
             this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(1305, 35);
+            this.progressBar.Size = new System.Drawing.Size(1305, 18);
             this.progressBar.TabIndex = 5;
             this.progressBar.Value = 100;
             // 

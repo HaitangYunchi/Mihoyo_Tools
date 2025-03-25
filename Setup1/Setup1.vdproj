@@ -15,19 +15,19 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_05FB96A2293B48B3900096E4FB5A651E"
+        "MsmKey" = "8:_04F089C8384E40B7B7A802586446EAB0"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_0782C0F8B3AF4560BA18374D3760D4AE"
+        "MsmKey" = "8:_13118A6DDFFA40979DB8B8E2B67B51AC"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_07F1514C42244D93BDFB6FFFEDBD3DAC"
+        "MsmKey" = "8:_1523F226BBB541C198C53A033FF7AB12"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -40,12 +40,18 @@
         "Entry"
         {
         "MsmKey" = "8:_1D069B1BECF1554B2ECA8B6E2E206445"
+        "OwnerKey" = "8:_BB9B08777A0BB9DD4F28D24E214F97AE"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_1D069B1BECF1554B2ECA8B6E2E206445"
         "OwnerKey" = "8:_2D552A16B59D964DB19C749B2FCFEAE4"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_1E0AE869C0964D6DB35C04247C974267"
+        "MsmKey" = "8:_1D229A91BC09497385F60FF271CA3DAF"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -53,6 +59,12 @@
         {
         "MsmKey" = "8:_1E849AB90F08C9550393AEA770479C9D"
         "OwnerKey" = "8:_DA2D3AC5E49712B231118EDA8B3DA6F9"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_1E849AB90F08C9550393AEA770479C9D"
+        "OwnerKey" = "8:_BB9B08777A0BB9DD4F28D24E214F97AE"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -107,6 +119,12 @@
         {
         "MsmKey" = "8:_1E849AB90F08C9550393AEA770479C9D"
         "OwnerKey" = "8:_2498E014719E3C9E476727261D121A82"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_1E849AB90F08C9550393AEA770479C9D"
+        "OwnerKey" = "8:_921CFF498BE2A968240833B67113F836"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -148,6 +166,12 @@
         "Entry"
         {
         "MsmKey" = "8:_1FD99C55B432B2ACBAAC4ED31FF1829E"
+        "OwnerKey" = "8:_BB9B08777A0BB9DD4F28D24E214F97AE"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_1FD99C55B432B2ACBAAC4ED31FF1829E"
         "OwnerKey" = "8:_BC77B0A9673CBF25BFF4D4C00C109CAF"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -177,7 +201,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_247CD7986D8E410A81835779426013E7"
+        "MsmKey" = "8:_2496F3F697EB4E71AC6A9E835ACF4B2E"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -190,13 +214,13 @@
         "Entry"
         {
         "MsmKey" = "8:_2498E014719E3C9E476727261D121A82"
-        "OwnerKey" = "8:_D8337DF09BC5281D79A79921799A005E"
+        "OwnerKey" = "8:_BB9B08777A0BB9DD4F28D24E214F97AE"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_264D483E1031438E95B2AFE92444120C"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_2498E014719E3C9E476727261D121A82"
+        "OwnerKey" = "8:_D8337DF09BC5281D79A79921799A005E"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -214,12 +238,24 @@
         "Entry"
         {
         "MsmKey" = "8:_2D552A16B59D964DB19C749B2FCFEAE4"
+        "OwnerKey" = "8:_BB9B08777A0BB9DD4F28D24E214F97AE"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_2D552A16B59D964DB19C749B2FCFEAE4"
         "OwnerKey" = "8:_975CEF13556B4B65A10A4B42E143C442"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_30E28C599BC44BAC90C8B90915488507"
+        "MsmKey" = "8:_2D71E687026641B2A03DCF1C57716655"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_2F33ADF270FE430D9F83B18CD277DC3B"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -243,14 +279,14 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_3300EDBEBE044C5CBDF68AC7B35DE855"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_330E930C0B4E7274563271E52C3306E2"
+        "OwnerKey" = "8:_975CEF13556B4B65A10A4B42E143C442"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_330E930C0B4E7274563271E52C3306E2"
-        "OwnerKey" = "8:_975CEF13556B4B65A10A4B42E143C442"
+        "MsmKey" = "8:_375E901499FC40E19F89C1B68DA4B95F"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -261,8 +297,20 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_3FC19A636E1C418080E0E6EE77F34BF8"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_3FE1CC413130CD25DF1CED82026E086B"
         "OwnerKey" = "8:_DA2D3AC5E49712B231118EDA8B3DA6F9"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_3FE1CC413130CD25DF1CED82026E086B"
+        "OwnerKey" = "8:_BB9B08777A0BB9DD4F28D24E214F97AE"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -317,6 +365,12 @@
         {
         "MsmKey" = "8:_3FE1CC413130CD25DF1CED82026E086B"
         "OwnerKey" = "8:_2498E014719E3C9E476727261D121A82"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_3FE1CC413130CD25DF1CED82026E086B"
+        "OwnerKey" = "8:_921CFF498BE2A968240833B67113F836"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -357,13 +411,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_4795737955AB40859208FF2FBA3D364F"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_5771A7C48ABF4B51B08D86DDCA068928"
+        "MsmKey" = "8:_4E4374EEBEE74890BA263EF7917EBFE9"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -412,6 +460,12 @@
         "Entry"
         {
         "MsmKey" = "8:_6E3CFAC34C7CDAC14E5BA28E2B67408C"
+        "OwnerKey" = "8:_BB9B08777A0BB9DD4F28D24E214F97AE"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_6E3CFAC34C7CDAC14E5BA28E2B67408C"
         "OwnerKey" = "8:_BC77B0A9673CBF25BFF4D4C00C109CAF"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -459,20 +513,20 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_72DEE407347441C39026989E3E0BBAB7"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_73B677468CDB40699CAE3AA43130A32A"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_76C4006AC83F5AC7762C546A68AE5037"
+        "OwnerKey" = "8:_975CEF13556B4B65A10A4B42E143C442"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_76C4006AC83F5AC7762C546A68AE5037"
-        "OwnerKey" = "8:_975CEF13556B4B65A10A4B42E143C442"
+        "OwnerKey" = "8:_BB9B08777A0BB9DD4F28D24E214F97AE"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_79524BE4F83E47848B3FCFB195438969"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -483,13 +537,31 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_91C8C6DE2A1747838EA91F30DA0CDEFA"
+        "MsmKey" = "8:_89642DC98D9C4BB2974A0ED5ABA348FC"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
+        "MsmKey" = "8:_921CFF498BE2A968240833B67113F836"
+        "OwnerKey" = "8:_975CEF13556B4B65A10A4B42E143C442"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_921CFF498BE2A968240833B67113F836"
+        "OwnerKey" = "8:_BB9B08777A0BB9DD4F28D24E214F97AE"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_975CEF13556B4B65A10A4B42E143C442"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_99C49E1DE4D54805ABEA1EA4692B4478"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -501,6 +573,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_9BFA0BE5F99042438F1FF7DE3BFF2336"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_9DC27D5E122187002E2CDADA4D2269A6"
         "OwnerKey" = "8:_6E3CFAC34C7CDAC14E5BA28E2B67408C"
         "MsmSig" = "8:_UNDEFINED"
@@ -513,26 +591,26 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_9EF429043FF548EA9B22FDEE283B5D4E"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_B44FFB3639714EC9A2699CAF6AD955D7"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_B97CF9B53BF847899A267DBA10335CCC"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_BB9B08777A0BB9DD4F28D24E214F97AE"
+        "OwnerKey" = "8:_975CEF13556B4B65A10A4B42E143C442"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_BBAEA78296261836A44A5B491615EF9F"
         "OwnerKey" = "8:_6E3CFAC34C7CDAC14E5BA28E2B67408C"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_BBAEA78296261836A44A5B491615EF9F"
+        "OwnerKey" = "8:_BB9B08777A0BB9DD4F28D24E214F97AE"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -581,6 +659,12 @@
         {
         "MsmKey" = "8:_C8C38D81D6A614BE03597013B66442E3"
         "OwnerKey" = "8:_8337C75D1ED418E6698BFE0A612A800D"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_C8C38D81D6A614BE03597013B66442E3"
+        "OwnerKey" = "8:_BB9B08777A0BB9DD4F28D24E214F97AE"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -646,6 +730,12 @@
         "Entry"
         {
         "MsmKey" = "8:_D49368BF665FC0BE2C6F8DB531A348D6"
+        "OwnerKey" = "8:_BB9B08777A0BB9DD4F28D24E214F97AE"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D49368BF665FC0BE2C6F8DB531A348D6"
         "OwnerKey" = "8:_975CEF13556B4B65A10A4B42E143C442"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -663,14 +753,14 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_D52C134A2D654F32845A09ED75E1432D"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_D8337DF09BC5281D79A79921799A005E"
+        "OwnerKey" = "8:_975CEF13556B4B65A10A4B42E143C442"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_D8337DF09BC5281D79A79921799A005E"
-        "OwnerKey" = "8:_975CEF13556B4B65A10A4B42E143C442"
+        "OwnerKey" = "8:_BB9B08777A0BB9DD4F28D24E214F97AE"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -683,6 +773,12 @@
         {
         "MsmKey" = "8:_DA2D3AC5E49712B231118EDA8B3DA6F9"
         "OwnerKey" = "8:_C8C38D81D6A614BE03597013B66442E3"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_DA2D3AC5E49712B231118EDA8B3DA6F9"
+        "OwnerKey" = "8:_BB9B08777A0BB9DD4F28D24E214F97AE"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -729,6 +825,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_E01B2D9AE20A4FDF8ED47A0C4D5721D5"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_E121C72C9167446F8E58D552044BCE62"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -747,25 +849,25 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_E21EC5378FF6415486A94B095805418D"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_E48B2C34FCA7421480F6C6C876E1F820"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_F11B6417DD7A43C5BE182982B33C7D03"
+        "MsmKey" = "8:_F1A6E25E13CF4437A96DDC4004701095"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_F93805CA93A34CC9BC103D5FB3FD8868"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_FA198A6BDEF948BDB8417064D5AFFA02"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -778,85 +880,91 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_F11B6417DD7A43C5BE182982B33C7D03"
+        "OwnerKey" = "8:_375E901499FC40E19F89C1B68DA4B95F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_E21EC5378FF6415486A94B095805418D"
+        "OwnerKey" = "8:_13118A6DDFFA40979DB8B8E2B67B51AC"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_D52C134A2D654F32845A09ED75E1432D"
+        "OwnerKey" = "8:_F1A6E25E13CF4437A96DDC4004701095"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_B97CF9B53BF847899A267DBA10335CCC"
+        "OwnerKey" = "8:_2D71E687026641B2A03DCF1C57716655"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_91C8C6DE2A1747838EA91F30DA0CDEFA"
+        "OwnerKey" = "8:_79524BE4F83E47848B3FCFB195438969"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_73B677468CDB40699CAE3AA43130A32A"
+        "OwnerKey" = "8:_FA198A6BDEF948BDB8417064D5AFFA02"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_5771A7C48ABF4B51B08D86DDCA068928"
+        "OwnerKey" = "8:_3FC19A636E1C418080E0E6EE77F34BF8"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_4795737955AB40859208FF2FBA3D364F"
+        "OwnerKey" = "8:_1523F226BBB541C198C53A033FF7AB12"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_30E28C599BC44BAC90C8B90915488507"
+        "OwnerKey" = "8:_2496F3F697EB4E71AC6A9E835ACF4B2E"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_264D483E1031438E95B2AFE92444120C"
+        "OwnerKey" = "8:_2F33ADF270FE430D9F83B18CD277DC3B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_247CD7986D8E410A81835779426013E7"
+        "OwnerKey" = "8:_04F089C8384E40B7B7A802586446EAB0"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_1E0AE869C0964D6DB35C04247C974267"
+        "OwnerKey" = "8:_89642DC98D9C4BB2974A0ED5ABA348FC"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_07F1514C42244D93BDFB6FFFEDBD3DAC"
+        "OwnerKey" = "8:_4E4374EEBEE74890BA263EF7917EBFE9"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_05FB96A2293B48B3900096E4FB5A651E"
+        "OwnerKey" = "8:_1D229A91BC09497385F60FF271CA3DAF"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_E01B2D9AE20A4FDF8ED47A0C4D5721D5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -887,6 +995,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_6B4010CB810CFE3997520BC9E83EA85C"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_BB9B08777A0BB9DD4F28D24E214F97AE"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -941,6 +1055,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_2498E014719E3C9E476727261D121A82"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_921CFF498BE2A968240833B67113F836"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -1098,15 +1218,20 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_05FB96A2293B48B3900096E4FB5A651E"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_04F089C8384E40B7B7A802586446EAB0"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:DevExpress.RichEdit.v24.2.Core.resources, Version=24.2.0.0, Culture=zh-CN, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:DevExpress.Printing.v24.2.Core.resources, Version=24.2.0.0, Culture=zh-CN, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_04F089C8384E40B7B7A802586446EAB0"
+                    {
+                    "Name" = "8:DevExpress.Printing.v24.2.Core.resources.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
-            "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\Release\\zh-CN\\DevExpress.RichEdit.v24.2.Core.resources.dll"
+            "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\x64\\Release\\zh-CN\\DevExpress.Printing.v24.2.Core.resources.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_99F418E4EAD947DE81FC2E7BFF28D7A7"
@@ -1124,12 +1249,23 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0782C0F8B3AF4560BA18374D3760D4AE"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_13118A6DDFFA40979DB8B8E2B67B51AC"
             {
-            "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\Release\\runtimes\\win-x64\\native\\WebView2Loader.dll"
-            "TargetName" = "8:WebView2Loader.dll"
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:DevExpress.XtraRichEdit.v24.2.resources, Version=24.2.0.0, Culture=zh-CN, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_13118A6DDFFA40979DB8B8E2B67B51AC"
+                    {
+                    "Name" = "8:DevExpress.XtraRichEdit.v24.2.resources.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\x64\\Release\\zh-CN\\DevExpress.XtraRichEdit.v24.2.resources.dll"
+            "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_9F89B2A72B734E27BCB17A148635C6E1"
+            "Folder" = "8:_99F418E4EAD947DE81FC2E7BFF28D7A7"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1144,15 +1280,20 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_07F1514C42244D93BDFB6FFFEDBD3DAC"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_1523F226BBB541C198C53A033FF7AB12"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:DevExpress.XtraLayout.v24.2.resources, Version=24.2.0.0, Culture=zh-CN, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:DevExpress.Utils.v24.2.resources, Version=24.2.0.0, Culture=zh-CN, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_1523F226BBB541C198C53A033FF7AB12"
+                    {
+                    "Name" = "8:DevExpress.Utils.v24.2.resources.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
-            "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\Release\\zh-CN\\DevExpress.XtraLayout.v24.2.resources.dll"
+            "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\x64\\Release\\zh-CN\\DevExpress.Utils.v24.2.resources.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_99F418E4EAD947DE81FC2E7BFF28D7A7"
@@ -1201,15 +1342,20 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_1E0AE869C0964D6DB35C04247C974267"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_1D229A91BC09497385F60FF271CA3DAF"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:DevExpress.Pdf.v24.2.Core.resources, Version=24.2.0.0, Culture=zh-CN, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:DevExpress.Drawing.v24.2.resources, Version=24.2.0.0, Culture=zh-CN, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_1D229A91BC09497385F60FF271CA3DAF"
+                    {
+                    "Name" = "8:DevExpress.Drawing.v24.2.resources.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
-            "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\Release\\zh-CN\\DevExpress.Pdf.v24.2.Core.resources.dll"
+            "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\x64\\Release\\zh-CN\\DevExpress.Drawing.v24.2.resources.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_99F418E4EAD947DE81FC2E7BFF28D7A7"
@@ -1289,15 +1435,20 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_247CD7986D8E410A81835779426013E7"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_2496F3F697EB4E71AC6A9E835ACF4B2E"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:DevExpress.Sparkline.v24.2.Core.resources, Version=24.2.0.0, Culture=zh-CN, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_2496F3F697EB4E71AC6A9E835ACF4B2E"
+                    {
+                    "Name" = "8:DevExpress.Sparkline.v24.2.Core.resources.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
-            "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\Release\\zh-CN\\DevExpress.Sparkline.v24.2.Core.resources.dll"
+            "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\x64\\Release\\zh-CN\\DevExpress.Sparkline.v24.2.Core.resources.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_99F418E4EAD947DE81FC2E7BFF28D7A7"
@@ -1344,32 +1495,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_264D483E1031438E95B2AFE92444120C"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:DevExpress.Data.v24.2.resources, Version=24.2.0.0, Culture=zh-CN, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                }
-            "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\Release\\zh-CN\\DevExpress.Data.v24.2.resources.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_99F418E4EAD947DE81FC2E7BFF28D7A7"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_2BDDE99674A85C9AF9AB74C4579C365A"
@@ -1434,15 +1559,51 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_30E28C599BC44BAC90C8B90915488507"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_2D71E687026641B2A03DCF1C57716655"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:DevExpress.Printing.v24.2.Core.resources, Version=24.2.0.0, Culture=zh-CN, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:DevExpress.XtraLayout.v24.2.resources, Version=24.2.0.0, Culture=zh-CN, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_2D71E687026641B2A03DCF1C57716655"
+                    {
+                    "Name" = "8:DevExpress.XtraLayout.v24.2.resources.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
-            "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\Release\\zh-CN\\DevExpress.Printing.v24.2.Core.resources.dll"
+            "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\x64\\Release\\zh-CN\\DevExpress.XtraLayout.v24.2.resources.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_99F418E4EAD947DE81FC2E7BFF28D7A7"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_2F33ADF270FE430D9F83B18CD277DC3B"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:DevExpress.RichEdit.v24.2.Core.resources, Version=24.2.0.0, Culture=zh-CN, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_2F33ADF270FE430D9F83B18CD277DC3B"
+                    {
+                    "Name" = "8:DevExpress.RichEdit.v24.2.Core.resources.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\x64\\Release\\zh-CN\\DevExpress.RichEdit.v24.2.Core.resources.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_99F418E4EAD947DE81FC2E7BFF28D7A7"
@@ -1491,26 +1652,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3300EDBEBE044C5CBDF68AC7B35DE855"
-            {
-            "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\Release\\runtimes\\win-arm64\\native\\WebView2Loader.dll"
-            "TargetName" = "8:WebView2Loader.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_EFD50BE2BA23456E98859E327FDA3817"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_330E930C0B4E7274563271E52C3306E2"
             {
             "AssemblyRegister" = "3:1"
@@ -1542,12 +1683,74 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_375E901499FC40E19F89C1B68DA4B95F"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:DevExpress.XtraTreeList.v24.2.resources, Version=24.2.0.0, Culture=zh-CN, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_375E901499FC40E19F89C1B68DA4B95F"
+                    {
+                    "Name" = "8:DevExpress.XtraTreeList.v24.2.resources.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\x64\\Release\\zh-CN\\DevExpress.XtraTreeList.v24.2.resources.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_99F418E4EAD947DE81FC2E7BFF28D7A7"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3C698FAC7A1D4CDC9E75BC1F116A7737"
             {
             "SourcePath" = "8:..\\Mihoyo_Tools\\data\\GICutscenes.exe"
             "TargetName" = "8:GICutscenes.exe"
             "Tag" = "8:"
             "Folder" = "8:_7C94D7CFC66B41EF9545919082232F66"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_3FC19A636E1C418080E0E6EE77F34BF8"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:DevExpress.XtraBars.v24.2.resources, Version=24.2.0.0, Culture=zh-CN, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_3FC19A636E1C418080E0E6EE77F34BF8"
+                    {
+                    "Name" = "8:DevExpress.XtraBars.v24.2.resources.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\x64\\Release\\zh-CN\\DevExpress.XtraBars.v24.2.resources.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_99F418E4EAD947DE81FC2E7BFF28D7A7"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1593,41 +1796,20 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_4795737955AB40859208FF2FBA3D364F"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_4E4374EEBEE74890BA263EF7917EBFE9"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:DevExpress.Office.v24.2.Core.resources, Version=24.2.0.0, Culture=zh-CN, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_4E4374EEBEE74890BA263EF7917EBFE9"
+                    {
+                    "Name" = "8:DevExpress.Office.v24.2.Core.resources.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
-            "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\Release\\zh-CN\\DevExpress.Office.v24.2.Core.resources.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_99F418E4EAD947DE81FC2E7BFF28D7A7"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_5771A7C48ABF4B51B08D86DDCA068928"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:DevExpress.XtraEditors.v24.2.resources, Version=24.2.0.0, Culture=zh-CN, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                }
-            "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\Release\\zh-CN\\DevExpress.XtraEditors.v24.2.resources.dll"
+            "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\x64\\Release\\zh-CN\\DevExpress.Office.v24.2.Core.resources.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_99F418E4EAD947DE81FC2E7BFF28D7A7"
@@ -1778,52 +1960,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_72DEE407347441C39026989E3E0BBAB7"
-            {
-            "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\Release\\Mihoyo\\说明.txt"
-            "TargetName" = "8:说明.txt"
-            "Tag" = "8:"
-            "Folder" = "8:_8F992C7ED99D4CB5A1C0026171F76E82"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_73B677468CDB40699CAE3AA43130A32A"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:DevExpress.Drawing.v24.2.resources, Version=24.2.0.0, Culture=zh-CN, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                }
-            "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\Release\\zh-CN\\DevExpress.Drawing.v24.2.resources.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_99F418E4EAD947DE81FC2E7BFF28D7A7"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_76C4006AC83F5AC7762C546A68AE5037"
             {
             "AssemblyRegister" = "3:1"
@@ -1853,6 +1989,37 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_79524BE4F83E47848B3FCFB195438969"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:DevExpress.XtraGrid.v24.2.resources, Version=24.2.0.0, Culture=zh-CN, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_79524BE4F83E47848B3FCFB195438969"
+                    {
+                    "Name" = "8:DevExpress.XtraGrid.v24.2.resources.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\x64\\Release\\zh-CN\\DevExpress.XtraGrid.v24.2.resources.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_99F418E4EAD947DE81FC2E7BFF28D7A7"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_8337C75D1ED418E6698BFE0A612A800D"
@@ -1886,18 +2053,74 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_91C8C6DE2A1747838EA91F30DA0CDEFA"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_89642DC98D9C4BB2974A0ED5ABA348FC"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:DevExpress.XtraGrid.v24.2.resources, Version=24.2.0.0, Culture=zh-CN, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:DevExpress.Pdf.v24.2.Core.resources, Version=24.2.0.0, Culture=zh-CN, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_89642DC98D9C4BB2974A0ED5ABA348FC"
+                    {
+                    "Name" = "8:DevExpress.Pdf.v24.2.Core.resources.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
-            "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\Release\\zh-CN\\DevExpress.XtraGrid.v24.2.resources.dll"
+            "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\x64\\Release\\zh-CN\\DevExpress.Pdf.v24.2.Core.resources.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_99F418E4EAD947DE81FC2E7BFF28D7A7"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_921CFF498BE2A968240833B67113F836"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:DevExpress.Images.v24.2, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_921CFF498BE2A968240833B67113F836"
+                    {
+                    "Name" = "8:DevExpress.Images.v24.2.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:DevExpress.Images.v24.2.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_F1D5965E804148D481E3DDDB648A9229"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_99C49E1DE4D54805ABEA1EA4692B4478"
+            {
+            "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\x64\\Release\\Mihoyo\\说明.txt"
+            "TargetName" = "8:说明.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_8F992C7ED99D4CB5A1C0026171F76E82"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1918,6 +2141,26 @@
             "TargetName" = "8:ffplay.exe"
             "Tag" = "8:"
             "Folder" = "8:_7C94D7CFC66B41EF9545919082232F66"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9BFA0BE5F99042438F1FF7DE3BFF2336"
+            {
+            "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\x64\\Release\\runtimes\\win-x64\\native\\WebView2Loader.dll"
+            "TargetName" = "8:WebView2Loader.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_9F89B2A72B734E27BCB17A148635C6E1"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1963,26 +2206,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9EF429043FF548EA9B22FDEE283B5D4E"
-            {
-            "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\Release\\runtimes\\win-x86\\native\\WebView2Loader.dll"
-            "TargetName" = "8:WebView2Loader.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_F12154D8F2B7463FB8780473A1BFBFCB"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B44FFB3639714EC9A2699CAF6AD955D7"
             {
             "SourcePath" = "8:..\\Mihoyo_Tools\\data\\ffmpeg.exe"
@@ -2003,18 +2226,23 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B97CF9B53BF847899A267DBA10335CCC"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_BB9B08777A0BB9DD4F28D24E214F97AE"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:DevExpress.Utils.v24.2.resources, Version=24.2.0.0, Culture=zh-CN, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:DevExpress.XtraRichEdit.v24.2, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_BB9B08777A0BB9DD4F28D24E214F97AE"
+                    {
+                    "Name" = "8:DevExpress.XtraRichEdit.v24.2.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
-            "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\Release\\zh-CN\\DevExpress.Utils.v24.2.resources.dll"
+            "SourcePath" = "8:DevExpress.XtraRichEdit.v24.2.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_99F418E4EAD947DE81FC2E7BFF28D7A7"
+            "Folder" = "8:_F1D5965E804148D481E3DDDB648A9229"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -2026,7 +2254,7 @@
             "PackageAs" = "3:1"
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_BBAEA78296261836A44A5B491615EF9F"
@@ -2235,32 +2463,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D52C134A2D654F32845A09ED75E1432D"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:DevExpress.XtraTreeList.v24.2.resources, Version=24.2.0.0, Culture=zh-CN, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                }
-            "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\Release\\zh-CN\\DevExpress.XtraTreeList.v24.2.resources.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_99F418E4EAD947DE81FC2E7BFF28D7A7"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D8337DF09BC5281D79A79921799A005E"
             {
             "AssemblyRegister" = "3:1"
@@ -2323,6 +2525,37 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_E01B2D9AE20A4FDF8ED47A0C4D5721D5"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:DevExpress.Data.v24.2.resources, Version=24.2.0.0, Culture=zh-CN, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_E01B2D9AE20A4FDF8ED47A0C4D5721D5"
+                    {
+                    "Name" = "8:DevExpress.Data.v24.2.resources.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\x64\\Release\\zh-CN\\DevExpress.Data.v24.2.resources.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_99F418E4EAD947DE81FC2E7BFF28D7A7"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E121C72C9167446F8E58D552044BCE62"
             {
             "SourcePath" = "8:..\\Mihoyo_Tools\\data\\appsettings.json"
@@ -2374,32 +2607,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_E21EC5378FF6415486A94B095805418D"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:DevExpress.XtraBars.v24.2.resources, Version=24.2.0.0, Culture=zh-CN, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                }
-            "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\Release\\zh-CN\\DevExpress.XtraBars.v24.2.resources.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_99F418E4EAD947DE81FC2E7BFF28D7A7"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E48B2C34FCA7421480F6C6C876E1F820"
             {
             "SourcePath" = "8:C:\\Windows\\System32\\msiexec.exe"
@@ -2420,15 +2627,20 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_F11B6417DD7A43C5BE182982B33C7D03"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_F1A6E25E13CF4437A96DDC4004701095"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:DevExpress.XtraPrinting.v24.2.resources, Version=24.2.0.0, Culture=zh-CN, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_F1A6E25E13CF4437A96DDC4004701095"
+                    {
+                    "Name" = "8:DevExpress.XtraPrinting.v24.2.resources.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
-            "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\Release\\zh-CN\\DevExpress.XtraPrinting.v24.2.resources.dll"
+            "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\x64\\Release\\zh-CN\\DevExpress.XtraPrinting.v24.2.resources.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_99F418E4EAD947DE81FC2E7BFF28D7A7"
@@ -2452,6 +2664,37 @@
             "TargetName" = "8:versions.json"
             "Tag" = "8:"
             "Folder" = "8:_7C94D7CFC66B41EF9545919082232F66"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_FA198A6BDEF948BDB8417064D5AFFA02"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:DevExpress.XtraEditors.v24.2.resources, Version=24.2.0.0, Culture=zh-CN, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_FA198A6BDEF948BDB8417064D5AFFA02"
+                    {
+                    "Name" = "8:DevExpress.XtraEditors.v24.2.resources.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\Mihoyo_Tools\\bin\\x64\\Release\\zh-CN\\DevExpress.XtraEditors.v24.2.resources.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_99F418E4EAD947DE81FC2E7BFF28D7A7"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -2524,50 +2767,6 @@
                     "Property" = "8:_6298942093CA41D6B1C2CAE5792F3068"
                         "Folders"
                         {
-                            "{9EF0B969-E518-4E46-987F-47570745A589}:_1017250289E54C4E8B7EED6093B8310B"
-                            {
-                            "Name" = "8:win-arm64"
-                            "AlwaysCreate" = "11:FALSE"
-                            "Condition" = "8:"
-                            "Transitive" = "11:FALSE"
-                            "Property" = "8:_576F479C23594A448E128E9D15E02FE9"
-                                "Folders"
-                                {
-                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_EFD50BE2BA23456E98859E327FDA3817"
-                                    {
-                                    "Name" = "8:native"
-                                    "AlwaysCreate" = "11:FALSE"
-                                    "Condition" = "8:"
-                                    "Transitive" = "11:FALSE"
-                                    "Property" = "8:_2808B7CFA36A4593BC022D61D917B1E9"
-                                        "Folders"
-                                        {
-                                        }
-                                    }
-                                }
-                            }
-                            "{9EF0B969-E518-4E46-987F-47570745A589}:_7F86A7CB7B6F4C8EB5D85CA78E60BDBA"
-                            {
-                            "Name" = "8:win-x86"
-                            "AlwaysCreate" = "11:FALSE"
-                            "Condition" = "8:"
-                            "Transitive" = "11:FALSE"
-                            "Property" = "8:_0BBD0A26BAC84738A129737C7CCCAADD"
-                                "Folders"
-                                {
-                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_F12154D8F2B7463FB8780473A1BFBFCB"
-                                    {
-                                    "Name" = "8:native"
-                                    "AlwaysCreate" = "11:FALSE"
-                                    "Condition" = "8:"
-                                    "Transitive" = "11:FALSE"
-                                    "Property" = "8:_C89CED8016E844B5B73C934D33CCD0A8"
-                                        "Folders"
-                                        {
-                                        }
-                                    }
-                                }
-                            }
                             "{9EF0B969-E518-4E46-987F-47570745A589}:_8AD20D11A64347BEBF05B318465A348B"
                             {
                             "Name" = "8:win-x64"
@@ -3207,7 +3406,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_975CEF13556B4B65A10A4B42E143C442"
             {
-            "SourcePath" = "8:..\\Mihoyo_Tools\\obj\\Release\\Mihoyo_Tools.exe"
+            "SourcePath" = "8:..\\Mihoyo_Tools\\obj\\x64\\Release\\Mihoyo_Tools.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_F1D5965E804148D481E3DDDB648A9229"
