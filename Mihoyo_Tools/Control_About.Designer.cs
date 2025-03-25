@@ -45,6 +45,23 @@
             this.hyperlinkLabelControl_DevExpress = new DevExpress.XtraEditors.HyperlinkLabelControl();
             this.pictureBox_WinXin = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lblMemSize = new DevExpress.XtraEditors.LabelControl();
+            this.lblMemUsage = new DevExpress.XtraEditors.LabelControl();
+            this.lblCpuUsage = new DevExpress.XtraEditors.LabelControl();
+            this.lblGpuBrand = new DevExpress.XtraEditors.LabelControl();
+            this.lblGpuMemory = new DevExpress.XtraEditors.LabelControl();
+            this.lblGpuName = new DevExpress.XtraEditors.LabelControl();
+            this.lblMemSpeed = new DevExpress.XtraEditors.LabelControl();
+            this.lblCpuCache = new DevExpress.XtraEditors.LabelControl();
+            this.lblCpuSpeed = new DevExpress.XtraEditors.LabelControl();
+            this.lblCpuName = new DevExpress.XtraEditors.LabelControl();
+            this.lblUUID = new DevExpress.XtraEditors.LabelControl();
+            this.lblBIOSDate = new DevExpress.XtraEditors.LabelControl();
+            this.lblBIOSVersion = new DevExpress.XtraEditors.LabelControl();
+            this.lblSystemModel = new DevExpress.XtraEditors.LabelControl();
+            this.lblOSVersion = new DevExpress.XtraEditors.LabelControl();
+            this.lblOSName = new DevExpress.XtraEditors.LabelControl();
+            this.ChecUpde = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_WinXin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -117,9 +134,9 @@
             // progressBar1
             // 
             this.progressBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.progressBar1.Location = new System.Drawing.Point(0, 774);
+            this.progressBar1.Location = new System.Drawing.Point(0, 791);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(1300, 35);
+            this.progressBar1.Size = new System.Drawing.Size(1300, 18);
             this.progressBar1.TabIndex = 3;
             this.progressBar1.Value = 100;
             // 
@@ -222,14 +239,201 @@
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
             // 
+            // lblMemSize
+            // 
+            this.lblMemSize.Appearance.Font = new System.Drawing.Font("Tahoma", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMemSize.Appearance.Options.UseFont = true;
+            this.lblMemSize.Location = new System.Drawing.Point(687, 412);
+            this.lblMemSize.Name = "lblMemSize";
+            this.lblMemSize.Size = new System.Drawing.Size(42, 17);
+            this.lblMemSize.TabIndex = 8;
+            this.lblMemSize.Text = "总内存";
+            // 
+            // lblMemUsage
+            // 
+            this.lblMemUsage.Appearance.Font = new System.Drawing.Font("Tahoma", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMemUsage.Appearance.Options.UseFont = true;
+            this.lblMemUsage.Location = new System.Drawing.Point(687, 389);
+            this.lblMemUsage.Name = "lblMemUsage";
+            this.lblMemUsage.Size = new System.Drawing.Size(70, 17);
+            this.lblMemUsage.TabIndex = 9;
+            this.lblMemUsage.Text = "内存使用率";
+            // 
+            // lblCpuUsage
+            // 
+            this.lblCpuUsage.Appearance.Font = new System.Drawing.Font("Tahoma", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCpuUsage.Appearance.Options.UseFont = true;
+            this.lblCpuUsage.Location = new System.Drawing.Point(687, 330);
+            this.lblCpuUsage.Name = "lblCpuUsage";
+            this.lblCpuUsage.Size = new System.Drawing.Size(65, 17);
+            this.lblCpuUsage.TabIndex = 10;
+            this.lblCpuUsage.Text = "cpu使用率";
+            // 
+            // lblGpuBrand
+            // 
+            this.lblGpuBrand.Appearance.Font = new System.Drawing.Font("Tahoma", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGpuBrand.Appearance.Options.UseFont = true;
+            this.lblGpuBrand.Location = new System.Drawing.Point(687, 447);
+            this.lblGpuBrand.Name = "lblGpuBrand";
+            this.lblGpuBrand.Size = new System.Drawing.Size(56, 17);
+            this.lblGpuBrand.TabIndex = 11;
+            this.lblGpuBrand.Text = "显卡品牌";
+            // 
+            // lblGpuMemory
+            // 
+            this.lblGpuMemory.Appearance.Font = new System.Drawing.Font("Tahoma", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGpuMemory.Appearance.Options.UseFont = true;
+            this.lblGpuMemory.Location = new System.Drawing.Point(687, 493);
+            this.lblGpuMemory.Name = "lblGpuMemory";
+            this.lblGpuMemory.Size = new System.Drawing.Size(28, 17);
+            this.lblGpuMemory.TabIndex = 12;
+            this.lblGpuMemory.Text = "显存";
+            // 
+            // lblGpuName
+            // 
+            this.lblGpuName.Appearance.Font = new System.Drawing.Font("Tahoma", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGpuName.Appearance.Options.UseFont = true;
+            this.lblGpuName.Location = new System.Drawing.Point(687, 470);
+            this.lblGpuName.Name = "lblGpuName";
+            this.lblGpuName.Size = new System.Drawing.Size(56, 17);
+            this.lblGpuName.TabIndex = 13;
+            this.lblGpuName.Text = "显卡名称";
+            // 
+            // lblMemSpeed
+            // 
+            this.lblMemSpeed.Appearance.Font = new System.Drawing.Font("Tahoma", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMemSpeed.Appearance.Options.UseFont = true;
+            this.lblMemSpeed.Location = new System.Drawing.Point(687, 366);
+            this.lblMemSpeed.Name = "lblMemSpeed";
+            this.lblMemSpeed.Size = new System.Drawing.Size(56, 17);
+            this.lblMemSpeed.TabIndex = 15;
+            this.lblMemSpeed.Text = "内存频率";
+            // 
+            // lblCpuCache
+            // 
+            this.lblCpuCache.Appearance.Font = new System.Drawing.Font("Tahoma", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCpuCache.Appearance.Options.UseFont = true;
+            this.lblCpuCache.Location = new System.Drawing.Point(687, 307);
+            this.lblCpuCache.Name = "lblCpuCache";
+            this.lblCpuCache.Size = new System.Drawing.Size(28, 17);
+            this.lblCpuCache.TabIndex = 16;
+            this.lblCpuCache.Text = "缓存";
+            // 
+            // lblCpuSpeed
+            // 
+            this.lblCpuSpeed.Appearance.Font = new System.Drawing.Font("Tahoma", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCpuSpeed.Appearance.Options.UseFont = true;
+            this.lblCpuSpeed.Location = new System.Drawing.Point(687, 284);
+            this.lblCpuSpeed.Name = "lblCpuSpeed";
+            this.lblCpuSpeed.Size = new System.Drawing.Size(51, 17);
+            this.lblCpuSpeed.TabIndex = 17;
+            this.lblCpuSpeed.Text = "cpu频率";
+            // 
+            // lblCpuName
+            // 
+            this.lblCpuName.Appearance.Font = new System.Drawing.Font("Tahoma", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCpuName.Appearance.Options.UseFont = true;
+            this.lblCpuName.Location = new System.Drawing.Point(687, 261);
+            this.lblCpuName.Name = "lblCpuName";
+            this.lblCpuName.Size = new System.Drawing.Size(51, 17);
+            this.lblCpuName.TabIndex = 18;
+            this.lblCpuName.Text = "cpu名称";
+            // 
+            // lblUUID
+            // 
+            this.lblUUID.Appearance.Font = new System.Drawing.Font("Tahoma", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUUID.Appearance.Options.UseFont = true;
+            this.lblUUID.Location = new System.Drawing.Point(687, 182);
+            this.lblUUID.Name = "lblUUID";
+            this.lblUUID.Size = new System.Drawing.Size(44, 17);
+            this.lblUUID.TabIndex = 19;
+            this.lblUUID.Text = "lblUUID";
+            // 
+            // lblBIOSDate
+            // 
+            this.lblBIOSDate.Appearance.Font = new System.Drawing.Font("Tahoma", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBIOSDate.Appearance.Options.UseFont = true;
+            this.lblBIOSDate.Location = new System.Drawing.Point(687, 228);
+            this.lblBIOSDate.Name = "lblBIOSDate";
+            this.lblBIOSDate.Size = new System.Drawing.Size(71, 17);
+            this.lblBIOSDate.TabIndex = 20;
+            this.lblBIOSDate.Text = "lblBIOSDate";
+            // 
+            // lblBIOSVersion
+            // 
+            this.lblBIOSVersion.Appearance.Font = new System.Drawing.Font("Tahoma", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBIOSVersion.Appearance.Options.UseFont = true;
+            this.lblBIOSVersion.Location = new System.Drawing.Point(687, 205);
+            this.lblBIOSVersion.Name = "lblBIOSVersion";
+            this.lblBIOSVersion.Size = new System.Drawing.Size(86, 17);
+            this.lblBIOSVersion.TabIndex = 21;
+            this.lblBIOSVersion.Text = "lblBIOSVersion";
+            // 
+            // lblSystemModel
+            // 
+            this.lblSystemModel.Appearance.Font = new System.Drawing.Font("Tahoma", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSystemModel.Appearance.Options.UseFont = true;
+            this.lblSystemModel.Location = new System.Drawing.Point(687, 159);
+            this.lblSystemModel.Name = "lblSystemModel";
+            this.lblSystemModel.Size = new System.Drawing.Size(93, 17);
+            this.lblSystemModel.TabIndex = 22;
+            this.lblSystemModel.Text = "lblSystemModel";
+            // 
+            // lblOSVersion
+            // 
+            this.lblOSVersion.Appearance.Font = new System.Drawing.Font("Tahoma", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOSVersion.Appearance.Options.UseFont = true;
+            this.lblOSVersion.Location = new System.Drawing.Point(687, 136);
+            this.lblOSVersion.Name = "lblOSVersion";
+            this.lblOSVersion.Size = new System.Drawing.Size(74, 17);
+            this.lblOSVersion.TabIndex = 23;
+            this.lblOSVersion.Text = "lblOSVersion";
+            // 
+            // lblOSName
+            // 
+            this.lblOSName.Appearance.Font = new System.Drawing.Font("Tahoma", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOSName.Appearance.Options.UseFont = true;
+            this.lblOSName.Location = new System.Drawing.Point(687, 113);
+            this.lblOSName.Name = "lblOSName";
+            this.lblOSName.Size = new System.Drawing.Size(65, 17);
+            this.lblOSName.TabIndex = 24;
+            this.lblOSName.Text = "lblOSName";
+            // 
+            // ChecUpde
+            // 
+            this.ChecUpde.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.ChecUpde.Location = new System.Drawing.Point(687, 708);
+            this.ChecUpde.Name = "ChecUpde";
+            this.ChecUpde.Size = new System.Drawing.Size(111, 23);
+            this.ChecUpde.TabIndex = 4;
+            this.ChecUpde.Text = "检查软件更新";
+            this.ChecUpde.Click += new System.EventHandler(this.ChecUpde_Click);
+            // 
             // Control_About
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lblUUID);
+            this.Controls.Add(this.lblBIOSDate);
+            this.Controls.Add(this.lblBIOSVersion);
+            this.Controls.Add(this.lblSystemModel);
+            this.Controls.Add(this.lblOSVersion);
+            this.Controls.Add(this.lblOSName);
+            this.Controls.Add(this.lblMemSize);
+            this.Controls.Add(this.lblMemUsage);
+            this.Controls.Add(this.lblCpuUsage);
+            this.Controls.Add(this.lblGpuBrand);
+            this.Controls.Add(this.lblGpuMemory);
+            this.Controls.Add(this.lblGpuName);
+            this.Controls.Add(this.lblMemSpeed);
+            this.Controls.Add(this.lblCpuCache);
+            this.Controls.Add(this.lblCpuSpeed);
+            this.Controls.Add(this.lblCpuName);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox_WinXin);
             this.Controls.Add(this.radioButton_gitee);
             this.Controls.Add(this.radioButto_github);
+            this.Controls.Add(this.ChecUpde);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.hyperlinkLabelControl_DevExpress);
@@ -269,5 +473,22 @@
         private DevExpress.XtraEditors.HyperlinkLabelControl hyperlinkLabelControl_DevExpress;
         private System.Windows.Forms.PictureBox pictureBox_WinXin;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private DevExpress.XtraEditors.LabelControl lblMemSize;
+        private DevExpress.XtraEditors.LabelControl lblMemUsage;
+        private DevExpress.XtraEditors.LabelControl lblCpuUsage;
+        private DevExpress.XtraEditors.LabelControl lblGpuBrand;
+        private DevExpress.XtraEditors.LabelControl lblGpuMemory;
+        private DevExpress.XtraEditors.LabelControl lblGpuName;
+        private DevExpress.XtraEditors.LabelControl lblMemSpeed;
+        private DevExpress.XtraEditors.LabelControl lblCpuCache;
+        private DevExpress.XtraEditors.LabelControl lblCpuSpeed;
+        private DevExpress.XtraEditors.LabelControl lblCpuName;
+        private DevExpress.XtraEditors.LabelControl lblUUID;
+        private DevExpress.XtraEditors.LabelControl lblBIOSDate;
+        private DevExpress.XtraEditors.LabelControl lblBIOSVersion;
+        private DevExpress.XtraEditors.LabelControl lblSystemModel;
+        private DevExpress.XtraEditors.LabelControl lblOSVersion;
+        private DevExpress.XtraEditors.LabelControl lblOSName;
+        private DevExpress.XtraEditors.SimpleButton ChecUpde;
     }
 }

@@ -106,7 +106,11 @@
     <Reference Include="DevExpress.Data.Desktop.v24.2, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v24.2, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Drawing.v24.2, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Images.v24.2, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v24.2.Core, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v24.2.Core, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v24.2.Core, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v24.2.Core, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Sparkline.v24.2.Core, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v24.2, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v24.2, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -114,6 +118,7 @@
     <Reference Include="DevExpress.XtraGrid.v24.2, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v24.2, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v24.2, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v24.2, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraTreeList.v24.2, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Web.WebView2.Core, Version=1.0.3065.39, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.WebView2.1.0.3065.39\lib\net462\Microsoft.Web.WebView2.Core.dll</HintPath>
@@ -126,6 +131,12 @@
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.4.2.0\lib\net45\SharpDX.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.DXGI, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.DXGI.4.2.0\lib\net45\SharpDX.DXGI.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -146,6 +157,9 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="UpdateHaiTang">
+      <HintPath>data\UpdateHaiTang.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account\Account.cs" />
@@ -167,6 +181,12 @@
     </Compile>
     <Compile Include="Control_Genshin_usm.Designer.cs">
       <DependentUpon>Control_Genshin_usm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control_LrcToSrt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control_LrcToSrt.Designer.cs">
+      <DependentUpon>Control_LrcToSrt.cs</DependentUpon>
     </Compile>
     <Compile Include="Control_Mihoyo_resources.cs">
       <SubType>UserControl</SubType>
@@ -199,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Control_Genshin_usm.resx">
       <DependentUpon>Control_Genshin_usm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control_LrcToSrt.resx">
+      <DependentUpon>Control_LrcToSrt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Control_Mihoyo_resources.resx">
       <DependentUpon>Control_Mihoyo_resources.cs</DependentUpon>

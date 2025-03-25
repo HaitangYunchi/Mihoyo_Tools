@@ -15,16 +15,26 @@ using System.Diagnostics;
 using System.IO;
 using DevExpress.Internal.WinApi.Windows.UI.Notifications;
 using System.Threading;
+using System.Management;
+using Timer = System.Windows.Forms.Timer;
+using SharpDX.DXGI;
+using Microsoft.Win32;
+using UpdateHaiTang;
 
 namespace Mihoyo_Tools
 {
     public partial class Control_About : DevExpress.XtraEditors.XtraUserControl
     {
+        UpdateHaiTang.Update up = new UpdateHaiTang.Update();
+        private readonly PerformanceCounter cpuCounter = new PerformanceCounter("Processor", "% Processor Time", "_Total");
+        private readonly Timer updateTimer = new Timer();
         private WebClient client;
         public Control_About()
         {
             InitializeComponent();
-            
+            GetSystemSummary();
+            InitializeHardwareInfo();
+            SetupTimer();
         }
 
         private void hyperlinkLabelControl1_Click(object sender, EventArgs e)
@@ -77,12 +87,13 @@ namespace Mihoyo_Tools
 
         void Client_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
         {
+            string path = GlobalVar.StrPath + @"\data\versions.json";
+            string SaveFilesName = GlobalVar.StrPath + @"\data\versions.json.back";
             this.Invoke((MethodInvoker)delegate
             {
                 if (e.Error != null)
                 {
-                    string path = GlobalVar.StrPath + @"\data\versions.json";
-                    string SaveFilesName = GlobalVar.StrPath + @"\data\versions.json.back";
+                    
                     if (System.IO.File.Exists(SaveFilesName))
                     {
                         System.IO.File.Copy(SaveFilesName, path, true);
@@ -93,24 +104,20 @@ namespace Mihoyo_Tools
                 }
                 else if (e.Cancelled)
                 {
-                    string path = GlobalVar.StrPath + @"\data\versions.json";
-                    string SaveFilesName = GlobalVar.StrPath + @"\data\versions.json.back";
                     if (System.IO.File.Exists(SaveFilesName))
                     {
                         System.IO.File.Copy(SaveFilesName, path, true);
                         progressBar1.Value = 100;
-                        XtraMessageBox.Show("更新被取消", "取消", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        XtraMessageBox.Show("更新被取消", "取消", MessageBoxButtons.OK, MessageBoxIcon.None);
                     }
                     
                 }
                 else
                 {
-                    string path = GlobalVar.StrPath + @"\data\versions.json";
-                    string SaveFilesName = GlobalVar.StrPath + @"\data\versions.json.back";
                     if (System.IO.File.Exists(path))
                     {
                         System.IO.File.Copy(path, SaveFilesName, true);
-                        XtraMessageBox.Show("已更新 Key 到最新版","成功", MessageBoxButtons.OK, MessageBoxIcon.None);
+                        XtraMessageBox.Show("已更新 Key 到最新版","成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
                 //progressBar1.Value = 0;
@@ -130,6 +137,247 @@ namespace Mihoyo_Tools
         private void hyperlinkLabelControl_DevExpress_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://www.devexpress.com");
+        }
+
+        private void InitializeHardwareInfo()
+        {
+            // CPU 信息
+            GetCpuInfo();
+            // 内存信息
+            GetMemoryInfo();
+            // 显卡信息
+            GetGpuInfo();
+        }
+
+        private void GetCpuInfo()
+        {
+            using (var searcher = new ManagementObjectSearcher("SELECT * FROM Win32_Processor"))
+            {
+                foreach (ManagementObject obj in searcher.Get())
+                {
+                    lblCpuName.Text = $"CPU型号: {obj["Name"]}";
+                    double currentGHz = Convert.ToDouble(obj["CurrentClockSpeed"]) / 1000;
+                    lblCpuSpeed.Text = $"基本频率: {currentGHz:F2} GHz";
+
+                    // 获取并转换L2缓存
+                    uint l2KB = obj["L2CacheSize"] != null ? Convert.ToUInt32(obj["L2CacheSize"]) : 0;
+                    string l2Display = l2KB > 0 ? $"{l2KB / 1024.0:F1} MB" : "未启用";
+
+                    // 获取并转换L3缓存
+                    uint l3KB = obj["L3CacheSize"] != null ? Convert.ToUInt32(obj["L3CacheSize"]) : 0;
+                    string l3Display = l3KB > 0 ? $"{l3KB / 1024.0:F1} MB" : "未启用";
+
+                    lblCpuCache.Text = $"L2缓存: {l2Display} | L3缓存: {l3Display}";
+                }
+            }
+        }
+
+        private void GetMemoryInfo()
+        {
+            ulong totalMemory = 0;
+            using (var searcher = new ManagementObjectSearcher("SELECT * FROM Win32_PhysicalMemory"))
+            {
+                foreach (ManagementObject obj in searcher.Get())
+                {
+                    totalMemory += Convert.ToUInt64(obj["Capacity"]);
+                    lblMemSpeed.Text = $"内存频率: {obj["Speed"]} MHz";
+
+                    // 添加内存品牌转换逻辑
+                    string manufacturerCode = obj["Manufacturer"]?.ToString() ?? "";
+                    //lblMemBrand.Text = $"内存品牌: {TranslateMemoryBrand(manufacturerCode)}";
+                }
+            }
+            lblMemSize.Text = $"系统总内存: {totalMemory / (1024 * 1024 * 1024)} GB";
+            UpdateMemoryUsage();
+        }
+
+        // 内存品牌编码转换字典
+        private static readonly Dictionary<string, string> MemoryBrandMap = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
+{
+            // 主要DRAM制造商（JEDEC标准编码）
+            {"0198", "Micron"},
+            {"029E", "Samsung"},
+            {"04CD", "SK Hynix"},
+            {"04CB", "Elpida"},
+            {"8541", "Nanya"},
+            {"AD00", "Hynix (旧编码)"},
+            {"AD80", "Hynix"},
+            {"2C00", "Corsair"},
+            {"7F7F", "Kingston (OEM)"},
+            {"04C5", "Ramaxel"},
+            {"859B", "Team Group"},
+            {"9E9E", "ADATA"},
+            {"04D4", "Smart Modular"},
+            {"04C3", "Powerchip"},
+
+            // 模块制造商（自定义编码）
+            {"7F7F7F7F7F7F0000", "G.Skill"},
+            {"534D", "SMART"},
+            {"4D48", "Mushkin"},
+            {"4850", "HP"},
+            {"4445", "Dell"},
+            {"4C45", "Lenovo"},
+            {"5645", "V-Color"},
+            {"4F43", "OCZ"},
+            {"4742", "GeIL"},
+            {"4241", "Ballistix"},
+            {"4B56", "Klevv"},
+            {"5451", "T-Force"},
+            {"4743", "Galaxy"},
+
+            // 中国品牌
+            {"04C9", "Tigo"},
+            {"04C7", "Biostar"},
+            {"04C8", "Asgard"},
+            {"04C6", "Gloway"},
+            {"04CA", "Colorful"},
+    
+            // 特殊编码
+            {"0000", "Generic"},
+            {"FFFF", "Unbuffered"},
+            {"AAAA", "Test Pattern"}
+            //{"AAAA", "Test Pattern"}
+};
+
+        private string TranslateMemoryBrand(string code)
+        {
+            // 处理空值
+            if (string.IsNullOrWhiteSpace(code)) return "未知品牌";
+
+            // 尝试完整匹配
+            if (MemoryBrandMap.TryGetValue(code, out var brand))
+                return brand;
+
+            // 尝试部分匹配（有些代码可能带前缀）
+            foreach (var pair in MemoryBrandMap)
+            {
+                if (code.StartsWith(pair.Key, StringComparison.OrdinalIgnoreCase))
+                    return pair.Value;
+            }
+
+
+
+            return $"未知品牌 ({code})";
+        }
+
+        private void GetGpuInfo()
+        {
+            using (var searcher = new ManagementObjectSearcher("SELECT * FROM Win32_VideoController"))
+            {
+                foreach (ManagementObject obj in searcher.Get())
+                {
+                    lblGpuBrand.Text = $"显卡品牌: {obj["AdapterCompatibility"]}";
+                    lblGpuName.Text = $"显卡型号: {obj["Name"]}";
+                    //lblGpuMemory.Text = $"显存大小: {Convert.ToUInt64(obj["AdapterRAM"]) / (1024 * 1024)} MB";
+                    lblGpuMemory.Text = $"显存大小:"+GetActualVRAM();
+                    
+                }
+            }
+        }
+        public static string GetActualVRAM()
+        {
+            try
+            {
+                using (var factory = new Factory1())
+                {
+                    foreach (var adapter in factory.Adapters)
+                    {
+                        if (adapter.GetOutputCount() == 0) continue;
+                        double vramGB = adapter.Description.DedicatedVideoMemory / 1024.0 / 1024 / 1024;
+                        return $"{vramGB:F2} GB (通过DirectX检测)";
+                    }
+                }
+            }
+            catch { /* 忽略错误 */ }
+            return "无法通过DirectX获取显存";
+        }
+      
+        private void SetupTimer()
+        {
+            updateTimer.Interval = 1000;
+            updateTimer.Tick += (s, e) => UpdateDynamicInfo();
+            updateTimer.Start();
+        }
+
+        private void UpdateDynamicInfo()
+        {
+            // CPU使用率
+            lblCpuUsage.Text = $"CPU使用率: {cpuCounter.NextValue().ToString("0.00")}%";
+
+            // 更新内存使用率
+            UpdateMemoryUsage();
+        }
+
+        private void UpdateMemoryUsage()
+        {
+            using (var searcher = new ManagementObjectSearcher("SELECT TotalVisibleMemorySize, FreePhysicalMemory FROM Win32_OperatingSystem"))
+            {
+                foreach (ManagementObject obj in searcher.Get())
+                {
+                    var total = Convert.ToUInt64(obj["TotalVisibleMemorySize"]);
+                    var free = Convert.ToUInt64(obj["FreePhysicalMemory"]);
+                    var used = total - free;
+                    var usagePercentage = (used * 100) / (double)total;
+                    lblMemUsage.Text = $"内存使用率: {usagePercentage.ToString("0.00")}%";
+                }
+            }
+        }
+
+        private void GetSystemSummary()
+        {
+            // 操作系统信息
+            using (var searcher = new ManagementObjectSearcher("SELECT * FROM Win32_OperatingSystem"))
+            {
+                foreach (ManagementObject obj in searcher.Get())
+                {
+                    lblOSName.Text = $"操作系统: {obj["Caption"]}";
+                    lblOSVersion.Text = $"系统版本: {obj["Version"]}";
+                }
+            }
+
+            // 系统型号
+            using (var searcher = new ManagementObjectSearcher("SELECT * FROM Win32_ComputerSystemProduct"))
+            {
+                foreach (ManagementObject obj in searcher.Get())
+                {
+                    lblSystemModel.Text = $"主板型号: {obj["Name"]}";
+                    lblUUID.Text = $"系统UUID: {obj["UUID"]}";
+                }
+            }
+
+            // BIOS信息
+            using (var searcher = new ManagementObjectSearcher("SELECT * FROM Win32_BIOS"))
+            {
+                foreach (ManagementObject obj in searcher.Get())
+                {
+                    lblBIOSVersion.Text = $"BIOS版本: {obj["SMBIOSBIOSVersion"]}";
+                    lblBIOSDate.Text = $"发布日期: {obj["ReleaseDate"]?.ToString().Substring(0, 8)}";
+                }
+            }
+        }
+
+        private void ChecUpde_Click(object sender, EventArgs e)
+        {
+            string ver = up.GetUpdateVer("AE72DEEE2BDF489DACC17D39D8D2C65E");
+            if (ver == GlobalVar.VerContrast)
+            {
+                XtraMessageBox.Show("当前版本已是最新版，无需更新", "无需更新", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            else
+            {
+                DialogResult result = XtraMessageBox.Show(up.GetUpdateInformation("AE72DEEE2BDF489DACC17D39D8D2C65E"), "发现新版本", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                // 判断用户的点击结果
+                if (result == DialogResult.OK)
+                {
+                    System.Diagnostics.Process.Start("https://www.123912.com/s/b6X3jv-wNtU3");
+                    //System.Diagnostics.Process.Start("https://www.123865.com/s/b6X3jv-wNtU3");
+                }
+                else if (result == DialogResult.Cancel)
+                {
+                    return;
+                }
+            }
         }
     }
 }
