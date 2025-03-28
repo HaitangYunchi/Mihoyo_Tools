@@ -14,14 +14,14 @@ namespace Mihoyo_Tools
         //代码设计海棠云螭（B站）  小海棠（抖音）
         //2024-09-28 更新
 
-        /// 
+
+        public static string tempFolderPath = Path.GetTempPath();
         /// <summary>
         /// <param name="StrPath">项目运行目录</param>
         /// </summary>
-        public static string tempFolderPath = Path.GetTempPath();
         public static string StrPath = System.Windows.Forms.Application.StartupPath;
         public static string VersionNo= Assembly.GetExecutingAssembly().GetName().Version.ToString();
-        public static int    Release = 2;//  0  Alpha 内测版      1  bate 公测版      2  Release 正式版
+        public static int    Release = 1;//  0  Alpha 内测版      1  bate 公测版      2  Release 正式版
         public static string Upgrade_ver = "";//升级版本号
         public static string VerContrast = Assembly.GetExecutingAssembly().GetName().Version.ToString();// 版本唯一码
         public static string New_Info = "";
@@ -33,6 +33,7 @@ namespace Mihoyo_Tools
 
         public static string AuthorName = "海棠云螭";
         public static string IniName = StrPath + @"\Config.ini";
+        public static string UsmVer = StrPath + @"\data\UsmVer.ini";
         public static string GICutscents_path = "";     // GICutscents 路径
         public static string Ffmpeg_path = "";          // Ffmpeg 路径
         public static string Output_path = "";          // 输出目录
@@ -54,6 +55,7 @@ namespace Mihoyo_Tools
         public static string strOutput = "";
         public static string _tempVideo_Name = "";      // 视频临时名字，可能用不到，先放这里吧，懒得删了
         public static bool   isNetworkAvailable;        // 判断网络是否链接 true = 已链接  flase = 未连接
+
         public static string genshin = StrPath + @"\Mihoyo\Genshin.dat";
         public static string genshinCloud = StrPath + @"\Mihoyo\GenshinCloud.dat";
         public static string genshinOversea = StrPath + @"\Mihoyo\GenshinOversea .dat";
@@ -82,6 +84,9 @@ namespace Mihoyo_Tools
         public const  string ZZZ_REG_PATH = @"Software\miHoYo\绝区零";
         public const  string ZZZOversea_REG_PATH = @"Software\Cognosphere\ZZZ";
         #endregion
-
+        public static string Control_Web = "http://space.bilibili.com/3493128132626725";
+        //public static string id = "AE72DEEE2BDF489DACC17D39D8D2C65E";//测试的时候换这个 ID
+        public static string id = "1B3BBA3F795047C5B4C278B2CE28A17B";//软件ID 不要修改
+        public static string key = "C727432CEB7047B580131B53D5C7FD9F";
     }
 }

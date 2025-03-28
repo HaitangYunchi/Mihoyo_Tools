@@ -1,6 +1,6 @@
 ﻿namespace Mihoyo_Tools
 {
-    partial class Control_Mihoyo_resources
+    partial class Control_Web
     {
         /// <summary> 
         /// Required designer variable.

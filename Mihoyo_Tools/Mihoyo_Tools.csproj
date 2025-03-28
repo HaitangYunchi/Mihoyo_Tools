@@ -120,6 +120,9 @@
     <Reference Include="DevExpress.XtraPrinting.v24.2, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraRichEdit.v24.2, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraTreeList.v24.2, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="HaiTangUpdate">
+      <HintPath>data\HaiTangUpdate.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Web.WebView2.Core, Version=1.0.3065.39, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.WebView2.1.0.3065.39\lib\net462\Microsoft.Web.WebView2.Core.dll</HintPath>
     </Reference>
@@ -157,9 +160,6 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="UpdateHaiTang">
-      <HintPath>data\UpdateHaiTang.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account\Account.cs" />
@@ -188,11 +188,11 @@
     <Compile Include="Control_LrcToSrt.Designer.cs">
       <DependentUpon>Control_LrcToSrt.cs</DependentUpon>
     </Compile>
-    <Compile Include="Control_Mihoyo_resources.cs">
+    <Compile Include="Control_Web.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Control_Mihoyo_resources.Designer.cs">
-      <DependentUpon>Control_Mihoyo_resources.cs</DependentUpon>
+    <Compile Include="Control_Web.Designer.cs">
+      <DependentUpon>Control_Web.cs</DependentUpon>
     </Compile>
     <Compile Include="CoreData.cs" />
     <Compile Include="DotNet.cs" />
@@ -223,8 +223,8 @@
     <EmbeddedResource Include="Control_LrcToSrt.resx">
       <DependentUpon>Control_LrcToSrt.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Control_Mihoyo_resources.resx">
-      <DependentUpon>Control_Mihoyo_resources.cs</DependentUpon>
+    <EmbeddedResource Include="Control_Web.resx">
+      <DependentUpon>Control_Web.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AccountNameDialog.resx">
       <DependentUpon>AccountNameDialog.cs</DependentUpon>

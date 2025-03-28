@@ -19,16 +19,20 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
-using UpdateHaiTang;
+using HaiTangUpdate;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using Newtonsoft.Json.Linq;
+using DevExpress.XtraPrinting;
+
 
 namespace Mihoyo_Tools {
     public partial class fr_Main : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm 
     {
-        UpdateHaiTang.Update up = new UpdateHaiTang.Update();
+        HaiTangUpdate.Update up = new HaiTangUpdate.Update();
+
         // private WebClient client;
         private Control_Genshin_usm _Genshin_usm;
-        private Control_Mihoyo_resources _Mihoyo;
+        private Control_Web _Web;
         private Control_About _About;
         private Control_Account _Account;
         private UserLookAndFeel userLookAndFeel;
@@ -39,15 +43,14 @@ namespace Mihoyo_Tools {
         {
 
             InitializeComponent();
-            HideSkins(_skinsToHide);
             // 创建 UserLookAndFeel 实例
             userLookAndFeel = new UserLookAndFeel(this);
 
             _Genshin_usm = new Control_Genshin_usm();
             _Genshin_usm.Dock = DockStyle.Fill;
 
-            _Mihoyo = new Control_Mihoyo_resources();
-            _Mihoyo.Dock = DockStyle.Fill;
+            _Web = new Control_Web();
+            _Web.Dock = DockStyle.Fill;
 
             _About = new Control_About();
             _About.Dock = DockStyle.Fill;
@@ -67,12 +70,12 @@ namespace Mihoyo_Tools {
             _Genshin_usm.Show();
             fr_Main_Container.Controls.Add(_Genshin_usm);
         }
-
         private void Element_mihoyo_rex_Click(object sender, EventArgs e)
         {
+            GlobalVar.Control_Web = "http://files.hk4e.com";
             fr_Main_Container.Controls.Clear();
-            _Mihoyo.Show();
-            fr_Main_Container.Controls.Add(_Mihoyo);
+            _Web.Show();
+            fr_Main_Container.Controls.Add(_Web);
         }
         private void Element_Account_Click(object sender, EventArgs e)
         {
@@ -161,7 +164,7 @@ namespace Mihoyo_Tools {
             //toolStripStatusLabel3.Text = $" 当前时间：{now:yyyy-MM-dd HH:mm:ss}  {week}   " + ChinaDate.GetChinaDate(DateTime.Now); 
             barStaticItem_Time.Caption = $" 当前时间：{now:yyyy-MM-dd HH:mm:ss}  {week}   " + ChinaDate.GetChinaDate(DateTime.Now)+"      ";
         }
-      
+
 
         private void fr_Main_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -208,47 +211,7 @@ namespace Mihoyo_Tools {
             Properties.Settings.Default.Save();
             XtraMessageBox.Show($"当前皮肤：{userLookAndFeel.ActiveSkinName}","成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-        string[] _skinsToHide = { "DevExpress Style", "DevExpress Dark Style" };
-        private void HideSkins(string[] skinsToHide)
-        {
-  
-            for (var i = 0; i < skinBarSubItem.ItemLinks.Count; i++)
-            {
-                //Check regular button items
-                if (skinBarSubItem.ItemLinks[i] is BarButtonItemLink)
-                {
-                    var item = skinBarSubItem.ItemLinks[i];
-                    foreach (var skin in skinsToHide)
-                    {
-                        if (item.Caption.Contains(skin))
-                        {
-                            item.Visible = false;
-                        }
-                    }
-                }
-                //Check buttons nested in the "Bonus Skins" sub-menu
-                if (skinBarSubItem.ItemLinks[i] is BarSubItemLink && skinBarSubItem.ItemLinks[i].Caption == "Bonus Skins")
-                {
-                    BarSubItemLink group = (BarSubItemLink)skinBarSubItem.ItemLinks[i];
-                    for (var j = 0; j < group.Item.ItemLinks.Count; j++)
-                    {
-                        var item = group.Item.ItemLinks[j];
-                        foreach (var skin in skinsToHide)
-                        {
-                            if (item.Caption.Contains(skin))
-                            {
-                                item.Visible = false;
-                            }
-                        }
-                    }
-                }
-                //Hide theme skins
-                if (skinBarSubItem.ItemLinks[i] is BarSubItemLink && skinBarSubItem.ItemLinks[i].Caption == "Theme Skins")
-                {
-                    skinBarSubItem.ItemLinks[i].Visible = false;
-                }
-            }
-        }
+        
 
         private void barStaticItem1_ItemClick(object sender, ItemClickEventArgs e)
         {
@@ -300,29 +263,69 @@ namespace Mihoyo_Tools {
 
             }
              * **/
-            //AE72DEEE2BDF489DACC17D39D8D2C65E
-            //XtraMessageBox.Show(up.GetUpdateVer("AE72DEEE2BDF489DACC17D39D8D2C65E"));
-            string ver = up.GetUpdateVer("AE72DEEE2BDF489DACC17D39D8D2C65E");
-            if (ver == GlobalVar.VerContrast)
+            string _Number = up.GetUpdateNumberOfVisits(GlobalVar.id, GlobalVar.key);
+            int NumberOfVisits = int.Parse(_Number)/6;
+            Soft_Number.Caption = $"  软件访问次数： {NumberOfVisits} （非实时数据） ";
+            string DowwnloadLink = up.GetUpdateDownloadLink(GlobalVar.id, GlobalVar.key);
+            Version UpdateVer = new Version(up.GetUpdateVersionNumber(GlobalVar.id,GlobalVar.key));
+            Version loaclVer = new Version(GlobalVar.VerContrast);
+            if (UpdateVer > loaclVer)
             {
-                return;
-            }
-            else
-            {
-                DialogResult result = XtraMessageBox.Show(up.GetUpdateInformation("AE72DEEE2BDF489DACC17D39D8D2C65E"), "发现新版本", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                
+                DialogResult result = XtraMessageBox.Show(up.GetUpdateVersionInformation(GlobalVar.id,GlobalVar.key), "发现新版本", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                 // 判断用户的点击结果
                 if (result == DialogResult.OK)
                 {
-                    System.Diagnostics.Process.Start("https://www.123912.com/s/b6X3jv-wNtU3");
-                    //System.Diagnostics.Process.Start("https://www.123865.com/s/b6X3jv-wNtU3");
+                    System.Diagnostics.Process.Start(DowwnloadLink);
                 }
                 else if (result == DialogResult.Cancel)
                 {
                     return;
                 }
+                
+            }
+            else
+            {
+                
+                Version LocalUsmVer = new Version(INIFile.getString("Ver", "version", "", GlobalVar.UsmVer));
+                
+                string CloudVariables = up.GetUpdateCloudVariables(GlobalVar.id, GlobalVar.key);
+                JArray jsonArray = JArray.Parse(CloudVariables);// 动态解析JSON
+                List<KeyValuePair<string, string>> configList = new List<KeyValuePair<string, string>>();
+
+                foreach (JObject item in jsonArray)
+                {
+                    string CloudKey = item["key"].ToString();
+                    string CloudValue = item["value"].ToString();
+                    configList.Add(new KeyValuePair<string, string>(CloudKey, CloudValue));
+                }
+                var _UsmKey = configList.FirstOrDefault(p => p.Key == "UpdateUsmKeyVer");
+                if(_UsmKey.Value!= null)
+                {
+                    Version UpdateUsmKey = new Version(_UsmKey.Value);
+
+                    if (UpdateUsmKey > LocalUsmVer)
+                    {
+                        
+                        XtraMessageBox.Show("服务端有新 Key \n\n请前往【关于】页面 \n\n点击【更新 Key】按钮获取最新 Key", GlobalVar.AuthorName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        
+                        return;
+                    }
+
+                }
+                else
+                {
+                    return;
+                }
+
             }
             
         }
+
+       
     }
 
 }

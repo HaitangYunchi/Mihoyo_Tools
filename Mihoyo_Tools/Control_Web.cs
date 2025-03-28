@@ -11,10 +11,10 @@ using DevExpress.XtraEditors;
 
 namespace Mihoyo_Tools
 {
-    public partial class Control_Mihoyo_resources : DevExpress.XtraEditors.XtraUserControl
+    public partial class Control_Web : DevExpress.XtraEditors.XtraUserControl
     {
 
-        public Control_Mihoyo_resources()
+        public Control_Web()
         {
             InitializeComponent();
         }
@@ -25,12 +25,7 @@ namespace Mihoyo_Tools
         }
         private void Control_Mihoyo_resources_Load(object sender, EventArgs e)
         {
-            string url = "files.hk4e.com";
-            if (!url.StartsWith("http://") && !url.StartsWith("https://"))
-            {
-                url = "http://" + url;
-            }
-            webView21.Source = new Uri(url);
+            webView21.Source = new Uri(GlobalVar.Control_Web);
             
         }
     }

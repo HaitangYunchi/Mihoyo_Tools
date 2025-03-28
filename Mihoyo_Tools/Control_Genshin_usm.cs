@@ -129,7 +129,7 @@ namespace Mihoyo_Tools
    
         private void simpleButton_Out_Click(object sender, EventArgs e)
         {
-            progressBar.Value = 100;
+            //progressBar.Value = 100;
             backgroundWorker_Game_path.RunWorkerAsync();
 
         }

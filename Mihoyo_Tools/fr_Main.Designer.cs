@@ -52,6 +52,7 @@
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
             this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
             this.barStaticItem_Time = new DevExpress.XtraBars.BarStaticItem();
+            this.Soft_Number = new DevExpress.XtraBars.BarStaticItem();
             this.barStaticItem_Ver = new DevExpress.XtraBars.BarStaticItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -228,8 +229,9 @@
             this.barHeaderItem1,
             this.barStaticItem2,
             this.barStaticItem_Time,
-            this.barStaticItem_Ver});
-            this.barManager1.MaxItemId = 5;
+            this.barStaticItem_Ver,
+            this.Soft_Number});
+            this.barManager1.MaxItemId = 6;
             this.barManager1.StatusBar = this.bar3;
             // 
             // bar3
@@ -243,6 +245,7 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem2),
             new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem_Time),
+            new DevExpress.XtraBars.LinkPersistInfo(this.Soft_Number),
             new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem_Ver)});
             this.bar3.OptionsBar.AllowQuickCustomization = false;
             this.bar3.OptionsBar.DrawDragBorder = false;
@@ -268,6 +271,12 @@
             this.barStaticItem_Time.Caption = "  当前时间：";
             this.barStaticItem_Time.Id = 3;
             this.barStaticItem_Time.Name = "barStaticItem_Time";
+            // 
+            // Soft_Number
+            // 
+            this.Soft_Number.Caption = "  截止昨日软件访问次数：";
+            this.Soft_Number.Id = 5;
+            this.Soft_Number.Name = "Soft_Number";
             // 
             // barStaticItem_Ver
             // 
@@ -384,5 +393,6 @@
         private DevExpress.XtraBars.BarStaticItem barStaticItem_Time;
         private DevExpress.XtraBars.BarStaticItem barStaticItem_Ver;
         private DevExpress.XtraBars.Bar bar1;
+        private DevExpress.XtraBars.BarStaticItem Soft_Number;
     }
 }

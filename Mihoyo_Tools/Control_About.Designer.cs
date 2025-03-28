@@ -62,6 +62,7 @@
             this.lblOSVersion = new DevExpress.XtraEditors.LabelControl();
             this.lblOSName = new DevExpress.XtraEditors.LabelControl();
             this.ChecUpde = new DevExpress.XtraEditors.SimpleButton();
+            this.backgroundWorker_ChecUpde = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_WinXin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -405,9 +406,14 @@
             this.ChecUpde.Location = new System.Drawing.Point(687, 708);
             this.ChecUpde.Name = "ChecUpde";
             this.ChecUpde.Size = new System.Drawing.Size(111, 23);
-            this.ChecUpde.TabIndex = 4;
+            this.ChecUpde.TabIndex = 9;
             this.ChecUpde.Text = "检查软件更新";
             this.ChecUpde.Click += new System.EventHandler(this.ChecUpde_Click);
+            // 
+            // backgroundWorker_ChecUpde
+            // 
+            this.backgroundWorker_ChecUpde.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker_ChecUpde_DoWork);
+            this.backgroundWorker_ChecUpde.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker_ChecUpde_RunWorkerCompleted);
             // 
             // Control_About
             // 
@@ -490,5 +496,6 @@
         private DevExpress.XtraEditors.LabelControl lblOSVersion;
         private DevExpress.XtraEditors.LabelControl lblOSName;
         private DevExpress.XtraEditors.SimpleButton ChecUpde;
+        private System.ComponentModel.BackgroundWorker backgroundWorker_ChecUpde;
     }
 }

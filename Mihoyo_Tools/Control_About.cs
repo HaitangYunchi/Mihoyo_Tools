@@ -19,20 +19,22 @@ using System.Management;
 using Timer = System.Windows.Forms.Timer;
 using SharpDX.DXGI;
 using Microsoft.Win32;
-using UpdateHaiTang;
+using HaiTangUpdate;
+using Newtonsoft.Json.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace Mihoyo_Tools
 {
     public partial class Control_About : DevExpress.XtraEditors.XtraUserControl
     {
-        UpdateHaiTang.Update up = new UpdateHaiTang.Update();
+        HaiTangUpdate.Update up = new HaiTangUpdate.Update();
+
         private readonly PerformanceCounter cpuCounter = new PerformanceCounter("Processor", "% Processor Time", "_Total");
         private readonly Timer updateTimer = new Timer();
         private WebClient client;
         public Control_About()
         {
             InitializeComponent();
-            GetSystemSummary();
             InitializeHardwareInfo();
             SetupTimer();
         }
@@ -117,7 +119,26 @@ namespace Mihoyo_Tools
                     if (System.IO.File.Exists(path))
                     {
                         System.IO.File.Copy(path, SaveFilesName, true);
-                        XtraMessageBox.Show("已更新 Key 到最新版","成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    string CloudVariables = up.GetUpdateCloudVariables(GlobalVar.id, GlobalVar.key);
+                    JArray jsonArray = JArray.Parse(CloudVariables);// 动态解析JSON
+                    List<KeyValuePair<string, string>> configList = new List<KeyValuePair<string, string>>();
+
+                    foreach (JObject item in jsonArray)
+                    {
+                        string CloudKey = item["key"].ToString();
+                        string CloudValue = item["value"].ToString();
+                        configList.Add(new KeyValuePair<string, string>(CloudKey, CloudValue));
+                    }
+                    var _UsmKey = configList.FirstOrDefault(p => p.Key == "UpdateUsmKeyVer");
+                    if (_UsmKey.Value != null)
+                    {
+                        INIFile.writeString("Ver", "version", _UsmKey.Value, GlobalVar.UsmVer);
+                        XtraMessageBox.Show("已更新 Key 到最新版", "成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        return;
                     }
                 }
                 //progressBar1.Value = 0;
@@ -147,6 +168,7 @@ namespace Mihoyo_Tools
             GetMemoryInfo();
             // 显卡信息
             GetGpuInfo();
+            GetSystemSummary();
         }
 
         private void GetCpuInfo()
@@ -358,26 +380,53 @@ namespace Mihoyo_Tools
 
         private void ChecUpde_Click(object sender, EventArgs e)
         {
-            string ver = up.GetUpdateVer("AE72DEEE2BDF489DACC17D39D8D2C65E");
-            if (ver == GlobalVar.VerContrast)
+            backgroundWorker_ChecUpde.RunWorkerAsync();   
+        }
+
+        private void backgroundWorker_ChecUpde_DoWork(object sender, DoWorkEventArgs e)
+        {
+            string DowwnloadLink = up.GetUpdateDownloadLink(GlobalVar.id, GlobalVar.key);
+            Version UpdateVer = new Version(up.GetUpdateVersionNumber(GlobalVar.id, GlobalVar.key));
+            Version loaclVer = new Version(GlobalVar.VerContrast);
+            if (UpdateVer > loaclVer)
             {
-                XtraMessageBox.Show("当前版本已是最新版，无需更新", "无需更新", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-            else
-            {
-                DialogResult result = XtraMessageBox.Show(up.GetUpdateInformation("AE72DEEE2BDF489DACC17D39D8D2C65E"), "发现新版本", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                DialogResult result = XtraMessageBox.Show(up.GetUpdateVersionInformation(GlobalVar.id, GlobalVar.key), "发现新版本", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                 // 判断用户的点击结果
                 if (result == DialogResult.OK)
                 {
-                    System.Diagnostics.Process.Start("https://www.123912.com/s/b6X3jv-wNtU3");
-                    //System.Diagnostics.Process.Start("https://www.123865.com/s/b6X3jv-wNtU3");
+                    System.Diagnostics.Process.Start(DowwnloadLink);
                 }
                 else if (result == DialogResult.Cancel)
                 {
                     return;
                 }
+
             }
+            else
+            {
+                DialogResult result = XtraMessageBox.Show("当前版本已是最新版", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+        }
+
+        private void backgroundWorker_ChecUpde_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            this.Invoke((MethodInvoker)delegate
+            {
+                if (e.Error != null)
+                {
+                    XtraMessageBox.Show("网络不可用，请检查网络后重试！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (e.Cancelled)
+                {
+                    XtraMessageBox.Show("用户已取消", "取消", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    return;
+                }
+
+            });
         }
     }
 }
