@@ -237,6 +237,15 @@ namespace Mihoyo_Tools {
             _Web_Browser.Show();
             fr_Main_Container.Controls.Add(_Web_Browser);
         }
-  
+
+        private void barStaticItem2_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            string url = "http://space.bilibili.com/3493128132626725";
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = url,
+                UseShellExecute = true
+            });
+        }
     }
 }

@@ -153,6 +153,7 @@
             resources.ApplyResources(barStaticItem2, "barStaticItem2");
             barStaticItem2.Id = 1;
             barStaticItem2.Name = "barStaticItem2";
+            barStaticItem2.ItemClick += barStaticItem2_ItemClick;
             // 
             // barStaticItem_Time
             // 

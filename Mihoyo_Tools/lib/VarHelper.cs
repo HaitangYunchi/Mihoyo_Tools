@@ -60,7 +60,7 @@ namespace Mihoyo_Tools.lib
             public static string Games_path = "";           // 游戏目录
             public static string USM_Files = "";            // usm 名称
             public static string SelectedFolder;            // 原神 YuanShen.exe 所在目录
-            public static string usmkey= "5.4";
+            public static string usmkey= "5.5.0";
             public static string VersionPath = StrPath+ @"data\versions.json";
 
             /// <summary>
