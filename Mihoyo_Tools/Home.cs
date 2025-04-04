@@ -245,10 +245,12 @@ namespace Mihoyo_Tools
         private async void Check_update_Click(object sender, EventArgs e)
         {
             await CheckForUpdatesAsync();
+            await up.MessageSend(id, "要发送的消息");
         }
         // 检查更新（异步）
         public async Task CheckForUpdatesAsync(bool silent = false)
         {
+            
             Assembly assembly = Assembly.GetExecutingAssembly();
             try
             {

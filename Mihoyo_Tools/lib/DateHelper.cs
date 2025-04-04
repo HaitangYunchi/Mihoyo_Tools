@@ -32,7 +32,7 @@ using System.Threading.Tasks;
 
 namespace Mihoyo_Tools.lib
 {
-    class Date
+    class DateHelper
     {
         public static class ChinaDate
         {

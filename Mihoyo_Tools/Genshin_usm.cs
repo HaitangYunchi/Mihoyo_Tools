@@ -209,7 +209,7 @@ namespace Mihoyo_Tools
                 try
                 {
                     // 异步执行命令并实时输出
-                    await CmdHelper.ExecuteGutscenesAsync(
+                    await CommandHelper.ExecuteGutscenesAsync(
                         lib.VarHelper.Var.Command_cmd.Trim(),
                         output =>
                         {
@@ -262,7 +262,7 @@ namespace Mihoyo_Tools
                 try
                 {
                     // 异步执行命令并实时输出
-                    await CmdHelper.ExecuteGutscenesAsync(
+                    await CommandHelper.ExecuteGutscenesAsync(
                         lib.VarHelper.Var.Command_cmd.Trim(),
                         output =>
                         {
@@ -359,7 +359,7 @@ namespace Mihoyo_Tools
                     try
                     {
                         // 异步执行命令并实时输出
-                        await lib.CmdHelper.ExecuteGutscenesAsync(demuxUsm.Trim(), output =>
+                        await lib.CommandHelper.ExecuteGutscenesAsync(demuxUsm.Trim(), output =>
                             {
                                 // 跨线程更新UI
                                 this.Invoke((Action)(() =>
@@ -392,7 +392,7 @@ namespace Mihoyo_Tools
                     try
                     {
                         // 异步执行命令并实时输出
-                        await lib.CmdHelper.ExecuteFFmpegAsync(mpegcommand.Trim(), output =>
+                        await lib.CommandHelper.ExecuteFFmpegAsync(mpegcommand.Trim(), output =>
                             {
                                 // 跨线程更新UI
                                 this.Invoke((Action)(() =>

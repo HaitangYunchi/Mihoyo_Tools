@@ -32,7 +32,7 @@ using System.Threading.Tasks;
 namespace Mihoyo_Tools.lib
 {
     //lib.VarHelper.Var.GICutscents_path
-    class CmdHelper
+    class CommandHelper
     {
         /// <summary>
         /// Gutscenes程序命令

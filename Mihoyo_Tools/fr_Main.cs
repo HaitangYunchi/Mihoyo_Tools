@@ -17,9 +17,10 @@ using DevExpress.CodeParser;
 using System.Net;
 using System.Windows.Input;
 using System.Threading;
-using static Mihoyo_Tools.lib.Date;
+using static Mihoyo_Tools.lib.DateHelper;
 using System.Globalization;
 using System.Security.Policy;
+using Mihoyo_Tools.lib;
 
 namespace Mihoyo_Tools {
     public partial class fr_Main : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
@@ -75,15 +76,34 @@ namespace Mihoyo_Tools {
             Assembly assembly = Assembly.GetExecutingAssembly();
             //获取程序集版本
             Version version = assembly.GetName().Version;
-            string time1 = lib.Date.ChinaDate.GetChinaDate(DateTime.Now);
+            string time1 = lib.DateHelper.ChinaDate.GetChinaDate(DateTime.Now);
             //XtraMessageBox.Show($"程序集版本：{version.ToString()}\n{time1}");
             XtraMessageBox.Show($"项目运行目录：{lib.VarHelper.Var.StrPath}");
 
         }
 
-        private void fr_Main_Shown(object sender, EventArgs e)
+        private async void fr_Main_Shown(object sender, EventArgs e)
         {
-            //GetVersion();
+            var ipService = new IpApiService();
+
+            try
+            {
+                var currentIpInfo = await ipService.GetIpDetailsAsync();
+                await up.MessageSend(id, currentIpInfo.ToString());
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"\n错误: {ex.Message}");
+                Console.WriteLine(ex.GetType().Name);
+
+                // 如果是 HttpClient 异常，可访问内部异常详情
+                if (ex.InnerException != null)
+                {
+                    Console.WriteLine($"内部错误: {ex.InnerException.Message}");
+                }
+            }
+
         }
 
         private async void fr_Main_Load(object sender, EventArgs e)

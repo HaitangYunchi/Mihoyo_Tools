@@ -106,6 +106,7 @@ namespace Mihoyo_Tools.lib
             #endregion
             public static string Control_Web = "http://space.bilibili.com/3493128132626725";
             //public static string id = "AE72DEEE2BDF489DACC17D39D8D2C65E";//测试的时候换这个 ID
+
             public static string id = "1B3BBA3F795047C5B4C278B2CE28A17B";//软件ID 不要修改
             public static string key = "C727432CEB7047B580131B53D5C7FD9F";
         }
