@@ -42,6 +42,8 @@ namespace Mihoyo_Tools
             lib.VarHelper.Var.Output_path = lib.JsonHelper.ReadJson(SettingFile, JsonData).Output_path;
             simpleButton_Stop.Enabled = false;
             simpleButton_Out.Text = "普通话音轨导出";
+            lib.JsonHelper.MergeJson(SettingFile, new { GICutscennts_path = Gutscenes_path.Text });
+            lib.JsonHelper.MergeJson(SettingFile, new { FFmpeg_path = FFmpeg_path.Text });
         }
 
         private void radioButton_CN_CheckedChanged(object sender, EventArgs e)
