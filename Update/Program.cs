@@ -63,7 +63,7 @@ namespace Update
                 foreach (var process in Process.GetProcessesByName(processName))
                 {
                     process.Kill();
-                    process.WaitForExit(3000);
+                    process.WaitForExit(5000);
                 }
                 //MessageBox.Show($"{extractDir}\n{workingDir}");
                 // 4. 复制文件
@@ -110,12 +110,18 @@ namespace Update
 
                     // 覆盖现有文件
                     File.Copy(filePath, destPath, true);
+                    //MessageBox.Show($"源路径: {filePath}, 目标路径: {destPath}");
                 }
-                catch (IOException)
+                catch (IOException ex)
                 {
+                    MessageBox.Show($"IO异常: {ex.Message}");
                     // 如果文件正在使用，等待后重试
-                    Thread.Sleep(500);
+                    Thread.Sleep(1000);
                     File.Copy(filePath, destPath, true);
+                }
+                catch (UnauthorizedAccessException ex)
+                {
+                    MessageBox.Show($"权限不足: {ex.Message}");
                 }
             }
         }
