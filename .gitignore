@@ -146,6 +146,8 @@ _TeamCity*
 coverage*.json
 coverage*.xml
 coverage*.info
+AesHelper.cs
+VarHelper.cs
 
 # Visual Studio code coverage results
 *.coverage

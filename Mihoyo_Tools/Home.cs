@@ -166,7 +166,7 @@ namespace Mihoyo_Tools
                 Version localVersion = new(lib.JsonHelper.ReadJson(SettingFile, JsonData).UsmKey); // 当前usm版本
 
                 // 获取服务器版本
-                Version UpdateVersion = new(up.GetUpdateCloudVariables(id, key, "UpdateUsmKeyVer"));
+                Version UpdateVersion = new(await Task.Run(() => up.GetUpdateCloudVariables(id, key, "UpdateUsmKeyVer")));
 
                 if (UpdateVersion > localVersion)
                 {
@@ -184,9 +184,9 @@ namespace Mihoyo_Tools
                     MessageBox.Show("当前已是最新 Key", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show($"更新失败: 无法访问服务器！\n                 请检查网络是否畅通。", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"更新失败: 无法访问服务器！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private async Task DownloadVersion()
@@ -225,7 +225,7 @@ namespace Mihoyo_Tools
                     return;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 string VersionFile = lib.VarHelper.Var.VersionPath;
                 string Jsonback = lib.VarHelper.Var.StrPath + @"\data\versions.json.back";// 新增备份老 version.json
@@ -283,7 +283,7 @@ namespace Mihoyo_Tools
                 }
                 await CheckVersionUpdate(true);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 if (!silent)
                 {
@@ -337,7 +337,7 @@ namespace Mihoyo_Tools
                 // 下载完成后启动更新程序
                 StartUpdateProcess(tempFile);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 XtraMessageBox.Show($"下载更新失败: 网络错误！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

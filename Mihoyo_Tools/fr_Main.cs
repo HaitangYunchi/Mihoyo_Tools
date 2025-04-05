@@ -108,6 +108,7 @@ namespace Mihoyo_Tools {
 
         private async void fr_Main_Load(object sender, EventArgs e)
         {
+            
             _home();
             Assembly assembly = typeof(Program).Assembly;
             AssemblyName name = new AssemblyName(assembly.FullName);
@@ -165,7 +166,7 @@ namespace Mihoyo_Tools {
                 int NumberOfVisits = int.Parse(_Number);
                 Soft_Number.Caption = $"  软件访问次数： {NumberOfVisits} （非实时数据） ";
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }

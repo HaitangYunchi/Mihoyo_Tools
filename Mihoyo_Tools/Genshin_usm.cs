@@ -232,7 +232,7 @@ namespace Mihoyo_Tools
                             }));
                         });
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     ScrollToEnd(memoEdit_out);
                 }
@@ -286,7 +286,7 @@ namespace Mihoyo_Tools
                         });
 
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     ScrollToEnd(memoEdit_out);
                 }
@@ -381,7 +381,7 @@ namespace Mihoyo_Tools
                             });
 
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
                         ScrollToEnd(memoEdit_out);
                     }
@@ -414,7 +414,7 @@ namespace Mihoyo_Tools
                             });
 
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
                         ScrollToEnd(memoEdit_out);
                     }

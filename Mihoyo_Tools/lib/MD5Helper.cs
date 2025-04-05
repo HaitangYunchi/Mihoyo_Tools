@@ -52,7 +52,7 @@ namespace Mihoyo_Tools.lib
                     return BitConverter.ToString(hashBytes).Replace("-", "").ToLower();
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //MessageBox.Show($"计算 MD5 时出错: {ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return string.Empty;
