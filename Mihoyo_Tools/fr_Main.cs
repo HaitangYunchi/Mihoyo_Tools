@@ -107,7 +107,7 @@ namespace Mihoyo_Tools {
 
         private async void fr_Main_Load(object sender, EventArgs e)
         {
-            
+
             _home();
             Assembly assembly = typeof(Program).Assembly;
             AssemblyName name = new AssemblyName(assembly.FullName);
@@ -172,12 +172,10 @@ namespace Mihoyo_Tools {
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            //ChineseLunisolarCalendar ChineseCalendar = new ChineseLunisolarCalendar();
-            DateTime now = DateTime.Now;
-            string[] Day = new string[] { "星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六" };
-            var week = Day[Convert.ToInt16(DateTime.Now.DayOfWeek)];
-            //toolStripStatusLabel3.Text = $" 当前时间：{now:yyyy-MM-dd HH:mm:ss}  {week}   " + ChinaDate.GetChinaDate(DateTime.Now); 
-            barStaticItem_Time.Caption = $" 当前时间：{now:yyyy-MM-dd HH:mm:ss}  {week}   " + DateHelper.ChinaDate.GetChinaDate(DateTime.Now) + "      ";
+            DateTime Now = DateTime.Now;
+            string[] Day = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+            var week = Day[Convert.ToInt16(Now.DayOfWeek)];
+            barStaticItem_Time.Caption = $" 当前时间：{Now:yyyy-MM-dd HH:mm:ss}  {week}   " + DateHelper.ChinaDate.GetChinaDate(Now) + "      ";
         }
         private void Home_Click(object sender, EventArgs e)
         {
@@ -261,6 +259,16 @@ namespace Mihoyo_Tools {
         private void barStaticItem2_ItemClick(object sender, ItemClickEventArgs e)
         {
             string url = "http://space.bilibili.com/3493128132626725";
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = url,
+                UseShellExecute = true
+            });
+        }
+
+        private void barStaticItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            string url = "http://gitee.com/haitangyunchi/mihoyo_tools";
             Process.Start(new ProcessStartInfo
             {
                 FileName = url,

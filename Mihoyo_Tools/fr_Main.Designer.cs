@@ -147,6 +147,7 @@
             resources.ApplyResources(barStaticItem1, "barStaticItem1");
             barStaticItem1.Id = 0;
             barStaticItem1.Name = "barStaticItem1";
+            barStaticItem1.ItemClick += barStaticItem1_ItemClick;
             // 
             // barStaticItem2
             // 

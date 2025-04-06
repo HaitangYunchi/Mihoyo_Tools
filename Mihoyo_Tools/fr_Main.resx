@@ -380,7 +380,7 @@
     <value>  当前时间：</value>
   </data>
   <data name="Soft_Number.Caption" xml:space="preserve">
-    <value>  软件使用数：</value>
+    <value>  软件访问次数： {获取失败} （非实时数据） </value>
   </data>
   <data name="barStaticItem_Ver.Caption" xml:space="preserve">
     <value>版本1.0</value>
