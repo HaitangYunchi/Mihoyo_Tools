@@ -24,73 +24,73 @@ namespace Mihoyo_Tools
 {
     public partial class Genshin_usm : DevExpress.XtraEditors.XtraUserControl
     {
-        string SettingFile = lib.VarHelper.Var.Setting;
+        string SettingFile = VarHelper.Var.Setting;
 
         public Action<MemoEdit> ScrollMemoToEnd { get; private set; }
 
         public Genshin_usm()
         {
             InitializeComponent();
-            var JsonData = new lib.JsonHelper.JsonData();
-            Gutscenes_path.Text = lib.VarHelper.Var.GICutscents_path;
-            FFmpeg_path.Text = lib.VarHelper.Var.Ffmpeg_path;
-            buttonEdit_Game_path.Text = lib.JsonHelper.ReadJson(SettingFile, JsonData).Games_path;
-            lib.VarHelper.Var.Games_path = lib.JsonHelper.ReadJson(SettingFile, JsonData).Games_path;
-            buttonEdit_usm_path.Text = lib.JsonHelper.ReadJson(SettingFile, JsonData).USM_path;
-            lib.VarHelper.Var.USM_path = lib.JsonHelper.ReadJson(SettingFile, JsonData).USM_path;
-            buttonEdit_Out_path.Text = lib.JsonHelper.ReadJson(SettingFile, JsonData).Output_path;
-            lib.VarHelper.Var.Output_path = lib.JsonHelper.ReadJson(SettingFile, JsonData).Output_path;
+            var JsonData = new JsonHelper.JsonData();
+            Gutscenes_path.Text = VarHelper.Var.GICutscents_path;
+            FFmpeg_path.Text = VarHelper.Var.Ffmpeg_path;
+            buttonEdit_Game_path.Text = JsonHelper.ReadJson(SettingFile, JsonData).Games_path;
+            VarHelper.Var.Games_path = JsonHelper.ReadJson(SettingFile, JsonData).Games_path;
+            buttonEdit_usm_path.Text = JsonHelper.ReadJson(SettingFile, JsonData).USM_path;
+            VarHelper.Var.USM_path = JsonHelper.ReadJson(SettingFile, JsonData).USM_path;
+            buttonEdit_Out_path.Text = JsonHelper.ReadJson(SettingFile, JsonData).Output_path;
+            VarHelper.Var.Output_path = JsonHelper.ReadJson(SettingFile, JsonData).Output_path;
             simpleButton_Stop.Enabled = false;
             simpleButton_Out.Text = "普通话音轨导出";
-            lib.JsonHelper.MergeJson(SettingFile, new { GICutscennts_path = Gutscenes_path.Text });
-            lib.JsonHelper.MergeJson(SettingFile, new { FFmpeg_path = FFmpeg_path.Text });
+            JsonHelper.MergeJson(SettingFile, new { GICutscennts_path = Gutscenes_path.Text });
+            JsonHelper.MergeJson(SettingFile, new { FFmpeg_path = FFmpeg_path.Text });
         }
 
         private void radioButton_CN_CheckedChanged(object sender, EventArgs e)
         {
             simpleButton_Out.Text = "普通话音轨导出";
-            lib.VarHelper.Var.Language = 0;
+            VarHelper.Var.Language = 0;
             simpleButton_Stop.Enabled = false;
         }
 
         private void radioButton_EN_CheckedChanged(object sender, EventArgs e)
         {
             simpleButton_Out.Text = "English Audio Track";
-            lib.VarHelper.Var.Language = 1;
+            VarHelper.Var.Language = 1;
             simpleButton_Stop.Enabled = false;
         }
 
         private void radioButton_JP_CheckedChanged(object sender, EventArgs e)
         {
             simpleButton_Out.Text = "日本語トラック";
-            lib.VarHelper.Var.Language = 2;
+            VarHelper.Var.Language = 2;
             simpleButton_Stop.Enabled = false;
         }
 
         private void radioButton_KR_CheckedChanged(object sender, EventArgs e)
         {
             simpleButton_Out.Text = "한국어 더빙 트랙";
-            lib.VarHelper.Var.Language = 3;
+            VarHelper.Var.Language = 3;
             simpleButton_Stop.Enabled = false;
         }
 
         private void radioButton_Game_path_CheckedChanged(object sender, EventArgs e)
         {
             simpleButton_Out.Text = "游戏目录导出(多轨)";
-            lib.VarHelper.Var.Language = 0;
+            VarHelper.Var.Language = 0;
             simpleButton_Stop.Enabled = true;
         }
 
         private void radioButton_usm_path_CheckedChanged(object sender, EventArgs e)
         {
             simpleButton_Out.Text = "自定义目录导出(多轨)";
-            lib.VarHelper.Var.Language = 0;
+            VarHelper.Var.Language = 0;
             simpleButton_Stop.Enabled = true;
         }
 
         private void buttonEdit_Game_path_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            var JsonData = new lib.JsonHelper.JsonData();
+            var JsonData = new JsonHelper.JsonData();
             // 游戏目录
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Title = "选择 YuanShen.exe";
@@ -100,15 +100,15 @@ namespace Mihoyo_Tools
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string selectedFile = openFileDialog.FileName;
-                lib.VarHelper.Var.SelectedFolder = System.IO.Path.GetDirectoryName(selectedFile);
-                buttonEdit_Game_path.Text = lib.VarHelper.Var.SelectedFolder;
-                lib.VarHelper.Var.Games_path = lib.VarHelper.Var.SelectedFolder;
-                lib.JsonHelper.MergeJson(SettingFile, new { Games_path = lib.VarHelper.Var.Games_path });
+                VarHelper.Var.SelectedFolder = System.IO.Path.GetDirectoryName(selectedFile);
+                buttonEdit_Game_path.Text = VarHelper.Var.SelectedFolder;
+                VarHelper.Var.Games_path = VarHelper.Var.SelectedFolder;
+                JsonHelper.MergeJson(SettingFile, new { Games_path = VarHelper.Var.Games_path });
             }
             else
             {
                 buttonEdit_Game_path.Text = "";
-                lib.VarHelper.Var.Games_path = buttonEdit_Game_path.Text;
+                VarHelper.Var.Games_path = buttonEdit_Game_path.Text;
             }
         }
 
@@ -119,8 +119,8 @@ namespace Mihoyo_Tools
             if (f.ShowDialog() == DialogResult.OK)
             {
                 buttonEdit_usm_path.Text = f.SelectedPath;
-                lib.VarHelper.Var.USM_path = buttonEdit_usm_path.Text;
-                lib.JsonHelper.MergeJson(SettingFile, new { USM_path = buttonEdit_usm_path.Text });
+                VarHelper.Var.USM_path = buttonEdit_usm_path.Text;
+                JsonHelper.MergeJson(SettingFile, new { USM_path = buttonEdit_usm_path.Text });
             }
         }
 
@@ -130,9 +130,9 @@ namespace Mihoyo_Tools
             FolderBrowserDialog f = new FolderBrowserDialog();
             if (f.ShowDialog() == DialogResult.OK)
             {
-                lib.VarHelper.Var.Output_path = f.SelectedPath;
-                buttonEdit_Out_path.Text = lib.VarHelper.Var.Output_path;//返回文件夹路径
-                lib.JsonHelper.MergeJson(SettingFile, new { Output_path = lib.VarHelper.Var.Output_path });
+                VarHelper.Var.Output_path = f.SelectedPath;
+                buttonEdit_Out_path.Text = VarHelper.Var.Output_path;//返回文件夹路径
+                JsonHelper.MergeJson(SettingFile, new { Output_path = VarHelper.Var.Output_path });
             }
         }
 
@@ -141,14 +141,14 @@ namespace Mihoyo_Tools
             // 选择USM 文件
             if (buttonEdit_Game_path.Text == "")
             {
-                XtraMessageBox.Show("游戏目录不能为！", lib.VarHelper.Var.AuthorName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                XtraMessageBox.Show("游戏目录不能为！", VarHelper.Var.AuthorName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
                 OpenFileDialog file = new OpenFileDialog();
                 file.Title = "选择 USM文件";
                 file.Filter = "USM文件（*.usm）|*.usm";
-                file.InitialDirectory = lib.VarHelper.Var.Games_path + @"\YuanShen_Data\StreamingAssets\VideoAssets\StandaloneWindows64";
+                file.InitialDirectory = VarHelper.Var.Games_path + @"\YuanShen_Data\StreamingAssets\VideoAssets\StandaloneWindows64";
                 file.Multiselect = false;
                 if (file.ShowDialog() == DialogResult.Cancel)
                 {
@@ -156,63 +156,63 @@ namespace Mihoyo_Tools
                 }
                 else
                 {
-                    lib.VarHelper.Var.USM_Files = file.FileName;//会返回 USM 文件全路径，包含了文件名和后缀
-                    string _temp = Path.GetFileName(lib.VarHelper.Var.USM_Files);
+                    VarHelper.Var.USM_Files = file.FileName;//会返回 USM 文件全路径，包含了文件名和后缀
+                    string _temp = Path.GetFileName(VarHelper.Var.USM_Files);
                     this.buttonEdit_usm_Name.Text = _temp;//返回 USM 文件名和后缀
-                    lib.VarHelper.Var.Video_Name = Path.GetFileNameWithoutExtension(_temp);
-                    //XtraMessageBox.Show(lib.VarHelper.Var.Video_Name);
+                    VarHelper.Var.Video_Name = Path.GetFileNameWithoutExtension(_temp);
+                    //XtraMessageBox.Show(VarHelper.Var.Video_Name);
                 }
             }
         }
 
         private async void simpleButton_Out_Click(object sender, EventArgs e)
         {
-            var JsonData = new lib.JsonHelper.JsonData();
+            var JsonData = new JsonHelper.JsonData();
             ScrollToEnd(memoEdit_out); // 初始滚动到底部
             simpleButton_Out.Enabled = false;
-            string GICutscenes = lib.VarHelper.Var.GICutscents_path;
-            string ffmpeg = lib.VarHelper.Var.Ffmpeg_path;
-            string ffplay = lib.VarHelper.Var.StrPath + @"\data\ffplay.exe";
-            string version = lib.VarHelper.Var.VersionPath;
+            string GICutscenes = VarHelper.Var.GICutscents_path;
+            string ffmpeg = VarHelper.Var.Ffmpeg_path;
+            string ffplay = VarHelper.Var.StrPath + @"\data\ffplay.exe";
+            string version = VarHelper.Var.VersionPath;
             bool fileGICutscenes = File.Exists(GICutscenes);
             bool fileffmpeg = File.Exists(ffmpeg);
             bool fileffplay = File.Exists(ffplay);
             bool fileversion = File.Exists(version);
             if (fileGICutscenes == false)
             {
-                XtraMessageBox.Show("GICutscenes 文件不存在！", lib.VarHelper.Var.AuthorName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                XtraMessageBox.Show("GICutscenes 文件不存在！", VarHelper.Var.AuthorName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (fileffmpeg == false)
             {
-                XtraMessageBox.Show("FFmpge 文件不存在！", lib.VarHelper.Var.AuthorName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                XtraMessageBox.Show("FFmpge 文件不存在！", VarHelper.Var.AuthorName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (fileffplay == false)
             {
-                XtraMessageBox.Show("FFplay 文件不存在！", lib.VarHelper.Var.AuthorName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                XtraMessageBox.Show("FFplay 文件不存在！", VarHelper.Var.AuthorName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (fileversion == false)
             {
-                XtraMessageBox.Show("versions.json 文件不存在！", lib.VarHelper.Var.AuthorName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                XtraMessageBox.Show("versions.json 文件不存在！", VarHelper.Var.AuthorName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (radioButton_Game_path.Checked == true)
             {
                 if (buttonEdit_Game_path.Text == "")
                 {
-                    XtraMessageBox.Show("游戏目录不能为空！", lib.VarHelper.Var.AuthorName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    XtraMessageBox.Show("游戏目录不能为空！", VarHelper.Var.AuthorName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
                 else if (buttonEdit_Out_path.Text == "")
                 {
-                    XtraMessageBox.Show("输出目录不能为空！", lib.VarHelper.Var.AuthorName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    XtraMessageBox.Show("输出目录不能为空！", VarHelper.Var.AuthorName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
-                string usm_path = lib.VarHelper.Var.Games_path + @"\YuanShen_Data\StreamingAssets\VideoAssets\StandaloneWindows64";
-                lib.VarHelper.Var.Command_cmd = $"batchDemux \"{usm_path}\" -o \"{lib.VarHelper.Var.Output_path}\" -m -e ffmpeg";
+                string usm_path = VarHelper.Var.Games_path + @"\YuanShen_Data\StreamingAssets\VideoAssets\StandaloneWindows64";
+                VarHelper.Var.Command_cmd = $"batchDemux \"{usm_path}\" -o \"{VarHelper.Var.Output_path}\" -m -e ffmpeg";
                 try
                 {
                     // 异步执行命令并实时输出
                     await CommandHelper.ExecuteGutscenesAsync(
-                        lib.VarHelper.Var.Command_cmd.Trim(),
+                        VarHelper.Var.Command_cmd.Trim(),
                         output =>
                         {
                             // 跨线程更新UI
@@ -244,28 +244,28 @@ namespace Mihoyo_Tools
                     // 重新启用按钮
                     simpleButton_Out.Enabled = true;
                 }
-                XtraMessageBox.Show($"全部处理完成！", lib.VarHelper.Var.AuthorName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Process.Start("explorer.exe", lib.VarHelper.Var.Output_path);
+                XtraMessageBox.Show($"全部处理完成！", VarHelper.Var.AuthorName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Process.Start("explorer.exe", VarHelper.Var.Output_path);
             }
             else if (radioButton_usm_path.Checked == true)
             {
                 if (buttonEdit_usm_path.Text == "")
                 {
-                    XtraMessageBox.Show("自定义usm目录不能为空！", lib.VarHelper.Var.AuthorName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    XtraMessageBox.Show("自定义usm目录不能为空！", VarHelper.Var.AuthorName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
                 else if (buttonEdit_Out_path.Text == "")
                 {
-                    XtraMessageBox.Show("输出目录不能为空！", lib.VarHelper.Var.AuthorName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    XtraMessageBox.Show("输出目录不能为空！", VarHelper.Var.AuthorName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
-                string _usm_path = lib.JsonHelper.ReadJson(SettingFile, JsonData).USM_path;
-                lib.VarHelper.Var.Command_cmd = $"batchDemux \"{_usm_path}\" -o \"{lib.VarHelper.Var.Output_path}\" -m -e ffmpeg";
+                string _usm_path = JsonHelper.ReadJson(SettingFile, JsonData).USM_path;
+                VarHelper.Var.Command_cmd = $"batchDemux \"{_usm_path}\" -o \"{VarHelper.Var.Output_path}\" -m -e ffmpeg";
                 try
                 {
                     // 异步执行命令并实时输出
                     await CommandHelper.ExecuteGutscenesAsync(
-                        lib.VarHelper.Var.Command_cmd.Trim(),
+                        VarHelper.Var.Command_cmd.Trim(),
                         output =>
                         {
                             // 跨线程更新UI
@@ -299,8 +299,8 @@ namespace Mihoyo_Tools
                     simpleButton_Out.Enabled = true;
                 }
 
-                XtraMessageBox.Show($"全部处理完成！", lib.VarHelper.Var.AuthorName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Process.Start("explorer.exe", lib.VarHelper.Var.Output_path);
+                XtraMessageBox.Show($"全部处理完成！", VarHelper.Var.AuthorName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Process.Start("explorer.exe", VarHelper.Var.Output_path);
 
             }
             else
@@ -308,56 +308,56 @@ namespace Mihoyo_Tools
                 simpleButton_Stop.Enabled = false;
                 if (buttonEdit_Out_path.Text == "")
                 {
-                    XtraMessageBox.Show("输出目录不能为空！", lib.VarHelper.Var.AuthorName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    XtraMessageBox.Show("输出目录不能为空！", VarHelper.Var.AuthorName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else if (buttonEdit_Game_path.Text == "")
                 {
-                    XtraMessageBox.Show("游戏目录不能为空！", lib.VarHelper.Var.AuthorName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    XtraMessageBox.Show("游戏目录不能为空！", VarHelper.Var.AuthorName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else if (buttonEdit_usm_Name.Text == "")
                 {
-                    XtraMessageBox.Show("请选择要转换的文件！", lib.VarHelper.Var.AuthorName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    XtraMessageBox.Show("请选择要转换的文件！", VarHelper.Var.AuthorName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
                 {
                     string SetLanguage = "";
                     if (radioButton_CN.Checked == true)
                     {
-                        lib.VarHelper.Var.Language = 0;
+                        VarHelper.Var.Language = 0;
                         SetLanguage = "CN";
 
                     }
                     else if (radioButton_EN.Checked == true)
                     {
-                        lib.VarHelper.Var.Language = 1;
+                        VarHelper.Var.Language = 1;
                         SetLanguage = "EN";
                     }
                     else if (radioButton_JP.Checked == true)
                     {
-                        lib.VarHelper.Var.Language = 2;
+                        VarHelper.Var.Language = 2;
                         SetLanguage = "Jpn";
                     }
                     else if (radioButton_KR.Checked == true)
                     {
-                        lib.VarHelper.Var.Language = 3;
+                        VarHelper.Var.Language = 3;
                         SetLanguage = "Kro";
                     }
                     else
                     {
-                        lib.VarHelper.Var.Language = 0;
+                        VarHelper.Var.Language = 0;
                         SetLanguage = "CN";
                     }
-                    int _Language = lib.VarHelper.Var.Language;
-                    lib.JsonHelper.MergeJson(SettingFile, new { Language = _Language });
+                    int _Language = VarHelper.Var.Language;
+                    JsonHelper.MergeJson(SettingFile, new { Language = _Language });
 
-                    // MessageBox.Show("选择的语言：" + lib.VarHelper.Var.Out_Language);
-                    lib.VarHelper.Var.Audio_Name = lib.VarHelper.Var.Video_Name + "_" + lib.VarHelper.Var.Language + ".wav";
-                    string playName = $"{lib.VarHelper.Var.Output_path}\\{lib.VarHelper.Var.Video_Name}\\{lib.VarHelper.Var.Video_Name}_{SetLanguage}.mkv";
-                    //string demuxUsm = " demuxUsm " + "\"" + lib.VarHelper.Var.USM_Files + "\"" + " -o " + lib.VarHelper.Var.Output_path + "\\" + lib.VarHelper.Var.Video_Name;
-                    //string mpegcommand = " -i " + lib.VarHelper.Var.Output_path + "\\" + lib.VarHelper.Var.Video_Name + "\\" + lib.VarHelper.Var.Video_Name + ".ivf" + " -i " + lib.VarHelper.Var.Output_path + "\\" + lib.VarHelper.Var.Video_Name + "\\" + lib.VarHelper.Var.Audio_Name + " -c:v copy -c:a copy " + lib.VarHelper.Var.Output_path + "\\" + lib.VarHelper.Var.Video_Name + "\\" + lib.VarHelper.Var.Video_Name + "_" + SetLanguage + ".mkv";
-                    string demuxUsm = $"demuxUsm \"{lib.VarHelper.Var.USM_Files}\" -o {lib.VarHelper.Var.Output_path}\\{lib.VarHelper.Var.Video_Name}";
+                    // MessageBox.Show("选择的语言：" + VarHelper.Var.Out_Language);
+                    VarHelper.Var.Audio_Name = VarHelper.Var.Video_Name + "_" + VarHelper.Var.Language + ".wav";
+                    string playName = $"{VarHelper.Var.Output_path}\\{VarHelper.Var.Video_Name}\\{VarHelper.Var.Video_Name}_{SetLanguage}.mkv";
+                    //string demuxUsm = " demuxUsm " + "\"" + VarHelper.Var.USM_Files + "\"" + " -o " + VarHelper.Var.Output_path + "\\" + VarHelper.Var.Video_Name;
+                    //string mpegcommand = " -i " + VarHelper.Var.Output_path + "\\" + VarHelper.Var.Video_Name + "\\" + VarHelper.Var.Video_Name + ".ivf" + " -i " + VarHelper.Var.Output_path + "\\" + VarHelper.Var.Video_Name + "\\" + VarHelper.Var.Audio_Name + " -c:v copy -c:a copy " + VarHelper.Var.Output_path + "\\" + VarHelper.Var.Video_Name + "\\" + VarHelper.Var.Video_Name + "_" + SetLanguage + ".mkv";
+                    string demuxUsm = $"demuxUsm \"{VarHelper.Var.USM_Files}\" -o {VarHelper.Var.Output_path}\\{VarHelper.Var.Video_Name}";
 
-                    string mpegcommand = $"-i {lib.VarHelper.Var.Output_path}\\{lib.VarHelper.Var.Video_Name}\\{lib.VarHelper.Var.Video_Name}.ivf -i {lib.VarHelper.Var.Output_path}\\{lib.VarHelper.Var.Video_Name}\\{lib.VarHelper.Var.Audio_Name} -c:v copy -c:a copy {lib.VarHelper.Var.Output_path}\\{lib.VarHelper.Var.Video_Name}\\{lib.VarHelper.Var.Video_Name}_{SetLanguage}.mkv";
+                    string mpegcommand = $"-i {VarHelper.Var.Output_path}\\{VarHelper.Var.Video_Name}\\{VarHelper.Var.Video_Name}.ivf -i {VarHelper.Var.Output_path}\\{VarHelper.Var.Video_Name}\\{VarHelper.Var.Audio_Name} -c:v copy -c:a copy {VarHelper.Var.Output_path}\\{VarHelper.Var.Video_Name}\\{VarHelper.Var.Video_Name}_{SetLanguage}.mkv";
                     try
                     {
                         // 异步执行命令并实时输出
@@ -412,7 +412,7 @@ namespace Mihoyo_Tools
                                     ScrollToEnd(memoEdit_out);
                                 }));
                             });
-
+                        
                     }
                     catch (Exception)
                     {
@@ -428,7 +428,7 @@ namespace Mihoyo_Tools
                     }
                     try
                     {
-                        DirectoryInfo di = new DirectoryInfo(lib.VarHelper.Var.Output_path + "\\" + lib.VarHelper.Var.Video_Name);
+                        DirectoryInfo di = new DirectoryInfo(VarHelper.Var.Output_path + "\\" + VarHelper.Var.Video_Name);
                         FileInfo[] dii = di.GetFiles();
                         if (dii.Length != 0)
                         {
@@ -439,12 +439,12 @@ namespace Mihoyo_Tools
                                     fi.Delete();
                                 }
                             }
-                            XtraMessageBox.Show("导出完成！\n点击确定预览视频！", lib.VarHelper.Var.AuthorName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            Process.Start("explorer.exe", lib.VarHelper.Var.Output_path + @"\" + lib.VarHelper.Var.Video_Name);
+                            XtraMessageBox.Show("导出完成！\n点击确定预览视频！", VarHelper.Var.AuthorName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Process.Start("explorer.exe", VarHelper.Var.Output_path + @"\" + VarHelper.Var.Video_Name);
                             //完成
-                            lib.VarHelper.Var.Command_Play = Application.StartupPath + @"\data\ffplay.exe";
+                            VarHelper.Var.Command_Play = Application.StartupPath + @"\data\ffplay.exe";
                             ProcessStartInfo startInfo = new ProcessStartInfo();
-                            startInfo.FileName = lib.VarHelper.Var.Command_Play;
+                            startInfo.FileName = VarHelper.Var.Command_Play;
                             startInfo.Arguments = $"-autoexit {playName}"; // -autoexit播放完成后自动退出
                             startInfo.UseShellExecute = false;
                             startInfo.RedirectStandardOutput = true;
@@ -460,7 +460,7 @@ namespace Mihoyo_Tools
                     }
                     catch
                     {
-                        //XtraMessageBox.Show("删除失败", lib.VarHelper.Var.AuthorName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        //XtraMessageBox.Show("删除失败", VarHelper.Var.AuthorName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                 }
             }
@@ -489,7 +489,7 @@ namespace Mihoyo_Tools
             Thread.Sleep(1000);
             try
             {
-                DirectoryInfo di = new DirectoryInfo(lib.VarHelper.Var.Output_path);
+                DirectoryInfo di = new DirectoryInfo(VarHelper.Var.Output_path);
                 FileInfo[] dii = di.GetFiles();
                 if (dii.Length != 0)
                 {

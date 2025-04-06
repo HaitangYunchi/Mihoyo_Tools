@@ -17,7 +17,6 @@ using DevExpress.CodeParser;
 using System.Net;
 using System.Windows.Input;
 using System.Threading;
-using static Mihoyo_Tools.lib.DateHelper;
 using System.Globalization;
 using System.Security.Policy;
 using Mihoyo_Tools.lib;
@@ -27,9 +26,9 @@ namespace Mihoyo_Tools {
     {
         private const string TempUpdateFolder = "TempUpdate";
         HaiTangUpdate.Update up = new HaiTangUpdate.Update();
-        string SettingFile = lib.VarHelper.Var.Setting;
-        string id = lib.VarHelper.Var.id;
-        string key = lib.VarHelper.Var.key;
+        string SettingFile = VarHelper.Var.Setting;
+        string id = VarHelper.Var.id;
+        string key = VarHelper.Var.key;
         public fr_Main()
         {
             InitializeComponent();
@@ -39,7 +38,7 @@ namespace Mihoyo_Tools {
         }
         private async void Check_SettingFile()
         {
-            string SettingFile = lib.VarHelper.Var.Setting;
+            string SettingFile = VarHelper.Var.Setting;
             bool exists = await Task.Run(() => File.Exists(SettingFile));
             if (File.Exists(SettingFile) == true)
             {
@@ -48,18 +47,18 @@ namespace Mihoyo_Tools {
             else
             {
                 // 创建数据并写入文件
-                var JsonData = new lib.JsonHelper.JsonData
+                var JsonData = new JsonHelper.JsonData
                 {
-                    UsmKey = lib.VarHelper.Var.usmkey,
-                    GICutscennts_path = lib.VarHelper.Var.GICutscents_path,
-                    FFmpeg_path = lib.VarHelper.Var.Ffmpeg_path,
-                    Output_path = lib.VarHelper.Var.Output_path,
-                    Games_path = lib.VarHelper.Var.Games_path,
-                    USM_path = lib.VarHelper.Var.USM_path,
-                    Language = lib.VarHelper.Var.Language
+                    UsmKey = VarHelper.Var.usmkey,
+                    GICutscennts_path = VarHelper.Var.GICutscents_path,
+                    FFmpeg_path = VarHelper.Var.Ffmpeg_path,
+                    Output_path = VarHelper.Var.Output_path,
+                    Games_path = VarHelper.Var.Games_path,
+                    USM_path = VarHelper.Var.USM_path,
+                    Language = VarHelper.Var.Language
                 };
 
-                lib.JsonHelper.WriteJson(SettingFile, JsonData);
+                JsonHelper.WriteJson(SettingFile, JsonData);
             }
         }
         public void _home()
@@ -78,7 +77,7 @@ namespace Mihoyo_Tools {
             Version version = assembly.GetName().Version;
             string time1 = lib.DateHelper.ChinaDate.GetChinaDate(DateTime.Now);
             //XtraMessageBox.Show($"程序集版本：{version.ToString()}\n{time1}");
-            XtraMessageBox.Show($"项目运行目录：{lib.VarHelper.Var.StrPath}");
+            XtraMessageBox.Show($"项目运行目录：{VarHelper.Var.StrPath}");
 
         }
 
@@ -115,36 +114,36 @@ namespace Mihoyo_Tools {
             int majorVersion = (int)name.Version.Major;
             int minorVersion = (int)name.Version.Minor;
 
-            //根据lib.VarHelper.Var对应变量值，修改显示版本信息；如需修改，请打开lib.VarHelper.Var.cs文件，修改 Release 的值，注意类型是int;//  0  Alpha 内测版      1  bate 公测版      2  Release 正式版
-            if (lib.VarHelper.Var.Release == 0)
+            //根据VarHelper.Var对应变量值，修改显示版本信息；如需修改，请打开VarHelper.Var.cs文件，修改 Release 的值，注意类型是int;//  0  Alpha 内测版      1  bate 公测版      2  Release 正式版
+            if (VarHelper.Var.Release == 0)
             {
-                //toolStripStatusLabel4.Text = "    版本：" + lib.VarHelper.Var.VersionNo + "_Alpha（内测版）";
-                barStaticItem_Ver.Caption = "    版本：" + lib.VarHelper.Var.VersionNo + "_Alpha（内测版）";
-                this.Text = lib.VarHelper.Var.SoftTitle + "    版本：" + lib.VarHelper.Var.VersionNo;
+                //toolStripStatusLabel4.Text = "    版本：" + VarHelper.Var.VersionNo + "_Alpha（内测版）";
+                barStaticItem_Ver.Caption = "    版本：" + VarHelper.Var.VersionNo + "_Alpha（内测版）";
+                this.Text = VarHelper.Var.SoftTitle + "    版本：" + VarHelper.Var.VersionNo;
             }
-            else if (lib.VarHelper.Var.Release == 1)
+            else if (VarHelper.Var.Release == 1)
             {
-                //toolStripStatusLabel4.Text = "    版本：" + lib.VarHelper.Var.VersionNo + "_bate（公测版）";
-                barStaticItem_Ver.Caption = "    版本：" + lib.VarHelper.Var.VersionNo + "_bate（公测版）";
-                this.Text = lib.VarHelper.Var.SoftTitle + "    版本：" + lib.VarHelper.Var.VersionNo;
+                //toolStripStatusLabel4.Text = "    版本：" + VarHelper.Var.VersionNo + "_bate（公测版）";
+                barStaticItem_Ver.Caption = "    版本：" + VarHelper.Var.VersionNo + "_bate（公测版）";
+                this.Text = VarHelper.Var.SoftTitle + "    版本：" + VarHelper.Var.VersionNo;
             }
-            else if (lib.VarHelper.Var.Release == 2)
+            else if (VarHelper.Var.Release == 2)
             {
                 //toolStripStatusLabel4.Text = "    版本：" + $"{majorVersion}." + $"{minorVersion}" + "_Release（正式版）";
                 barStaticItem_Ver.Caption = "    版本：" + $"{majorVersion}." + $"{minorVersion}" + "_Release（正式版）";
-                this.Text = lib.VarHelper.Var.SoftTitle + "    版本：" + lib.VarHelper.Var.VersionNo;
+                this.Text = VarHelper.Var.SoftTitle + "    版本：" + VarHelper.Var.VersionNo;
             }
             else
             {
-                //toolStripStatusLabel4.Text = "    版本：" + lib.VarHelper.Var.VersionNo + "_Alpha（内测版）";
-                barStaticItem_Ver.Caption = "    版本：" + lib.VarHelper.Var.VersionNo + "_Alpha（内测版）";
-                this.Text = lib.VarHelper.Var.SoftTitle + "    版本：" + lib.VarHelper.Var.VersionNo + "_Alpha（内测版）";
+                //toolStripStatusLabel4.Text = "    版本：" + VarHelper.Var.VersionNo + "_Alpha（内测版）";
+                barStaticItem_Ver.Caption = "    版本：" + VarHelper.Var.VersionNo + "_Alpha（内测版）";
+                this.Text = VarHelper.Var.SoftTitle + "    版本：" + VarHelper.Var.VersionNo + "_Alpha（内测版）";
             }
 
             await CheckNumberOfVisits(true);
 
-            string VersionFile = lib.VarHelper.Var.VersionPath;
-            string Jsonback = lib.VarHelper.Var.StrPath + @"\data\versions.json.back";// 新增备份老 version.json
+            string VersionFile = VarHelper.Var.VersionPath;
+            string Jsonback = VarHelper.Var.StrPath + @"\data\versions.json.back";// 新增备份老 version.json
             if (System.IO.File.Exists(VersionFile))//检查文件是否存在 true = 存在 flase = 不存在
             {
                 if (System.IO.File.Exists(Jsonback))
@@ -178,7 +177,7 @@ namespace Mihoyo_Tools {
             string[] Day = new string[] { "星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六" };
             var week = Day[Convert.ToInt16(DateTime.Now.DayOfWeek)];
             //toolStripStatusLabel3.Text = $" 当前时间：{now:yyyy-MM-dd HH:mm:ss}  {week}   " + ChinaDate.GetChinaDate(DateTime.Now); 
-            barStaticItem_Time.Caption = $" 当前时间：{now:yyyy-MM-dd HH:mm:ss}  {week}   " + ChinaDate.GetChinaDate(DateTime.Now) + "      ";
+            barStaticItem_Time.Caption = $" 当前时间：{now:yyyy-MM-dd HH:mm:ss}  {week}   " + DateHelper.ChinaDate.GetChinaDate(DateTime.Now) + "      ";
         }
         private void Home_Click(object sender, EventArgs e)
         {
@@ -201,7 +200,7 @@ namespace Mihoyo_Tools {
             Thread.Sleep(1000);
             try
             {
-                DirectoryInfo di = new DirectoryInfo(lib.VarHelper.Var.Output_path);
+                DirectoryInfo di = new DirectoryInfo(VarHelper.Var.Output_path);
                 FileInfo[] dii = di.GetFiles();
                 if (dii.Length != 0)
                 {
@@ -217,7 +216,7 @@ namespace Mihoyo_Tools {
             }
             catch
             {
-                //XtraMessageBox.Show("删除失败", lib.VarHelper.Var.AuthorName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                //XtraMessageBox.Show("删除失败", VarHelper.Var.AuthorName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             Process.GetCurrentProcess().Kill();
         }

@@ -19,6 +19,7 @@ using static Mihoyo_Tools.lib.JsonHelper;
 using System.Reflection;
 using static System.Net.WebRequestMethods;
 using DevExpress.XtraEditors.Controls;
+using Mihoyo_Tools.lib;
 
 namespace Mihoyo_Tools
 {
@@ -26,13 +27,13 @@ namespace Mihoyo_Tools
     {
         private const string TempUpdateFolder = "TempUpdate";
         HaiTangUpdate.Update up = new();
-        string SettingFile = lib.VarHelper.Var.Setting;
-        string id = lib.VarHelper.Var.id;
-        string key = lib.VarHelper.Var.key;
-        string VersionName = lib.VarHelper.Var.StrPath + @"data\versions.json";
-        string Versionback = lib.VarHelper.Var.StrPath + @"data\versions.json.back";
+        string SettingFile = VarHelper.Var.Setting;
+        string id = VarHelper.Var.id;
+        string key = VarHelper.Var.key;
+        string VersionName = VarHelper.Var.StrPath + @"data\versions.json";
+        string Versionback = VarHelper.Var.StrPath + @"data\versions.json.back";
         private readonly string data = Path.Combine(Application.StartupPath, "data");
-        private static string BackgroundFolderPath = lib.VarHelper.Var.StrPath + @"background"; // 背景图片文件夹路径
+        private static string BackgroundFolderPath = VarHelper.Var.StrPath + @"background"; // 背景图片文件夹路径
 
         public bool AllowTransparency { get; private set; }
 
@@ -153,7 +154,7 @@ namespace Mihoyo_Tools
         }
         private async Task CheckVersionUpdate(bool silent = false)//检查versions.json文件是否有更新
         {
-            var JsonData = new lib.JsonHelper.JsonData();
+            var JsonData = new JsonHelper.JsonData();
             try
             {
                 // 确保data目录存在
@@ -163,7 +164,7 @@ namespace Mihoyo_Tools
                 }
 
                 // 获取当前本地版本
-                Version localVersion = new(lib.JsonHelper.ReadJson(SettingFile, JsonData).UsmKey); // 当前usm版本
+                Version localVersion = new(JsonHelper.ReadJson(SettingFile, JsonData).UsmKey); // 当前usm版本
 
                 // 获取服务器版本
                 Version UpdateVersion = new(await Task.Run(() => up.GetUpdateCloudVariables(id, key, "UpdateUsmKeyVer")));
@@ -211,9 +212,9 @@ namespace Mihoyo_Tools
                 string lastUsmKeyVersion = await Task.Run(() => up.GetUpdateCloudVariables(id, key, "UpdateUsmKeyVer"));
                 if (lastUsmKeyVersion != null)
                 {
-                    lib.JsonHelper.MergeJson(SettingFile, new { UsmKey = lastUsmKeyVersion });
-                    string VersionFile = lib.VarHelper.Var.VersionPath;
-                    string Jsonback = lib.VarHelper.Var.StrPath + @"\data\versions.json.back";// 新增备份老 version.json
+                    JsonHelper.MergeJson(SettingFile, new { UsmKey = lastUsmKeyVersion });
+                    string VersionFile = VarHelper.Var.VersionPath;
+                    string Jsonback = VarHelper.Var.StrPath + @"\data\versions.json.back";// 新增备份老 version.json
                     if (System.IO.File.Exists(VersionFile))//检查文件是否存在 true = 存在 flase = 不存在
                     {
                         System.IO.File.Copy(VersionFile, Jsonback, true);// 备份老 version.json
@@ -227,8 +228,8 @@ namespace Mihoyo_Tools
             }
             catch (Exception)
             {
-                string VersionFile = lib.VarHelper.Var.VersionPath;
-                string Jsonback = lib.VarHelper.Var.StrPath + @"\data\versions.json.back";// 新增备份老 version.json
+                string VersionFile = VarHelper.Var.VersionPath;
+                string Jsonback = VarHelper.Var.StrPath + @"\data\versions.json.back";// 新增备份老 version.json
                 if (System.IO.File.Exists(Jsonback))//检查文件是否存在 true = 存在 flase = 不存在
                 {
                     System.IO.File.Copy(Jsonback, VersionFile, true);// 更新失败回滚 version.json

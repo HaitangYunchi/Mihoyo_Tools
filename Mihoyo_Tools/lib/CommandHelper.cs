@@ -31,7 +31,7 @@ using System.Threading.Tasks;
 
 namespace Mihoyo_Tools.lib
 {
-    //lib.VarHelper.Var.GICutscents_path
+    //VarHelper.Var.GICutscents_path
     class CommandHelper
     {
         /// <summary>
@@ -55,7 +55,7 @@ namespace Mihoyo_Tools.lib
 
             var processStartInfo = new ProcessStartInfo
             {
-                FileName = lib.VarHelper.Var.GICutscents_path,
+                FileName = VarHelper.Var.GICutscents_path,
                 Arguments = $"{command}",  // /C 表示执行后关闭
                 RedirectStandardOutput = true,
                 RedirectStandardError = true,
@@ -150,7 +150,7 @@ namespace Mihoyo_Tools.lib
 
             var processStartInfo = new ProcessStartInfo
             {
-                FileName = lib.VarHelper.Var.Ffmpeg_path,
+                FileName = VarHelper.Var.Ffmpeg_path,
                 Arguments = $"{command}",  // /C 表示执行后关闭
                 RedirectStandardOutput = true,
                 RedirectStandardError = true,
