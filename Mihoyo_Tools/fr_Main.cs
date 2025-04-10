@@ -25,7 +25,7 @@ namespace Mihoyo_Tools {
     public partial class fr_Main : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
     {
         private const string TempUpdateFolder = "TempUpdate";
-        HaiTangUpdate.Update up = new HaiTangUpdate.Update();
+        HaiTangUpdate.Update up = new();
         string SettingFile = VarHelper.Var.Setting;
         string id = VarHelper.Var.id;
         string key = VarHelper.Var.key;
@@ -146,13 +146,13 @@ namespace Mihoyo_Tools {
             string Jsonback = VarHelper.Var.StrPath + @"\data\versions.json.back";// 新增备份老 version.json
             if (System.IO.File.Exists(VersionFile))//检查文件是否存在 true = 存在 flase = 不存在
             {
-                if (System.IO.File.Exists(Jsonback))
+                if (!System.IO.File.Exists(Jsonback))
                 {
-                    return;
+                    System.IO.File.Copy(VersionFile, Jsonback, true);// 备份老 version.json
                 }
                 else
                 {
-                    System.IO.File.Copy(VersionFile, Jsonback, true);// 备份老 version.json
+                    return;
                 }
 
             }
