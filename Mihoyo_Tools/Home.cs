@@ -167,7 +167,7 @@ namespace Mihoyo_Tools
                 Version localVersion = new(JsonHelper.ReadJson(SettingFile, JsonData).UsmKey); // 当前usm版本
 
                 // 获取服务器版本
-                Version UpdateVersion = new(await Task.Run(() => up.GetUpdateCloudVariables(id, key, "UpdateUsmKeyVer")));
+                Version UpdateVersion = new(await Task.Run(() => up.GetCloudVariables(id, key, "UpdateUsmKeyVer")));
 
                 if (UpdateVersion > localVersion)
                 {
@@ -194,7 +194,7 @@ namespace Mihoyo_Tools
         {
             try
             {
-                string downloadUrl = await Task.Run(() => up.GetUpdateCloudVariables(id, key, "VersionsPath"));
+                string downloadUrl = await Task.Run(() => up.GetCloudVariables(id, key, "VersionsPath"));
                 string fileName = Path.GetFileName(downloadUrl);
                 Debug.WriteLine(fileName);
                 VersionName = Path.Combine(data, fileName);
@@ -209,7 +209,7 @@ namespace Mihoyo_Tools
                 await client.DownloadFileTaskAsync(new Uri(downloadUrl), VersionName);
 
                 // 更新本地版本号
-                string lastUsmKeyVersion = await Task.Run(() => up.GetUpdateCloudVariables(id, key, "UpdateUsmKeyVer"));
+                string lastUsmKeyVersion = await Task.Run(() => up.GetCloudVariables(id, key, "UpdateUsmKeyVer"));
                 if (lastUsmKeyVersion != null)
                 {
                     JsonHelper.MergeJson(SettingFile, new { UsmKey = lastUsmKeyVersion });
@@ -255,7 +255,7 @@ namespace Mihoyo_Tools
             try
             {
                 // 获取服务器版本信息
-                string serverVersion = await Task.Run(() => up.GetUpdateVersionNumber(id, key));
+                string serverVersion = await Task.Run(() => up.GetVersionNumber(id, key));
 
                 // 获取当前程序版本
                 Version currentVersion = assembly.GetName().Version;
@@ -264,8 +264,8 @@ namespace Mihoyo_Tools
                 if (latestVersion > currentVersion)
                 {
                     // 获取下载链接
-                    string downloadUrl = await Task.Run(() => up.GetUpdateDownloadLink(id, key));
-                    string upInfo = await Task.Run(() => up.GetUpdateVersionInformation(id, key));
+                    string downloadUrl = await Task.Run(() => up.GetDownloadLink(id, key));
+                    string upInfo = await Task.Run(() => up.GetVersionInformation(id, key));
                     //string downloadUrl = "http://172.16.227.100:8080/updata/updata.zip";
 
                     // 显示更新对话框

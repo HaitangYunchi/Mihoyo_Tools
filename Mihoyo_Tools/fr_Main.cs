@@ -161,7 +161,7 @@ namespace Mihoyo_Tools {
         {
             try
             {
-                string _Number = await Task.Run(() => up.GetUpdateNumberOfVisits(id, key));
+                string _Number = await Task.Run(() => up.GetNumberOfVisits(id, key));
                 int NumberOfVisits = int.Parse(_Number);
                 Soft_Number.Caption = $"  软件访问次数： {NumberOfVisits} （非实时数据） ";
             }

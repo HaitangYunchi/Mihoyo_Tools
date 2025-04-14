@@ -24,7 +24,7 @@
 ## FAQ
 
 ### Where are the game files with cutscenes?
-`[Game directory]\Genshin Impact game\GenshinImpact_Data\StreamingAssets\VideoAssets\StandaloneWindows64`
+`[Game directory]\Genshin Impact game\YuanShen_Data\StreamingAssets\VideoAssets\StandaloneWindows64`
 
 ### I have an error when demuxing files
 Try to update your [GIcutscenes script](https://github.com/ToaHartor/GI-cutscenes/releases) to the latest version.<br>
@@ -48,7 +48,7 @@ Add the `ffplay.exe` file next to the exe file you are running.
 ## 常见问题
 
 ### 原神过场动画在游戏的那个文件夹?
-`[游戏安装目录]\Genshin Impact game\GenshinImpact_Data\StreamingAssets\VideoAssets\StandaloneWindows64`
+`[游戏安装目录]\Genshin Impact game\YuanShen_Data\StreamingAssets\VideoAssets\StandaloneWindows64`
 
 ### 解密文件出错怎么办？
 尝试更新 [GIcutscenes](https://github.com/ToaHartor/GI-cutscenes/releases)到最新版本，<br>
