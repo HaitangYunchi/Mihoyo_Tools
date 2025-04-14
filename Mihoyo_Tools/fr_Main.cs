@@ -20,6 +20,14 @@ using System.Threading;
 using System.Globalization;
 using System.Security.Policy;
 using Mihoyo_Tools.lib;
+using Newtonsoft.Json;
+using static Mihoyo_Tools.lib.JsonHelper;
+using Newtonsoft.Json.Linq;
+using DevExpress.Internal;
+using DevExpress.Map.Kml.Model;
+using static System.Net.WebRequestMethods;
+using File = System.IO.File;
+using Json.Path;
 
 namespace Mihoyo_Tools {
     public partial class fr_Main : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
@@ -27,17 +35,49 @@ namespace Mihoyo_Tools {
         private const string TempUpdateFolder = "TempUpdate";
         HaiTangUpdate.Update up = new();
         string SettingFile = VarHelper.Var.Setting;
+        string userJsonFiles = VarHelper.Var.userJson;
         string id = VarHelper.Var.id;
         string key = VarHelper.Var.key;
         public fr_Main()
         {
             InitializeComponent();
             Check_SettingFile();
-
-
         }
         private async void Check_SettingFile()
         {
+            string Code = up.GetMachineCode();
+            try
+            {
+                var _userInfoJson = await up.GetUpdate(id, key, Code);
+                var user = JsonConvert.DeserializeObject<UserInfo>(_userInfoJson);
+                var userInfo = new JsonHelper.UserInfo
+                {
+                    author = "海棠云螭",
+                    mandatoryUpdate = user.mandatoryUpdate,
+                    softwareMd5 = user.softwareMd5,
+                    softwareName = user.softwareName,
+                    notice = user.notice,
+                    versionInformation = user.versionInformation,
+                    softwareId = user.softwareId,
+                    downloadLink = user.downloadLink,
+                    versionNumber = user.versionNumber,
+                    numberOfVisits = user.numberOfVisits,
+                    miniVersion = user.miniVersion,
+                    timeStamp = user.timeStamp,
+                    networkVerificationId = user.networkVerificationId,
+                    isItEffective = user.isItEffective,
+                    numberOfDays = user.numberOfDays,
+                    networkVerificationRemarks = user.networkVerificationRemarks,
+                    expirationDate = user.expirationDate,
+                    bilibiliLink = "https://space.bilibili.com/3493128132626725"
+                };
+                JsonHelper.WriteJson(userJsonFiles, userInfo);
+            }
+            catch
+            {
+
+            }
+            
             string SettingFile = VarHelper.Var.Setting;
             bool exists = await Task.Run(() => File.Exists(SettingFile));
             if (File.Exists(SettingFile) == true)
@@ -47,7 +87,7 @@ namespace Mihoyo_Tools {
             else
             {
                 // 创建数据并写入文件
-                var JsonData = new JsonHelper.JsonData
+                var appConfig = new JsonHelper.AppConfig
                 {
                     UsmKey = VarHelper.Var.usmkey,
                     GICutscennts_path = VarHelper.Var.GICutscents_path,
@@ -57,8 +97,8 @@ namespace Mihoyo_Tools {
                     USM_path = VarHelper.Var.USM_path,
                     Language = VarHelper.Var.Language
                 };
+                JsonHelper.WriteJson(SettingFile, appConfig);
 
-                JsonHelper.WriteJson(SettingFile, JsonData);
             }
         }
         public void _home()

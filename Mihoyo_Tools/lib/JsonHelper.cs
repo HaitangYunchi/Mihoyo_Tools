@@ -33,12 +33,13 @@ using System.Reflection;
 using static Mihoyo_Tools.lib.JsonHelper;
 using System.Text.Json.Nodes;
 using Json.Path;
+using Newtonsoft.Json.Linq;
 
 namespace Mihoyo_Tools.lib
 {
     class JsonHelper
     {
-        public class JsonData
+        public class AppConfig
         {
             public string UsmKey { get; set; }
             public string GICutscennts_path { get; set; }
@@ -48,11 +49,42 @@ namespace Mihoyo_Tools.lib
             public string USM_path { get; set; }
             public int Language { get; set; }
 
+            public static implicit operator JToken(AppConfig v)
+            {
+                throw new NotImplementedException();
+            }
+        }
+        public class UserInfo
+        {
+            public string author { get; set; }
+            public string mandatoryUpdate { get; set; }
+            public string softwareMd5 { get; set; }
+            public string softwareName { get; set; }
+            public string notice { get; set; }
+            public string versionInformation { get; set; }
+            public string softwareId { get; set; }
+            public string downloadLink { get; set; }
+            public string versionNumber { get; set; }
+            public string numberOfVisits { get; set; }
+            public string miniVersion { get; set; }
+            public string timeStamp { get; set; }
+            public string networkVerificationId { get; set; }
+            public string isItEffective { get; set; }
+            public string numberOfDays { get; set; }
+            public string networkVerificationRemarks { get; set; }
+            public string expirationDate { get; set; }
+            public string bilibiliLink { get; set; }
+
+            public static implicit operator JToken(UserInfo v)
+            {
+                throw new NotImplementedException();
+            }
         }
         #region JSON 文件读写
         // JSON 序列化选项（格式化输出）
         private static readonly JsonSerializerOptions _jsonOptions = new JsonSerializerOptions
         {
+            Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
             WriteIndented = true, // 格式化输出
             PropertyNameCaseInsensitive = true // 不区分大小写
         };
@@ -102,6 +134,7 @@ namespace Mihoyo_Tools.lib
                 throw new ApplicationException($"写入 JSON 文件失败: {ex.Message}", ex);
             }
         }
+        
 
         /// <summary>
         /// 合并 JSON 数据（更新或新增字段）

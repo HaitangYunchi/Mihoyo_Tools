@@ -31,7 +31,7 @@ namespace Mihoyo_Tools
         public Genshin_usm()
         {
             InitializeComponent();
-            var JsonData = new JsonHelper.JsonData();
+            var JsonData = new JsonHelper.AppConfig();
             Gutscenes_path.Text = VarHelper.Var.GICutscents_path;
             FFmpeg_path.Text = VarHelper.Var.Ffmpeg_path;
             buttonEdit_Game_path.Text = JsonHelper.ReadJson(SettingFile, JsonData).Games_path;
@@ -40,7 +40,7 @@ namespace Mihoyo_Tools
             VarHelper.Var.USM_path = JsonHelper.ReadJson(SettingFile, JsonData).USM_path;
             buttonEdit_Out_path.Text = JsonHelper.ReadJson(SettingFile, JsonData).Output_path;
             VarHelper.Var.Output_path = JsonHelper.ReadJson(SettingFile, JsonData).Output_path;
-            simpleButton_Stop.Enabled = false;
+            simpleButton_Stop.Enabled = true;
             simpleButton_Out.Text = "普通话音轨导出";
             JsonHelper.MergeJson(SettingFile, new { GICutscennts_path = Gutscenes_path.Text });
             JsonHelper.MergeJson(SettingFile, new { FFmpeg_path = FFmpeg_path.Text });
@@ -50,28 +50,28 @@ namespace Mihoyo_Tools
         {
             simpleButton_Out.Text = "普通话音轨导出";
             VarHelper.Var.Language = 0;
-            simpleButton_Stop.Enabled = false;
+            simpleButton_Stop.Enabled = true;
         }
 
         private void radioButton_EN_CheckedChanged(object sender, EventArgs e)
         {
             simpleButton_Out.Text = "English Audio Track";
             VarHelper.Var.Language = 1;
-            simpleButton_Stop.Enabled = false;
+            simpleButton_Stop.Enabled = true;
         }
 
         private void radioButton_JP_CheckedChanged(object sender, EventArgs e)
         {
             simpleButton_Out.Text = "日本語トラック";
             VarHelper.Var.Language = 2;
-            simpleButton_Stop.Enabled = false;
+            simpleButton_Stop.Enabled = true;
         }
 
         private void radioButton_KR_CheckedChanged(object sender, EventArgs e)
         {
             simpleButton_Out.Text = "한국어 더빙 트랙";
             VarHelper.Var.Language = 3;
-            simpleButton_Stop.Enabled = false;
+            simpleButton_Stop.Enabled = true;
         }
 
         private void radioButton_Game_path_CheckedChanged(object sender, EventArgs e)
@@ -90,7 +90,7 @@ namespace Mihoyo_Tools
 
         private void buttonEdit_Game_path_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            var JsonData = new JsonHelper.JsonData();
+            var JsonData = new JsonHelper.AppConfig();
             // 游戏目录
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Title = "选择 YuanShen.exe";
@@ -167,7 +167,7 @@ namespace Mihoyo_Tools
 
         private async void simpleButton_Out_Click(object sender, EventArgs e)
         {
-            var JsonData = new JsonHelper.JsonData();
+            var JsonData = new JsonHelper.AppConfig();
             ScrollToEnd(memoEdit_out); // 初始滚动到底部
             simpleButton_Out.Enabled = false;
             string GICutscenes = VarHelper.Var.GICutscents_path;
@@ -305,7 +305,7 @@ namespace Mihoyo_Tools
             }
             else
             {
-                simpleButton_Stop.Enabled = false;
+                simpleButton_Stop.Enabled = true;
                 if (buttonEdit_Out_path.Text == "")
                 {
                     XtraMessageBox.Show("输出目录不能为空！", VarHelper.Var.AuthorName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -480,6 +480,7 @@ namespace Mihoyo_Tools
 
         private void simpleButton_Stop_Click(object sender, EventArgs e)
         {
+            simpleButton_Out.Enabled = true;
             string processName = "GICutscenes"; // 查找的程序进程名称
             Process[] processes = Process.GetProcessesByName(processName);
             foreach (Process process in processes)

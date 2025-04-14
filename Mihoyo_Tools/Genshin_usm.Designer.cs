@@ -205,7 +205,7 @@
             simpleButton_Stop.Name = "simpleButton_Stop";
             simpleButton_Stop.Size = new System.Drawing.Size(75, 23);
             simpleButton_Stop.TabIndex = 4;
-            simpleButton_Stop.Text = "停止导出";
+            simpleButton_Stop.Text = "复位停止";
             simpleButton_Stop.Click += simpleButton_Stop_Click;
             // 
             // labelControl8

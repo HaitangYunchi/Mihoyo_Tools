@@ -28,6 +28,7 @@ namespace Mihoyo_Tools
         private const string TempUpdateFolder = "TempUpdate";
         HaiTangUpdate.Update up = new();
         string SettingFile = VarHelper.Var.Setting;
+        string userJsonFiles = VarHelper.Var.userJson;
         string id = VarHelper.Var.id;
         string key = VarHelper.Var.key;
         string VersionName = VarHelper.Var.StrPath + @"data\versions.json";
@@ -154,7 +155,7 @@ namespace Mihoyo_Tools
         }
         private async Task CheckVersionUpdate(bool silent = false)//检查versions.json文件是否有更新
         {
-            var JsonData = new JsonHelper.JsonData();
+            var JsonData = new JsonHelper.AppConfig();
             try
             {
                 // 确保data目录存在
@@ -229,8 +230,8 @@ namespace Mihoyo_Tools
             catch (Exception)
             {
                 string VersionFile = VarHelper.Var.VersionPath;
-                string Jsonback = VarHelper.Var.StrPath + @"\data\versions.json.back";// 新增备份老 version.json
-                if (System.IO.File.Exists(Jsonback))//检查文件是否存在 true = 存在 flase = 不存在
+                string Jsonback = VarHelper.Var.StrPath + @"\data\versions.json.back";
+                if (System.IO.File.Exists(Jsonback))
                 {
                     System.IO.File.Copy(Jsonback, VersionFile, true);// 更新失败回滚 version.json
                 }
