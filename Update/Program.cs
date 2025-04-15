@@ -36,7 +36,7 @@ namespace Update
                 progressForm.Show();
                 Application.DoEvents();
 
-                // 1. 解压更新包
+                // 解压更新包
                 progressForm.UpdateStatus("正在解压更新包...");
                 string extractDir = Path.Combine(Path.GetTempPath(), "UpdateExtract");
    
@@ -46,7 +46,7 @@ namespace Update
                 Directory.CreateDirectory(extractDir);
                 ZipFile.ExtractToDirectory(updatePackagePath, extractDir);
 
-                // 2. 等待主程序退出
+                // 等待主程序退出
                 progressForm.UpdateStatus("等待主程序关闭...");
                 string processName = Path.GetFileNameWithoutExtension(appPath);
 
@@ -59,28 +59,28 @@ namespace Update
                     Thread.Sleep(1000);
                 }
 
-                // 3. 强制关闭主程序（如果还在运行）
+                // 强制关闭主程序（如果还在运行）
                 foreach (var process in Process.GetProcessesByName(processName))
                 {
                     process.Kill();
                     process.WaitForExit(5000);
                 }
                 //MessageBox.Show($"{extractDir}\n{workingDir}");
-                // 4. 复制文件
+                // 复制文件
                 progressForm.UpdateStatus("正在应用更新...");
                 CopyAllFiles(extractDir, workingDir);
                 
 
-                // 5. 清理临时文件
+                // 清理临时文件
                 progressForm.UpdateStatus("正在清理临时文件...");
                 Directory.Delete(extractDir, true);
                 File.Delete(updatePackagePath);
 
-                // 6. 启动更新后的程序
+                // 启动更新后的程序
                 progressForm.UpdateStatus("启动新版本...");
                 Process.Start("Mihoyo_Tools.exe");
 
-                // 7. 关闭更新程序
+                // 关闭更新程序
                 progressForm.Close();
             }
             catch (Exception ex)

@@ -4,7 +4,7 @@
  * 公司名称：
  * 命名空间：Mihoyo_Tools
  * 唯一标识：2d6c0f9c-05c8-456b-81fd-87582c2d4059
- * 文件名：CmdHelper
+ * 文件名：CommandHelper
  * 
  * 创建者：海棠云螭
  * 电子邮箱：haitangyunchi@126.com
