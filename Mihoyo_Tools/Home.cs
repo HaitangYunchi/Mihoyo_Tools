@@ -42,7 +42,7 @@ namespace Mihoyo_Tools
         {
             InitializeComponent();
             InitializeStaticBackground();
-            // 父控件也需要设置透明
+            
             
         }
         private async void InitializeStaticBackground()
@@ -168,9 +168,9 @@ namespace Mihoyo_Tools
                 Version localVersion = new(JsonHelper.ReadJson(SettingFile, JsonData).UsmKey); // 当前usm版本
 
                 // 获取服务器版本
-                Version UpdateVersion = new(await Task.Run(() => up.GetCloudVariables(id, key, "UpdateUsmKeyVer")));
+                Version lastVersion = new(await Task.Run(() => up.GetCloudVariables(id, key, "UsmKeyVer")));
 
-                if (UpdateVersion > localVersion)
+                if (lastVersion > localVersion)
                 {
                     var result = XtraMessageBox.Show($"服务端有新的 Key，请更新 Key", "发现新版本", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
 
@@ -259,18 +259,19 @@ namespace Mihoyo_Tools
                 string serverVersion = await Task.Run(() => up.GetVersionNumber(id, key));
 
                 // 获取当前程序版本
-                Version currentVersion = assembly.GetName().Version;
+                Version localVersion = assembly.GetName().Version;
                 Version latestVersion = new(serverVersion);
 
-                if (latestVersion > currentVersion)
+                if (latestVersion > localVersion)
                 {
                     // 获取下载链接
                     string downloadUrl = await Task.Run(() => up.GetDownloadLink(id, key));
-                    string upInfo = await Task.Run(() => up.GetVersionInformation(id, key));
+                    string verInfo = await Task.Run(() => up.GetVersionInformation(id, key));
                     //string downloadUrl = "http://172.16.227.100:8080/updata/updata.zip";
 
                     // 显示更新对话框
-                    var result = XtraMessageBox.Show($"发现新版: {serverVersion} 是否立即更新？\n\n当前版本: {currentVersion}\n\n\n更新内容：\n\n{upInfo}", "发现新版本", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                    var result = XtraMessageBox.Show($"发现新版: {serverVersion} 是否立即更新？\n\n当前版本: {localVersion}\n\n\n更新内容：\n\n{verInfo}", 
+                        "发现新版本", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
 
                     if (result == DialogResult.OK)
                     {

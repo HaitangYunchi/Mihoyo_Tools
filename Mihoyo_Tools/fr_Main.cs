@@ -28,6 +28,8 @@ using DevExpress.Map.Kml.Model;
 using static System.Net.WebRequestMethods;
 using File = System.IO.File;
 using Json.Path;
+using System.Management;
+
 
 namespace Mihoyo_Tools {
     public partial class fr_Main : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
@@ -44,7 +46,7 @@ namespace Mihoyo_Tools {
             Check_SettingFile();
         }
         private async void Check_SettingFile()
-        {
+        {  
             string Code = up.GetMachineCode();
             try
             {
@@ -59,7 +61,7 @@ namespace Mihoyo_Tools {
                     notice = user.notice,
                     versionInformation = user.versionInformation,
                     softwareId = user.softwareId,
-                    downloadLink = user.downloadLink,
+                    downloadLink = "https://www.123912.com/s/b6X3jv-wNtU3",
                     versionNumber = user.versionNumber,
                     numberOfVisits = user.numberOfVisits,
                     miniVersion = user.miniVersion,
@@ -128,7 +130,8 @@ namespace Mihoyo_Tools {
             try
             {
                 var currentIpInfo = await ipService.GetIpDetailsAsync();
-                await up.MessageSend(id, currentIpInfo.ToString());
+                string _Message = $"{currentIpInfo.ToString()}\n机器码： {up.GetMachineCode()}";
+                await up.MessageSend(id, _Message);
 
             }
             catch (Exception ex)
@@ -147,7 +150,7 @@ namespace Mihoyo_Tools {
 
         private async void fr_Main_Load(object sender, EventArgs e)
         {
-
+            
             _home();
             Assembly assembly = typeof(Program).Assembly;
             AssemblyName name = new AssemblyName(assembly.FullName);
@@ -157,31 +160,25 @@ namespace Mihoyo_Tools {
             //根据VarHelper.Var对应变量值，修改显示版本信息；如需修改，请打开VarHelper.Var.cs文件，修改 Release 的值，注意类型是int;//  0  Alpha 内测版      1  bate 公测版      2  Release 正式版
             if (VarHelper.Var.Release == 0)
             {
-                //toolStripStatusLabel4.Text = "    版本：" + VarHelper.Var.VersionNo + "_Alpha（内测版）";
-                barStaticItem_Ver.Caption = "    版本：" + VarHelper.Var.VersionNo + "_Alpha（内测版）";
+                barStaticItem_Ver.Caption = $"    版本： {VarHelper.Var.VersionNo}_Alpha（内测版）";
                 this.Text = VarHelper.Var.SoftTitle + "    版本：" + VarHelper.Var.VersionNo;
             }
             else if (VarHelper.Var.Release == 1)
             {
-                //toolStripStatusLabel4.Text = "    版本：" + VarHelper.Var.VersionNo + "_bate（公测版）";
-                barStaticItem_Ver.Caption = "    版本：" + VarHelper.Var.VersionNo + "_bate（公测版）";
+                barStaticItem_Ver.Caption = $"    版本： {VarHelper.Var.VersionNo}_bate（公测版）";
                 this.Text = VarHelper.Var.SoftTitle + "    版本：" + VarHelper.Var.VersionNo;
             }
             else if (VarHelper.Var.Release == 2)
             {
-                //toolStripStatusLabel4.Text = "    版本：" + $"{majorVersion}." + $"{minorVersion}" + "_Release（正式版）";
-                barStaticItem_Ver.Caption = "    版本：" + $"{majorVersion}." + $"{minorVersion}" + "_Release（正式版）";
+                barStaticItem_Ver.Caption = $"    版本：{majorVersion}.{minorVersion}_Release（正式版）";
                 this.Text = VarHelper.Var.SoftTitle + "    版本：" + VarHelper.Var.VersionNo;
             }
             else
             {
-                //toolStripStatusLabel4.Text = "    版本：" + VarHelper.Var.VersionNo + "_Alpha（内测版）";
-                barStaticItem_Ver.Caption = "    版本：" + VarHelper.Var.VersionNo + "_Alpha（内测版）";
+                barStaticItem_Ver.Caption = $"    版本： {VarHelper.Var.VersionNo}_Alpha（内测版）";
                 this.Text = VarHelper.Var.SoftTitle + "    版本：" + VarHelper.Var.VersionNo + "_Alpha（内测版）";
             }
-
-            await CheckNumberOfVisits(true);
-
+            await GetServerData(true);
             string VersionFile = VarHelper.Var.VersionPath;
             string Jsonback = VarHelper.Var.StrPath + @"\data\versions.json.back";// 新增备份老 version.json
             if (System.IO.File.Exists(VersionFile))//检查文件是否存在 true = 存在 flase = 不存在
@@ -196,14 +193,18 @@ namespace Mihoyo_Tools {
                 }
 
             }
+            
         }
-        private async Task CheckNumberOfVisits(bool silent = false)//检查versions.json文件是否有更新
+        private async Task GetServerData(bool silent = false)
         {
+            string Code = up.GetMachineCode();
             try
             {
-                string _Number = await Task.Run(() => up.GetNumberOfVisits(id, key));
+                string _Number = await Task.Run(() => up.GetNumberOfVisits(id, key,Code));
                 int NumberOfVisits = int.Parse(_Number);
-                Soft_Number.Caption = $"  软件访问次数： {NumberOfVisits} （非实时数据） ";
+                Soft_Number.Caption = $" 软件访问次数： {NumberOfVisits} （非实时数据）";
+                string _SerialNumberID = await Task.Run(() => up.GetNetworkVerificationId(id, key, Code));
+                SerialNumberID.Caption = $" 序列号： {_SerialNumberID} ";
             }
             catch (Exception)
             {
@@ -215,7 +216,7 @@ namespace Mihoyo_Tools {
             DateTime Now = DateTime.Now;
             string[] Day = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
             var week = Day[Convert.ToInt16(Now.DayOfWeek)];
-            barStaticItem_Time.Caption = $" 当前时间：{Now:yyyy-MM-dd HH:mm:ss}  {week}   " + DateHelper.ChinaDate.GetChinaDate(Now) + "      ";
+            barStaticItem_Time.Caption = $" 当前时间：{Now:yyyy-MM-dd HH:mm:ss}  {week}  " + DateHelper.ChinaDate.GetChinaDate(Now) + "  ";
         }
         private void Home_Click(object sender, EventArgs e)
         {
@@ -315,5 +316,8 @@ namespace Mihoyo_Tools {
                 UseShellExecute = true
             });
         }
+
+
+
     }
 }

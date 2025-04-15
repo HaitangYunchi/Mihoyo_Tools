@@ -380,10 +380,13 @@
     <value>  当前时间：</value>
   </data>
   <data name="Soft_Number.Caption" xml:space="preserve">
-    <value>  软件访问次数： {获取失败} （非实时数据） </value>
+    <value>  软件访问次数： {获取失败}  </value>
   </data>
   <data name="barStaticItem_Ver.Caption" xml:space="preserve">
     <value>版本1.0</value>
+  </data>
+  <data name="SerialNumberID.Caption" xml:space="preserve">
+    <value> 序列号：{获取失败} </value>
   </data>
   <data name="bar3.Text" xml:space="preserve">
     <value>Status bar</value>
@@ -548,6 +551,12 @@
     <value>barStaticItem_Ver</value>
   </data>
   <data name="&gt;&gt;barStaticItem_Ver.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarStaticItem, DevExpress.XtraBars.v24.2, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;SerialNumberID.Name" xml:space="preserve">
+    <value>SerialNumberID</value>
+  </data>
+  <data name="&gt;&gt;SerialNumberID.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarStaticItem, DevExpress.XtraBars.v24.2, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;timer1.Name" xml:space="preserve">

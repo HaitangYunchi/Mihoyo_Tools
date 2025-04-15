@@ -7,7 +7,7 @@
     <Platforms>AnyCPU;x64</Platforms>
     <ApplicationIcon>Resources\hutao.ico</ApplicationIcon>
     <IncludeSymbols>False</IncludeSymbols>
-    <AssemblyVersion>2.0.4.*</AssemblyVersion>
+    <AssemblyVersion>2.1.0.*</AssemblyVersion>
     <Deterministic>false</Deterministic>
     <NoWarn>$(NoWarn);SYSLIB0014</NoWarn>
     <Company>HaiTangYunchi</Company>
@@ -41,6 +41,7 @@
     <PackageReference Include="JsonPath.Net" Version="2.1.1" />
     <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.3179.45" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Management" Version="9.0.4" />
     <PackageReference Include="System.Text.Json" Version="9.0.4" />
   </ItemGroup>
 
@@ -51,7 +52,6 @@
   <ItemGroup>
     <Reference Include="HaiTangUpdate">
       <HintPath>..\..\..\HaiTangUpdate\bin\Release\net8.0\HaiTangUpdate.dll</HintPath>
-      <Private>True</Private>
     </Reference>
   </ItemGroup>
 

@@ -45,6 +45,7 @@
             barStaticItem_Time = new DevExpress.XtraBars.BarStaticItem();
             Soft_Number = new DevExpress.XtraBars.BarStaticItem();
             barStaticItem_Ver = new DevExpress.XtraBars.BarStaticItem();
+            SerialNumberID = new DevExpress.XtraBars.BarStaticItem();
             barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -125,8 +126,8 @@
             barManager1.DockControls.Add(barDockControlLeft);
             barManager1.DockControls.Add(barDockControlRight);
             barManager1.Form = this;
-            barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] { barStaticItem1, barStaticItem2, barStaticItem_Time, Soft_Number, barStaticItem_Ver });
-            barManager1.MaxItemId = 5;
+            barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] { barStaticItem1, barStaticItem2, barStaticItem_Time, Soft_Number, barStaticItem_Ver, SerialNumberID });
+            barManager1.MaxItemId = 6;
             barManager1.StatusBar = bar3;
             // 
             // bar3
@@ -136,7 +137,7 @@
             bar3.DockCol = 0;
             bar3.DockRow = 0;
             bar3.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom;
-            bar3.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] { new DevExpress.XtraBars.LinkPersistInfo(barStaticItem1), new DevExpress.XtraBars.LinkPersistInfo(barStaticItem2), new DevExpress.XtraBars.LinkPersistInfo(barStaticItem_Time), new DevExpress.XtraBars.LinkPersistInfo(Soft_Number), new DevExpress.XtraBars.LinkPersistInfo(barStaticItem_Ver) });
+            bar3.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] { new DevExpress.XtraBars.LinkPersistInfo(barStaticItem1), new DevExpress.XtraBars.LinkPersistInfo(barStaticItem2), new DevExpress.XtraBars.LinkPersistInfo(barStaticItem_Time), new DevExpress.XtraBars.LinkPersistInfo(Soft_Number), new DevExpress.XtraBars.LinkPersistInfo(barStaticItem_Ver), new DevExpress.XtraBars.LinkPersistInfo(SerialNumberID) });
             bar3.OptionsBar.AllowQuickCustomization = false;
             bar3.OptionsBar.DrawDragBorder = false;
             bar3.OptionsBar.UseWholeRow = true;
@@ -174,6 +175,12 @@
             resources.ApplyResources(barStaticItem_Ver, "barStaticItem_Ver");
             barStaticItem_Ver.Id = 4;
             barStaticItem_Ver.Name = "barStaticItem_Ver";
+            // 
+            // SerialNumberID
+            // 
+            resources.ApplyResources(SerialNumberID, "SerialNumberID");
+            SerialNumberID.Id = 5;
+            SerialNumberID.Name = "SerialNumberID";
             // 
             // barDockControlTop
             // 
@@ -256,6 +263,7 @@
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraBars.Navigation.AccordionControlElement Soft_Rex;
         private System.Windows.Forms.Timer timer1;
+        private DevExpress.XtraBars.BarStaticItem SerialNumberID;
     }
 }
 
