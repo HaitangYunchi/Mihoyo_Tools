@@ -55,7 +55,7 @@ namespace Mihoyo_Tools.lib
             var processStartInfo = new ProcessStartInfo
             {
                 FileName = VarHelper.Var.GICutscents_path,
-                Arguments = $"{command}",  // /C 表示执行后关闭
+                Arguments = $"{command}",  
                 RedirectStandardOutput = true,
                 RedirectStandardError = true,
                 UseShellExecute = false,
@@ -129,7 +129,7 @@ namespace Mihoyo_Tools.lib
             }
         }
         /// <summary>
-        /// Gutscenes程序命令
+        /// FFmpeg程序命令
         /// </summary>
         /// <param name="command">要执行的命令</param>
         /// <param name="outputHandler">实时输出处理委托</param>

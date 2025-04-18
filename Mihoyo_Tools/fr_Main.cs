@@ -37,7 +37,7 @@ namespace Mihoyo_Tools {
         private const string TempUpdateFolder = "TempUpdate";
         HaiTangUpdate.Update up = new();
         string SettingFile = VarHelper.Var.Setting;
-        string userJsonFiles = VarHelper.Var.userJson;
+        string SoftJsonFiles = VarHelper.Var.SoftJson;
         string id = VarHelper.Var.id;
         string key = VarHelper.Var.key;
         public fr_Main()
@@ -52,7 +52,7 @@ namespace Mihoyo_Tools {
             {
                 var _userInfoJson = await up.GetUpdate(id, key, Code);
                 var user = JsonConvert.DeserializeObject<UserInfo>(_userInfoJson);
-                var userInfo = new JsonHelper.UserInfo
+                var softInfo = new JsonHelper.UserInfo
                 {
                     author = "海棠云螭",
                     mandatoryUpdate = user.mandatoryUpdate,
@@ -73,7 +73,7 @@ namespace Mihoyo_Tools {
                     expirationDate = user.expirationDate,
                     bilibiliLink = "https://space.bilibili.com/3493128132626725"
                 };
-                JsonHelper.WriteJson(userJsonFiles, userInfo);
+                JsonHelper.WriteJson(SoftJsonFiles, softInfo);
             }
             catch
             {

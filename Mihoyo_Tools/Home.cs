@@ -28,7 +28,7 @@ namespace Mihoyo_Tools
         private const string TempUpdateFolder = "TempUpdate";
         HaiTangUpdate.Update up = new();
         string SettingFile = VarHelper.Var.Setting;
-        string userJsonFiles = VarHelper.Var.userJson;
+        string SoftJsonFiles = VarHelper.Var.SoftJson;
         string id = VarHelper.Var.id;
         string key = VarHelper.Var.key;
         string VersionName = VarHelper.Var.StrPath + @"data\versions.json";
@@ -210,7 +210,7 @@ namespace Mihoyo_Tools
                 await client.DownloadFileTaskAsync(new Uri(downloadUrl), VersionName);
 
                 // 更新本地版本号
-                string lastUsmKeyVersion = await Task.Run(() => up.GetCloudVariables(id, key, "UpdateUsmKeyVer"));
+                string lastUsmKeyVersion = await Task.Run(() => up.GetCloudVariables(id, key, "UsmKeyVer"));
                 if (lastUsmKeyVersion != null)
                 {
                     JsonHelper.MergeJson(SettingFile, new { UsmKey = lastUsmKeyVersion });

@@ -39,6 +39,7 @@ namespace Mihoyo_Tools.lib
 {
     class JsonHelper
     {
+
         public class AppConfig
         {
             public string UsmKey { get; set; }

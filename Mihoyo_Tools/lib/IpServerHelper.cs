@@ -117,10 +117,7 @@ namespace Mihoyo_Tools.lib
             return $"来自[{City}]的用户使用了[米哈游工具箱]\n" +
                    $"IP: {Ip}\n" +
                    $"位置: {City}, {Region} ({RegionCode}), {CountryName} ({CountryCode})\n" +
-                   $"经纬度: {Latitude}, {Longitude}\n" +
-                   $"时区: {Timezone} (UTC {UtcOffset})\n" +
-                   $"货币: {Currency} ({CurrencyName})\n" +
-                   $"运营商: {Org} (ASN: {Asn})";
+                   $"时区: {Timezone} (UTC {UtcOffset})";
         }
     }
     public class IpApiService
