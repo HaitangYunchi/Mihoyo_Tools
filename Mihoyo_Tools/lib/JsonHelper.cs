@@ -55,16 +55,17 @@ namespace Mihoyo_Tools.lib
                 throw new NotImplementedException();
             }
         }
-        public class UserInfo
+        public class SoftInfo
         {
             public string author { get; set; }
             public string mandatoryUpdate { get; set; }
             public string softwareMd5 { get; set; }
             public string softwareName { get; set; }
             public string notice { get; set; }
-            public string versionInformation { get; set; }
+            public string usmkeyInfo { get; set; } 
             public string softwareId { get; set; }
             public string downloadLink { get; set; }
+            public string versionInformation { get; set; }
             public string versionNumber { get; set; }
             public string numberOfVisits { get; set; }
             public string miniVersion { get; set; }
@@ -76,7 +77,7 @@ namespace Mihoyo_Tools.lib
             public string expirationDate { get; set; }
             public string bilibiliLink { get; set; }
 
-            public static implicit operator JToken(UserInfo v)
+            public static implicit operator JToken(SoftInfo v)
             {
                 throw new NotImplementedException();
             }

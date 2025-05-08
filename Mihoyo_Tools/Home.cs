@@ -65,6 +65,7 @@ namespace Mihoyo_Tools
                 if (imageFile != null)
                 {
                     pictureEdit.Image = Image.FromFile(imageFile);
+                    //pictureEdit.Properties.SizeMode = PictureSizeMode.Stretch;
                 }
                 else
                 {
@@ -166,13 +167,13 @@ namespace Mihoyo_Tools
 
                 // 获取当前本地版本
                 Version localVersion = new(JsonHelper.ReadJson(SettingFile, JsonData).UsmKey); // 当前usm版本
-
                 // 获取服务器版本
                 Version lastVersion = new(await Task.Run(() => up.GetCloudVariables(id, key, "UsmKeyVer")));
+                string Notice = await up.GetNotice(id, key,up.GetMachineCode());//获取公告信息，目前公告信息存储的是新增的过场动画数据
 
                 if (lastVersion > localVersion)
                 {
-                    var result = XtraMessageBox.Show($"服务端有新的 Key，请更新 Key", "发现新版本", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                    var result = XtraMessageBox.Show($"发现服务端存在新 key\n新增部分过场动画解密数据\n\n{Notice}", "更新 versions.json", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
 
                     if (result == DialogResult.OK)
                     {

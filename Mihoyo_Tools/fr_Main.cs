@@ -29,6 +29,8 @@ using static System.Net.WebRequestMethods;
 using File = System.IO.File;
 using Json.Path;
 using System.Management;
+using DevExpress.DataAccess.Native.Web;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
 
 namespace Mihoyo_Tools {
@@ -40,37 +42,71 @@ namespace Mihoyo_Tools {
         string SoftJsonFiles = VarHelper.Var.SoftJson;
         string id = VarHelper.Var.id;
         string key = VarHelper.Var.key;
+        string _activestate;
         public fr_Main()
         {
             InitializeComponent();
             Check_SettingFile();
         }
         private async void Check_SettingFile()
-        {  
+        {
             string Code = up.GetMachineCode();
+            var timestamp = await up.GetRemainingUsageTime(id, key, Code);
+            string _time;
+            if (timestamp == -1)
+            {
+                _time = $"永久";
+            }
+            else if (timestamp == 0)
+            {
+                _time = $"已过期";
+            }
+            else if (timestamp == 1)
+            {
+                _time = $"未激活";
+            }
+            else
+            {
+                TimeSpan timeSpan = TimeSpan.FromMilliseconds(timestamp);
+
+                int days = timeSpan.Days;
+                int hours = timeSpan.Hours;
+                int minutes = timeSpan.Minutes;
+                int seconds = timeSpan.Seconds;
+
+                _time = $"剩余时间：{days}天{hours}小时{minutes}分钟{seconds}秒";
+            }
             try
             {
-                var _userInfoJson = await up.GetUpdate(id, key, Code);
-                var user = JsonConvert.DeserializeObject<UserInfo>(_userInfoJson);
-                var softInfo = new JsonHelper.UserInfo
+                string _isItEffective;
+                var _softInfoJson = await up.GetUpdate(id, key, Code);
+                var soft = JsonConvert.DeserializeObject<SoftInfo>(_softInfoJson);
+                if (soft.isItEffective == "y")
+                {
+                    _isItEffective = "True";
+                }
+                else 
+                {
+                    _isItEffective = "False";
+                }
+                var softInfo = new JsonHelper.SoftInfo
                 {
                     author = "海棠云螭",
-                    mandatoryUpdate = user.mandatoryUpdate,
-                    softwareMd5 = user.softwareMd5,
-                    softwareName = user.softwareName,
-                    notice = user.notice,
-                    versionInformation = user.versionInformation,
-                    softwareId = user.softwareId,
+                    mandatoryUpdate = soft.mandatoryUpdate,
+                    softwareMd5 = soft.softwareMd5,
+                    softwareName = soft.softwareName,
+                    usmkeyInfo = soft.notice,
                     downloadLink = "https://www.123912.com/s/b6X3jv-wNtU3",
-                    versionNumber = user.versionNumber,
-                    numberOfVisits = user.numberOfVisits,
-                    miniVersion = user.miniVersion,
-                    timeStamp = user.timeStamp,
-                    networkVerificationId = user.networkVerificationId,
-                    isItEffective = user.isItEffective,
-                    numberOfDays = user.numberOfDays,
-                    networkVerificationRemarks = user.networkVerificationRemarks,
-                    expirationDate = user.expirationDate,
+                    versionInformation = soft.versionInformation,
+                    versionNumber = soft.versionNumber,
+                    numberOfVisits = soft.numberOfVisits,
+                    miniVersion = soft.miniVersion,
+                    timeStamp = soft.timeStamp,
+                    networkVerificationId = soft.networkVerificationId,
+                    isItEffective = _isItEffective,
+                    numberOfDays = soft.numberOfDays,
+                    networkVerificationRemarks = soft.networkVerificationRemarks,
+                    expirationDate = _time,
                     bilibiliLink = "https://space.bilibili.com/3493128132626725"
                 };
                 JsonHelper.WriteJson(SoftJsonFiles, softInfo);
@@ -79,7 +115,7 @@ namespace Mihoyo_Tools {
             {
 
             }
-            
+
             string SettingFile = VarHelper.Var.Setting;
             bool exists = await Task.Run(() => File.Exists(SettingFile));
             if (File.Exists(SettingFile) == true)
@@ -122,15 +158,15 @@ namespace Mihoyo_Tools {
             XtraMessageBox.Show($"项目运行目录：{VarHelper.Var.StrPath}");
 
         }
-
         private async void fr_Main_Shown(object sender, EventArgs e)
         {
             var ipService = new IpApiService();
 
             try
             {
+                ActiveState();
                 var currentIpInfo = await ipService.GetIpDetailsAsync();
-                string _Message = $"{currentIpInfo.ToString()}\n机器码： {up.GetMachineCode()}";
+                string _Message = $"{currentIpInfo.ToString()}\n机器码： {up.GetMachineCode()}  状态：{_activestate}";
                 await up.MessageSend(id, _Message);
 
             }
@@ -147,10 +183,30 @@ namespace Mihoyo_Tools {
             }
 
         }
-
+        private async void ActiveState()
+        {
+            string Code = up.GetMachineCode();
+            var timestamp = await up.GetRemainingUsageTime(id, key, Code);
+            if (timestamp == -1)
+            {
+                _activestate = $"永久激活";
+            }
+            else if (timestamp == 0)
+            {
+                _activestate = $"已过期";
+            }
+            else if (timestamp == 1)
+            {
+                _activestate = $"未激活";
+            }
+            else
+            {
+                _activestate = $"限时激活";
+            }
+        }
         private async void fr_Main_Load(object sender, EventArgs e)
         {
-            
+            //this.Cursor = new(VarHelper.Var.StrPath + @"Genshin.cur");
             _home();
             Assembly assembly = typeof(Program).Assembly;
             AssemblyName name = new AssemblyName(assembly.FullName);
@@ -193,18 +249,20 @@ namespace Mihoyo_Tools {
                 }
 
             }
-            
+
         }
         private async Task GetServerData(bool silent = false)
         {
             string Code = up.GetMachineCode();
             try
             {
-                string _Number = await Task.Run(() => up.GetNumberOfVisits(id, key,Code));
+                //ActiveState();
+                string _Number = await Task.Run(() => up.GetNumberOfVisits(id, key, Code));
                 int NumberOfVisits = int.Parse(_Number);
                 Soft_Number.Caption = $" 软件访问次数： {NumberOfVisits} （非实时数据）";
                 string _SerialNumberID = await Task.Run(() => up.GetNetworkVerificationId(id, key, Code));
-                SerialNumberID.Caption = $" 序列号： {_SerialNumberID} ";
+                SerialNumberID.Caption = $" 序列号： {_SerialNumberID}  ";
+                //SerialNumberID.Caption = $" 序列号： {_SerialNumberID}   ({_activestate})";
             }
             catch (Exception)
             {
@@ -213,10 +271,13 @@ namespace Mihoyo_Tools {
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
+            string Code = up.GetMachineCode();
             DateTime Now = DateTime.Now;
             string[] Day = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
             var week = Day[Convert.ToInt16(Now.DayOfWeek)];
-            barStaticItem_Time.Caption = $" 当前时间：{Now:yyyy-MM-dd HH:mm:ss}  {week}  " + DateHelper.ChinaDate.GetChinaDate(Now) + "  ";
+            //barStaticItem_Time.Caption = $" 当前时间：{Now:yyyy-MM-dd HH:mm:ss}  {week}  " + DateHelper.ChinaDate.GetChinaDate(Now) + "  ";
+            barStaticItem_Time.Caption = $" 当前时间：{Now:yyyy-MM-dd HH:mm:ss}  {week}  ";
+            
         }
         private void Home_Click(object sender, EventArgs e)
         {
@@ -316,8 +377,6 @@ namespace Mihoyo_Tools {
                 UseShellExecute = true
             });
         }
-
-
 
     }
 }

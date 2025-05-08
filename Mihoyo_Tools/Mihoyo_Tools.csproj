@@ -7,7 +7,7 @@
     <Platforms>AnyCPU;x64</Platforms>
     <ApplicationIcon>Resources\hutao.ico</ApplicationIcon>
     <IncludeSymbols>False</IncludeSymbols>
-    <AssemblyVersion>2.1.1.*</AssemblyVersion>
+    <AssemblyVersion>2.1.5.*</AssemblyVersion>
     <Deterministic>false</Deterministic>
     <NoWarn>$(NoWarn);SYSLIB0014</NoWarn>
     <Company>HaiTangYunchi</Company>
@@ -114,6 +114,9 @@
     </None>
     <None Update="data\versions.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Genshin.cur">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

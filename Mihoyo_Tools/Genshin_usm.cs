@@ -293,7 +293,7 @@ namespace Mihoyo_Tools
                 finally
                 {
                     // 显示完成消息
-                    memoEdit_out.AppendText("\n[全部处理完成]\n");
+                    memoEdit_out.AppendText("\r\n[全部处理完成]\r\n");
                     ScrollToEnd(memoEdit_out);
                     // 重新启用按钮
                     simpleButton_Out.Enabled = true;
@@ -388,7 +388,7 @@ namespace Mihoyo_Tools
                     finally
                     {
                         // 显示完成消息
-                        memoEdit_out.AppendText("\n[提取完成]\n");
+                        memoEdit_out.AppendText("\r\n[提取完成]\r\n");
                         ScrollToEnd(memoEdit_out);
                     }
                     try
@@ -421,7 +421,7 @@ namespace Mihoyo_Tools
                     finally
                     {
                         // 显示完成消息
-                        memoEdit_out.AppendText("\n[合并完成]\n");
+                        memoEdit_out.AppendText("\r\n[合并完成]\r\n");
                         ScrollToEnd(memoEdit_out);
                         // 重新启用按钮
                         simpleButton_Out.Enabled = true;
