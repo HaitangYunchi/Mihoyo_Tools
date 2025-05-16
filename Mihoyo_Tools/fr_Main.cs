@@ -85,7 +85,7 @@ namespace Mihoyo_Tools {
                 {
                     _isItEffective = "True";
                 }
-                else 
+                else
                 {
                     _isItEffective = "False";
                 }
@@ -277,7 +277,7 @@ namespace Mihoyo_Tools {
             var week = Day[Convert.ToInt16(Now.DayOfWeek)];
             //barStaticItem_Time.Caption = $" 当前时间：{Now:yyyy-MM-dd HH:mm:ss}  {week}  " + DateHelper.ChinaDate.GetChinaDate(Now) + "  ";
             barStaticItem_Time.Caption = $" 当前时间：{Now:yyyy-MM-dd HH:mm:ss}  {week}  ";
-            
+
         }
         private void Home_Click(object sender, EventArgs e)
         {
@@ -294,6 +294,12 @@ namespace Mihoyo_Tools {
             string processName = "GICutscenes"; // 查找的程序进程名称
             Process[] processes = Process.GetProcessesByName(processName);
             foreach (Process process in processes)
+            {
+                process.Kill();
+            }
+            string processFFmpeg = "ffmpeg"; // 查找的程序进程名称
+            Process[] processesffmpeg = Process.GetProcessesByName(processFFmpeg);
+            foreach (Process process in processesffmpeg)
             {
                 process.Kill();
             }
@@ -357,7 +363,15 @@ namespace Mihoyo_Tools {
             _Web_Browser.Show();
             fr_Main_Container.Controls.Add(_Web_Browser);
         }
-
+        private void Video_size_Click(object sender, EventArgs e)
+        {
+            string ffmpegPath = VarHelper.Var.Ffmpeg_path;
+            var ffmpegControl = new FFmpegControl(ffmpegPath);
+            ffmpegControl.Dock = DockStyle.Fill;
+            fr_Main_Container.Controls.Clear();
+            ffmpegControl.Show();
+            fr_Main_Container.Controls.Add(ffmpegControl);
+        }
         private void barStaticItem2_ItemClick(object sender, ItemClickEventArgs e)
         {
             string url = "http://space.bilibili.com/3493128132626725";
@@ -378,5 +392,6 @@ namespace Mihoyo_Tools {
             });
         }
 
+        
     }
 }

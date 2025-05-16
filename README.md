@@ -71,4 +71,6 @@ Add the `ffplay.exe` file next to the exe file you are running.
 <BR>
 <img align="center" src="./Mihoyo_Tools/Readme_images/LrcToSrt.png" >
 <BR>
+<img align="center" src="./Mihoyo_Tools/Readme_images/FFmpeg.png" >
+<BR>
 <BR>

@@ -51,6 +51,7 @@
             barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             timer1 = new System.Windows.Forms.Timer(components);
+            Video_size = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)accordionControl1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)fluentDesignFormControl1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)fluentFormDefaultManager1).BeginInit();
@@ -74,7 +75,7 @@
             // 
             // Home
             // 
-            Home.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] { Genshin_tools, Lrc_srt, Soft_Rex });
+            Home.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] { Genshin_tools, Lrc_srt, Soft_Rex, Video_size });
             Home.Expanded = true;
             Home.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("Home.ImageOptions.Image");
             Home.Name = "Home";
@@ -211,6 +212,14 @@
             timer1.Enabled = true;
             timer1.Tick += timer1_Tick;
             // 
+            // Video_size
+            // 
+            Video_size.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("accordionControlElement1.ImageOptions.Image");
+            Video_size.Name = "Video_size";
+            Video_size.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            resources.ApplyResources(Video_size, "Video_size");
+            Video_size.Click += Video_size_Click;
+            // 
             // fr_Main
             // 
             Appearance.BackColor = System.Drawing.SystemColors.Control;
@@ -264,6 +273,7 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement Soft_Rex;
         private System.Windows.Forms.Timer timer1;
         private DevExpress.XtraBars.BarStaticItem SerialNumberID;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement Video_size;
     }
 }
 
