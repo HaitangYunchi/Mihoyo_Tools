@@ -162,9 +162,9 @@
             // lstFiles
             // 
             lstFiles.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            lstFiles.Location = new System.Drawing.Point(12, 46);
+            lstFiles.Location = new System.Drawing.Point(12, 52);
             lstFiles.Name = "lstFiles";
-            lstFiles.Size = new System.Drawing.Size(1114, 242);
+            lstFiles.Size = new System.Drawing.Size(1114, 236);
             lstFiles.TabIndex = 0;
             // 
             // groupControlSettings
@@ -374,7 +374,7 @@
             // 
             tabPageLog.Controls.Add(txtLog);
             tabPageLog.Name = "tabPageLog";
-            tabPageLog.Size = new System.Drawing.Size(1166, 609);
+            tabPageLog.Size = new System.Drawing.Size(1166, 604);
             tabPageLog.Text = "日志";
             // 
             // txtLog
@@ -383,7 +383,7 @@
             txtLog.Location = new System.Drawing.Point(0, 0);
             txtLog.Name = "txtLog";
             txtLog.Properties.ReadOnly = true;
-            txtLog.Size = new System.Drawing.Size(1166, 609);
+            txtLog.Size = new System.Drawing.Size(1166, 604);
             txtLog.TabIndex = 0;
             // 
             // progressBar

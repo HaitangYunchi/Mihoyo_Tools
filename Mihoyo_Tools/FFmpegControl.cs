@@ -47,23 +47,18 @@ namespace Mihoyo_Tools
             btnPresetSave.Click += BtnPresetSave_Click;
             btnPresetManage.Click += BtnPresetManage_Click;
 
-
             // 设置文件列表
             lstFiles.DataSource = _fileList;
             //lstFiles.DisplayMember = "FileName";
-
             // 初始化编码器下拉框
             cboVideoCodec.Properties.Items.AddRange(new[] { "libx264", "libx265", "h264_nvenc", "mpeg4", "vp9" });
             cboVideoCodec.SelectedIndex = 0;
-
             // 初始化分辨率下拉框
             cboResolution.Properties.Items.AddRange(new[] { "1920:1080", "2560:1440", "3840:2160", "5120:2880" });
             cboResolution.SelectedIndex = 1;
-
             // 初始化比特率下拉框
             cboBitrate.Properties.Items.AddRange(new[] { "18", "20" });
             cboBitrate.SelectedIndex = 0;
-
             // 初始化帧率下拉框
             fps.Properties.Items.AddRange(new[] { "30", "60" });
             fps.SelectedIndex = 1;

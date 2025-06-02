@@ -138,7 +138,7 @@
             btnOK.Name = "btnOK";
             btnOK.Size = new System.Drawing.Size(82, 23);
             btnOK.TabIndex = 2;
-            btnOK.Text = "确定";
+            btnOK.Text = "保存";
             btnOK.Click += btnOK_Click;
             // 
             // btnDelete
@@ -168,9 +168,10 @@
             ClientSize = new System.Drawing.Size(748, 366);
             Controls.Add(gridControl);
             Controls.Add(panelControl1);
+            IconOptions.Image = Properties.Resources.hutao;
             Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             MaximizeBox = false;
-            MaximumSize = new System.Drawing.Size(750, 402);
+            MaximumSize = new System.Drawing.Size(750, 400);
             MinimizeBox = false;
             MinimumSize = new System.Drawing.Size(750, 400);
             Name = "PresetForm";
