@@ -79,6 +79,7 @@ namespace Mihoyo_Tools {
             try
             {
                 string _isItEffective;
+                string _mandatoryUpdate;
                 var _softInfoJson = await up.GetUpdate(id, key, Code);
                 var soft = JsonConvert.DeserializeObject<SoftInfo>(_softInfoJson);
                 if (soft.isItEffective == "y")
@@ -89,26 +90,34 @@ namespace Mihoyo_Tools {
                 {
                     _isItEffective = "False";
                 }
-                var softInfo = new JsonHelper.SoftInfo
+                if(soft.mandatoryUpdate == "y")
                 {
-                    author = "海棠云螭",
-                    mandatoryUpdate = soft.mandatoryUpdate,
-                    softwareMd5 = soft.softwareMd5,
-                    softwareName = soft.softwareName,
-                    usmkeyInfo = soft.notice,
-                    downloadLink = "https://www.123912.com/s/b6X3jv-wNtU3",
-                    versionInformation = soft.versionInformation,
-                    versionNumber = soft.versionNumber,
-                    numberOfVisits = soft.numberOfVisits,
-                    miniVersion = soft.miniVersion,
-                    timeStamp = soft.timeStamp,
-                    networkVerificationId = soft.networkVerificationId,
-                    isItEffective = _isItEffective,
-                    numberOfDays = soft.numberOfDays,
-                    networkVerificationRemarks = soft.networkVerificationRemarks,
-                    expirationDate = _time,
-                    bilibiliLink = "https://space.bilibili.com/3493128132626725"
-                };
+                    _mandatoryUpdate = "True";
+                }
+                else
+                {
+                    _mandatoryUpdate = "False";
+                }
+                    var softInfo = new JsonHelper.SoftInfo
+                    {
+                        author = "海棠云螭",
+                        mandatoryUpdate = _mandatoryUpdate,
+                        softwareMd5 = soft.softwareMd5,
+                        softwareName = soft.softwareName,
+                        usmkeyInfo = soft.notice,
+                        downloadLink = "https://www.123912.com/s/b6X3jv-wNtU3",
+                        versionInformation = soft.versionInformation,
+                        versionNumber = soft.versionNumber,
+                        numberOfVisits = soft.numberOfVisits,
+                        miniVersion = soft.miniVersion,
+                        timeStamp = soft.timeStamp,
+                        networkVerificationId = soft.networkVerificationId,
+                        isItEffective = _isItEffective,
+                        numberOfDays = soft.numberOfDays,
+                        networkVerificationRemarks = soft.networkVerificationRemarks,
+                        expirationDate = _time,
+                        bilibiliLink = "https://space.bilibili.com/3493128132626725"
+                    };
                 JsonHelper.WriteJson(SoftJsonFiles, softInfo);
             }
             catch
@@ -166,7 +175,7 @@ namespace Mihoyo_Tools {
             {
                 ActiveState();
                 var currentIpInfo = await ipService.GetIpDetailsAsync();
-                string _Message = $"{currentIpInfo.ToString()}\n机器码： {up.GetMachineCode()}  状态：{_activestate}";
+                string _Message = $"{currentIpInfo.ToString()}\n机器码： {up.GetMachineCode()}  状态：{_activestate}\n版本号：{VarHelper.Var.VersionNo}";
                 await up.MessageSend(id, _Message);
 
             }

@@ -5,7 +5,7 @@ VisualStudioVersion = 17.13.35806.99
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mihoyo_Tools", "Mihoyo_Tools\Mihoyo_Tools.csproj", "{D3ADF874-BD17-463F-B39A-8D3C7390E57F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Update", "Update\Update.csproj", "{3329FC4B-EC54-4CC0-917F-D8F65F07A551}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "upgrade", "upgrade\upgrade.csproj", "{3329FC4B-EC54-4CC0-917F-D8F65F07A551}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

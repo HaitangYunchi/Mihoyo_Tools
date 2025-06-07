@@ -278,50 +278,50 @@
   <data name="Soft_Rex.Text" xml:space="preserve">
     <value>游戏资源下载</value>
   </data>
-  <data name="accordionControlElement1.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Video_size.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        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
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAADV0RVh0VGl0
+        bGUAQXJyb3c7UmVjdXJyZW5jZTtSZWZyZXNoO1VwZGF0ZTtSZWxvYWQ7RXhjaGFuZ2WGtF1IAAAITElE
+        QVRYR51Wa1CU5xVehMQYo9I0/dEfnbbpxHSatH/ambTTpJn2h+3Uab1EboHK/SKhykUIXkABQWBRQK66
+        igJCDKhIlLsiFGGM4SJEq4jcFgFhuSzssrvcPD3Pu/sxu6Cp7TvzzPvt973veZ5z3vOes7L/Y1h9B/6n
+        QUSmp/8+JIJVDGsTbJYB7/AdeCkxFgLS85pk6bmNsjTg3C1Z6tkGvJaIrf33ptrGpVfYJWbd+CIxu7Y1
+        IfO6Mj7rBh1Nr1HGpde0RqdWXDiYWGLv4hvzPV4PQUJI+NFSniwcWBJnIQCkc89oCTxMxClvJWRdTzmu
+        qNcVl7dTy/1BGhiZpgmNgXgdTUwbSPl0iu50KKmgpJliUqt0BxNKU+3cIn/A+yUhImLJitoo07MQYSEg
+        JadhOblNTGqZE3s7UV73gCa1szTLhIbFZ6RfABZpZt4InQkGfj8+rafia20UduTyVMC+c85sZzWwO6Iw
+        Jvn0v2D8FZN9SwHHFPUSORTbxJ6ojM7Ib6Qno9OCGIQgEaRzwAJpgVkjNCbgGev6hiYpOrmcAvadj/cP
+        z4uruHmfkk7dBAEEgcNSgPxkLSaj58nlMWeKvhZewytBLEgXjaTPIdYY5mnasMCYpym9EU/HNSTPrqGy
+        2nukn50n5Azbf42xUgAPceYR8iv2qTn1pJ4xCPKZ+YUlb8f5vGEsIbOKgg8VkXvgWQo5XERJ2dVUXnef
+        xjj8U/o5UjP56JSehia0NKbWkYbfjfIcm1YDxjWM5wpY5bor9odHTlRPDIxMGclNnsLDWy09tPvgBdoZ
+        oKh03pURaOch/8M7731oa+eR+LGLf2aQ+54zVcEspqm1lyZ1czQwpqUBlZaUKg0NjGqonxGVUgnG18EF
+        QnMB8P6VAwmlSRX1DwQ5PJbCe7nyLnubo3LyPeHE6xBCJJJ09zG/yljzqV+Ks1dI3tiVmg4aGp8hJYhH
+        NNTHedTHNyfyWJkkAPssBKz68xYf2+jkCj2yGIkGYpxn/Z3HCHX3pq3Bb/M6EEnXyBzwCN/WeQadTi+t
+        bhchB2nf02nqNWF//FUwrmVYCIABm+BDhTvzS74R3oMYwDkGHy5e+MQ17iNeA69BZDW7+EwmAb8ZMLjG
+        I1BxtLS6g7R85ohAL9eHnmEjuvk5LLbkhQJeDY2+WHS7rY90HHopi5FYbntOF/N3hN3anNiMHKJWewSd
+        iZXIB8e11A1SATU9HlJT16CagqMuPleAMBAcVfywnxdq+CqpOYmAxKxqcvJL3cHfRfEQxAvAogDeMaw9
+        9+ZF+4QXks/njLAC8g47T96h+eQF7M0nz5A8gT0RRWBccQtEBHzC8qe8Q/OIk4g8g3PJI+icuGabtoX8
+        iL+Lc5eIlwmAMQiEYXj3hgnrGBtMsDXNeI9cWSEABKhQMICNEvAb76WMB7AZe6wMliIAaQ0E4dgkEWhQ
+        AJ5xC0REJQEYkhf4iE3rTZCESF5BEDzFWiFEP7cg083Oy3QGI/COYePkGfmzqOQKOnS8nK8fI6mMIuRl
+        dCDhqpa/i2NYLuA1+cmbxM2HErhkxmdyq824TtxqRQXjAoVOR9FcTLjbxfF6RMVKIp4xzAlItvxCsx1P
+        FTSSRjdLai7pwMOeEXL5TNHJ3+GMtbkAhG1tHBNyWEnPdUCAaz+AmwFcLG8jroKJvBYeYI+VRMzZzz+N
+        3jPWB0YWflXb1EWDXBG/7Runb3vH6MuKNnL0TS/h7+ImLBewDt5puWkMTc5wHZ/h68QQs5ZQIxx90pJ4
+        HdSLM5SIzchh53XXgBT3yKSrNMy9ANevg8k7esYoNqOS/u4St4vXrDgCIQBnhK72hImN4HrOHuRevkP2
+        XqkKXvN9xpL3ZpByaO1Hm1zf++fBC6O3mnuEEyC/y+RN9wbJdU+OfuP7f8Stwk2wSEIYXM9/n4QAkCq5
+        kfQDXM/PX2kmlwDF+N8+jfbgdchkiIARkGLG7w1OPnJ3//CC8ZKqdlJN6eihcoLaulXU9lhFKWfraLv7
+        8SxeJ86fsXQNMcS5hURfommuZCDtE5jmEmqs4zWNneQXXkAOPmllmx0Pu/zuT84bec+bH3zs+O4OtzgX
+        90BFGZdtauDegT7w6IlaELcyqm8/hgPq93+z+R3eg2uNqK0QsGF3ZBFNcQXs5SbSOTBJnU8mOHmMCfRg
+        YIJ6uFJe4s4Yk1JGQfx/wCskl4Iiv6SEjCoq5Q44PKYRefNveN41yuSjdKtjgHw/z6e/Ohz2Zg6RfCDE
+        WC7A1n9fIU3OzNGpC00UeuQStXQOC/L2HhW1d+MsVfSAjSs5MsN8vgjzGDesEU5a9P6HLBJetzA50NA+
+        QEFRxbTlH4kpbB9HJ5KXIcaKCKB+ny+5Q1t3JpzY5ibP+mx/AdV908sCxoxnaTpPKbTwsLWLZxNhS9cI
+        tTwapeZHI1Te+Ij7Qj5t2SnPZNuoglIJfq4AhOUNd67/nCjH+BnZ/uZmhyhvZ3/F9PHTN+g2Z3EbCBmS
+        hxKaBamRuK6tn45yE3P0OznzF7sIX7aDPiD9EbVy8D3Jk3GYC8DH1U5+mfE8I0uxAYrX/vpDx19sd08u
+        4CTSR8i/olyuB+WNXdRwVykI61v76VpDJ+Vc+pr2J5aSs/+pua2uSV/86oPtv+T9KONLnvO1lL1IAMKC
+        KOCMcBxSqPAOTWX92z///Y/ZI08WU2rnlXbPwSdLxcbI3jtLtcMz7d42t+Rrmz454P2Tjb/9Ka+Xrips
+        wQ57ni1z8MmW2TOkYS4AQyw0wXxIQhAVNCs0KZwpjukt0yx1OvPuKTmx3N7SWC7gRUMyAsAoxIAA0ZKA
+        33hvTgp853hZAebD3PiL8NKDiGT/AXwEi3DZwGunAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="Video_size.Text" xml:space="preserve">
-    <value>视频转换</value>
+    <value>视频转换（实验）</value>
   </data>
   <data name="Home.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -415,6 +415,24 @@
   <metadata name="barManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>235, 17</value>
   </metadata>
+  <data name="barStaticItem1.Caption" xml:space="preserve">
+    <value>米哈游工具箱</value>
+  </data>
+  <data name="barStaticItem2.Caption" xml:space="preserve">
+    <value>软件开发：海棠云螭（B站） 海棠云螭（抖音）</value>
+  </data>
+  <data name="barStaticItem_Time.Caption" xml:space="preserve">
+    <value>  当前时间：</value>
+  </data>
+  <data name="Soft_Number.Caption" xml:space="preserve">
+    <value>  软件访问次数： {获取失败}  </value>
+  </data>
+  <data name="barStaticItem_Ver.Caption" xml:space="preserve">
+    <value>版本1.0</value>
+  </data>
+  <data name="SerialNumberID.Caption" xml:space="preserve">
+    <value> 序列号：{获取失败} </value>
+  </data>
   <data name="bar3.Text" xml:space="preserve">
     <value>Status bar</value>
   </data>
@@ -481,24 +499,6 @@
   <data name="&gt;&gt;barDockControlRight.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="barStaticItem1.Caption" xml:space="preserve">
-    <value>米哈游工具箱</value>
-  </data>
-  <data name="barStaticItem2.Caption" xml:space="preserve">
-    <value>软件开发：海棠云螭（B站） 海棠云螭（抖音）</value>
-  </data>
-  <data name="barStaticItem_Time.Caption" xml:space="preserve">
-    <value>  当前时间：</value>
-  </data>
-  <data name="Soft_Number.Caption" xml:space="preserve">
-    <value>  软件访问次数： {获取失败}  </value>
-  </data>
-  <data name="barStaticItem_Ver.Caption" xml:space="preserve">
-    <value>版本1.0</value>
-  </data>
-  <data name="SerialNumberID.Caption" xml:space="preserve">
-    <value> 序列号：{获取失败} </value>
-  </data>
   <data name="barDockControlLeft.Size" type="System.Drawing.Size, System.Drawing">
     <value>0, 740</value>
   </data>
@@ -548,6 +548,12 @@
     <value>Soft_Rex</value>
   </data>
   <data name="&gt;&gt;Soft_Rex.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Navigation.AccordionControlElement, DevExpress.XtraBars.v24.2, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;Video_size.Name" xml:space="preserve">
+    <value>Video_size</value>
+  </data>
+  <data name="&gt;&gt;Video_size.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.Navigation.AccordionControlElement, DevExpress.XtraBars.v24.2, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;fluentFormDefaultManager1.Name" xml:space="preserve">
@@ -609,12 +615,6 @@
   </data>
   <data name="&gt;&gt;timer1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Video_size.Name" xml:space="preserve">
-    <value>Video_size</value>
-  </data>
-  <data name="&gt;&gt;Video_size.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Navigation.AccordionControlElement, DevExpress.XtraBars.v24.2, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>fr_Main</value>

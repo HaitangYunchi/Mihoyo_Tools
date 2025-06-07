@@ -46,7 +46,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Update\Update.csproj" />
+    <ProjectReference Include="..\upgrade\upgrade.csproj" />
   </ItemGroup>
 
   <ItemGroup>

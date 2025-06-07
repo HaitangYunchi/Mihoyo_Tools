@@ -353,12 +353,12 @@ namespace Mihoyo_Tools
             try
             {
                 string currentExePath = Assembly.GetExecutingAssembly().Location;
-                string updaterExePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Update.exe");
+                string updaterExePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "upgrade.exe");
 
                 // 检查更新程序是否存在
                 if (!System.IO.File.Exists(updaterExePath))
                 {
-                    XtraMessageBox.Show("更新程序 Update.exe 未找到。", "错误",
+                    XtraMessageBox.Show("更新程序 upgrade.exe 未找到。", "错误",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }

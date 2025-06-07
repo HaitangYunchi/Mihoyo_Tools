@@ -1,4 +1,4 @@
-﻿namespace Update
+﻿namespace upgrade
 {
     partial class Form1
     {

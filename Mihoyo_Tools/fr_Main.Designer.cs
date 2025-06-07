@@ -36,6 +36,7 @@
             Genshin_tools = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             Lrc_srt = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             Soft_Rex = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            Video_size = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(components);
             barManager1 = new DevExpress.XtraBars.BarManager(components);
@@ -51,7 +52,6 @@
             barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             timer1 = new System.Windows.Forms.Timer(components);
-            Video_size = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)accordionControl1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)fluentDesignFormControl1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)fluentFormDefaultManager1).BeginInit();
@@ -105,6 +105,15 @@
             Soft_Rex.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             resources.ApplyResources(Soft_Rex, "Soft_Rex");
             Soft_Rex.Click += Soft_Rex_Click;
+            // 
+            // Video_size
+            // 
+            Video_size.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("Video_size.ImageOptions.Image");
+            Video_size.Name = "Video_size";
+            Video_size.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            resources.ApplyResources(Video_size, "Video_size");
+            Video_size.Visible = false;
+            Video_size.Click += Video_size_Click;
             // 
             // fluentDesignFormControl1
             // 
@@ -211,14 +220,6 @@
             // 
             timer1.Enabled = true;
             timer1.Tick += timer1_Tick;
-            // 
-            // Video_size
-            // 
-            Video_size.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("accordionControlElement1.ImageOptions.Image");
-            Video_size.Name = "Video_size";
-            Video_size.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            resources.ApplyResources(Video_size, "Video_size");
-            Video_size.Click += Video_size_Click;
             // 
             // fr_Main
             // 
