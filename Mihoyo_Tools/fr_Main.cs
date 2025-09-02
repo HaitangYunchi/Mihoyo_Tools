@@ -1,36 +1,37 @@
-﻿using DevExpress.XtraBars;
+﻿using DevExpress.CodeParser;
+using DevExpress.DataAccess.Native.Web;
+using DevExpress.Internal;
+using DevExpress.Map.Kml.Model;
+using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
+using Json.Path;
+using Mihoyo_Tools.lib;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Management;
+using System.Net;
 using System.Reflection;
+using System.Security.Policy;
 using System.Text;
+using System.Text.Json;
+using System.Threading;
+using System.Threading.Channels;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Text.Json;
-using DevExpress.CodeParser;
-using System.Net;
 using System.Windows.Input;
-using System.Threading;
-using System.Globalization;
-using System.Security.Policy;
-using Mihoyo_Tools.lib;
-using Newtonsoft.Json;
 using static Mihoyo_Tools.lib.JsonHelper;
-using Newtonsoft.Json.Linq;
-using DevExpress.Internal;
-using DevExpress.Map.Kml.Model;
 using static System.Net.WebRequestMethods;
-using File = System.IO.File;
-using Json.Path;
-using System.Management;
-using DevExpress.DataAccess.Native.Web;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
+using File = System.IO.File;
 
 
 namespace Mihoyo_Tools {
@@ -47,6 +48,7 @@ namespace Mihoyo_Tools {
         {
             InitializeComponent();
             Check_SettingFile();
+            Check_FFMpegChanger();
         }
         private async void Check_SettingFile()
         {
@@ -156,6 +158,27 @@ namespace Mihoyo_Tools {
             fr_Main_Container.Controls.Clear();
             _home.Show();
             fr_Main_Container.Controls.Add(_home);
+        }
+        public async void Check_FFMpegChanger()
+        {
+            string FFMpegChanger = await up.GetCloudVariables(id,key,"FFMpegChanger");
+            string Soft_RexChanger = await up.GetCloudVariables(id, key, "Soft_Rex");
+            if (FFMpegChanger == "True")
+            {
+                Video_size.Visible = true;      //  视频转换页面开关
+            }
+            else
+            {
+                Video_size.Visible = false;
+            }
+            if (Soft_RexChanger == "True")
+            {
+                Soft_Rex.Visible = true;      //  游戏资源页面开关
+            }
+            else
+            {
+                Soft_Rex.Visible = false;
+            }
         }
         public void GetVersion()
         {
