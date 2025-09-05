@@ -151,6 +151,7 @@ namespace Mihoyo_Tools
         }
         private async void simpleButton1_Click(object sender, EventArgs e)
         {
+            LoggerHelper.Log("执行检查 Version ...", LoggerHelper.LogLevel.INFO);
             await CheckVersionUpdate();
 
         }
@@ -162,18 +163,22 @@ namespace Mihoyo_Tools
                 // 确保data目录存在
                 if (!Directory.Exists(data))
                 {
+                    LoggerHelper.Log("data 目录不存在，创建中...", LoggerHelper.LogLevel.WARN);
                     Directory.CreateDirectory(data);
+                    LoggerHelper.Log("创建 data 完成", LoggerHelper.LogLevel.INFO);
                 }
 
                 // 获取当前本地版本
                 Version localVersion = new(JsonHelper.ReadJson(SettingFile, JsonData).UsmKey); // 当前usm版本
+                LoggerHelper.Log($"获取本地 Version 版本，版本号 {localVersion}", LoggerHelper.LogLevel.INFO);
                 // 获取服务器版本
                 Version lastVersion = new(await Task.Run(() => up.GetCloudVariables(id, key, "UsmKeyVer")));
+                LoggerHelper.Log($"获取服务端 Version 版本，版本号 {lastVersion}", LoggerHelper.LogLevel.INFO);
                 string Notice = await up.GetNotice(id, key,up.GetMachineCode());//获取公告信息，目前公告信息存储的是新增的过场动画数据
 
                 if (lastVersion > localVersion)
                 {
-                    var result = XtraMessageBox.Show($"发现服务端存在新 key\n新增部分过场动画解密数据\n\n{Notice}", "更新 versions.json", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                    var result = XtraMessageBox.Show($"发现服务端存在新的 Versions.json\n新增部分过场动画解密数据\n\n{Notice}", "更新 versions.json", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
 
                     if (result == DialogResult.OK)
                     {
@@ -184,11 +189,13 @@ namespace Mihoyo_Tools
                 }
                 else if(!silent)
                 {
-                    MessageBox.Show("当前已是最新 Key", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoggerHelper.Log($"Version 文件已是最新", LoggerHelper.LogLevel.INFO);
+                    MessageBox.Show("当前 Version.json 已是最新", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception)
             {
+                LoggerHelper.Log($"更新 Version 文件失败，无法访问服务器！", LoggerHelper.LogLevel.ERROR);
                 MessageBox.Show($"更新失败: 无法访问服务器！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -196,6 +203,7 @@ namespace Mihoyo_Tools
         {
             try
             {
+                LoggerHelper.Log($"正在下载服务端 Version 文件", LoggerHelper.LogLevel.INFO);
                 string downloadUrl = await Task.Run(() => up.GetCloudVariables(id, key, "VersionsPath"));
                 string fileName = Path.GetFileName(downloadUrl);
                 Debug.WriteLine(fileName);
@@ -221,7 +229,8 @@ namespace Mihoyo_Tools
                     {
                         System.IO.File.Copy(VersionFile, Jsonback, true);// 备份老 version.json
                     }
-                    XtraMessageBox.Show("已更新 Key 到最新版", "成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoggerHelper.Log($"Version 文件已更新完成", LoggerHelper.LogLevel.INFO);
+                    XtraMessageBox.Show("已更新 Version.json 到最新版", "成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
@@ -378,6 +387,7 @@ namespace Mihoyo_Tools
 
         private async void Home_Load(object sender, EventArgs e)
         {
+            LoggerHelper.Log("启动成功", LoggerHelper.LogLevel.INFO);
             await CheckForUpdatesAsync(true);
         }
     }

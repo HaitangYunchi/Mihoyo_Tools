@@ -1,13 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Windows.Forms;
+﻿using DevExpress.Skins;
 using DevExpress.UserSkins;
-using DevExpress.Skins;
 using DevExpress.XtraEditors;
+using Mihoyo_Tools.lib;
+using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
+using System.Linq;
+using System.Net.NetworkInformation;
 using System.Threading;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Mihoyo_Tools {
     static class Program {
@@ -19,6 +22,7 @@ namespace Mihoyo_Tools {
             System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("zh-CN");
             DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle("WXI");
             System.Diagnostics.Process[] myProcesses = System.Diagnostics.Process.GetProcessesByName("Mihoyo_Tools");
+
             if (myProcesses.Length > 1) //如果可以获取到的进程名大于一个，则说明在此之前已经启动过
             {
                 XtraMessageBox.Show("程序已经运行！", "警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -26,10 +30,12 @@ namespace Mihoyo_Tools {
             }
             else
             {
+                LoggerHelper.Log("应用程序启动", LoggerHelper.LogLevel.INFO);
                 Application.EnableVisualStyles();
-                Application.SetCompatibleTextRenderingDefault(false);
+                Application.SetCompatibleTextRenderingDefault(false);              
                 Application.Run(new fr_Main());
             }
         }
+       
     }
 }

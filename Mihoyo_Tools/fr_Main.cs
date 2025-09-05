@@ -48,7 +48,7 @@ namespace Mihoyo_Tools {
         {
             InitializeComponent();
             Check_SettingFile();
-            Check_FFMpegChanger();
+            Check_PanelItemDisplay();
         }
         private async void Check_SettingFile()
         {
@@ -159,7 +159,7 @@ namespace Mihoyo_Tools {
             _home.Show();
             fr_Main_Container.Controls.Add(_home);
         }
-        public async void Check_FFMpegChanger()
+        public async void Check_PanelItemDisplay()  //检查面板项目是否可用
         {
             string FFMpegChanger = await up.GetCloudVariables(id,key,"FFMpegChanger");
             string Soft_RexChanger = await up.GetCloudVariables(id, key, "Soft_Rex");
