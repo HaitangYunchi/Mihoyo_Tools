@@ -1,6 +1,7 @@
 ﻿using DevExpress.Skins;
 using DevExpress.UserSkins;
 using DevExpress.XtraEditors;
+using HaiTangUpdate;
 using Mihoyo_Tools.lib;
 using System;
 using System.Collections.Generic;
@@ -30,7 +31,7 @@ namespace Mihoyo_Tools {
             }
             else
             {
-                LoggerHelper.Log("应用程序启动", LoggerHelper.LogLevel.INFO);
+                Logger.Log("应用程序启动", Logger.LogLevel.INFO);
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);              
                 Application.Run(new fr_Main());

@@ -4,6 +4,7 @@ using DevExpress.Internal;
 using DevExpress.Map.Kml.Model;
 using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
+using HaiTangUpdate;
 using Json.Path;
 using Mihoyo_Tools.lib;
 using Newtonsoft.Json;
@@ -78,6 +79,7 @@ namespace Mihoyo_Tools {
 
                 _time = $"剩余时间：{days}天{hours}小时{minutes}分钟{seconds}秒";
             }
+            Logger.Log($"检查序列号，序列号到期时间 {_time}", Logger.LogLevel.INFO);
             try
             {
                 string _isItEffective;
@@ -126,7 +128,7 @@ namespace Mihoyo_Tools {
             {
 
             }
-
+            Logger.Log("检查配置文件", Logger.LogLevel.INFO);
             string SettingFile = VarHelper.Var.Setting;
             bool exists = await Task.Run(() => File.Exists(SettingFile));
             if (File.Exists(SettingFile) == true)
@@ -323,6 +325,7 @@ namespace Mihoyo_Tools {
 
         private void fr_Main_FormClosed(object sender, FormClosedEventArgs e)
         {
+            Logger.Log("关闭程序", Logger.LogLevel.INFO);
             string processName = "GICutscenes"; // 查找的程序进程名称
             Process[] processes = Process.GetProcessesByName(processName);
             foreach (Process process in processes)
